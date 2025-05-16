@@ -13,7 +13,7 @@ A modern framework for automatically generating research surveys by searching ar
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/yourusername/survey_agent.git
+git clone https://github.com/linjh1118/survey_agent.git
 cd survey_agent
 pip install -e .
 ```
