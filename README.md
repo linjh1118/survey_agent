@@ -54,7 +54,7 @@ The generated survey includes:
 🏃🏻‍♀️🏃🏻‍♀️ 
 
  If you `python examples/generate_survey.md`, you will get `output/vlm_games_survey.md`
---> check [output/vlm_games_survey.md](output/vlm_games_survey.md "output/vlm_games_survey.md") . The log is at [output/vlm_games_survey.log](output/vlm_games_survey.md "output/vlm_games_survey.md").
+--> check [output/vlm_games_survey.md](output/vlm_games_survey.md) . The log is at [output/vlm_games_survey.log](output/vlm_games_survey.log).
 
 <table>
   <tr>
