@@ -1,0 +1,7 @@
+arxiv
+PyMuPDF
+pandas
+fuzzywuzzy
+python-Levenshtein
+openai
+rich

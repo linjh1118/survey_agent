@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: survey_agent
+Version: 0.1.0
+Summary: A framework for generating research surveys from arXiv papers
+Home-page: https://github.com/yourusername/survey_agent
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: arxiv
+Requires-Dist: PyMuPDF
+Requires-Dist: pandas
+Requires-Dist: fuzzywuzzy
+Requires-Dist: python-Levenshtein
+Requires-Dist: openai
+Requires-Dist: rich
+
+# 📚 Survey Agent
+
+A modern framework for automatically generating research surveys by searching arXiv papers, downloading them, and using LLMs to summarize their content. Perfect for researchers, students, and anyone who wants to stay up-to-date with the latest research! ✨
+
+## ✅ Features
+
+- 🔍 Search arXiv papers by keywords or specific titles
+- 📥 Download PDFs and extract text content
+- 🤖 Generate summaries of papers using LLMs
+- 📝 Create well-formatted markdown surveys with paper lists and summaries
+- 🚀 Simple and intuitive API
+
+## 🛠️ Installation
+
+```bash
+git clone https://github.com/yourusername/survey_agent.git
+cd survey_agent
+pip install -e .
+```
+
+## 🚀 Quick Start
+
+```python
+from survey_agent.arxiv import search_papers
+from survey_agent.survey import generate_survey
+
+# Search for papers with specific keywords
+papers = search_papers(terms=["VLM", "Games"], max_results=10)
+
+# Generate a survey from the papers
+generate_survey(papers, output_file="game_vlm_survey.md")
+```
+
+## 📋 Usage Examples
+
+See the `examples` directory for complete usage examples:
+
+- `basic_search.py`: Shows how to search for papers on arXiv
+- `generate_survey.py`: Demonstrates the complete workflow from search to survey generation
+
+## 🏗️ Project Structure
+
+```
+survey_agent/
+├── examples/       # Example usage scripts
+└── src/
+    └── survey_agent/
+        ├── arxiv/  # ArXiv search and download functionality
+        ├── llm/    # LLM integration for summarization
+        ├── utils/  # Utility functions
+        └── survey/ # Survey generation tools
+```
+
+## ⚙️ Configuration
+
+You can configure the LLM used for summarization in the config file or by setting environment variables:
+
+```python
+# Set the LLM model to use
+import os
+os.environ["SURVEY_AGENT_LLM_MODEL"] = "gpt-4o"
+```
+
+## 🙋‍♂️ Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request if you have any improvements or bug fixes.
+
+## 📜 License
+
+MIT
