@@ -2,5 +2,5 @@
 __pycache__/
 *.py[cod]
 *.class
-output/
-
+pdfs/
+src/survey_agent.egg-info

@@ -1,0 +1,59 @@
+(base) ❰lincode|survey_agent(main)❱ pip install -e . 
+Obtaining file:///Users/lincode/Documents/GitHub/survey_agent/survey_agent
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: arxiv in /Users/lincode/miniconda3/lib/python3.12/site-packages (from survey_agent==0.1.0) (2.1.3)
+Requirement already satisfied: PyMuPDF in /Users/lincode/miniconda3/lib/python3.12/site-packages (from survey_agent==0.1.0) (1.25.5)
+Requirement already satisfied: pandas in /Users/lincode/miniconda3/lib/python3.12/site-packages (from survey_agent==0.1.0) (2.2.3)
+Requirement already satisfied: fuzzywuzzy in /Users/lincode/miniconda3/lib/python3.12/site-packages (from survey_agent==0.1.0) (0.18.0)
+Requirement already satisfied: python-Levenshtein in /Users/lincode/miniconda3/lib/python3.12/site-packages (from survey_agent==0.1.0) (0.27.1)
+Requirement already satisfied: openai in /Users/lincode/miniconda3/lib/python3.12/site-packages (from survey_agent==0.1.0) (1.78.1)
+Requirement already satisfied: rich in /Users/lincode/miniconda3/lib/python3.12/site-packages (from survey_agent==0.1.0) (14.0.0)
+Requirement already satisfied: feedparser~=6.0.10 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from arxiv->survey_agent==0.1.0) (6.0.11)
+Requirement already satisfied: requests~=2.32.0 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from arxiv->survey_agent==0.1.0) (2.32.3)
+Requirement already satisfied: anyio<5,>=3.5.0 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from openai->survey_agent==0.1.0) (4.9.0)
+Requirement already satisfied: distro<2,>=1.7.0 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from openai->survey_agent==0.1.0) (1.9.0)
+Requirement already satisfied: httpx<1,>=0.23.0 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from openai->survey_agent==0.1.0) (0.28.1)
+Requirement already satisfied: jiter<1,>=0.4.0 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from openai->survey_agent==0.1.0) (0.9.0)
+Requirement already satisfied: pydantic<3,>=1.9.0 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from openai->survey_agent==0.1.0) (2.11.3)
+Requirement already satisfied: sniffio in /Users/lincode/miniconda3/lib/python3.12/site-packages (from openai->survey_agent==0.1.0) (1.3.1)
+Requirement already satisfied: tqdm>4 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from openai->survey_agent==0.1.0) (4.66.5)
+Requirement already satisfied: typing-extensions<5,>=4.11 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from openai->survey_agent==0.1.0) (4.12.2)
+Requirement already satisfied: numpy>=1.26.0 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from pandas->survey_agent==0.1.0) (2.2.5)
+Requirement already satisfied: python-dateutil>=2.8.2 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from pandas->survey_agent==0.1.0) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from pandas->survey_agent==0.1.0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from pandas->survey_agent==0.1.0) (2025.2)
+Requirement already satisfied: Levenshtein==0.27.1 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from python-Levenshtein->survey_agent==0.1.0) (0.27.1)
+Requirement already satisfied: rapidfuzz<4.0.0,>=3.9.0 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from Levenshtein==0.27.1->python-Levenshtein->survey_agent==0.1.0) (3.13.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from rich->survey_agent==0.1.0) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from rich->survey_agent==0.1.0) (2.19.1)
+Requirement already satisfied: idna>=2.8 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from anyio<5,>=3.5.0->openai->survey_agent==0.1.0) (3.7)
+Requirement already satisfied: sgmllib3k in /Users/lincode/miniconda3/lib/python3.12/site-packages (from feedparser~=6.0.10->arxiv->survey_agent==0.1.0) (1.0.0)
+Requirement already satisfied: certifi in /Users/lincode/miniconda3/lib/python3.12/site-packages (from httpx<1,>=0.23.0->openai->survey_agent==0.1.0) (2024.8.30)
+Requirement already satisfied: httpcore==1.* in /Users/lincode/miniconda3/lib/python3.12/site-packages (from httpx<1,>=0.23.0->openai->survey_agent==0.1.0) (1.0.9)
+Requirement already satisfied: h11>=0.16 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from httpcore==1.*->httpx<1,>=0.23.0->openai->survey_agent==0.1.0) (0.16.0)
+Requirement already satisfied: mdurl~=0.1 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich->survey_agent==0.1.0) (0.1.2)
+Requirement already satisfied: annotated-types>=0.6.0 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from pydantic<3,>=1.9.0->openai->survey_agent==0.1.0) (0.7.0)
+Requirement already satisfied: pydantic-core==2.33.1 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from pydantic<3,>=1.9.0->openai->survey_agent==0.1.0) (2.33.1)
+Requirement already satisfied: typing-inspection>=0.4.0 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from pydantic<3,>=1.9.0->openai->survey_agent==0.1.0) (0.4.0)
+Requirement already satisfied: six>=1.5 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas->survey_agent==0.1.0) (1.17.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from requests~=2.32.0->arxiv->survey_agent==0.1.0) (3.3.2)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /Users/lincode/miniconda3/lib/python3.12/site-packages (from requests~=2.32.0->arxiv->survey_agent==0.1.0) (2.2.3)
+Installing collected packages: survey_agent
+  DEPRECATION: Legacy editable install of survey_agent==0.1.0 from file:///Users/lincode/Documents/GitHub/survey_agent/survey_agent (setup.py develop) is deprecated. pip 25.0 will enforce this behaviour change. A possible replacement is to add a pyproject.toml or enable --use-pep517, and use setuptools >= 64. If the resulting installation is not behaving as expected, try using --config-settings editable_mode=compat. Please consult the setuptools documentation for more information. Discussion can be found at https://github.com/pypa/pip/issues/11457
+  Running setup.py develop for survey_agent
+Successfully installed survey_agent-0.1.0
+(base) ❰lincode|survey_agent(main)❱ python examples/generate_survey.py
+🔍 Generating survey from search terms...
+Downloaded `DSADF: Thinking Fast and Slow for Decision Making` to `/Users/lincode/Documents/GitHub/survey_agent/survey_agent/pdfs/DSADF__Thinking_Fast_and_Slow_for_Decision_Making.pdf`
+Downloaded `Towards Efficient Online Tuning of VLM Agents via Counterfactual Soft Reinforcement Learning` to `/Users/lincode/Documents/GitHub/survey_agent/survey_agent/pdfs/Towards_Efficient_Online_Tuning_of_VLM_Agents_via_Counterfactual_Soft_Reinforcement_Learning.pdf`
+Downloaded `mrCAD: Multimodal Refinement of Computer-aided Designs` to `/Users/lincode/Documents/GitHub/survey_agent/survey_agent/pdfs/mrCAD__Multimodal_Refinement_of_Computer_aided_Designs.pdf`
+Error downloading `Metropolis-Hastings Captioning Game: Knowledge Fusion of Vision Language Models via Decentralized Bayesian Inference`: HTTP Error 502: Bad Gateway
+Downloaded `BlenderGym: Benchmarking Foundational Model Systems for Graphics Editing` to `/Users/lincode/Documents/GitHub/survey_agent/survey_agent/pdfs/BlenderGym__Benchmarking_Foundational_Model_Systems_for_Graphics_Editing.pdf`
+Downloaded `Cultivating Game Sense for Yourself: Making VLMs Gaming Experts` to `/Users/lincode/Documents/GitHub/survey_agent/survey_agent/pdfs/Cultivating_Game_Sense_for_Yourself__Making_VLMs_Gaming_Experts.pdf`
+Downloaded `MetaSpatial: Reinforcing 3D Spatial Reasoning in VLMs for the Metaverse` to `/Users/lincode/Documents/GitHub/survey_agent/survey_agent/pdfs/MetaSpatial__Reinforcing_3D_Spatial_Reasoning_in_VLMs_for_the_Metaverse.pdf`
+Downloaded `GTR: Guided Thought Reinforcement Prevents Thought Collapse in RL-based VLM Agent Training` to `/Users/lincode/Documents/GitHub/survey_agent/survey_agent/pdfs/GTR__Guided_Thought_Reinforcement_Prevents_Thought_Collapse_in_RL_based_VLM_Agent_Training.pdf`
+Downloaded `GFlowVLM: Enhancing Multi-step Reasoning in Vision-Language Models with Generative Flow Networks` to `/Users/lincode/Documents/GitHub/survey_agent/survey_agent/pdfs/GFlowVLM__Enhancing_Multi_step_Reasoning_in_Vision_Language_Models_with_Generative_Flow_Networks.pdf`
+Downloaded `AVA: Attentive VLM Agent for Mastering StarCraft II` to `/Users/lincode/Documents/GitHub/survey_agent/survey_agent/pdfs/AVA__Attentive_VLM_Agent_for_Mastering_StarCraft_II.pdf`
+Processing papers: 100%|██████████████████████████████████████████████| 10/10 [00:53<00:00,  5.31s/it]
+Summarizing papers: 100%|█████████████████████████████████████████████| 10/10 [02:25<00:00, 14.53s/it]
+Saved markdown survey to output/vlm_games_survey.md

@@ -51,7 +51,10 @@ The generated survey includes:
 - TLDR/Notes section with detailed summaries of each paper
 - Paper abstracts and key insights
 
-🏃🏻‍♀️🏃🏻‍♀️ ==> If you `python examples/generate_survey.md`, you will get `output/vlm_games_survey.md`--> check [output/vlm_games_survey.md](output/vlm_games_survey.md "output/vlm_games_survey.md")
+🏃🏻‍♀️🏃🏻‍♀️ 
+
+ If you `python examples/generate_survey.md`, you will get `output/vlm_games_survey.md`
+--> check [output/vlm_games_survey.md](output/vlm_games_survey.md "output/vlm_games_survey.md") . The log is at [output/vlm_games_survey.log](output/vlm_games_survey.md "output/vlm_games_survey.md").
 
 <table>
   <tr>
