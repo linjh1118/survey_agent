@@ -100,6 +100,12 @@ os.environ["BASE_URL"] = 'https://open.bigmodel.cn/api/paas/v4/'
 
 Contributions are welcome! Feel free to open an issue or submit a pull request if you have any improvements or bug fixes.
 
+Contributors:
+
+<a href="https://github.com/linjh1118/survey_agent/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=linjh1118/survey_agent" />
+</a>
+
 ## 📜 License
 
 MIT
