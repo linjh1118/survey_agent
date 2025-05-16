@@ -5,8 +5,8 @@ import os
 os.environ["https_proxy"] = "http://127.0.0.1:7890"
 os.environ["http_proxy"] = "http://127.0.0.1:7890"
 # os.environ["all_proxy"] = "socks5://127.0.0.1:7890"
-os.environ["API_KEY"] = '979525e325524e629a9fe3a0d406b924.f5e8BbGc4DpMPAbm'
-os.environ["BASE_URL"] = 'https://open.bigmodel.cn/api/paas/v4/'
+os.environ["API_KEY"] = '979525e325524e629a9fe3a0d406b924.plz.use_your_case'
+os.environ["BASE_URL"] = 'https://open.bigmodel.cn/api'
 
 
 def main():
