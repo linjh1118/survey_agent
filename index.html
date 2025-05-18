@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Agent - 自动化研究调研生成工具</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- 引入动画库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- 引入代码高亮样式 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="animate__animated animate__fadeIn"><i class="fas fa-book-open"></i> Survey Agent</h1>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">自动化研究调研生成工具</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="bg-shape-1"></div>
+        <div class="bg-shape-2"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="animate__animated animate__fadeInUp">使用 AI 自动生成研究领域综述</h2>
+                <p class="animate__animated animate__fadeInUp animate__delay-1s">借助arXiv搜索、PDF下载和LLM总结功能，轻松生成结构化的研究综述。</p>
+                <div class="animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#examples" class="btn">查看示例</a>
+                    <a href="#features" class="btn btn-outline">了解功能</a>
+                </div>
+            </div>
+            <div class="hero-image animate__animated animate__fadeInRight animate__delay-1s">
+                <img src="output/vlm_game.png" alt="Survey Agent演示">
+            </div>
+        </div>
+    </section>
+
+    <section id="examples" class="examples">
+        <div class="bg-shape-1"></div>
+        <div class="container">
+            <h2 class="section-title">参考案例</h2>
+            <p class="section-desc">以下是使用Survey Agent生成的研究综述案例，展示了工具的强大功能</p>
+            
+            <div class="example-tabs">
+                <button class="tab-btn active" onclick="openTab('tab1')">VLM与游戏研究</button>
+                <button class="tab-btn" onclick="openTab('tab2')">推理研究</button>
+            </div>
+            
+            <div id="tab1" class="tab-content active">
+                <div class="example-content">
+                    <div class="example-image">
+                        <img src="output/vlm_game2.png" alt="VLM与游戏研究综述">
+                    </div>
+                    <div class="example-text">
+                        <h3>VLM与游戏研究综述</h3>
+                        <p>这份综述涵盖了视觉语言模型(VLM)在游戏领域的最新研究进展，为研究者提供了全面的文献回顾。</p>
+                        <ul>
+                            <li>双系统自适应决策框架(DSADF)</li>
+                            <li>反事实软强化学习在VLM代理中的应用</li>
+                            <li>计算机辅助设计的多模态优化</li>
+                            <li>VLM在StarCraft II等游戏中的应用</li>
+                        </ul>
+                        <a href="output/vlm_games_survey.md" class="btn btn-sm">阅读完整综述</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="tab2" class="tab-content">
+                <div class="example-content">
+                    <div class="example-image">
+                        <img src="output/reason_r1.png" alt="推理研究综述">
+                    </div>
+                    <div class="example-text">
+                        <h3>推理研究综述</h3>
+                        <p>这份综述探讨了大型语言模型推理能力的最新发展，深入解析了多种提升LLM推理能力的创新方法。</p>
+                        <ul>
+                            <li>J1：通过强化学习激励LLM模型思考</li>
+                            <li>RAIDEN-R1：通过GRPO和可验证奖励提升角色意识</li>
+                            <li>Pre-Act：多步规划和推理改进LLM代理行为</li>
+                            <li>AM-Thinking-v1：在32B尺度上推进推理前沿</li>
+                        </ul>
+                        <a href="output/reason_r1_survey.md" class="btn btn-sm">阅读完整综述</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="bg-shape-1"></div>
+        <div class="container">
+            <h2 class="section-title">核心功能</h2>
+            <p class="section-desc">我们提供一套完整的工具链，帮助研究人员自动化生成高质量研究综述</p>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>arXiv论文搜索</h3>
+                    <p>通过关键词或特定标题搜索arXiv论文库，快速定位最新研究成果</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>PDF下载与提取</h3>
+                    <p>自动下载论文PDF并提取文本内容，省去手动查询和阅读的繁琐步骤</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI论文总结</h3>
+                    <p>使用大型语言模型(包括GLM-4)智能分析论文内容，提取关键观点</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>格式化综述生成</h3>
+                    <p>创建结构良好的Markdown格式研究综述，包含论文列表和详细摘要</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="bg-shape-2"></div>
+        <div class="container">
+            <h2 class="section-title">工作原理</h2>
+            <p class="section-desc">通过四个简单步骤，自动生成全面的研究综述</p>
+            <div class="steps">
+                <div class="step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <h3>搜索相关论文</h3>
+                    <p>输入关键词或术语，搜索arXiv上的相关研究论文，精准定位研究方向</p>
+                </div>
+                <div class="step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <h3>下载并处理论文</h3>
+                    <p>自动下载PDF，提取文本内容，准备分析，节省大量手动操作时间</p>
+                </div>
+                <div class="step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">3</div>
+                    <h3>AI论文分析</h3>
+                    <p>使用先进的LLM模型分析论文内容，提取关键信息，理解研究成果</p>
+                </div>
+                <div class="step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number">4</div>
+                    <h3>生成综述文档</h3>
+                    <p>创建格式化的Markdown文档，包含论文列表和详细总结，一键生成综述</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-start">
+        <div class="bg-shape-2"></div>
+        <div class="container">
+            <h2 class="section-title">快速开始</h2>
+            <p class="section-desc">使用简单的Python代码，快速生成您自己的研究综述</p>
+            <div class="code-block">
+                <pre><code class="language-python">import os
+os.environ.update({"https_proxy": "http://127.0.0.1:7890", "http_proxy": "http://127.0.0.1:7890"})
+os.environ.update({"API_KEY": "your_api_key_here", "BASE_URL": "your_api_url"})
+
+from survey_agent.survey import generate_survey
+
+# 生成VLM和游戏相关的研究综述
+generate_survey(
+    terms=["VLM", "Games"],
+    max_results=10,
+    output_file="output/vlm_games_survey.md",
+    model_name="glm-4-air"
+)</code></pre>
+                <a href="https://github.com/linjh1118/survey_agent" class="btn btn-link"><i class="fab fa-github"></i> 查看GitHub项目</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Survey Agent</h2>
+                    <p>自动化研究调研生成工具，帮助研究人员高效生成文献综述，节省宝贵的研究时间。</p>
+                </div>
+                <div class="footer-links">
+                    <h3>项目链接</h3>
+                    <ul>
+                        <li><a href="https://github.com/linjh1118/survey_agent"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="#features">功能</a></li>
+                        <li><a href="#examples">案例</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Survey Agent. 采用MIT许可证。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS动画库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- 代码高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <script>
+        // 初始化AOS动画
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+        });
+        
+        function openTab(tabId) {
+            // 隐藏所有标签内容
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+            
+            // 移除所有标签按钮的active类
+            const tabButtons = document.getElementsByClassName('tab-btn');
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active');
+            }
+            
+            // 显示选中的标签内容
+            document.getElementById(tabId).classList.add('active');
+            
+            // 给点击的按钮添加active类
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html> 

@@ -5,8 +5,8 @@ import os
 os.environ["https_proxy"] = "http://127.0.0.1:7890"
 os.environ["http_proxy"] = "http://127.0.0.1:7890"
 # os.environ["all_proxy"] = "socks5://127.0.0.1:7890"
-os.environ["API_KEY"] = '979525e325524e629a9fe3a0d406b924.plz.use_your_case'
-os.environ["BASE_URL"] = 'https://open.bigmodel.cn/api'
+os.environ["API_KEY"] = 'YOUR_API_KEY_HERE'
+os.environ["BASE_URL"] = 'YOUR_BASE_URL_HERE'
 
 
 def main():
@@ -23,7 +23,7 @@ def main():
         max_results=10,
         output_file="output/vlm_games_survey.md",
         llm_provider="openai",  # just a python class name, not mean openai api
-        model_name="glm-4-air"
+        model_name="YOUR_MODEL_NAME_HERE",
     )
     
     '''# Option 2: Generate survey from pre-processed papers
