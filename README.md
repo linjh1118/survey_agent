@@ -37,7 +37,12 @@ This will launch a user-friendly interface where you can:
 
 📺 **User Case**
 
-![demo_mp4](https://github.com/linjh1118/survey_agent/blob/main/.github/assets/demo.mp4)
+
+<a href="https://warp.dev/llama-factory">
+    <img alt="Warp sponsorship" width="400" src="https://github.com/user-attachments/assets/c6af0ce3-c051-4e03-9686-c151a37ba364">
+</a>
+
+![demo_mp4](https://github.com/user-attachments/assets/c6af0ce3-c051-4e03-9686-c151a37ba364)
 
 <video width="100%" controls>
   <source src="output/demo.mp4" type="video/mp4">
