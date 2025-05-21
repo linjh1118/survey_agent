@@ -37,10 +37,10 @@ This will launch a user-friendly interface where you can:
 
 📺 **User Case**
 
-https://github.com/linjh1118/survey_agent/blob/main/.github/assets/demo.mp4
+![demo_mp4](https://github.com/linjh1118/survey_agent/blob/main/.github/assets/demo.mp4)
 
 <video width="100%" controls>
-  <source src="output/362_1747830210.mp4" type="video/mp4">
+  <source src="output/demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
