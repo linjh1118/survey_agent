@@ -37,12 +37,7 @@ This will launch a user-friendly interface where you can:
 
 📺 **User Case**
 
-
-<a href="https://warp.dev/llama-factory">
-    <img alt="Warp sponsorship" width="400" src="https://github.com/user-attachments/assets/c6af0ce3-c051-4e03-9686-c151a37ba364">
-</a>
-
-![demo_mp4](https://github.com/user-attachments/assets/c6af0ce3-c051-4e03-9686-c151a37ba364)
+https://github.com/user-attachments/assets/c6af0ce3-c051-4e03-9686-c151a37ba364
 
 <video width="100%" controls>
   <source src="output/demo.mp4" type="video/mp4">
