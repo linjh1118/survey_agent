@@ -6,8 +6,8 @@ from typing import List, Dict, Any, Union
 
 from tqdm import tqdm
 
-from ..arxiv.search import search_papers
-from ..arxiv.download import process_paper
+from ..arxiv_tools.search import search_papers
+from ..arxiv_tools.download import process_paper
 from ..llm.summarize import get_summarizer
 
 

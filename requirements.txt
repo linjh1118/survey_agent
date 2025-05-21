@@ -1,0 +1,8 @@
+streamlit
+arxiv
+fuzzywuzzy
+python-Levenshtein
+PyMuPDF
+tqdm
+openai
+pandas 

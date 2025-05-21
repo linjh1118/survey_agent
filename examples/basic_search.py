@@ -1,6 +1,6 @@
 from tqdm import tqdm
-from survey_agent.arxiv import search_papers
-from survey_agent.arxiv import process_paper
+from survey_agent.arxiv_tools import search_papers
+from survey_agent.arxiv_tools import process_paper
 from survey_agent.utils import save_papers_to_jsonl
 
 def main():
