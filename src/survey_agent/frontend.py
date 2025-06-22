@@ -5,12 +5,8 @@ from survey_agent.survey.generator import generate_survey, generate_markdown
 from survey_agent.arxiv_tools.search import search_papers
 from survey_agent.arxiv_tools.download import process_paper
 from survey_agent.llm.summarize import get_summarizer
-os.environ["API_KEY"] = '979525e325524e629a9fe3a0d406b924.f5e8BbGc4DpMPAbm'
-os.environ["BASE_URL"] = 'https://open.bigmodel.cn/api/paas/v4/'
-# export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
-os.environ["https_proxy"] = "http://127.0.0.1:7890"
-os.environ["http_proxy"] = "http://127.0.0.1:7890"
-os.environ["all_proxy"] = "socks5://127.0.0.1:7890"
+
+from survey_agent.env import *
 import uuid
 
 st.set_page_config(page_title="AI 论文综述生成器", layout="wide")
@@ -87,7 +83,7 @@ with st.form("query_form"):
     # llm_provider = st.selectbox("LLM 提供商", ["openai"])
     llm_provider = "openai"
     # model_name = st.text_input("LLM 模型名", "glm-4-air")
-    model_name = st.selectbox("LLM 模型名", ["glm-4-air", "glm-4-plus"])
+    model_name = st.selectbox("LLM 模型名", ['None', "glm-4-air", "glm-4-plus"])
     submitted = st.form_submit_button("开始生成综述")
 
 progress_placeholder = st.empty()
@@ -107,7 +103,11 @@ if submitted:
     # 修改原始代码部分
     processed_papers = process_papers_parallel(papers, process_paper, progress_placeholder, paper_list_placeholder)
     progress_placeholder.info("正在调用 LLM 生成总结...")
-    summarizer = get_summarizer(llm_provider, model_name)
+    # summarizer = get_summarizer(llm_provider, model_name)
+    if model_name != "None":
+        summarizer = get_summarizer(llm_provider, model_name)
+    else:
+        summarizer = get_summarizer(llm_provider)
     processed_papers = summarize_papers_parallel(processed_papers, summarizer, progress_placeholder, paper_list_placeholder)   
         
     progress_placeholder.success("全部论文处理完成，正在生成 markdown...")

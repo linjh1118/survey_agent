@@ -1,4 +1,4 @@
-# Paper List of Terms(VLM+Games)
+# Paper List of Terms(Vision Language Model+Game)
 - [25/06] **An Open-Source Software Toolkit & Benchmark Suite for the Evaluation and Adaptation of Multimodal Action Models**  
 [[Paper](http://arxiv.org/pdf/2506.09172v2)] [[Code/Page]()] [[TLDR/Notes](#an-open-source-software-toolkit-&-benchmark-suite-for-the-evaluation-and-adaptation-of-multimodal-action-models)]
 
@@ -8,17 +8,11 @@
 - [25/05] **Vision Language Models are Biased**  
 [[Paper](http://arxiv.org/pdf/2505.23941v1)] [[Code/Page]()] [[TLDR/Notes](#vision-language-models-are-biased)]
 
-- [25/05] **GAM-Agent: Game-Theoretic and Uncertainty-Aware Collaboration for Complex Visual Reasoning**  
-[[Paper](http://arxiv.org/pdf/2505.23399v1)] [[Code/Page]()] [[TLDR/Notes](#gam-agent--game-theoretic-and-uncertainty-aware-collaboration-for-complex-visual-reasoning)]
-
 - [25/05] **VideoGameBench: Can Vision-Language Models complete popular video games?**  
 [[Paper](http://arxiv.org/pdf/2505.18134v2)] [[Code/Page]()] [[TLDR/Notes](#videogamebench--can-vision-language-models-complete-popular-video-games-)]
 
 - [25/05] **VideoGameQA-Bench: Evaluating Vision-Language Models for Video Game Quality Assurance**  
 [[Paper](http://arxiv.org/pdf/2505.15952v1)] [[Code/Page](https://asgaardlab.github.io/videogameqa-bench/)] [[TLDR/Notes](#videogameqa-bench--evaluating-vision-language-models-for-video-game-quality-assurance)]
-
-- [25/05] **KORGym: A Dynamic Game Platform for LLM Reasoning Evaluation**  
-[[Paper](http://arxiv.org/pdf/2505.14552v2)] [[Code/Page]()] [[TLDR/Notes](#korgym--a-dynamic-game-platform-for-llm-reasoning-evaluation)]
 
 - [25/05] **Code2Logic: Game-Code-Driven Data Synthesis for Enhancing VLMs General Reasoning**  
 [[Paper](http://arxiv.org/pdf/2505.13886v1)] [[Code/Page](https://github.com/tongjingqi/Code2Logic.)] [[TLDR/Notes](#code2logic--game-code-driven-data-synthesis-for-enhancing-vlms-general-reasoning)]
@@ -28,6 +22,12 @@
 
 - [25/05] **DSADF: Thinking Fast and Slow for Decision Making**  
 [[Paper](http://arxiv.org/pdf/2505.08189v1)] [[Code/Page]()] [[TLDR/Notes](#dsadf--thinking-fast-and-slow-for-decision-making)]
+
+- [25/05] **Towards Efficient Online Tuning of VLM Agents via Counterfactual Soft Reinforcement Learning**  
+[[Paper](http://arxiv.org/pdf/2505.03792v2)] [[Code/Page](https://github.com/langfengQ/CoSo.)] [[TLDR/Notes](#towards-efficient-online-tuning-of-vlm-agents-via-counterfactual-soft-reinforcement-learning)]
+
+- [25/04] **Metropolis-Hastings Captioning Game: Knowledge Fusion of Vision Language Models via Decentralized Bayesian Inference**  
+[[Paper](http://arxiv.org/pdf/2504.09620v1)] [[Code/Page]()] [[TLDR/Notes](#metropolis-hastings-captioning-game--knowledge-fusion-of-vision-language-models-via-decentralized-bayesian-inference)]
 
 
 
@@ -157,44 +157,6 @@ and data are available at: vlmsarebiased.github.io.
 2. 对多领域、多任务、多模型的测试方式，为评估AI模型在真实场景下的鲁棒性提供了全面范例，可指导其他模型评估工作设计更丰富的实验。  
 3. 关于文本提示、引导策略对VLM偏见影响的研究，为优化VLM prompting策略提供了实证依据，助力后续提升模型在实际应用中应对偏见的能力。
 
-## gam-agent--game-theoretic-and-uncertainty-aware-collaboration-for-complex-visual-reasoning
-### Abstract
-We propose GAM-Agent, a game-theoretic multi-agent framework for enhancing
-vision-language reasoning. Unlike prior single-agent or monolithic models,
-GAM-Agent formulates the reasoning process as a non-zero-sum game between base
-agents--each specializing in visual perception subtasks--and a critical agent
-that verifies logic consistency and factual correctness. Agents communicate via
-structured claims, evidence, and uncertainty estimates. The framework
-introduces an uncertainty-aware controller to dynamically adjust agent
-collaboration, triggering multi-round debates when disagreement or ambiguity is
-detected. This process yields more robust and interpretable predictions.
-Experiments on four challenging benchmarks--MMMU, MMBench, MVBench, and
-V*Bench--demonstrate that GAM-Agent significantly improves performance across
-various VLM backbones. Notably, GAM-Agent boosts the accuracy of small-to-mid
-scale models (e.g., Qwen2.5-VL-7B, InternVL3-14B) by 5--6\%, and still enhances
-strong models like GPT-4o by up to 2--3\%. Our approach is modular, scalable,
-and generalizable, offering a path toward reliable and explainable multi-agent
-multimodal reasoning.
-### 🌟 论文解读 | GAM-Agent：基于博弈论与不确定性感知的多智能体复杂视觉推理协作框架
-
-### 📌 背景痛点/本文动机
-在大语言模型（LLMs）领域，多智能体协作已展现出突破单模型局限的能力，但在视觉语言模型（VLMs）领域，多智能体协作的潜力尚未充分挖掘。现有VLM方法多依赖单模型或简单集成策略，难以应对复杂视觉推理任务中的多步推理与视觉模糊等挑战。虽有部分多智能体辩论框架尝试弥补不足，但缺乏基于视觉推理的策略性交互，在高复杂度场景表现不佳。同时，现有博弈论协作方法复杂且难直接应用于视觉推理，因此本文旨在探索VLM底层架构，利用推理过程中间结果与不确定性表示，提出博弈论与不确定性感知结合的多智能体协作框架GAM - Agent，以提升复杂视觉语言推理能力。
-
-### 🚀 核心方法（介绍本文的几个创新点）
-💡 创新点1：博弈论驱动的多智能体分工协作架构  
-GAM - Agent构建了由基础智能体（Base Agents）和关键智能体（Critical Agents）组成的非零和博弈框架。基础智能体专注于不同视觉感知子任务，如目标识别、场景描述、图像文本分析等，生成初步分析与证据；关键智能体则扮演推理批判专家角色，检查基础智能体输出的事实准确性、逻辑连贯性与完整性。二者交互建模为非零和博弈，通过量化不确定性仲裁，让智能体迭代分享和完善对自身主张与证据的不确定性评估，经结构化辩论逐步减少模糊性并达成共识。  
-
-💡 创新点2：不确定性感知的动态协作机制  
-框架引入不确定性感知控制器（Debate Controller & Integrator）与一系列配套模块。不确定性量化（Uncertainty Quantification）持续评估各智能体贡献的置信度；主张解析（Claim Parser）将非结构化响应解构成结构化信息元组；证据映射（Evidence Mapping）把文本主张与图像特定视觉区域关联以锚定推理过程。控制器先评估初始共识与系统不确定性，若发现显著分歧或高不确定性则触发多轮辩论，辩论中基础智能体完善论点、关键智能体提供评估，不确定性量化指导信息动态加权整合，迭代优化集体理解直至达成稳健共识或满足终止条件。  
-
-### 📈 实验结果
-在MMMU、MMBench、MVBench和V*Bench四大极具挑战性的基准测试中，GAM - Agent在多种VLM骨干模型上均显著提升性能。对中小规模模型（如Qwen2.5 - VL - 7B、InternVL3 - 14B），准确率提升5 - 6%；对如GPT - 4o这类强模型，也能提升多达2 - 3%，有力证明了框架在不同规模VLM上的有效性与泛化性。  
-
-### 💬 可借鉴之处
-1. 模块化与可扩展性设计：GAM - Agent的模块化架构使其各组件（如基础/关键智能体、各类处理模块等）可灵活替换与扩展，为后续多智能体 multimodal推理系统设计提供了可复用的架构思路，便于结合新任务或新模型进行适配。  
-2. 不确定性感知与博弈论结合：将不确定性量化融入多智能体协作与博弈过程，为处理复杂任务中固有模糊性与分歧提供了有效范式，可启发其他需处理不确定性、追求可解释性推理的多智能体系统研究，如跨模态问答、复杂决策支持等场景。  
-3. 视觉语言推理的协作范式：为视觉语言模型突破单模型局限、提升复杂推理能力开辟了新路径，展示了多智能体分工协作在VLMs领域的巨大潜力，推动VLMs向更可靠、可解释方向发展，相关思路可迁移至其他需多维度分析与验证的AI任务中。
-
 ## videogamebench--can-vision-language-models-complete-popular-video-games-
 ### Abstract
 Vision-language models (VLMs) have achieved strong results on coding and math
@@ -285,40 +247,6 @@ available at: https://asgaardlab.github.io/videogameqa-bench/
 1. 填补领域空白：首次针对性构建游戏QA方向VLMs评估基准，为该领域后续模型研发、优化提供了标准化评估工具与参考依据；  
 2. 任务设计思路：从真实产业流程中抽象任务类型并转化为模型可评估的形式，这种贴合产业实际场景的基准构建思路，可为其他垂直领域（如影视制作QA、工业设计视觉检测等）打造AI评估基准提供借鉴；  
 3. 实验分析价值：对VLMs在各游戏QA子任务上的表现优劣分析，能指导后续模型改进方向（如强化精细视觉理解、常识融合等），也让产业界清晰知晓当前技术在游戏QA自动化上的能力边界与潜力点。
-
-## korgym--a-dynamic-game-platform-for-llm-reasoning-evaluation
-### Abstract
-Recent advancements in large language models (LLMs) underscore the need for
-more comprehensive evaluation methods to accurately assess their reasoning
-capabilities. Existing benchmarks are often domain-specific and thus cannot
-fully capture an LLM's general reasoning potential. To address this limitation,
-we introduce the Knowledge Orthogonal Reasoning Gymnasium (KORGym), a dynamic
-evaluation platform inspired by KOR-Bench and Gymnasium. KORGym offers over
-fifty games in either textual or visual formats and supports interactive,
-multi-turn assessments with reinforcement learning scenarios. Using KORGym, we
-conduct extensive experiments on 19 LLMs and 8 VLMs, revealing consistent
-reasoning patterns within model families and demonstrating the superior
-performance of closed-source models. Further analysis examines the effects of
-modality, reasoning strategies, reinforcement learning techniques, and response
-length on model performance. We expect KORGym to become a valuable resource for
-advancing LLM reasoning research and developing evaluation methodologies suited
-to complex, interactive environments.
-### 🌟 论文解读 | KORGym：为大模型推理能力评估而生的动态游戏平台
-
-### 📌 背景痛点/本文动机
-大语言模型（LLMs）的快速发展，对更全面评估其推理能力的方法提出了迫切需求。现有的基准测试往往是特定领域的，无法充分捕捉大模型的通用推理潜力。比如很多针对文本理解、逻辑推理的任务型基准，或者像AIME、PHYBench这类领域专属的测试集，都难以衡量模型在不同场景下的综合推理表现；即便一些试图覆盖更广泛推理的基准（如SuperGPQA、HLE），也受限于预训练数据的影响，没法很好地测试模型“内在”的推理技能。而游戏场景由于其在预训练语料中很少见、场景多样，成了评估通用推理能力的理想载体，但现有基于游戏的评估方法也存在不足：像LogicGame只有单轮场景，测不了长期规划；TextArena、SPINBench虽支持多轮但引入了对手动态导致干扰因素多；gg - bench又太依赖生成能力且在游戏保真度和强化学习集成上不够鲁棒。为解决这些问题，论文提出了KORGym平台。
-
-### 🚀 核心方法（介绍本文的几个创新点）
-💡 创新点1：打造多维度游戏集合的评估平台
-KORGym参考KOR - Bench的知识正交推理框架和Gymnasium强化学习环境构建，提供了超五十款文本或视觉格式的游戏，覆盖数学与逻辑推理、控制交互推理、谜题推理、空间与几何推理、策略推理、多模态推理这六个推理维度，能全面评估大模型在不同场景下的推理表现。
-💡 创新点2：模块化架构与强化学习支持
-平台由推理模块、游戏交互模块、评估模块、通信模块这四个模块化组件构成，支持多轮评估、可配置难度等级以及稳定的强化学习支持，能实现增量开发和强化学习集成，为大模型在复杂、交互式环境下的推理评估提供了灵活且强大的框架。
-
-### 📈 实验结果
-论文用KORGym对19个大语言模型（LLMs）和8个视觉 - 语言模型（VLMs）开展了大量实验，有不少关键发现：同一模型系列内推理能力的优势和劣势呈现出一致的特征；模态（文本或视觉等）会影响推理性能，且开源和闭源大模型间有不同表现模式；“思考型”模型和“非思考型”模型表现出不同行为模式；大模型在解决问题时常用显式推理范式，这可能在一定程度上限制性能；合适的强化学习能增强推理能力，还能在不同推理维度上带来更均衡的表现；同时也展现出闭源模型在推理性能上更优的特点。
-
-### 💬 可借鉴之处
-从评估方法角度，KORGym将游戏场景用于大模型推理评估，为摆脱领域特定知识束缚、测试通用推理能力提供了新思路，后续研究可参考这种用“新颖场景集合”评估模型内在推理的思路；在平台构建上，其模块化设计以及对强化学习的支持，为打造更灵活、可扩展的大模型评估框架提供了范例，不管是后续优化评估平台还是结合强化学习做模型能力提升研究，都有参考价值；在实验分析维度，论文从模型系列、模态、推理策略、强化学习技术、响应长度等多方面分析对模型性能的影响，这种多维度剖析模型表现的方式，也值得其他评估类研究借鉴，以更全面挖掘模型能力与性能波动原因。
 
 ## code2logic--game-code-driven-data-synthesis-for-enhancing-vlms-general-reasoning
 ### Abstract
@@ -455,4 +383,44 @@ System 2利用基础模型强大推理能力，从指令提示中提取线索，
 1. 跨领域理论迁移：将认知科学中“快慢思考”理论引入强化学习与基础模型结合的研究，为解决智能体泛化和协作难题提供新视角，启发后续跨学科融合类研究思路拓展。  
 2. 模块化协作范式：DSADF的双系统模块化设计，清晰划分快速响应与深度推理职能并构建互动机制，为多智能体或多模型协作完成复杂任务提供了可参考的架构范式，便于后续研究者在此基础上优化模块交互逻辑等。  
 3. 任务拆解与动态适配：借助VLM做任务拆解、记忆更新与指令生成，让RL专注单步优势领域，这种“分解 - 适配 - 提升”的思路，对处理长周期、稀疏奖励等强化学习难点任务具有借鉴价值，可指导类似复杂任务分解与智能体能力适配方案设计。 
+
+## towards-efficient-online-tuning-of-vlm-agents-via-counterfactual-soft-reinforcement-learning
+### Abstract
+Online fine-tuning vision-language model (VLM) agents with reinforcement
+learning (RL) has shown promise for equipping agents with multi-step,
+goal-oriented capabilities in dynamic environments. However, their open-ended
+textual action space and non-end-to-end nature of action generation present
+significant challenges to effective online exploration in RL, e.g., explosion
+of the exploration space. We propose a novel online fine-tuning method,
+Counterfactual Soft Reinforcement Learning (CoSo), better suited to the textual
+output space of VLM agents. Compared to prior methods that assign uniform
+uncertainty to all tokens, CoSo leverages counterfactual reasoning to
+dynamically assess the causal influence of individual tokens on post-processed
+actions. By prioritizing the exploration of action-critical tokens while
+reducing the impact of semantically redundant or low-impact tokens, CoSo
+enables a more targeted and efficient online rollout process. We provide
+theoretical analysis proving CoSo's convergence and policy improvement
+guarantees, and extensive empirical evaluations supporting CoSo's
+effectiveness. Our results across a diverse set of agent tasks, including
+Android device control, card gaming, and embodied AI, highlight its remarkable
+ability to enhance exploration efficiency and deliver consistent performance
+gains. The code is available at https://github.com/langfengQ/CoSo.
+
+
+## metropolis-hastings-captioning-game--knowledge-fusion-of-vision-language-models-via-decentralized-bayesian-inference
+### Abstract
+We propose the Metropolis-Hastings Captioning Game (MHCG), a method to fuse
+knowledge of multiple vision-language models (VLMs) by learning from each
+other. Although existing methods that combine multiple models suffer from
+inference costs and architectural constraints, MHCG avoids these problems by
+performing decentralized Bayesian inference through a process resembling a
+language game. The knowledge fusion process establishes communication between
+two VLM agents alternately captioning images and learning from each other. We
+conduct two image-captioning experiments with two VLMs, each pre-trained on a
+different dataset. The first experiment demonstrates that MHCG achieves
+consistent improvement in reference-free evaluation metrics. The second
+experiment investigates how MHCG contributes to sharing VLMs' category-level
+vocabulary by observing the occurrence of the vocabulary in the generated
+captions.
+
 

@@ -13,11 +13,9 @@ from survey_agent.llm.summarize import get_summarizer
 from survey_agent.survey.generator import generate_markdown
 
 # 设置环境变量
-os.environ["API_KEY"] = '979525e325524e629a9fe3a0d406b924.f5e8BbGc4DpMPAbm'
-os.environ["BASE_URL"] = 'https://open.bigmodel.cn/api/paas/v4/'
-os.environ["https_proxy"] = "http://127.0.0.1:7890"
-os.environ["http_proxy"] = "http://127.0.0.1:7890"
-os.environ["all_proxy"] = "socks5://127.0.0.1:7890"
+from survey_agent.env import *
+
+
 
 st.set_page_config(page_title="AI 论文综述生成器 (BIB文件版)", layout="wide")
 st.title("📚 AI 论文综述生成器 (BIB文件版) 🔬")
@@ -221,7 +219,7 @@ st.sidebar.header("⚙️ 配置选项")
 
 # LLM设置
 llm_provider = "openai"
-model_name = st.sidebar.selectbox("🤖 LLM 模型", ["glm-4-air", "glm-4-plus"])
+model_name = st.sidebar.selectbox("🤖 LLM 模型", ["glm-4-air", "glm-4-plus", "doubao"])
 
 # 并行处理设置
 max_workers = st.sidebar.slider("🔧 并行处理线程数", min_value=1, max_value=8, value=4, 

@@ -2,11 +2,12 @@ import os
 from survey_agent.survey import generate_survey_from_bib
 
 # 设置环境变量
-os.environ["https_proxy"] = "http://127.0.0.1:7890"
-os.environ["http_proxy"] = "http://127.0.0.1:7890"
-# os.environ["all_proxy"] = "socks5://127.0.0.1:7890"
-os.environ["API_KEY"] = 'YOUR_API_KEY_HERE'
-os.environ["BASE_URL"] = 'YOUR_BASE_URL_HERE'
+# 导入环境配置
+from survey_agent import env
+
+# 或者手动设置（如果需要的话）
+# os.environ["https_proxy"] = "http://127.0.0.1:7890"
+# os.environ["http_proxy"] = "http://127.0.0.1:7890"
 
 def main():
     """

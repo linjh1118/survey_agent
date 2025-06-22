@@ -2,11 +2,12 @@ from survey_agent.survey import generate_survey
 from survey_agent.utils import load_papers_from_jsonl
 import os
 
-os.environ["https_proxy"] = "http://127.0.0.1:7890"
-os.environ["http_proxy"] = "http://127.0.0.1:7890"
-# os.environ["all_proxy"] = "socks5://127.0.0.1:7890"
-os.environ["API_KEY"] = 'YOUR_API_KEY_HERE'
-os.environ["BASE_URL"] = 'YOUR_BASE_URL_HERE'
+# 导入环境配置
+from survey_agent import env
+
+# 或者手动设置（如果需要的话）
+# os.environ["https_proxy"] = "http://127.0.0.1:7890"
+# os.environ["http_proxy"] = "http://127.0.0.1:7890"
 
 
 def main():
@@ -23,7 +24,7 @@ def main():
         max_results=10,
         output_file="output/vlm_games_survey.md",
         llm_provider="openai",  # just a python class name, not mean openai api
-        model_name="YOUR_MODEL_NAME_HERE",
+        model_name="ep-20250526175303-cv654",
     )
     
     '''# Option 2: Generate survey from pre-processed papers
