@@ -31,7 +31,7 @@ pip install -e .
 The easiest way to get started is using our interactive web interface:
 
 ```bash
-streamlitrun src/survey_agent/frontend.py
+streamlit run src/survey_agent/frontend.py
 ```
 
 #### **NEW**: BIB File Interface
@@ -327,6 +327,7 @@ generate_survey(terms=["AI", "Machine Learning"], max_results=10)
 ```
 
 **Cache Statistics**: View cache performance with built-in stats:
+
 ```python
 from survey_agent.utils.cache import get_paper_cache
 cache = get_paper_cache()

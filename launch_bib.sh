@@ -1,0 +1,1 @@
+python3 -m streamlit run src/survey_agent/frontend_by_bib.py

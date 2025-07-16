@@ -24,7 +24,7 @@ def main():
         bib_file=".github/assets/导出的条目.bib",
         output_file="output/survey_from_bib_default.md",
         llm_provider="openai",
-        model_name="glm-4-air",
+        model_name="ep-20250526175303-cv654",
         pdf_dir="pdfs/"
     )
     
@@ -76,7 +76,7 @@ def main():
         bib_file=".github/assets/导出的条目.bib",
         output_file="output/survey_from_bib_custom.md",
         llm_provider="openai",
-        model_name="glm-4-air", 
+        model_name="ep-20250526175303-cv654",
         custom_prompt=custom_prompt,
         pdf_dir="pdfs/"
     )
@@ -115,7 +115,7 @@ Full Text: {pdf_text}
         bib_file=".github/assets/导出的条目.bib",
         output_file="output/survey_from_bib_english.md",
         llm_provider="openai",
-        model_name="glm-4-air",
+        model_name="ep-20250526175303-cv654",
         custom_prompt=english_prompt,
         pdf_dir="pdfs/"
     )
