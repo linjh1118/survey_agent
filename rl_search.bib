@@ -1,0 +1,408 @@
+
+@article{dong_tool-star_2025,
+	title = {Tool-{Star}: {Empowering} {LLM}-{Brained} {Multi}-{Tool} {Reasoner} via {Reinforcement} {Learning}},
+	volume = {abs/2505.16410},
+	url = {https://www.semanticscholar.org/paper/ca39d564e30c35ccc95546272903674f89e5ad0f},
+	doi = {10.48550/arXiv.2505.16410},
+	abstract = {Recently, large language models (LLMs) have shown remarkable reasoning capabilities via large-scale reinforcement learning (RL). However, leveraging the RL algorithm to empower effective multi-tool collaborative reasoning in LLMs remains an open challenge. In this paper, we introduce Tool-Star, an RL-based framework designed to empower LLMs to autonomously invoke multiple external tools during stepwise reasoning. Tool-Star integrates six types of tools and incorporates systematic designs in both data synthesis and training. To address the scarcity of tool-use data, we propose a general tool-integrated reasoning data synthesis pipeline, which combines tool-integrated prompting with hint-based sampling to automatically and scalably generate tool-use trajectories. A subsequent quality normalization and difficulty-aware classification process filters out low-quality samples and organizes the dataset from easy to hard. Furthermore, we propose a two-stage training framework to enhance multi-tool collaborative reasoning by: (1) cold-start fine-tuning, which guides LLMs to explore reasoning patterns via tool-invocation feedback; and (2) a multi-tool self-critic RL algorithm with hierarchical reward design, which reinforces reward understanding and promotes effective tool collaboration. Experimental analyses on over 10 challenging reasoning benchmarks highlight the effectiveness and efficiency of Tool-Star. The code is available at https://github.com/dongguanting/Tool-Star.},
+	journal = {ArXiv},
+	author = {Dong, Guanting and Chen, Yifei and Li, Xiaoxi and Jin, Jiajie and Qian, Hongjin and Zhu, Yutao and Mao, Hangyu and Zhou, Guorui and Dou, Zhicheng and Wen, Ji-Rong},
+	year = {2025},
+	pages = {null},
+}
+
+@article{wang_stepsearch_2025,
+	title = {{StepSearch}: {Igniting} {LLMs} {Search} {Ability} via {Step}-{Wise} {Proximal} {Policy} {Optimization}},
+	volume = {abs/2505.15107},
+	url = {https://www.semanticscholar.org/paper/53662e87ba9fc22011472ab78f49792a9ebd53c7},
+	doi = {10.48550/arXiv.2505.15107},
+	abstract = {Efficient multi-hop reasoning requires Large Language Models (LLMs) based agents to acquire high-value external knowledge iteratively. Previous work has explored reinforcement learning (RL) to train LLMs to perform search-based document retrieval, achieving notable improvements in QA performance, but underperform on complex, multi-hop QA resulting from the sparse rewards from global signal only. To address this gap in existing research, we introduce StepSearch, a framework for search LLMs that trained with step-wise proximal policy optimization method. It consists of richer and more detailed intermediate search rewards and token-level process supervision based on information gain and redundancy penalties to better guide each search step. We constructed a fine-grained question-answering dataset containing sub-question-level search trajectories based on open source datasets through a set of data pipeline method. On standard multi-hop QA benchmarks, it significantly outperforms global-reward baselines, achieving 11.2\% and 4.2\% absolute improvements for 3B and 7B models over various search with RL baselines using only 19k training data, demonstrating the effectiveness of fine-grained, stepwise supervision in optimizing deep search LLMs. Our code will be released on https://github.com/Zillwang/StepSearch.},
+	journal = {ArXiv},
+	author = {Wang, Ziliang and Zheng, Xuhui and An, Kang and Ouyang, Cijun and Cai, Jialu and Wang, Yuhang and Wu, Yichao},
+	year = {2025},
+	pages = {null},
+}
+
+@article{bai_towards_2025,
+	title = {Towards {Effective} {Code}-{Integrated} {Reasoning}},
+	url = {https://www.semanticscholar.org/paper/ac1d5df9687455f405de44ef8190aa5321a99a5b},
+	abstract = {In this paper, we investigate code-integrated reasoning, where models generate code when necessary and integrate feedback by executing it through a code interpreter. To acquire this capability, models must learn when and how to use external code tools effectively, which is supported by tool-augmented reinforcement learning (RL) through interactive learning. Despite its benefits, tool-augmented RL can still suffer from potential instability in the learning dynamics. In light of this challenge, we present a systematic approach to improving the training effectiveness and stability of tool-augmented RL for code-integrated reasoning. Specifically, we develop enhanced training strategies that balance exploration and stability, progressively building tool-use capabilities while improving reasoning performance. Through extensive experiments on five mainstream mathematical reasoning benchmarks, our model demonstrates significant performance improvements over multiple competitive baselines. Furthermore, we conduct an in-depth analysis of the mechanism and effect of code-integrated reasoning, revealing several key insights, such as the extension of model's capability boundaries and the simultaneous improvement of reasoning efficiency through code integration. All data and code for reproducing this work are available at: https://github.com/RUCAIBox/CIR.},
+	author = {Bai, Fei and Min, Yingqian and Zhang, Beichen and Chen, Zhipeng and Zhao, Wayne Xin and Fang, Lei and Liu, Zheng and Wang, Zhongyuan and Wen, Ji-Rong},
+	year = {2025},
+}
+
+@article{wang_chain--retrieval_2025,
+	title = {Chain-of-{Retrieval} {Augmented} {Generation}},
+	volume = {abs/2501.14342},
+	url = {https://www.semanticscholar.org/paper/61a955799c7429efabc46a60812ec13cb1b3fc26},
+	doi = {10.48550/arXiv.2501.14342},
+	abstract = {This paper introduces an approach for training o1-like RAG models that retrieve and reason over relevant information step by step before generating the final answer. Conventional RAG methods usually perform a single retrieval step before the generation process, which limits their effectiveness in addressing complex queries due to imperfect retrieval results. In contrast, our proposed method, CoRAG (Chain-of-Retrieval Augmented Generation), allows the model to dynamically reformulate the query based on the evolving state. To train CoRAG effectively, we utilize rejection sampling to automatically generate intermediate retrieval chains, thereby augmenting existing RAG datasets that only provide the correct final answer. At test time, we propose various decoding strategies to scale the model's test-time compute by controlling the length and number of sampled retrieval chains. Experimental results across multiple benchmarks validate the efficacy of CoRAG, particularly in multi-hop question answering tasks, where we observe more than 10 points improvement in EM score compared to strong baselines. On the KILT benchmark, CoRAG establishes a new state-of-the-art performance across a diverse range of knowledge-intensive tasks. Furthermore, we offer comprehensive analyses to understand the scaling behavior of CoRAG, laying the groundwork for future research aimed at developing factual and grounded foundation models.},
+	journal = {ArXiv},
+	author = {Wang, Liang and Chen, Haonan and Yang, Nan and Huang, Xiaolong and Dou, Zhicheng and Wei, Furu},
+	year = {2025},
+	pages = {null},
+}
+
+@article{yue_hybrid_2025,
+	title = {Hybrid {Latent} {Reasoning} via {Reinforcement} {Learning}},
+	volume = {abs/2505.18454},
+	url = {https://www.semanticscholar.org/paper/da924145e0e7323e559b8c9e964e5acf0dd3aeff},
+	doi = {10.48550/arXiv.2505.18454},
+	abstract = {Recent advances in large language models (LLMs) have introduced latent reasoning as a promising alternative to autoregressive reasoning. By performing internal computation with hidden states from previous steps, latent reasoning benefit from more informative features rather than sampling a discrete chain-of-thought (CoT) path. Yet latent reasoning approaches are often incompatible with LLMs, as their continuous paradigm conflicts with the discrete nature of autoregressive generation. Moreover, these methods rely on CoT traces for training and thus fail to exploit the inherent reasoning patterns of LLMs. In this work, we explore latent reasoning by leveraging the intrinsic capabilities of LLMs via reinforcement learning (RL). To this end, we introduce hybrid reasoning policy optimization (HRPO), an RL-based hybrid latent reasoning approach that (1) integrates prior hidden states into sampled tokens with a learnable gating mechanism, and (2) initializes training with predominantly token embeddings while progressively incorporating more hidden features. This design maintains LLMs' generative capabilities and incentivizes hybrid reasoning using both discrete and continuous representations. In addition, the hybrid HRPO introduces stochasticity into latent reasoning via token sampling, thereby enabling RL-based optimization without requiring CoT trajectories. Extensive evaluations across diverse benchmarks show that HRPO outperforms prior methods in both knowledge- and reasoning-intensive tasks. Furthermore, HRPO-trained LLMs remain interpretable and exhibit intriguing behaviors like cross-lingual patterns and shorter completion lengths, highlighting the potential of our RL-based approach and offer insights for future work in latent reasoning.},
+	journal = {ArXiv},
+	author = {Yue, Zhenrui and Jin, Bowen and Zeng, Huimin and Zhuang, Honglei and Qin, Zhen and Yoon, Jinsung and Shang, Lanyu and Han, Jiawei and Wang, Dong},
+	year = {2025},
+	pages = {null},
+}
+
+@article{jin_empirical_2025,
+	title = {An {Empirical} {Study} on {Reinforcement} {Learning} for {Reasoning}-{Search} {Interleaved} {LLM} {Agents}},
+	url = {https://www.semanticscholar.org/paper/c4adaa35132733efc484b50fcd867a7da86b3f82},
+	abstract = {Reinforcement learning (RL) has demonstrated strong potential in training large language models (LLMs) capable of complex reasoning for real-world problem solving. More recently, RL has been leveraged to create sophisticated LLM-based search agents that adeptly combine reasoning with search engine use. While the use of RL for training search agents is promising, the optimal design of such agents remains not fully understood. In particular, key factors – such as (1) reward formulation, (2) the choice and characteristics of the underlying LLM, and (3) the role of the search engine in the RL process – require further investigation. In this work, we conduct comprehensive empirical studies to systematically investigate these and offer actionable insights. We highlight several key findings: format rewards are effective in improving final performance, whereas intermediate retrieval rewards have limited impact; the scale and initialization of the LLM (general-purpose vs. reasoning-specialized) significantly influence RL outcomes; and the choice of search engine plays a critical role in shaping RL training dynamics and the robustness of the trained agent during inference. These establish important guidelines for successfully building and deploying LLM-based search agents in real-world applications. Code is available at https://github.com/PeterGriffinJin/Search-R1.},
+	author = {Jin, Bowen and Yoon, Jinsung and Kargupta, Priyanka and Arik, Sercan Ö and Han, Jiawei},
+	year = {2025},
+}
+
+@article{zhang_computational_2025,
+	title = {Computational {Thinking} {Reasoning} in {Large} {Language} {Models}},
+	url = {https://www.semanticscholar.org/paper/588da2fdffb7b2c87f481e581bc7657e3dae6107},
+	abstract = {While large language models (LLMs) have demonstrated remarkable reasoning capabilities, they often struggle with complex tasks that require specific thinking paradigms, such as divide-and-conquer and procedural deduction, {\textbackslash}etc Previous researches integrate external, reliable tools to alleviate logical inconsistencies and hallucinations in LLMs' problem-solving processes. However, we argue that the root challenge is more profound: LLMs lack the complex thinking paradigms (ıe, computational thinking) during reasoning. In this paper, we propose Computational Thinking Model (CTM), a novel framework that incorporates computational thinking paradigms into LLMs. This framework enables LLMs to reformulate complex problems through decomposition, abstraction, reduction, and simulation, among other techniques. Specifically, live code execution is seamlessly integrated into the reasoning process, allowing CTM to think by computing. CTM directly instills computational thinking objectives into LLMs through tailored reinforcement learning rewards, which encourages problem simplification, modular planning, and iterative verification. We conduct extensive evaluations on multiple code generation and mathematical benchmarks. The results demonstrate that CTM outperforms conventional reasoning models and tool-augmented baselines in terms of accuracy, interpretability, and generalizability. We hope this study offers valuable insights for AI reasoning, where LLMs can transform problems into robust, verifiable, and scalable computational workflows, much like computer scientists do.},
+	author = {Zhang, Kechi and Li, Ge and Li, Jia and Zhang, Huangzhao and Xu, Jingjing and Zhu, Hao and Wang, Lecheng and Dong, Yihong and Mai, Jing and Gu, Bin and Jin, Zhi},
+	year = {2025},
+}
+
+@article{yao_diversity-aware_2025,
+	title = {Diversity-{Aware} {Policy} {Optimization} for {Large} {Language} {Model} {Reasoning}},
+	url = {https://www.semanticscholar.org/paper/4a0be5039b2d462fedafec282ac19dce5746dad8},
+	abstract = {The reasoning capabilities of large language models (LLMs) have advanced rapidly, particularly following the release of DeepSeek R1, which has inspired a surge of research into data quality and reinforcement learning (RL) algorithms. Despite the pivotal role diversity plays in RL, its influence on LLM reasoning remains largely underexplored. To bridge this gap, this work presents a systematic investigation into the impact of diversity in RL-based training for LLM reasoning, and proposes a novel diversity-aware policy optimization method. Across evaluations on 12 LLMs, we observe a strong positive correlation between the solution diversity and Potential at k (a novel metric quantifying an LLM's reasoning potential) in high-performing models. This finding motivates our method to explicitly promote diversity during RL training. Specifically, we design a token-level diversity and reformulate it into a practical objective, then we selectively apply it to positive samples. Integrated into the R1-zero training framework, our method achieves a 3.5 percent average improvement across four mathematical reasoning benchmarks, while generating more diverse and robust solutions.},
+	author = {Yao, Jian and Cheng, Ran and Wu, Xingyu and Wu, Jibin and Tan, Kay Chen},
+	year = {2025},
+}
+
+@article{qian_scent_2025,
+	title = {Scent of {Knowledge}: {Optimizing} {Search}-{Enhanced} {Reasoning} with {Information} {Foraging}},
+	volume = {abs/2505.09316},
+	url = {https://www.semanticscholar.org/paper/c778fad9acef0847c4f4e0f4ac033b7c4f1c217b},
+	doi = {10.48550/arXiv.2505.09316},
+	abstract = {Augmenting large language models (LLMs) with external retrieval has become a standard method to address their inherent knowledge cutoff limitations. However, traditional retrieval-augmented generation methods employ static, pre-inference retrieval strategies, making them inadequate for complex tasks involving ambiguous, multi-step, or evolving information needs. Recent advances in test-time scaling techniques have demonstrated significant potential in enabling LLMs to dynamically interact with external tools, motivating the shift toward adaptive inference-time retrieval. Inspired by Information Foraging Theory (IFT), we propose InForage, a reinforcement learning framework that formalizes retrieval-augmented reasoning as a dynamic information-seeking process. Unlike existing approaches, InForage explicitly rewards intermediate retrieval quality, encouraging LLMs to iteratively gather and integrate information through adaptive search behaviors. To facilitate training, we construct a human-guided dataset capturing iterative search and reasoning trajectories for complex, real-world web tasks. Extensive evaluations across general question answering, multi-hop reasoning tasks, and a newly developed real-time web QA dataset demonstrate InForage's superior performance over baseline methods. These results highlight InForage's effectiveness in building robust, adaptive, and efficient reasoning agents.},
+	journal = {ArXiv},
+	author = {Qian, Hongjin and Liu, Zheng},
+	year = {2025},
+	pages = {null},
+}
+
+@article{gao_smartrag_2024,
+	title = {{SmartRAG}: {Jointly} {Learn} {RAG}-{Related} {Tasks} {From} the {Environment} {Feedback}},
+	volume = {abs/2410.18141},
+	url = {https://www.semanticscholar.org/paper/ec9936ca344c640ef76ec551528512355a69cfc1},
+	doi = {10.48550/arXiv.2410.18141},
+	abstract = {RAG systems consist of multiple modules to work together. However, these modules are usually separately trained. We argue that a system like RAG that incorporates multiple modules should be jointly optimized to achieve optimal performance. To demonstrate this, we design a specific pipeline called \textbf{SmartRAG} that includes a policy network and a retriever. The policy network can serve as 1) a decision maker that decides when to retrieve, 2) a query rewriter to generate a query most suited to the retriever, and 3) an answer generator that produces the final response with/without the observations. We then propose to jointly optimize the whole system using a reinforcement learning algorithm, with the reward designed to encourage the system to achieve the best performance with minimal retrieval cost. When jointly optimized, all the modules can be aware of how other modules are working and thus find the best way to work together as a complete system. Empirical results demonstrate that the jointly optimized SmartRAG can achieve better performance than separately optimized counterparts.},
+	journal = {ArXiv},
+	author = {Gao, Jingsheng and Li, Linxu and Li, Weiyuan and Fu, Yuzhuo and Dai, Bin},
+	year = {2024},
+	pages = {null},
+}
+
+@article{zheng_deepresearcher_2025,
+	title = {{DeepResearcher}: {Scaling} {Deep} {Research} via {Reinforcement} {Learning} in {Real}-world {Environments}},
+	volume = {abs/2504.03160},
+	url = {https://www.semanticscholar.org/paper/4298a7bca88001f5df2d1ae15cca186d46271dc5},
+	doi = {10.48550/arXiv.2504.03160},
+	abstract = {Large Language Models (LLMs) equipped with web search capabilities have demonstrated impressive potential for deep research tasks. However, current approaches predominantly rely on either manually engineered prompts (prompt engineering-based) with brittle performance or reinforcement learning within controlled Retrieval-Augmented Generation (RAG) environments (RAG-based) that fail to capture the complexities of real-world interaction. In this paper, we introduce DeepResearcher, the first comprehensive framework for end-to-end training of LLM-based deep research agents through scaling reinforcement learning (RL) in real-world environments with authentic web search interactions. Unlike RAG-based approaches that assume all necessary information exists within a fixed corpus, our method trains agents to navigate the noisy, unstructured, and dynamic nature of the open web. We implement a specialized multi-agent architecture where browsing agents extract relevant information from various webpage structures and overcoming significant technical challenges. Extensive experiments on open-domain research tasks demonstrate that DeepResearcher achieves substantial improvements of up to 28.9 points over prompt engineering-based baselines and up to 7.2 points over RAG-based RL agents. Our qualitative analysis reveals emergent cognitive behaviors from end-to-end RL training, including the ability to formulate plans, cross-validate information from multiple sources, engage in self-reflection to redirect research, and maintain honesty when unable to find definitive answers. Our results highlight that end-to-end training in real-world web environments is not merely an implementation detail but a fundamental requirement for developing robust research capabilities aligned with real-world applications. We release DeepResearcher at https://github.com/GAIR-NLP/DeepResearcher.},
+	journal = {ArXiv},
+	author = {Zheng, Yuxiang and Fu, Dayuan and Hu, Xiangkun and Cai, Xiaojie and Ye, Lyumanshan and Lu, Pengrui and Liu, Pengfei},
+	year = {2025},
+	pages = {null},
+}
+
+@article{xu_collab-rag_2025,
+	title = {Collab-{RAG}: {Boosting} {Retrieval}-{Augmented} {Generation} for {Complex} {Question} {Answering} via {White}-{Box} and {Black}-{Box} {LLM} {Collaboration}},
+	volume = {abs/2504.04915},
+	url = {https://www.semanticscholar.org/paper/8132f76f1090659317e6a3067f13222439571ff3},
+	doi = {10.48550/arXiv.2504.04915},
+	abstract = {Retrieval-Augmented Generation (RAG) systems often struggle to handle multi-hop question-answering tasks accurately due to irrelevant context retrieval and limited complex reasoning capabilities. We introduce Collab-RAG, a collaborative training framework that leverages mutual enhancement between a white-box small language model (SLM) and a blackbox large language model (LLM) for RAG. Specifically, the SLM decomposes complex queries into simpler sub-questions, thus enhancing the accuracy of the retrieval and facilitating more effective reasoning by the black-box LLM. Concurrently, the black-box LLM provides feedback signals to improve the SLM's decomposition capability. We observe that Collab-RAG relies solely on supervision from an affordable black-box LLM without additional distillation from frontier LLMs, yet demonstrates strong generalization across multiple black-box LLMs. Experimental evaluations across five multi-hop QA datasets demonstrate that Collab-RAG substantially outperforms existing black-box-only and SLM fine-tuning baselines by 1.8\%-14.2\% on average. In particular, our fine-tuned 3B SLM surpasses a frozen 32B LLM in question decomposition, highlighting the efficiency of Collab-RAG in improving reasoning and retrieval for complex questions. The code of Collab-RAG is available on https://github.com/ritaranx/Collab-RAG/.},
+	journal = {ArXiv},
+	author = {Xu, Ran and Shi, Wenqi and Zhuang, Yuchen and Yu, Yue and Ho, Joyce C. and Wang, Haoyu and Yang, Carl},
+	year = {2025},
+	pages = {null},
+}
+
+@article{li_hallucination_2025,
+	title = {The {Hallucination} {Dilemma}: {Factuality}-{Aware} {Reinforcement} {Learning} for {Large} {Reasoning} {Models}},
+	url = {https://www.semanticscholar.org/paper/3f26226bf48bde05bccc3025d9bcf229121f7dc6},
+	abstract = {Large language models (LLMs) have significantly advanced in reasoning tasks through reinforcement learning (RL) optimization, achieving impressive capabilities across various challenging benchmarks. However, our empirical analysis reveals a critical drawback: reasoning-oriented RL fine-tuning significantly increases the prevalence of hallucinations. We theoretically analyze the RL training dynamics, identifying high-variance gradient, entropy-induced randomness, and susceptibility to spurious local optima as key factors leading to hallucinations. To address this drawback, we propose Factuality-aware Step-wise Policy Optimization (FSPO), an innovative RL fine-tuning algorithm incorporating explicit factuality verification at each reasoning step. FSPO leverages automated verification against given evidence to dynamically adjust token-level advantage values, incentivizing factual correctness throughout the reasoning process. Experiments across mathematical reasoning and hallucination benchmarks using Qwen2.5 and Llama models demonstrate that FSPO effectively reduces hallucinations while enhancing reasoning accuracy, substantially improving both reliability and performance.},
+	author = {Li, Junyi and Ng, Hwee Tou},
+	year = {2025},
+}
+
+@article{zeng_simplerl-zoo_2025,
+	title = {{SimpleRL}-{Zoo}: {Investigating} and {Taming} {Zero} {Reinforcement} {Learning} for {Open} {Base} {Models} in the {Wild}},
+	volume = {abs/2503.18892},
+	url = {https://www.semanticscholar.org/paper/16db56b5a57f2e675e5c4f60ca0fbd5764915a5e},
+	doi = {10.48550/arXiv.2503.18892},
+	abstract = {DeepSeek-R1 has shown that long chain-of-thought (CoT) reasoning can naturally emerge through a simple reinforcement learning (RL) framework with rule-based rewards, where the training may directly start from the base models-a paradigm referred to as zero RL training. Most recent efforts to reproduce zero RL training have primarily focused on the Qwen2.5 model series, which may not be representative as we find the base models already exhibit strong instruction-following and self-reflection abilities. In this work, we investigate zero RL training across 10 diverse base models, spanning different families and sizes including LLama3-8B, Mistral-7B/24B, DeepSeek-Math-7B, Qwen2.5-math-7B, and all Qwen2.5 models from 0.5B to 32B. Leveraging several key design strategies-such as adjusting format reward and controlling query difficulty-we achieve substantial improvements in both reasoning accuracy and response length across most settings. However, by carefully monitoring the training dynamics, we observe that different base models exhibit distinct patterns during training. For instance, the increased response length does not always correlate with the emergence of certain cognitive behaviors such as verification (i.e., the"aha moment"). Notably, we observe the"aha moment"for the first time in small models not from the Qwen family. We share the key designs that enable successful zero RL training, along with our findings and practices. To facilitate further research, we open-source the code, models, and analysis tools.},
+	journal = {ArXiv},
+	author = {Zeng, Weihao and Huang, Yuzhen and Liu, Qian and Liu, Wei and He, Keqing and Ma, Zejun and He, Junxian},
+	year = {2025},
+	pages = {null},
+}
+
+@article{xiong_rag-gym_2025,
+	title = {{RAG}-{Gym}: {Systematic} {Optimization} of {Language} {Agents} for {Retrieval}-{Augmented} {Generation}},
+	url = {https://www.semanticscholar.org/paper/50485355c7c21f82efce9a697046a1c0b5c9e63a},
+	abstract = {Retrieval-augmented generation (RAG) has shown great promise for knowledge-intensive tasks and recently advanced with agentic RAG, where language agents engage in multi-round interactions with external knowledge sources for adaptive information retrieval. However, existing agentic RAG methods often depend on ad-hoc prompt engineering and lack a unified optimization framework. We introduce RAG-Gym, a comprehensive platform that systematically explores three optimization dimensions: (1) prompt engineering, (2) actor tuning, and (3) critic training. For prompt engineering, we propose Re{\textasciicircum}2Search, a novel agent incorporating reasoning reflection that significantly outperforms standard prompts. In actor tuning, we evaluate three popular post-training algorithms with fine-grained process supervision and identify direct preference optimization as the most effective. We further demonstrate that a trained critic can enhance inference by selecting higher-quality intermediate reasoning steps. Together, these findings lead to the optimized Re{\textasciicircum}2Search++ agent, which surpasses most recent methods like Search-R1 by a relative increase of 3.2\% to 11.6\% in average F1. Finally, we examine the impact of different reward sources and analyze scaling properties in training and inference, offering practical insights for agentic RAG optimization. The project homepage is available at https://rag-gym.github.io.},
+	author = {Xiong, Guangzhi and Jin, Qiao and Wang, Xiao and Fang, Yin and Liu, Haolin and Yang, Yifan and Chen, Fangyuan and Song, Zhixing and Wang, Dengyu and Zhang, Minjia and Lu, Zhiyong and Zhang, Aidong},
+	year = {2025},
+}
+
+@article{zhou_passive_2025,
+	title = {From {Passive} to {Active} {Reasoning}: {Can} {Large} {Language} {Models} {Ask} the {Right} {Questions} under {Incomplete} {Information}?},
+	url = {https://www.semanticscholar.org/paper/19eb425c0d2c6318b4a597beedf23a2ae3ef5a08},
+	abstract = {While existing benchmarks probe the reasoning abilities of large language models (LLMs) across diverse domains, they predominantly assess passive reasoning, providing models with all the information needed to reach a solution. By contrast, active reasoning-where an LLM must interact with external systems to acquire missing evidence or data-has received little systematic attention. To address this shortfall, we present AR-Bench, a novel benchmark designed explicitly to evaluate an LLM's active reasoning skills. AR-Bench comprises three task families-detective cases, situation puzzles, and guessing numbers-that together simulate real-world, agentic scenarios and measure performance across commonsense, logical, and symbolic reasoning challenges. Empirical evaluation on AR-Bench demonstrates that contemporary LLMs exhibit pronounced difficulties with active reasoning: they frequently fail to acquire or leverage the information needed to solve tasks. This gap highlights a stark divergence between their passive and active reasoning abilities. Moreover, ablation studies indicate that even advanced strategies, such as tree-based searching or post-training approaches, yield only modest gains and fall short of the levels required for real-world deployment. Collectively, these findings highlight the critical need to advance methodology for active reasoning, e.g., incorporating interactive learning, real-time feedback loops, and environment-aware objectives for training. The benchmark is publicly available at: https://github.com/tmlr-group/AR-Bench.},
+	author = {Zhou, Zhanke and Feng, Xiao and Zhu, Zhaocheng and Yao, Jiangchao and Koyejo, Sanmi and Han, Bo},
+	year = {2025},
+}
+
+@article{zhang_speed-rl_2025,
+	title = {{SPEED}-{RL}: {Faster} {Training} of {Reasoning} {Models} via {Online} {Curriculum} {Learning}},
+	url = {https://www.semanticscholar.org/paper/a8b0a54975067014d4c5017a7a07b9aa05c8e8c0},
+	abstract = {Training large language models with reinforcement learning (RL) against verifiable rewards significantly enhances their reasoning abilities, yet remains computationally expensive due to inefficient uniform prompt sampling. We introduce Selective Prompting with Efficient Estimation of Difficulty (SPEED), an adaptive online RL curriculum that selectively chooses training examples of intermediate difficulty to maximize learning efficiency. Theoretically, we establish that intermediate-difficulty prompts improve the gradient estimator's signal-to-noise ratio, accelerating convergence. Empirically, our efficient implementation leads to 2x to 6x faster training without degrading accuracy, requires no manual tuning, and integrates seamlessly into standard RL algorithms.},
+	author = {Zhang, Ruiqi and Arora, Daman and Mei, Song and Zanette, Andrea},
+	year = {2025},
+}
+
+@article{sun_zerosearch_2025,
+	title = {{ZeroSearch}: {Incentivize} the {Search} {Capability} of {LLMs} without {Searching}},
+	volume = {abs/2505.04588},
+	url = {https://www.semanticscholar.org/paper/638d402d7c097391d154043554467d077f45f4b1},
+	doi = {10.48550/arXiv.2505.04588},
+	abstract = {Effective information searching is essential for enhancing the reasoning and generation capabilities of large language models (LLMs). Recent research has explored using reinforcement learning (RL) to improve LLMs' search capabilities by interacting with live search engines in real-world environments. While these approaches show promising results, they face two major challenges: (1) Uncontrolled Document Quality: The quality of documents returned by search engines is often unpredictable, introducing noise and instability into the training process. (2) Prohibitively High API Costs: RL training requires frequent rollouts, potentially involving hundreds of thousands of search requests, which incur substantial API expenses and severely constrain scalability. To address these challenges, we introduce ZeroSearch, a novel RL framework that incentivizes the capabilities of LLMs to use a real search engine with simulated searches during training. Our approach begins with lightweight supervised fine-tuning to transform the LLM into a retrieval module capable of generating both useful and noisy documents in response to a query. During RL training, we employ a curriculum-based rollout strategy that incrementally degrades the quality of generated documents, progressively eliciting the model's reasoning ability by exposing it to increasingly challenging retrieval scenarios. Extensive experiments demonstrate that ZeroSearch effectively incentivizes the search capabilities of LLMs using a 3B LLM as the retrieval module. Remarkably, a 7B retrieval module achieves comparable performance to the real search engine, while a 14B retrieval module even surpasses it. Furthermore, it generalizes well across both base and instruction-tuned models of various parameter sizes and is compatible with a wide range of RL algorithms.},
+	journal = {ArXiv},
+	author = {Sun, Hao and Qiao, Zile and Guo, Jiayan and Fan, Xuanbo and Hou, Yingyan and Jiang, Yong and Xie, Pengjun and Zhang, Yan and Huang, Fei and Zhou, Jingren},
+	year = {2025},
+	pages = {null},
+}
+
+@article{jiang_s3_2025,
+	title = {s3: {You} {Don}'t {Need} {That} {Much} {Data} to {Train} a {Search} {Agent} via {RL}},
+	volume = {abs/2505.14146},
+	url = {https://www.semanticscholar.org/paper/8b1738b888e3397bb22a8cf2f4d89721363b388b},
+	doi = {10.48550/arXiv.2505.14146},
+	abstract = {Retrieval-augmented generation (RAG) systems empower large language models (LLMs) to access external knowledge during inference. Recent advances have enabled LLMs to act as search agents via reinforcement learning (RL), improving information acquisition through multi-turn interactions with retrieval engines. However, existing approaches either optimize retrieval using search-only metrics (e.g., NDCG) that ignore downstream utility or fine-tune the entire LLM to jointly reason and retrieve-entangling retrieval with generation and limiting the real search utility and compatibility with frozen or proprietary models. In this work, we propose s3, a lightweight, model-agnostic framework that decouples the searcher from the generator and trains the searcher using a Gain Beyond RAG reward: the improvement in generation accuracy over naive RAG. s3 requires only 2.4k training samples to outperform baselines trained on over 70x more data, consistently delivering stronger downstream performance across six general QA and five medical QA benchmarks.},
+	journal = {ArXiv},
+	author = {Jiang, Pengcheng and Xu, Xueqiang and Lin, Jiacheng and Xiao, Jinfeng and Wang, Zifeng and Sun, Jimeng and Han, Jiawei},
+	year = {2025},
+	pages = {null},
+}
+
+@article{wang_reinforcement_2025,
+	title = {Reinforcement {Learning} for {Reasoning} in {Large} {Language} {Models} with {One} {Training} {Example}},
+	volume = {abs/2504.20571},
+	url = {https://www.semanticscholar.org/paper/1122b654f8b47c1aa9c04ff6bbe7561c798e2ad0},
+	doi = {10.48550/arXiv.2504.20571},
+	abstract = {We show that reinforcement learning with verifiable reward using one training example (1-shot RLVR) is effective in incentivizing the mathematical reasoning capabilities of large language models (LLMs). Applying RLVR to the base model Qwen2.5-Math-1.5B, we identify a single example that elevates model performance on MATH500 from 36.0\% to 73.6\%, and improves the average performance across six common mathematical reasoning benchmarks from 17.6\% to 35.7\%. This result matches the performance obtained using the 1.2k DeepScaleR subset (MATH500: 73.6\%, average: 35.9\%), which includes the aforementioned example. Furthermore, RLVR with only two examples even slightly exceeds these results (MATH500: 74.8\%, average: 36.6\%). Similar substantial improvements are observed across various models (Qwen2.5-Math-7B, Llama3.2-3B-Instruct, DeepSeek-R1-Distill-Qwen-1.5B), RL algorithms (GRPO and PPO), and different math examples (when employed as a single training example). In addition, we identify some interesting phenomena during 1-shot RLVR, including cross-domain generalization, increased frequency of self-reflection, and sustained test performance improvement even after the training accuracy has saturated, a phenomenon we term post-saturation generalization. Moreover, we verify that the effectiveness of 1-shot RLVR primarily arises from the policy gradient loss, distinguishing it from the"grokking"phenomenon. We also show the critical role of promoting exploration (e.g., by incorporating entropy loss with an appropriate coefficient) in 1-shot RLVR training. We also further discuss related observations about format correction, label robustness and prompt modification. These findings can inspire future work on RLVR efficiency and encourage a re-examination of recent progress and the underlying mechanisms in RLVR. Our code, model, and data are open source at https://github.com/ypwang61/One-Shot-RLVR.},
+	journal = {ArXiv},
+	author = {Wang, Yiping and Yang, Qing and Zeng, Zhiyuan and Ren, Liliang and Liu, Lucas and Peng, Baolin and Cheng, Hao and He, Xuehai and Wang, Kuan and Gao, Jianfeng and Chen, Weizhu and Wang, Shuohang and Du, S. and Shen, Yelong},
+	year = {2025},
+	pages = {null},
+}
+
+@article{yang_treerpo_2025,
+	title = {{TreeRPO}: {Tree} {Relative} {Policy} {Optimization}},
+	url = {https://www.semanticscholar.org/paper/f0143edd509e55ec2337849aa2ebef0a432f4cca},
+	abstract = {Large Language Models (LLMs) have shown remarkable reasoning capabilities through Reinforcement Learning with Verifiable Rewards (RLVR) methods. However, a key limitation of existing approaches is that rewards defined at the full trajectory level provide insufficient guidance for optimizing the intermediate steps of a reasoning process. To address this, we introduce \textbf{{\textbackslash}name}, a novel method that estimates the mathematical expectations of rewards at various reasoning steps using tree sampling. Unlike prior methods that rely on a separate step reward model, {\textbackslash}name directly estimates these rewards through this sampling process. Building on the group-relative reward training mechanism of GRPO, {\textbackslash}name innovatively computes rewards based on step-level groups generated during tree sampling. This advancement allows {\textbackslash}name to produce fine-grained and dense reward signals, significantly enhancing the learning process and overall performance of LLMs. Experimental results demonstrate that our {\textbackslash}name algorithm substantially improves the average Pass@1 accuracy of Qwen-2.5-Math on test benchmarks, increasing it from 19.0\% to 35.5\%. Furthermore, {\textbackslash}name significantly outperforms GRPO by 2.9\% in performance while simultaneously reducing the average response length by 18.1\%, showcasing its effectiveness and efficiency. Our code will be available at https://github.com/yangzhch6/TreeRPOhttps://github.com/yangzhch6/TreeRPO.},
+	author = {YANG, Zhicheng and Guo, Zhijiang and Huang, Yinya and Liang, Xiaodan and Wang, Yiwei and Tang, Jing},
+	year = {2025},
+}
+
+@article{ren_effective_2025,
+	title = {Effective and {Transparent} {RAG}: {Adaptive}-{Reward} {Reinforcement} {Learning} for {Decision} {Traceability}},
+	url = {https://www.semanticscholar.org/paper/5d37d03fea537b3c5d1c35e4178f627a8bb3f794},
+	abstract = {Retrieval-Augmented Generation (RAG) has significantly improved the performance of large language models (LLMs) on knowledge-intensive domains. However, although RAG achieved successes across distinct domains, there are still some unsolved challenges: 1) Effectiveness. Existing research mainly focuses on developing more powerful RAG retrievers, but how to enhance the generator's (LLM's) ability to utilize the retrieved information for reasoning and generation? 2) Transparency. Most RAG methods ignore which retrieved content actually contributes to the reasoning process, resulting in a lack of interpretability and visibility. To address this, we propose ARENA (Adaptive-Rewarded Evidence Navigation Agent), a transparent RAG generator framework trained via reinforcement learning (RL) with our proposed rewards. Based on the structured generation and adaptive reward calculation, our RL-based training enables the model to identify key evidence, perform structured reasoning, and generate answers with interpretable decision traces. Applied to Qwen2.5-7B-Instruct and Llama3.1-8B-Instruct, abundant experiments with various RAG baselines demonstrate that our model achieves 10-30\% improvements on all multi-hop QA datasets, which is comparable with the SOTA Commercially-developed LLMs (e.g., OpenAI-o1, DeepSeek-R1). Further analyses show that ARENA has strong flexibility to be adopted on new datasets without extra training. Our models and codes are publicly released.},
+	author = {Ren, Jingyi and Xu, Yekun and Wang, Xiaolong and Li, Weitao and Ma, Weizhi and Liu, Yang},
+	year = {2025},
+}
+
+@article{liang_sws_2025,
+	title = {{SwS}: {Self}-aware {Weakness}-driven {Problem} {Synthesis} in {Reinforcement} {Learning} for {LLM} {Reasoning}},
+	url = {https://www.semanticscholar.org/paper/cf92906ac18467b2bce3cf1cbd77bc4ed1201352},
+	abstract = {Reinforcement Learning with Verifiable Rewards (RLVR) has proven effective for training large language models (LLMs) on complex reasoning tasks, such as mathematical problem solving. A prerequisite for the scalability of RLVR is a high-quality problem set with precise and verifiable answers. However, the scarcity of well-crafted human-labeled math problems and limited-verification answers in existing distillation-oriented synthetic datasets limit their effectiveness in RL. Additionally, most problem synthesis strategies indiscriminately expand the problem set without considering the model's capabilities, leading to low efficiency in generating useful questions. To mitigate this issue, we introduce a Self-aware Weakness-driven problem Synthesis framework (SwS) that systematically identifies model deficiencies and leverages them for problem augmentation. Specifically, we define weaknesses as questions that the model consistently fails to learn through its iterative sampling during RL training. We then extract the core concepts from these failure cases and synthesize new problems to strengthen the model's weak areas in subsequent augmented training, enabling it to focus on and gradually overcome its weaknesses. Without relying on external knowledge distillation, our framework enables robust generalization byempowering the model to self-identify and address its weaknesses in RL, yielding average performance gains of 10.0\% and 7.7\% on 7B and 32B models across eight mainstream reasoning benchmarks.},
+	author = {Liang, Xiao and Li, Zhong-zhi and Gong, Yeyun and Wang, Yang and Zhang, Hengyuan and Shen, Yelong and Wu, Yingchun and Chen, Weizhu},
+	year = {2025},
+}
+
+@article{zhao_r-search_2025,
+	title = {R-{Search}: {Empowering} {LLM} {Reasoning} with {Search} via {Multi}-{Reward} {Reinforcement} {Learning}},
+	url = {https://www.semanticscholar.org/paper/3557ade184b70202c33193e860de296a42d661d4},
+	abstract = {Large language models (LLMs) have notably progressed in multi-step and long-chain reasoning. However, extending their reasoning capabilities to encompass deep interactions with search remains a non-trivial challenge, as models often fail to identify optimal reasoning-search interaction trajectories, resulting in suboptimal responses. We propose R-Search, a novel reinforcement learning framework for Reasoning-Search integration, designed to enable LLMs to autonomously execute multi-step reasoning with deep search interaction, and learn optimal reasoning search interaction trajectories via multi-reward signals, improving response quality in complex logic- and knowledge-intensive tasks. R-Search guides the LLM to dynamically decide when to retrieve or reason, while globally integrating key evidence to enhance deep knowledge interaction between reasoning and search. During RL training, R-Search provides multi-stage, multi-type rewards to jointly optimize the reasoning-search trajectory. Experiments on seven datasets show that R-Search outperforms advanced RAG baselines by up to 32.2\% (in-domain) and 25.1\% (out-of-domain). The code and data are available at https://github.com/QingFei1/R-Search.},
+	author = {Zhao, Qingfei and Wang, Ruobing and Xu, Dingling and Zha, Daren and Liu, Limin},
+	year = {2025},
+}
+
+@article{shi_pangu_2025,
+	title = {Pangu {DeepDiver}: {Adaptive} {Search} {Intensity} {Scaling} via {Open}-{Web} {Reinforcement} {Learning}},
+	url = {https://www.semanticscholar.org/paper/2b214b4219fedfefdcaa0b31232cc1d5088efb6e},
+	abstract = {Information seeking demands iterative evidence gathering and reflective reasoning, yet large language models (LLMs) still struggle with it in open-web question answering. Existing methods rely on static prompting rules or training with Wikipedia-based corpora and retrieval environments, limiting adaptability to the real-world web environment where ambiguity, conflicting evidence, and noise are prevalent. These constrained training settings hinder LLMs from learning to dynamically decide when and where to search, and how to adjust search depth and frequency based on informational demands. We define this missing capacity as Search Intensity Scaling (SIS)–the emergent skill to intensify search efforts under ambiguous or conflicting conditions, rather than settling on overconfident, under-verification answers. To study SIS, we introduce WebPuzzle, the first dataset designed to foster information-seeking behavior in open-world internet environments. WebPuzzle consists of 24K training instances and 275 test questions spanning both wiki-based and open-web queries. Building on this dataset, we propose DeepDiver, a Reinforcement Learning (RL) framework that promotes SIS by encouraging adaptive search policies through exploration under a real-world open-web environment. Experimental results show that Pangu-7B-Reasoner empowered by DeepDiver achieve performance on real-web tasks comparable to the 671B-parameter DeepSeek-R1. We detail DeepDiver's training curriculum from cold-start supervised fine-tuning to a carefully designed RL phase, and present that its capability of SIS generalizes from closed-form QA to open-ended tasks such as long-form writing. Our contributions advance adaptive information seeking in LLMs and provide a valuable benchmark and dataset for future research.},
+	author = {Shi, Wenxuan and Tan, Haochen and Kuang, Chuqiao and Li, Xiaoguang and Ren, Xiaozhe and Zhang, Chen and Chen, Hanting and Wang, Yasheng and Shang, Lifeng and Yu, Fisher and Wang, Yunhe},
+	year = {2025},
+}
+
+@article{an_dont_2025,
+	title = {Don't {Think} {Longer}, {Think} {Wisely}: {Optimizing} {Thinking} {Dynamics} for {Large} {Reasoning} {Models}},
+	url = {https://www.semanticscholar.org/paper/0e9dd674e20c59a7a78e3eab30e3881632c0bd9c},
+	abstract = {While recent success of large reasoning models (LRMs) significantly advanced LLMs' reasoning capability by optimizing the final answer accuracy using reinforcement learning, they may also drastically increase the output length due to overthinking, characterized by unnecessarily complex reasoning paths that waste computation and potentially degrade the performance. We hypothesize that such inefficiencies stem from LRMs' limited capability to dynamically select the proper modular reasoning strategies, termed thinking patterns at the right position. To investigate this hypothesis, we propose a dynamic optimization framework that segments model-generated reasoning paths into distinct thinking patterns, systematically identifying and promoting beneficial patterns that improve the answer while removing detrimental ones. Empirical analysis confirms that our optimized thinking paths yield more concise yet sufficiently informative trajectories, enhancing reasoning efficiency by reducing attention FLOPs by up to 47\% while maintaining accuracy for originally correct responses. Moreover, a non-trivial portion of originally incorrect responses are transformed into correct ones, achieving a 15.6\% accuracy improvement with reduced length. Motivated by the improvement brought by the optimized thinking paths, we apply a preference optimization technique supported by a pairwise dataset contrasting suboptimal and optimal reasoning paths. Experimental evaluations across multiple mathematical reasoning benchmarks reveal that our method notably reduces computational overhead while simultaneously improving reasoning accuracy, achieving up to a 12\% accuracy improvement and reducing token usage from approximately 5,000 to 3,000 tokens.},
+	author = {An, Sohyun and Wang, Ruochen and Zhou, Tianyi and Hsieh, Cho-Jui},
+	year = {2025},
+}
+
+@article{wang_rare_2025,
+	title = {{RARE}: {Retrieval}-{Augmented} {Reasoning} {Modeling}},
+	volume = {abs/2503.23513},
+	url = {https://www.semanticscholar.org/paper/ae54469c450c37433ff742cf6bd124dbd62cd4e2},
+	doi = {10.48550/arXiv.2503.23513},
+	abstract = {Domain-specific intelligence demands specialized knowledge and sophisticated reasoning for problem-solving, posing significant challenges for large language models (LLMs) that struggle with knowledge hallucination and inadequate reasoning capabilities under constrained parameter budgets. Inspired by Bloom's Taxonomy in educational theory, we propose Retrieval-Augmented Reasoning Modeling (RARE), a novel paradigm that decouples knowledge storage from reasoning optimization. RARE externalizes domain knowledge to retrievable sources and internalizes domain-specific reasoning patterns during training. Specifically, by injecting retrieved knowledge into training prompts with masked losses, RARE transforms learning objectives from rote memorization to contextualized reasoning. It enables models to bypass parameter-intensive memorization and prioritize the development of higher-order cognitive processes. Extensive experiments demonstrate that lightweight RARE-trained models (e.g., Llama-3.1-8B) could achieve state-of-the-art performance, surpassing retrieval-augmented GPT-4 and DeepSeek-R1 up to approximately 20\% accuracy. RARE establishes a paradigm shift where maintainable external knowledge bases synergize with compact, reasoning-optimized models, collectively driving more scalable domain-specific intelligence.},
+	journal = {ArXiv},
+	author = {Wang, Zhengren and Yu, Jiayang and Ma, Dongsheng and Chen, Zhe and Wang, Yu and Li, Zhiyu and Xiong, Feiyu and Wang, Yanfeng and Weinan, E. and Tang, Linpeng and Zhang, Wentao},
+	year = {2025},
+	pages = {null},
+}
+
+@article{huang_pitfalls_2025,
+	title = {Pitfalls of {Rule}- and {Model}-based {Verifiers} – {A} {Case} {Study} on {Mathematical} {Reasoning}},
+	url = {https://www.semanticscholar.org/paper/6f99c69faa15825a52b594af20bd21b586b1e9e8},
+	abstract = {Trustworthy verifiers are essential for the success of reinforcement learning with verifiable reward (RLVR), which is the core methodology behind various large reasoning models such as DeepSeek-R1. In complex domains like mathematical reasoning, rule-based verifiers have been widely adopted in previous works to train strong reasoning models. However, the reliability of these verifiers and their impact on the RL training process remain poorly understood. In this work, we take mathematical reasoning as a case study and conduct a comprehensive analysis of various verifiers in both static evaluation and RL training scenarios. First, we find that current open-source rule-based verifiers often fail to recognize equivalent answers presented in different formats across multiple commonly used mathematical datasets, resulting in non-negligible false negative rates. This limitation adversely affects RL training performance and becomes more pronounced as the policy model gets stronger. Subsequently, we investigate model-based verifiers as a potential solution to address these limitations. While the static evaluation shows that model-based verifiers achieve significantly higher verification accuracy, further analysis and RL training results imply that they are highly susceptible to hacking, where they misclassify certain patterns in responses as correct (i.e., false positives). This vulnerability is exploited during policy model optimization, leading to artificially inflated rewards. Our findings underscore the unique risks inherent to both rule-based and model-based verifiers, aiming to offer valuable insights to develop more robust reward systems in reinforcement learning.},
+	author = {Huang, Yuzhen and Zeng, Weihao and Zeng, Xingshan and Zhu, Qi and He, Junxian},
+	year = {2025},
+}
+
+@article{li_start_2025,
+	title = {{START}: {Self}-taught {Reasoner} with {Tools}},
+	volume = {abs/2503.04625},
+	url = {https://www.semanticscholar.org/paper/b87f2fbb88c7dcf3a4a96dc690f8f4da831112dc},
+	doi = {10.48550/arXiv.2503.04625},
+	abstract = {Large reasoning models (LRMs) like OpenAI-o1 and DeepSeek-R1 have demonstrated remarkable capabilities in complex reasoning tasks through the utilization of long Chain-of-thought (CoT). However, these models often suffer from hallucinations and inefficiencies due to their reliance solely on internal reasoning processes. In this paper, we introduce START (Self-Taught Reasoner with Tools), a novel tool-integrated long CoT reasoning LLM that significantly enhances reasoning capabilities by leveraging external tools. Through code execution, START is capable of performing complex computations, self-checking, exploring diverse methods, and self-debugging, thereby addressing the limitations of LRMs. The core innovation of START lies in its self-learning framework, which comprises two key techniques: 1) Hint-infer: We demonstrate that inserting artificially designed hints (e.g., “Wait, maybe using Python here is a good idea.”) during the inference process of a LRM effectively stimulates its ability to utilize external tools without the need for any demonstration data. Hint-infer can also serve as a simple and effective sequential test-time scaling method; 2) Hint Rejection Sampling Fine-Tuning (Hint-RFT): Hint-RFT combines Hint-infer and RFT by scoring, filtering, and modifying the reasoning trajectories with tool invocation generated by a LRM via Hint-infer, followed by fine-tuning the LRM. Through this framework, we have fine-tuned the QwQ-32B model to achieve START. On PhD-level science QA (GPQA), competition-level math benchmarks (AMC23, AIME24, AIME25), and the competition-level code benchmark (LiveCodeBench), START achieves accuracy rates of 63.6\%, 95.0\%, 66.7\%, 47.1\%, and 47.3\%, respectively. It significantly outperforms the base QwQ-32B and achieves performance comparable to the state-of-the-art open-weight model R1-Distill-Qwen-32B and the proprietary model o1-Preview.},
+	journal = {ArXiv},
+	author = {Li, Chengpeng and Xue, Mingfeng and Zhang, Zhenru and Yang, Jiaxin and Zhang, Beichen and Wang, Xiang and Yu, Bowen and Hui, Binyuan and Lin, Junyang and Liu, Dayiheng},
+	year = {2025},
+	pages = {null},
+}
+
+@article{peng_learning_2025,
+	title = {Learning to {Route} {Queries} {Across} {Knowledge} {Bases} for {Step}-wise {Retrieval}-{Augmented} {Reasoning}},
+	url = {https://www.semanticscholar.org/paper/2ec83e81e7dd800480dca6a480962a0382faf659},
+	abstract = {Multimodal Retrieval-Augmented Generation (MRAG) has shown promise in mitigating hallucinations in Multimodal Large Language Models (MLLMs) by incorporating external knowledge during generation. Existing MRAG methods typically adopt a static retrieval pipeline that fetches relevant information from multiple Knowledge Bases (KBs), followed by a refinement step. However, these approaches overlook the reasoning and planning capabilities of MLLMs to dynamically determine how to interact with different KBs during the reasoning process. To address this limitation, we propose R1-Router, a novel MRAG framework that learns to decide when and where to retrieve knowledge based on the evolving reasoning state. Specifically, R1-Router can generate follow-up queries according to the current reasoning step, routing these intermediate queries to the most suitable KB, and integrating external knowledge into a coherent reasoning trajectory to answer the original query. Furthermore, we introduce Step-wise Group Relative Policy Optimization (Step-GRPO), a tailored reinforcement learning algorithm that assigns step-specific rewards to optimize the reasoning behavior of MLLMs. Experimental results on various open-domain QA benchmarks across multiple modalities demonstrate that R1-Router outperforms baseline models by over 7\%. Further analysis shows that R1-Router can adaptively and effectively leverage diverse KBs, reducing unnecessary retrievals and improving both efficiency and accuracy.},
+	author = {Peng, Chunyi and Xu, Zhipeng and Liu, Zhenghao and Li, Yishan and Yan, Yukun and Wang, Shuo and Liu, Zhiyuan and Gu, Yu and Yu, Minghe and Yu, Ge and Sun, Maosong},
+	year = {2025},
+}
+
+@article{chen_research_2025,
+	title = {{ReSearch}: {Learning} to {Reason} with {Search} for {LLMs} via {Reinforcement} {Learning}},
+	volume = {abs/2503.19470},
+	url = {https://www.semanticscholar.org/paper/fb970ce4383a78ad52c641bc38815d78ad737aad},
+	doi = {10.48550/arXiv.2503.19470},
+	abstract = {Large Language Models (LLMs) have shown remarkable capabilities in reasoning, exemplified by the success of OpenAI-o1 and DeepSeek-R1. However, integrating reasoning with external search processes remains challenging, especially for complex multi-hop questions requiring multiple retrieval steps. We propose ReSearch, a novel framework that trains LLMs to Reason with Search via reinforcement learning without using any supervised data on reasoning steps. Our approach treats search operations as integral components of the reasoning chain, where when and how to perform searches is guided by text-based thinking, and search results subsequently influence further reasoning. We train ReSearch on Qwen2.5-7B(-Instruct) and Qwen2.5-32B(-Instruct) models and conduct extensive experiments. Despite being trained on only one dataset, our models demonstrate strong generalizability across various benchmarks. Analysis reveals that ReSearch naturally elicits advanced reasoning capabilities such as reflection and self-correction during the reinforcement learning process.},
+	journal = {ArXiv},
+	author = {Chen, Mingyang and Li, Tianpeng and Sun, Haoze and Zhou, Yijie and Zhu, Chenzheng and Wang, Haofen and Pan, Jeff Z. and Zhang, Wen and Chen, Hua-zeng and Yang, Fan and Zhou, Zenan and Chen, Weipeng},
+	year = {2025},
+	pages = {null},
+}
+
+@article{shi_iterative_2025,
+	title = {Iterative {Self}-{Incentivization} {Empowers} {Large} {Language} {Models} as {Agentic} {Searchers}},
+	url = {https://www.semanticscholar.org/paper/91c5af45193678dd19852eefb5ca855395642c69},
+	abstract = {Large language models (LLMs) have been widely integrated into information retrieval to advance traditional techniques. However, effectively enabling LLMs to seek accurate knowledge in complex tasks remains a challenge due to the complexity of multi-hop queries as well as the irrelevant retrieved content. To address these limitations, we propose EXSEARCH, an agentic search framework, where the LLM learns to retrieve useful information as the reasoning unfolds through a self-incentivized process. At each step, the LLM decides what to retrieve (thinking), triggers an external retriever (search), and extracts fine-grained evidence (recording) to support next-step reasoning. To enable LLM with this capability, EXSEARCH adopts a Generalized Expectation-Maximization algorithm. In the E-step, the LLM generates multiple search trajectories and assigns an importance weight to each; the M-step trains the LLM on them with a re-weighted loss function. This creates a self-incentivized loop, where the LLM iteratively learns from its own generated data, progressively improving itself for search. We further theoretically analyze this training process, establishing convergence guarantees. Extensive experiments on four knowledge-intensive benchmarks show that EXSEARCH substantially outperforms baselines, e.g., +7.8\% improvement on exact match score. Motivated by these promising results, we introduce EXSEARCH-Zoo, an extension that extends our method to broader scenarios, to facilitate future work.},
+	author = {Shi, Zhengliang and Yan, Lingyong and Yin, Dawei and Verberne, Suzan and Rijke, M. D. and Ren, Zhaochun},
+	year = {2025},
+}
+
+@article{kang_distilling_2025,
+	title = {Distilling {LLM} {Agent} into {Small} {Models} with {Retrieval} and {Code} {Tools}},
+	volume = {abs/2505.17612},
+	url = {https://www.semanticscholar.org/paper/d030e15e1f5a01d7e50c9a31bac80787a54fa4aa},
+	doi = {10.48550/arXiv.2505.17612},
+	abstract = {Large language models (LLMs) excel at complex reasoning tasks but remain computationally expensive, limiting their practical deployment. To address this, recent works have focused on distilling reasoning capabilities into smaller language models (sLMs) using chain-of-thought (CoT) traces from teacher LLMs. However, this approach struggles in scenarios requiring rare factual knowledge or precise computation, where sLMs often hallucinate due to limited capability. In this work, we propose Agent Distillation, a framework for transferring not only reasoning capability but full task-solving behavior from LLM-based agents into sLMs with retrieval and code tools. We improve agent distillation along two complementary axes: (1) we introduce a prompting method called first-thought prefix to enhance the quality of teacher-generated trajectories; and (2) we propose a self-consistent action generation for improving test-time robustness of small agents. We evaluate our method on eight reasoning tasks across factual and mathematical domains, covering both in-domain and out-of-domain generalization. Our results show that sLMs as small as 0.5B, 1.5B, 3B parameters can achieve performance competitive with next-tier larger 1.5B, 3B, 7B models fine-tuned using CoT distillation, demonstrating the potential of agent distillation for building practical, tool-using small agents. Our code is available at https://github.com/Nardien/agent-distillation.},
+	journal = {ArXiv},
+	author = {Kang, Minki and Jeong, Jongwon and Lee, Seanie and Cho, Jaewoong and Hwang, Sung Ju},
+	year = {2025},
+	pages = {null},
+}
+
+@article{wu_search_2025,
+	title = {Search {Wisely}: {Mitigating} {Sub}-optimal {Agentic} {Searches} {By} {Reducing} {Uncertainty}},
+	url = {https://www.semanticscholar.org/paper/89a5223e14896e7404d8c2fbd246f989ab3bcaac},
+	abstract = {Agentic Retrieval-Augmented Generation (RAG) systems enhance Large Language Models (LLMs) by enabling dynamic, multi-step reasoning and information retrieval. However, these systems often exhibit sub-optimal search behaviors like over-search (retrieving redundant information) and under-search (failing to retrieve necessary information), which hinder efficiency and reliability. This work formally defines and quantifies these behaviors, revealing their prevalence across multiple QA datasets and agentic RAG systems (e.g., one model could have avoided searching in 27.7\% of its search steps). Furthermore, we demonstrate a crucial link between these inefficiencies and the models' uncertainty regarding their own knowledge boundaries, where response accuracy correlates with model's uncertainty in its search decisions. To address this, we propose β-GRPO, a reinforcement learning-based training method that incorporates confidence threshold to reward high-certainty search decisions. Experiments on seven QA benchmarks show that β-GRPO enable a 3B model with better agentic RAG ability, outperforming other strong baselines with a 4\% higher average exact match score.},
+	author = {Wu, Peilin and Zhang, Mian and Zhang, Xinlu and Du, Xinya and Chen, Z.},
+	year = {2025},
+}
+
+@article{yang_select2reason_2025,
+	title = {{Select2Reason}: {Efficient} {Instruction}-{Tuning} {Data} {Selection} for {Long}-{CoT} {Reasoning}},
+	volume = {abs/2505.17266},
+	url = {https://www.semanticscholar.org/paper/235de042668f48ba799a2d2c5c86f403f8b60d2b},
+	doi = {10.48550/arXiv.2505.17266},
+	abstract = {A practical approach to activate long chain-of-thoughts reasoning ability in pre-trained large language models is to perform supervised fine-tuning on instruction datasets synthesized by strong Large Reasoning Models such as DeepSeek-R1, offering a cost-effective alternative to reinforcement learning. However, large-scale instruction sets with more than 100k samples incur significant training overhead, while effective strategies for automatic long-CoT instruction selection still remain unexplored. In this work, we propose Select2Reason, a novel and efficient instruction-tuning data selection framework for long-CoT reasoning. From the perspective of emergence of rethinking behaviors like self-correction and backtracking, we investigate common metrics that may determine the quality of long-CoT reasoning instructions. Select2Reason leverages a quantifier to estimate difficulty of question and jointly incorporates a reasoning trace length-based heuristic through a weighted scheme for ranking to prioritize high-utility examples. Empirical results on OpenR1-Math-220k demonstrate that fine-tuning LLM on only 10\% of the data selected by Select2Reason achieves performance competitive with or superior to full-data tuning and open-source baseline OpenR1-Qwen-7B across three competition-level and six comprehensive mathematical benchmarks. Further experiments highlight the scalability in varying data size, efficiency during inference, and its adaptability to other instruction pools with minimal cost.},
+	journal = {ArXiv},
+	author = {Yang, Cehao and Lin, Xueyuan and Xu, Chengjin and Jiang, Xuhui and Wu, Xiaojun and Liu, Honghao and Xiong, Hui and Guo, Jian},
+	year = {2025},
+	pages = {null},
+}
+
+@article{shi_search_2025,
+	title = {Search and {Refine} {During} {Think}: {Autonomous} {Retrieval}-{Augmented} {Reasoning} of {LLMs}},
+	volume = {abs/2505.11277},
+	url = {https://www.semanticscholar.org/paper/28827ca806a07f33f9d6f47f5a72b1dc8c7e0b91},
+	doi = {10.48550/arXiv.2505.11277},
+	abstract = {Large language models have demonstrated impressive reasoning capabilities but are inherently limited by their knowledge reservoir. Retrieval-augmented reasoning mitigates this limitation by allowing LLMs to query external resources, but existing methods often retrieve irrelevant or noisy information, hindering accurate reasoning. In this paper, we propose AutoRefine, a reinforcement learning post-training framework that adopts a new “search-and-refine-during-think” paradigm. AutoRefine introduces explicit knowledge refinement steps between successive search calls, enabling the model to iteratively filter, distill, and organize evidence before generating an answer. Furthermore, we incorporate tailored retrieval-specific rewards alongside answer correctness rewards using group relative policy optimization. Experiments on single-hop and multi-hop QA benchmarks demonstrate that AutoRefine significantly outperforms existing approaches, particularly in complex, multi-hop reasoning scenarios. Detailed analysis shows that AutoRefine issues frequent, higher-quality searches and synthesizes evidence effectively.},
+	journal = {ArXiv},
+	author = {Shi, Yaorui and Li, Shihan and Wu, Chang and Liu, Zhiyuan and Fang, Junfeng and Cai, Hengxing and Zhang, An and Wang, Xiang},
+	year = {2025},
+	pages = {null},
+}
+
+@article{jin_search-r1_2025,
+	title = {Search-{R1}: {Training} {LLMs} to {Reason} and {Leverage} {Search} {Engines} with {Reinforcement} {Learning}},
+	volume = {abs/2503.09516},
+	url = {https://www.semanticscholar.org/paper/1fcaafeb72142fe3d1a5d698a072d69778d244b0},
+	doi = {10.48550/arXiv.2503.09516},
+	abstract = {Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41\% (Qwen2.5-7B) and 20\% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.},
+	journal = {ArXiv},
+	author = {Jin, Bowen and Zeng, Hansi and Yue, Zhenrui and Wang, Dong and Zamani, Hamed and Han, Jiawei},
+	year = {2025},
+	pages = {null},
+}
+
+@article{li_webthinker_2025,
+	title = {{WebThinker}: {Empowering} {Large} {Reasoning} {Models} with {Deep} {Research} {Capability}},
+	volume = {abs/2504.21776},
+	url = {https://www.semanticscholar.org/paper/23f655a7a596ab5f431ab9e18d5c641de3f8afb9},
+	doi = {10.48550/arXiv.2504.21776},
+	abstract = {Large reasoning models (LRMs), such as OpenAI-o1 and DeepSeek-R1, demonstrate impressive long-horizon reasoning capabilities. However, their reliance on static internal knowledge limits their performance on complex, knowledge-intensive tasks and hinders their ability to produce comprehensive research reports requiring synthesis of diverse web information. To address this, we propose \textbf{WebThinker}, a deep research agent that empowers LRMs to autonomously search the web, navigate web pages, and draft research reports during the reasoning process. WebThinker integrates a \textbf{Deep Web Explorer} module, enabling LRMs to dynamically search, navigate, and extract information from the web when encountering knowledge gaps. It also employs an \textbf{Autonomous Think-Search-and-Draft strategy}, allowing the model to seamlessly interleave reasoning, information gathering, and report writing in real time. To further enhance research tool utilization, we introduce an \textbf{RL-based training strategy} via iterative online Direct Preference Optimization (DPO). Extensive experiments on complex reasoning benchmarks (GPQA, GAIA, WebWalkerQA, HLE) and scientific report generation tasks (Glaive) demonstrate that WebThinker significantly outperforms existing methods and strong proprietary systems. Our approach enhances LRM reliability and applicability in complex scenarios, paving the way for more capable and versatile deep research systems. The code is available at https://github.com/RUC-NLPIR/WebThinker.},
+	journal = {ArXiv},
+	author = {Li, Xiaoxi and Jin, Jiajie and Dong, Guanting and Qian, Hongjin and Zhu, Yutao and Wu, Yongkang and Wen, Ji-Rong and Dou, Zhicheng},
+	year = {2025},
+	pages = {null},
+}
+
+@article{wu_composerag_2025,
+	title = {{ComposeRAG}: {A} {Modular} and {Composable} {RAG} for {Corpus}-{Grounded} {Multi}-{Hop} {Question} {Answering}},
+	url = {https://www.semanticscholar.org/paper/7ed25c318da6dc16e0d323f0e40606132da3ba92},
+	abstract = {Retrieval-Augmented Generation (RAG) systems are increasingly diverse, yet many suffer from monolithic designs that tightly couple core functions like query reformulation, retrieval, reasoning, and verification. This limits their interpretability, systematic evaluation, and targeted improvement, especially for complex multi-hop question answering. We introduce ComposeRAG, a novel modular abstraction that decomposes RAG pipelines into atomic, composable modules. Each module, such as Question Decomposition, Query Rewriting, Retrieval Decision, and Answer Verification, acts as a parameterized transformation on structured inputs/outputs, allowing independent implementation, upgrade, and analysis. To enhance robustness against errors in multi-step reasoning, ComposeRAG incorporates a self-reflection mechanism that iteratively revisits and refines earlier steps upon verification failure. Evaluated on four challenging multi-hop QA benchmarks, ComposeRAG consistently outperforms strong baselines in both accuracy and grounding fidelity. Specifically, it achieves up to a 15\% accuracy improvement over fine-tuning-based methods and up to a 5\% gain over reasoning-specialized pipelines under identical retrieval conditions. Crucially, ComposeRAG significantly enhances grounding: its verification-first design reduces ungrounded answers by over 10\% in low-quality retrieval settings, and by approximately 3\% even with strong corpora. Comprehensive ablation studies validate the modular architecture, demonstrating distinct and additive contributions from each component. These findings underscore ComposeRAG's capacity to deliver flexible, transparent, scalable, and high-performing multi-hop reasoning with improved grounding and interpretability.},
+	author = {Wu, Ruofan and Lee, Youngwon and Shu, Fan and Xu, Danmei and Hwang, Seung-won and Yao, Zhewei and He, Yuxiong and Yan, Feng},
+	year = {2025},
+}
+
+@article{li_cort_2025,
+	title = {{CoRT}: {Code}-integrated {Reasoning} within {Thinking}},
+	url = {https://www.semanticscholar.org/paper/eff086f0a6d66b6514322c6832f2469d057f33e3},
+	abstract = {Large Reasoning Models (LRMs) like o1 and DeepSeek-R1 have shown remarkable progress in natural language reasoning with long chain-of-thought (CoT), yet they remain inefficient or inaccurate when handling complex mathematical operations. Addressing these limitations through computational tools (e.g., computation libraries and symbolic solvers) is promising, but it introduces a technical challenge: Code Interpreter (CI) brings external knowledge beyond the model's internal text representations, thus the direct combination is not efficient. This paper introduces CoRT, a post-training framework for teaching LRMs to leverage CI effectively and efficiently. As a first step, we address the data scarcity issue by synthesizing code-integrated reasoning data through Hint-Engineering, which strategically inserts different hints at appropriate positions to optimize LRM-CI interaction. We manually create 30 high-quality samples, upon which we post-train models ranging from 1.5B to 32B parameters, with supervised fine-tuning, rejection fine-tuning and reinforcement learning. Our experimental results demonstrate that Hint-Engineering models achieve 4\% and 8\% absolute improvements on DeepSeek-R1-Distill-Qwen-32B and DeepSeek-R1-Distill-Qwen-1.5B respectively, across five challenging mathematical reasoning datasets. Furthermore, Hint-Engineering models use about 30\% fewer tokens for the 32B model and 50\% fewer tokens for the 1.5B model compared with the natural language models. The models and code are available at https://github.com/ChengpengLi1003/CoRT.},
+	author = {Li, Chengpeng and Tang, Zhengyang and Li, Ziniu and Xue, Mingfeng and Bao, Keqin and Ding, Tian and Sun, Ruoyu and Wang, Benyou and Wang, Xiang and Lin, Junyang and Liu, Dayiheng},
+	year = {2025},
+}
+
+@article{xie_interleaved_2025,
+	title = {Interleaved {Reasoning} for {Large} {Language} {Models} via {Reinforcement} {Learning}},
+	url = {https://www.semanticscholar.org/paper/121b2ea3770c1e5627846f06b58ada4d886a7f01},
+	abstract = {Long chain-of-thought (CoT) significantly enhances large language models' (LLM) reasoning capabilities. However, the extensive reasoning traces lead to inefficiencies and an increased time-to-first-token (TTFT). We propose a novel training paradigm that uses reinforcement learning (RL) to guide reasoning LLMs to interleave thinking and answering for multi-hop questions. We observe that models inherently possess the ability to perform interleaved reasoning, which can be further enhanced through RL. We introduce a simple yet effective rule-based reward to incentivize correct intermediate steps, which guides the policy model toward correct reasoning paths by leveraging intermediate signals generated during interleaved reasoning. Extensive experiments conducted across five diverse datasets and three RL algorithms (PPO, GRPO, and REINFORCE++) demonstrate consistent improvements over traditional think-answer reasoning, without requiring external tools. Specifically, our approach reduces TTFT by over 80\% on average and improves up to 19.3\% in Pass@1 accuracy. Furthermore, our method, trained solely on question answering and logical reasoning datasets, exhibits strong generalization ability to complex reasoning datasets such as MATH, GPQA, and MMLU. Additionally, we conduct in-depth analysis to reveal several valuable insights into conditional reward modeling.},
+	author = {Xie, Roy and Qiu, David and Gopinath, Deepak and Lin, Dong and Sun, Yanchao and Wang, Chong and Potdar, Saloni and Dhingra, Bhuwan},
+	year = {2025},
+}

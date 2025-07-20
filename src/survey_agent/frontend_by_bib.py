@@ -4,6 +4,7 @@ import time
 import tempfile
 import uuid
 import arxiv
+import re
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from survey_agent.arxiv_tools.download import process_paper
@@ -75,6 +76,46 @@ def fetch_arxiv_paper_parallel(arxiv_ids, progress_placeholder, paper_list_place
     # Filter out None results
     return [p for p in papers if p is not None]
 
+def search_papers_by_title_parallel(entries_without_arxiv, progress_placeholder, paper_list_placeholder, max_workers=4):
+    """并行通过标题搜索arXiv论文"""
+    found_papers = [None] * len(entries_without_arxiv)  # Pre-allocate list to maintain order
+    
+    def search_single_paper(idx_entry):
+        idx, entry = idx_entry
+        try:
+            parser = BibParser()
+            # 启用详细输出模式，在终端显示搜索过程
+            print(f"\n📋 [{idx+1}/{len(entries_without_arxiv)}] 开始搜索论文...")
+            result = parser.search_paper_by_title(entry['cleaned_title'], verbose=True)
+            return idx, result, entry
+        except Exception as e:
+            print(f"❌ Error searching paper with title '{entry['cleaned_title']}': {e}\n")
+            return idx, None, entry
+    
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Create list of (idx, entry) tuples for processing
+        futures = [executor.submit(search_single_paper, (i, entry)) 
+                  for i, entry in enumerate(entries_without_arxiv)]
+        
+        for future in as_completed(futures):
+            idx, result, entry = future.result()
+            found_papers[idx] = result
+            
+            # Update progress display
+            completed_count = sum(1 for p in found_papers if p is not None)
+            progress_placeholder.info(f"🔍 正在通过标题搜索论文 {completed_count}/{len(entries_without_arxiv)}")
+            
+            # Update paper list display
+            paper_list_placeholder.markdown(
+                "\n".join([
+                    f"- {'📄 ' if found_papers[i] is not None else '❌ '}{entries_without_arxiv[i]['cleaned_title'][:60]}..." 
+                    for i in range(len(entries_without_arxiv))
+                ])
+            )
+    
+    # Filter out None results
+    return [p for p in found_papers if p is not None]
+
 def process_papers_parallel(papers, progress_placeholder, paper_list_placeholder, pdf_dir=None, max_workers=4):
     """并行处理论文：下载PDF并提取文本"""
     processed_papers = [None] * len(papers)  # Pre-allocate list to maintain order
@@ -142,46 +183,69 @@ def generate_survey_from_bib_parallel(bib_file: str,
                                     paper_list_placeholder=None,
                                     max_workers: int = 4) -> str:
     """
-    并行版本的从BIB文件生成综述函数
+    并行版本的从BIB文件生成综述函数，支持通过标题搜索没有arXiv ID的条目
     """
-    # Step 1: Parse BIB file and extract arXiv IDs
+    # Step 1: Parse BIB file and extract arXiv IDs and entries without arXiv IDs
     if progress_placeholder:
         progress_placeholder.info(f"📚 正在解析 BIB 文件...")
     
     parser = BibParser()
     content = Path(bib_file).read_text(encoding='utf-8')
-    arxiv_ids = parser.parse_string(content)
+    parse_result = parser.parse_string(content)
     
-    if not arxiv_ids:
+    arxiv_ids = parse_result['arxiv_ids']
+    entries_without_arxiv = parse_result['entries_without_arxiv']
+    
+    if not arxiv_ids and not entries_without_arxiv:
         if progress_placeholder:
-            progress_placeholder.error("❌ 在BIB文件中没有找到arXiv ID")
+            progress_placeholder.error("❌ 在BIB文件中没有找到任何可处理的论文")
         return None
     
     if progress_placeholder:
-        progress_placeholder.info(f"✅ 找到 {len(arxiv_ids)} 个arXiv ID")
+        progress_placeholder.info(f"✅ 找到 {len(arxiv_ids)} 个arXiv ID，{len(entries_without_arxiv)} 个需要通过标题搜索的条目")
     
-    # Step 2: 并行从arXiv获取论文对象
-    if progress_placeholder:
-        progress_placeholder.info("🔍 正在从arXiv获取论文详细信息(Paper对象)...")
+    all_papers = []
     
-    papers = fetch_arxiv_paper_parallel(
-        arxiv_ids, progress_placeholder, paper_list_placeholder, max_workers
-    )
+    # Step 2: 并行从arXiv获取有ID的论文对象
+    if arxiv_ids:
+        if progress_placeholder:
+            progress_placeholder.info("🔍 正在从arXiv获取有ID的论文详细信息...")
+        
+        papers_from_ids = fetch_arxiv_paper_parallel(
+            arxiv_ids, progress_placeholder, paper_list_placeholder, max_workers
+        )
+        all_papers.extend(papers_from_ids)
+        
+        if progress_placeholder:
+            progress_placeholder.info(f"✅ 成功获取 {len(papers_from_ids)} 篇有ID的论文信息")
     
-    if not papers:
+    # Step 3: 并行通过标题搜索没有arXiv ID的论文
+    if entries_without_arxiv:
+        if progress_placeholder:
+            progress_placeholder.info("🔍 正在通过标题搜索论文...")
+        
+        papers_from_titles = search_papers_by_title_parallel(
+            entries_without_arxiv, progress_placeholder, paper_list_placeholder, max_workers
+        )
+        all_papers.extend(papers_from_titles)
+        
+        if progress_placeholder:
+            progress_placeholder.info(f"✅ 通过标题搜索成功找到 {len(papers_from_titles)} 篇论文")
+    
+    if not all_papers:
         if progress_placeholder:
             progress_placeholder.error("❌ 没有成功获取到任何论文信息")
         return None
     
     if progress_placeholder:
-        progress_placeholder.info(f"✅ 成功获取 {len(papers)} 篇论文信息")
+        progress_placeholder.info(f"✅ 总共获取 {len(all_papers)} 篇论文信息")
     
-    # Step 3: 并行处理论文 (下载PDFs和提取文本)
+    # Step 4: 并行处理论文 (下载PDFs和提取文本)
     if progress_placeholder:
         progress_placeholder.info("📥 正在下载PDFs和提取文本...")
     
     processed_papers = process_papers_parallel(
-        papers, progress_placeholder, paper_list_placeholder, pdf_dir, max_workers
+        all_papers, progress_placeholder, paper_list_placeholder, pdf_dir, max_workers
     )
     
     if not processed_papers:
@@ -189,7 +253,7 @@ def generate_survey_from_bib_parallel(bib_file: str,
             progress_placeholder.error("❌ 没有论文被成功处理")
         return None
     
-    # Step 4: 并行生成总结
+    # Step 5: 并行生成总结
     if progress_placeholder:
         progress_placeholder.info("🤖 正在使用LLM生成总结...")
     
@@ -211,6 +275,8 @@ if 'bib_content' not in st.session_state:
     st.session_state.bib_content = None
 if 'arxiv_papers' not in st.session_state:
     st.session_state.arxiv_papers = []
+if 'title_papers' not in st.session_state:
+    st.session_state.title_papers = []
 if 'all_papers' not in st.session_state:
     st.session_state.all_papers = []
 
@@ -265,36 +331,66 @@ with col1:
             preview_content = bib_content[:1000] + "..." if len(bib_content) > 1000 else bib_content
             st.text_area("文件内容", preview_content, height=200, disabled=True)
             
-            # 解析BIB文件，只提取arxiv IDs
+            # 解析BIB文件，提取arxiv IDs和需要标题搜索的条目
             try:
                 parser = BibParser()
-                arxiv_ids = parser.parse_string(bib_content)
+                parse_result = parser.parse_string(bib_content)
                 
-                if arxiv_ids:
-                    # 构造简单的论文字典列表
-                    papers = [
-                        {
-                            'arxiv_id': arxiv_id,
-                            'url': f"https://arxiv.org/abs/{arxiv_id}",
-                            'pdf_url': f"https://arxiv.org/pdf/{arxiv_id}.pdf"
-                        }
-                        for arxiv_id in arxiv_ids
-                    ]
+                arxiv_ids = parse_result['arxiv_ids']
+                entries_without_arxiv = parse_result['entries_without_arxiv']
+                
+                # 构造有arXiv ID的论文字典列表
+                arxiv_papers = [
+                    {
+                        'arxiv_id': arxiv_id,
+                        'url': f"https://arxiv.org/abs/{arxiv_id}",
+                        'pdf_url': f"https://arxiv.org/pdf/{arxiv_id}.pdf"
+                    }
+                    for arxiv_id in arxiv_ids
+                ]
+                
+                # 构造需要标题搜索的条目列表  
+                title_papers = [
+                    {
+                        'title': entry['cleaned_title'],
+                        'original_title': entry['original_title'],
+                        'authors': entry['authors'],
+                        'year': entry['year'],
+                        'key': entry['key']
+                    }
+                    for entry in entries_without_arxiv
+                ]
+                
+                # 保存到会话状态
+                st.session_state.arxiv_papers = arxiv_papers
+                st.session_state.title_papers = title_papers
+                st.session_state.all_papers = arxiv_papers + title_papers
+                
+                if arxiv_ids or entries_without_arxiv:
+                    st.success(f"✅ 成功解析BIB文件！")
+                    st.info(f"📊 找到 {len(arxiv_ids)} 个arXiv ID，{len(entries_without_arxiv)} 个需要通过标题搜索的条目")
                     
-                    # 保存到会话状态
-                    st.session_state.arxiv_papers = papers
+                    # 显示有arXiv ID的论文列表
+                    if arxiv_ids:
+                        with st.expander("📄 查看有arXiv ID的论文"):
+                            for i, arxiv_id in enumerate(arxiv_ids):
+                                st.write(f"{i+1}. **{arxiv_id}**")
+                                st.write(f"   - URL: https://arxiv.org/abs/{arxiv_id}")
                     
-                    st.success(f"✅ 成功从BIB文件中提取arXiv ID！")
-                    st.info(f"📊 找到 {len(arxiv_ids)} 个arXiv论文ID")
-                    
-                    # 显示论文ID列表
-                    with st.expander("📄 查看解析出的arXiv ID"):
-                        for i, arxiv_id in enumerate(arxiv_ids):
-                            st.write(f"{i+1}. **{arxiv_id}**")
-                            st.write(f"   - URL: https://arxiv.org/abs/{arxiv_id}")
+                    # 显示需要标题搜索的条目列表
+                    if entries_without_arxiv:
+                        with st.expander("🔍 查看需要通过标题搜索的条目"):
+                            for i, entry in enumerate(entries_without_arxiv):
+                                st.write(f"{i+1}. **{entry['cleaned_title']}**")
+                                if entry['authors']:
+                                    st.write(f"   - 作者: {entry['authors']}")
+                                if entry['year']:
+                                    st.write(f"   - 年份: {entry['year']}")
                 else:
-                    st.warning("⚠️ 没有找到任何arXiv ID")
+                    st.warning("⚠️ 没有找到任何可处理的论文")
                     st.session_state.arxiv_papers = []
+                    st.session_state.title_papers = []
+                    st.session_state.all_papers = []
             
             except Exception as e:
                 st.error(f"❌ BIB文件解析失败: {e}")
@@ -306,7 +402,7 @@ with col1:
     elif st.session_state.bib_content:
         # 如果有之前上传的文件，显示信息
         st.info("📄 已上传 BIB 文件")
-        st.info(f"📊 总共 {len(st.session_state.all_papers)} 篇论文，其中 {len(st.session_state.arxiv_papers)} 篇有 arXiv ID")
+        st.info(f"📊 总共 {len(st.session_state.all_papers)} 篇论文，其中 {len(st.session_state.arxiv_papers)} 篇有 arXiv ID，{len(st.session_state.title_papers)} 篇需要标题搜索")
 
 with col2:
     st.header("🎯 自定义 Prompt")
@@ -460,8 +556,8 @@ download_placeholder = st.empty()
 if submitted:
     if st.session_state.bib_content is None:
         st.warning("⚠️ 请先上传 BIB 文件")
-    elif len(st.session_state.arxiv_papers) == 0:
-        st.warning("⚠️ 没有找到可处理的论文（需要包含 arXiv ID）")
+    elif len(st.session_state.all_papers) == 0:
+        st.warning("⚠️ 没有找到可处理的论文")
     else:
         try:
             # 创建临时文件保存BIB内容
@@ -494,11 +590,24 @@ if submitted:
                 # 显示预览
                 summary_placeholder.markdown("### 📋 综述预览")
                 with summary_placeholder.expander("查看生成的综述", expanded=True):
-                    st.markdown(markdown_content)
+                    # 预处理markdown内容，移除代码块标记让内容正常显示
+                    def replace_code_blocks(match):
+                        return match.group(1)
+                    
+                    display_markdown = re.sub(r'```[a-zA-Z]*\n(.*?)\n```', replace_code_blocks, markdown_content, flags=re.DOTALL)
+                    st.markdown(display_markdown)
                 
                 # 生成HTML版本
                 import markdown
-                html_content = markdown.markdown(markdown_content, extensions=['tables', 'fenced_code'])
+                # 预处理markdown内容，移除代码块标记让内容正常渲染
+                processed_markdown = markdown_content
+                # 替换markdown代码块为普通段落 - 修复正则表达式
+                def replace_code_blocks(match):
+                    return match.group(1)
+                
+                processed_markdown = re.sub(r'```[a-zA-Z]*\n(.*?)\n```', replace_code_blocks, processed_markdown, flags=re.DOTALL)
+                # 生成HTML
+                html_content = markdown.markdown(processed_markdown, extensions=['tables', 'fenced_code', 'nl2br'])
                 
                 # 下载按钮
                 download_placeholder.markdown("### 📥 下载结果")
@@ -538,7 +647,14 @@ with st.expander("📖 使用说明"):
     ### 🎯 功能特点
     
     1. **BIB 文件支持**: 上传您的 BibTeX 文件，自动解析论文信息
-    2. **智能过滤**: 自动筛选包含 arXiv ID 的论文进行处理
+    2. **智能论文识别**: 
+       - 🆔 **arXiv ID 识别**: 自动提取包含 arXiv ID 的论文
+       - 🔍 **多层标题搜索**: 对没有 arXiv ID 的论文，采用三层搜索策略：
+         * 精确标题匹配
+         * 灵活标题搜索
+         * 关键词组合搜索
+       - 🧹 **标题清理**: 自动清理标题中的特殊字符（如 {}、\\ 等）
+       - 🎯 **智能匹配**: 综合词汇重叠度、字符相似度和长度相似度进行匹配
     3. **全流程并行处理**: 
        - 🔍 **并行arXiv搜索**: 同时获取多篇论文的详细信息
        - 📥 **并行PDF处理**: 同时下载和处理多个PDF文件
@@ -580,7 +696,9 @@ with st.expander("📖 使用说明"):
     
     ### ⚠️ 注意事项
     
-    - 仅支持包含 arXiv ID 的论文下载和处理
+    - 支持包含 arXiv ID 的论文和通过标题搜索的论文
+    - **标题搜索优化**: 采用多层搜索策略，显著提高匹配成功率
+    - **HTML 输出优化**: 自动处理代码块标记，确保论文内容正确渲染
     - 并行处理会提升速度，但也会增加网络和系统资源消耗
     - arXiv API有速率限制，过高的并行度可能导致请求失败
     - 建议在网络稳定的环境下使用，以获得最佳体验
@@ -588,4 +706,4 @@ with st.expander("📖 使用说明"):
 
 # 页脚
 st.markdown("---")
-st.markdown("💡 **提示**: 现在支持全流程并行处理！从arXiv搜索到PDF处理再到LLM总结，每个步骤都经过优化，大幅提升处理效率。")
+st.markdown("💡 **提示**: 现在支持智能论文识别和全流程并行处理！采用多层搜索策略提高论文匹配成功率，并优化HTML输出格式，让综述内容更完整、更美观。")
