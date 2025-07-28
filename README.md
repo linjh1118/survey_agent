@@ -10,6 +10,8 @@ A modern framework for automatically generating research surveys by searching ar
 - 🤖 Generate summaries of papers using LLMs (supports various models including GLM-4)
 - 🎯 **NEW**: Custom prompt templates for personalized summarization
 - 📁 **NEW**: Intelligent caching system for 200-1000x speedup on repeated queries
+- 🖥️ **NEW**: PDF and Notes Viewer - Browse cached PDFs with interactive interface
+- ❓ **NEW**: Batch Q&A - Ask the same question to multiple papers simultaneously
 - 📝 Create well-formatted markdown surveys with paper lists and summaries
 - 🚀 Simple and intuitive API
 - 🌐 Support for both web interface and Python API
@@ -67,7 +69,35 @@ This new interface allows you to:
   Your browser does not support the video tag.
 </video>
 
-### 2. Using Python API
+### 2. **NEW**: PDF and Notes Viewer
+
+Experience our new interactive PDF and notes management interface:
+
+```bash
+./launch_pdf_viewer.sh
+# Or manually: python3 pdf_api.py
+```
+
+Then visit: http://localhost:8002/pdf_viewer.html
+
+**Features:**
+- 📋 **View All Cached PDFs**: Browse your downloaded papers with rich metadata
+- 📄 **Rich Summary Display**: View AI-generated summaries in beautifully formatted pages
+- 🎨 **Markdown Rendering**: Full markdown support with syntax highlighting and formatting
+- 🔍 **Smart Search & Filter**: Search by title/content, filter by status, sort by date
+- ✅ **Multi-select Papers**: Select multiple papers for batch operations  
+- ❓ **Batch Q&A**: Ask the same question to selected papers simultaneously
+- 📊 **Statistics Dashboard**: Track your paper collection and cache status
+- 💾 **Auto-save Results**: All Q&A responses saved as structured Markdown files
+- 📤 **Export & Share**: Copy, export, email, or print summaries with one click
+
+**Perfect for:**
+- Literature review sessions
+- Comparative analysis across papers
+- Finding common themes in research
+- Quick reference to your paper collection
+
+### 3. Using Python API
 
 #### Standard Search API
 
@@ -221,6 +251,11 @@ survey_agent/
 ├── cache/                       # NEW: Intelligent caching system
 │   ├── README.md                # Cache documentation
 │   └── paper_summaries.json     # Cached paper summaries
+├── pdf_viewer.html              # NEW: PDF and Notes Viewer interface
+├── summary_view.html            # NEW: Individual summary display page  
+├── pdf_api.py                   # NEW: PDF Viewer backend API
+├── launch_pdf_viewer.sh         # NEW: PDF Viewer launcher script
+├── test_summary_view.html       # NEW: Testing page for summary features
 └── src/
     └── survey_agent/
         ├── arxiv_tools/         # ArXiv search and download functionality
@@ -289,6 +324,20 @@ streamlit run src/survey_agent/frontend_by_bib.py
 - Multiple prompt template options
 - Custom prompt editor with placeholder support
 - Real-time template preview
+
+### **NEW**: PDF and Notes Viewer
+
+```bash
+./launch_pdf_viewer.sh
+```
+
+**Features:**
+
+- Interactive PDF library management
+- Advanced search and filtering capabilities
+- Multi-select batch operations
+- Batch Q&A with automatic result saving
+- Real-time statistics and progress tracking
 
 ### 功能说明
 

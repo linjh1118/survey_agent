@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试摘要查看功能</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        .test-link {
+            display: block;
+            padding: 1rem;
+            margin: 1rem 0;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #495057;
+            transition: all 0.3s ease;
+        }
+        .test-link:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+        }
+        .test-title {
+            font-weight: 600;
+            color: #212529;
+        }
+        .test-desc {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 摘要查看功能测试</h1>
+    <p>点击下面的链接测试不同摘要的显示效果：</p>
+    
+    <a href="summary_view.html?arxiv_id=2507.09973" class="test-link" target="_blank">
+        <div class="test-title">测试1：Tiny Reward Models</div>
+        <div class="test-desc">arXiv ID: 2507.09973 - 简短标题测试</div>
+    </a>
+    
+    <a href="summary_view.html?arxiv_id=2507.11155" class="test-link" target="_blank">
+        <div class="test-title">测试2：视觉语言模型安全概念识别</div>
+        <div class="test-desc">arXiv ID: 2507.11155 - 长标题测试</div>
+    </a>
+    
+    <a href="summary_view.html?arxiv_id=2503.19470" class="test-link" target="_blank">
+        <div class="test-title">测试3：强化学习推理搜索</div>
+        <div class="test-desc">arXiv ID: 2503.19470 - 复杂摘要测试</div>
+    </a>
+    
+    <a href="summary_view.html?arxiv_id=nonexistent123" class="test-link" target="_blank">
+        <div class="test-title">测试4：错误处理</div>
+        <div class="test-desc">不存在的arXiv ID - 测试错误状态</div>
+    </a>
+    
+    <a href="summary_view.html" class="test-link" target="_blank">
+        <div class="test-title">测试5：缺少参数</div>
+        <div class="test-desc">没有arXiv ID参数 - 测试参数验证</div>
+    </a>
+    
+    <hr style="margin: 2rem 0;">
+    
+    <h2>📋 功能验证清单</h2>
+    <ul>
+        <li>✅ Markdown格式正确渲染（标题、列表、粗体等）</li>
+        <li>✅ 论文元信息显示完整</li>
+        <li>✅ PDF链接正常工作</li>
+        <li>✅ 复制摘要功能</li>
+        <li>✅ 导出Markdown文件</li>
+        <li>✅ 邮件分享功能</li>
+        <li>✅ 打印功能</li>
+        <li>✅ 错误状态处理</li>
+        <li>✅ 加载状态显示</li>
+        <li>✅ 返回按钮功能</li>
+    </ul>
+    
+    <hr style="margin: 2rem 0;">
+    
+    <h2>🔧 开发提示</h2>
+    <p>如果测试链接无法正常工作，请确保：</p>
+    <ol>
+        <li>PDF API服务器正在运行 (port 8002)</li>
+        <li>缓存文件 cache/paper_summaries.json 存在且包含测试数据</li>
+        <li>PDF文件存在于 pdfs/ 目录中</li>
+        <li>浏览器允许跨域请求（开发环境）</li>
+    </ol>
+    
+    <p><a href="pdf_viewer.html">← 返回PDF查看器主页</a></p>
+</body>
+</html>
