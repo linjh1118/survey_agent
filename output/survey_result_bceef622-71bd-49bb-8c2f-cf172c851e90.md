@@ -1,0 +1,2354 @@
+# Paper List of Terms(reward model+reinforcement learning)
+- [25/07] **Inverse Reinforcement Learning Meets Large Language Model Post-Training: Basics, Advances, and Opportunities**  
+[[Paper](http://arxiv.org/pdf/2507.13158v1)] [[Code/Page]()] [[TLDR/Notes](#inverse-reinforcement-learning-meets-large-language-model-post-training--basics--advances--and-opportunities)]
+
+- [25/07] **Bridging the Gap in Vision Language Models in Identifying Unsafe Concepts Across Modalities**  
+[[Paper](http://arxiv.org/pdf/2507.11155v1)] [[Code/Page]()] [[TLDR/Notes](#bridging-the-gap-in-vision-language-models-in-identifying-unsafe-concepts-across-modalities)]
+
+- [25/07] **Tiny Reward Models**  
+[[Paper](http://arxiv.org/pdf/2507.09973v1)] [[Code/Page]()] [[TLDR/Notes](#tiny-reward-models)]
+
+- [25/07] **Enhancing RLHF with Human Gaze Modeling**  
+[[Paper](http://arxiv.org/pdf/2507.09016v2)] [[Code/Page]()] [[TLDR/Notes](#enhancing-rlhf-with-human-gaze-modeling)]
+
+- [25/07] **One Token to Fool LLM-as-a-Judge**  
+[[Paper](http://arxiv.org/pdf/2507.08794v1)] [[Code/Page](https://huggingface.co/sarosavo/Master-RM)] [[TLDR/Notes](#one-token-to-fool-llm-as-a-judge)]
+
+- [25/07] **Stable Preference Optimization for LLMs: A Bilevel Approach Beyond Direct Preference Optimization**  
+[[Paper](http://arxiv.org/pdf/2507.07723v1)] [[Code/Page]()] [[TLDR/Notes](#stable-preference-optimization-for-llms--a-bilevel-approach-beyond-direct-preference-optimization)]
+
+- [25/07] **Bradley-Terry and Multi-Objective Reward Modeling Are Complementary**  
+[[Paper](http://arxiv.org/pdf/2507.07375v1)] [[Code/Page]()] [[TLDR/Notes](#bradley-terry-and-multi-objective-reward-modeling-are-complementary)]
+
+- [25/07] **Perception-Aware Policy Optimization for Multimodal Reasoning**  
+[[Paper](http://arxiv.org/pdf/2507.06448v2)] [[Code/Page](https://mikewangwzhl.github.io/PAPO.)] [[TLDR/Notes](#perception-aware-policy-optimization-for-multimodal-reasoning)]
+
+- [25/07] **Sample-Efficient Reinforcement Learning Controller for Deep Brain Stimulation in Parkinson's Disease**  
+[[Paper](http://arxiv.org/pdf/2507.06326v1)] [[Code/Page]()] [[TLDR/Notes](#sample-efficient-reinforcement-learning-controller-for-deep-brain-stimulation-in-parkinson-s-disease)]
+
+- [25/07] **A Technical Survey of Reinforcement Learning Techniques for Large Language Models**  
+[[Paper](http://arxiv.org/pdf/2507.04136v1)] [[Code/Page]()] [[TLDR/Notes](#a-technical-survey-of-reinforcement-learning-techniques-for-large-language-models)]
+
+- [25/07] **ARF-RLHF: Adaptive Reward-Following for RLHF through Emotion-Driven Self-Supervision and Trace-Biased Dynamic Optimization**  
+[[Paper](http://arxiv.org/pdf/2507.03069v1)] [[Code/Page]()] [[TLDR/Notes](#arf-rlhf--adaptive-reward-following-for-rlhf-through-emotion-driven-self-supervision-and-trace-biased-dynamic-optimization)]
+
+- [25/07] **Self-Guided Process Reward Optimization with Redefined Step-wise Advantage for Process Reinforcement Learning**  
+[[Paper](http://arxiv.org/pdf/2507.01551v2)] [[Code/Page]()] [[TLDR/Notes](#self-guided-process-reward-optimization-with-redefined-step-wise-advantage-for-process-reinforcement-learning)]
+
+- [25/07] **Activation Reward Models for Few-Shot Model Alignment**  
+[[Paper](http://arxiv.org/pdf/2507.01368v1)] [[Code/Page]()] [[TLDR/Notes](#activation-reward-models-for-few-shot-model-alignment)]
+
+- [25/07] **Skywork-Reward-V2: Scaling Preference Data Curation via Human-AI Synergy**  
+[[Paper](http://arxiv.org/pdf/2507.01352v2)] [[Code/Page]()] [[TLDR/Notes](#skywork-reward-v2--scaling-preference-data-curation-via-human-ai-synergy)]
+
+- [25/07] **SAFER: Probing Safety in Reward Models with Sparse Autoencoder**  
+[[Paper](http://arxiv.org/pdf/2507.00665v1)] [[Code/Page](https://github.com/xzy-101/SAFER-code.)] [[TLDR/Notes](#safer--probing-safety-in-reward-models-with-sparse-autoencoder)]
+
+- [25/07] **Residual Reward Models for Preference-based Reinforcement Learning**  
+[[Paper](http://arxiv.org/pdf/2507.00611v1)] [[Code/Page](https://sunlighted.github.io/RRM-web/.)] [[TLDR/Notes](#residual-reward-models-for-preference-based-reinforcement-learning)]
+
+- [25/06] **Generalist Reward Models: Found Inside Large Language Models**  
+[[Paper](http://arxiv.org/pdf/2506.23235v1)] [[Code/Page]()] [[TLDR/Notes](#generalist-reward-models--found-inside-large-language-models)]
+
+- [25/06] **Listener-Rewarded Thinking in VLMs for Image Preferences**  
+[[Paper](http://arxiv.org/pdf/2506.22832v2)] [[Code/Page](https://huggingface.co/alexgambashidze/qwen2.5vl_image_preference_reasoner.)] [[TLDR/Notes](#listener-rewarded-thinking-in-vlms-for-image-preferences)]
+
+- [25/06] **TROFI: Trajectory-Ranked Offline Inverse Reinforcement Learning**  
+[[Paper](http://arxiv.org/pdf/2506.22008v1)] [[Code/Page]()] [[TLDR/Notes](#trofi--trajectory-ranked-offline-inverse-reinforcement-learning)]
+
+- [25/06] **ReasonFlux-PRM: Trajectory-Aware PRMs for Long Chain-of-Thought Reasoning in LLMs**  
+[[Paper](http://arxiv.org/pdf/2506.18896v1)] [[Code/Page](https://github.com/Gen-Verse/ReasonFlux)] [[TLDR/Notes](#reasonflux-prm--trajectory-aware-prms-for-long-chain-of-thought-reasoning-in-llms)]
+
+- [25/06] **LongWriter-Zero: Mastering Ultra-Long Text Generation via Reinforcement Learning**  
+[[Paper](http://arxiv.org/pdf/2506.18841v1)] [[Code/Page](https://huggingface.co/THU-KEG/LongWriter-Zero-32B)] [[TLDR/Notes](#longwriter-zero--mastering-ultra-long-text-generation-via-reinforcement-learning)]
+
+- [25/06] **Reflective Verbal Reward Design for Pluralistic Alignment**  
+[[Paper](http://arxiv.org/pdf/2506.17834v1)] [[Code/Page]()] [[TLDR/Notes](#reflective-verbal-reward-design-for-pluralistic-alignment)]
+
+- [25/06] **ReasonGRM: Enhancing Generative Reward Models through Large Reasoning Models**  
+[[Paper](http://arxiv.org/pdf/2506.16712v1)] [[Code/Page]()] [[TLDR/Notes](#reasongrm--enhancing-generative-reward-models-through-large-reasoning-models)]
+
+- [25/06] **AutoRule: Reasoning Chain-of-thought Extracted Rule-based Rewards Improve Preference Learning**  
+[[Paper](http://arxiv.org/pdf/2506.15651v1)] [[Code/Page](https://github.com/cxcscmu/AutoRule.)] [[TLDR/Notes](#autorule--reasoning-chain-of-thought-extracted-rule-based-rewards-improve-preference-learning)]
+
+- [25/06] **Reward Models in Deep Reinforcement Learning: A Survey**  
+[[Paper](http://arxiv.org/pdf/2506.15421v1)] [[Code/Page]()] [[TLDR/Notes](#reward-models-in-deep-reinforcement-learning--a-survey)]
+
+- [25/06] **Adaptive Accompaniment with ReaLchords**  
+[[Paper](http://arxiv.org/pdf/2506.14723v1)] [[Code/Page]()] [[TLDR/Notes](#adaptive-accompaniment-with-realchords)]
+
+- [25/06] **SENIOR: Efficient Query Selection and Preference-Guided Exploration in Preference-based Reinforcement Learning**  
+[[Paper](http://arxiv.org/pdf/2506.14648v1)] [[Code/Page]()] [[TLDR/Notes](#senior--efficient-query-selection-and-preference-guided-exploration-in-preference-based-reinforcement-learning)]
+
+- [25/06] **TGDPO: Harnessing Token-Level Reward Guidance for Enhancing Direct Preference Optimization**  
+[[Paper](http://arxiv.org/pdf/2506.14574v1)] [[Code/Page](https://github.com/dvlab-research/TGDPO.)] [[TLDR/Notes](#tgdpo--harnessing-token-level-reward-guidance-for-enhancing-direct-preference-optimization)]
+
+- [25/06] **GRAM: A Generative Foundation Reward Model for Reward Generalization**  
+[[Paper](http://arxiv.org/pdf/2506.14175v2)] [[Code/Page]()] [[TLDR/Notes](#gram--a-generative-foundation-reward-model-for-reward-generalization)]
+
+- [25/06] **VL-GenRM: Enhancing Vision-Language Verification via Vision Experts and Iterative Training**  
+[[Paper](http://arxiv.org/pdf/2506.13888v1)] [[Code/Page]()] [[TLDR/Notes](#vl-genrm--enhancing-vision-language-verification-via-vision-experts-and-iterative-training)]
+
+- [25/06] **Fake it till You Make it: Reward Modeling as Discriminative Prediction**  
+[[Paper](http://arxiv.org/pdf/2506.13846v2)] [[Code/Page](https://github.com/Visualignment/GAN-RM.)] [[TLDR/Notes](#fake-it-till-you-make-it--reward-modeling-as-discriminative-prediction)]
+
+- [25/06] **PB$^2$: Preference Space Exploration via Population-Based Methods in Preference-Based Reinforcement Learning**  
+[[Paper](http://arxiv.org/pdf/2506.13741v1)] [[Code/Page]()] [[TLDR/Notes](#pb$^2$--preference-space-exploration-via-population-based-methods-in-preference-based-reinforcement-learning)]
+
+- [25/06] **$\texttt{SPECS}$: Faster Test-Time Scaling through Speculative Drafts**  
+[[Paper](http://arxiv.org/pdf/2506.15733v1)] [[Code/Page]()] [[TLDR/Notes](#$\texttt{specs}$--faster-test-time-scaling-through-speculative-drafts)]
+
+- [25/06] **Theoretical Tensions in RLHF: Reconciling Empirical Success with Inconsistencies in Social Choice Theory**  
+[[Paper](http://arxiv.org/pdf/2506.12350v1)] [[Code/Page]()] [[TLDR/Notes](#theoretical-tensions-in-rlhf--reconciling-empirical-success-with-inconsistencies-in-social-choice-theory)]
+
+- [25/06] **TreeRL: LLM Reinforcement Learning with On-Policy Tree Search**  
+[[Paper](http://arxiv.org/pdf/2506.11902v1)] [[Code/Page](https://github.com/THUDM/TreeRL.)] [[TLDR/Notes](#treerl--llm-reinforcement-learning-with-on-policy-tree-search)]
+
+- [25/06] **Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards**  
+[[Paper](http://arxiv.org/pdf/2506.11425v2)] [[Code/Page]()] [[TLDR/Notes](#agent-rlvr--training-software-engineering-agents-via-guidance-and-environment-rewards)]
+
+- [25/06] **Reinforcement Learning Fine-Tuning of Language Model for Instruction Following and Math Reasoning**  
+[[Paper](http://arxiv.org/pdf/2506.21560v1)] [[Code/Page]()] [[TLDR/Notes](#reinforcement-learning-fine-tuning-of-language-model-for-instruction-following-and-math-reasoning)]
+
+- [25/06] **Unsupervised Elicitation of Language Models**  
+[[Paper](http://arxiv.org/pdf/2506.10139v1)] [[Code/Page]()] [[TLDR/Notes](#unsupervised-elicitation-of-language-models)]
+
+- [25/06] **Learning to Reason Across Parallel Samples for LLM Reasoning**  
+[[Paper](http://arxiv.org/pdf/2506.09014v1)] [[Code/Page]()] [[TLDR/Notes](#learning-to-reason-across-parallel-samples-for-llm-reasoning)]
+
+- [25/06] **GFRIEND: Generative Few-shot Reward Inference through EfficieNt DPO**  
+[[Paper](http://arxiv.org/pdf/2506.08965v1)] [[Code/Page]()] [[TLDR/Notes](#gfriend--generative-few-shot-reward-inference-through-efficient-dpo)]
+
+- [25/06] **Intra-Trajectory Consistency for Reward Modeling**  
+[[Paper](http://arxiv.org/pdf/2506.09096v3)] [[Code/Page](https://github.com/chaoyang101/ICRM.)] [[TLDR/Notes](#intra-trajectory-consistency-for-reward-modeling)]
+
+- [25/06] **Reinforcement Learning from Human Feedback with High-Confidence Safety Constraints**  
+[[Paper](http://arxiv.org/pdf/2506.08266v1)] [[Code/Page]()] [[TLDR/Notes](#reinforcement-learning-from-human-feedback-with-high-confidence-safety-constraints)]
+
+- [25/06] **Explicit Preference Optimization: No Need for an Implicit Reward Model**  
+[[Paper](http://arxiv.org/pdf/2506.07492v1)] [[Code/Page]()] [[TLDR/Notes](#explicit-preference-optimization--no-need-for-an-implicit-reward-model)]
+
+- [25/06] **ProteinZero: Self-Improving Protein Generation via Online Reinforcement Learning**  
+[[Paper](http://arxiv.org/pdf/2506.07459v2)] [[Code/Page]()] [[TLDR/Notes](#proteinzero--self-improving-protein-generation-via-online-reinforcement-learning)]
+
+- [25/06] **Efficient Online RFT with Plug-and-Play LLM Judges: Unlocking State-of-the-Art Performance**  
+[[Paper](http://arxiv.org/pdf/2506.05748v1)] [[Code/Page]()] [[TLDR/Notes](#efficient-online-rft-with-plug-and-play-llm-judges--unlocking-state-of-the-art-performance)]
+
+- [25/06] **Confidence Is All You Need: Few-Shot RL Fine-Tuning of Language Models**  
+[[Paper](http://arxiv.org/pdf/2506.06395v3)] [[Code/Page]()] [[TLDR/Notes](#confidence-is-all-you-need--few-shot-rl-fine-tuning-of-language-models)]
+
+- [25/06] **Customizing Speech Recognition Model with Large Language Model Feedback**  
+[[Paper](http://arxiv.org/pdf/2506.11091v1)] [[Code/Page]()] [[TLDR/Notes](#customizing-speech-recognition-model-with-large-language-model-feedback)]
+
+- [25/06] **TreeRPO: Tree Relative Policy Optimization**  
+[[Paper](http://arxiv.org/pdf/2506.05183v1)] [[Code/Page](https://github.com/yangzhch6/TreeRPO}{https://github.com/yangzhch6/TreeRPO}.)] [[TLDR/Notes](#treerpo--tree-relative-policy-optimization)]
+
+- [25/06] **RIVAL: Reinforcement Learning with Iterative and Adversarial Optimization for Machine Translation**  
+[[Paper](http://arxiv.org/pdf/2506.05070v1)] [[Code/Page]()] [[TLDR/Notes](#rival--reinforcement-learning-with-iterative-and-adversarial-optimization-for-machine-translation)]
+
+- [25/06] **LogicPuzzleRL: Cultivating Robust Mathematical Reasoning in LLMs via Reinforcement Learning**  
+[[Paper](http://arxiv.org/pdf/2506.04821v1)] [[Code/Page]()] [[TLDR/Notes](#logicpuzzlerl--cultivating-robust-mathematical-reasoning-in-llms-via-reinforcement-learning)]
+
+
+
+# TLDR/Notes
+## inverse-reinforcement-learning-meets-large-language-model-post-training--basics--advances--and-opportunities
+### Abstract
+In the era of Large Language Models (LLMs), alignment has emerged as a
+fundamental yet challenging problem in the pursuit of more reliable,
+controllable, and capable machine intelligence. The recent success of reasoning
+models and conversational AI systems has underscored the critical role of
+reinforcement learning (RL) in enhancing these systems, driving increased
+research interest at the intersection of RL and LLM alignment. This paper
+provides a comprehensive review of recent advances in LLM alignment through the
+lens of inverse reinforcement learning (IRL), emphasizing the distinctions
+between RL techniques employed in LLM alignment and those in conventional RL
+tasks. In particular, we highlight the necessity of constructing neural reward
+models from human data and discuss the formal and practical implications of
+this paradigm shift. We begin by introducing fundamental concepts in RL to
+provide a foundation for readers unfamiliar with the field. We then examine
+recent advances in this research agenda, discussing key challenges and
+opportunities in conducting IRL for LLM alignment. Beyond methodological
+considerations, we explore practical aspects, including datasets, benchmarks,
+evaluation metrics, infrastructure, and computationally efficient training and
+inference techniques. Finally, we draw insights from the literature on
+sparse-reward RL to identify open questions and potential research directions.
+By synthesizing findings from diverse studies, we aim to provide a structured
+and critical overview of the field, highlight unresolved challenges, and
+outline promising future directions for improving LLM alignment through RL and
+IRL techniques.
+### 🌟 论文解读 | 大语言模型对齐中的逆强化学习：基础、进展与机遇
+
+### 📌 背景痛点/本文动机
+在大语言模型（LLM）时代，对齐（alignment）已成为追求更可靠、可控和有能力的机器智能过程中一个基础且具挑战性的问题。一方面，大规模数据驱动模型（如LLM）在多领域取得成功，但LLM存在无法自主持续改进等不足；另一方面，强化学习（RL）在众多领域展现超人类性能却面临系统透明性等挑战。鉴于RL和LLM在各自领域的成功，将二者结合极具前景。同时，当前在将RL扩展到更广泛LLM任务和应用中存在缺乏奖励信号、计算成本高、RL算法需适配LLM对齐任务特性等关键挑战，因此本文从逆强化学习（IRL）视角全面综述LLM对齐的最新进展，试图弥合IRL与LLM对齐间的差距以助力未来研究。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：以逆强化学习视角综述LLM对齐进展  
+本文聚焦于从逆强化学习（IRL）的角度来审视大语言模型对齐的最新研究成果，突出LLM对齐中所用RL技术与传统RL任务中技术的区别，强调从人类数据构建神经奖励模型的必要性，并探讨这种范式转变在形式和实践上的影响，为该领域提供了全新的审视维度。  
+💡 创新点2：全面覆盖多方面内容构建知识体系  
+先为不熟悉RL领域的读者介绍RL基本概念（如马尔可夫决策过程等）奠定基础；接着审视该研究议程的最新进展，讨论为LLM对齐进行IRL的关键挑战和机遇；除方法考量外，还探索数据集、基准、评估指标、基础设施以及计算高效的训练和推理技术等实践方面；最后从稀疏奖励RL文献中汲取见解以确定开放性问题和潜在研究方向，全方位构建起LLM对齐与IRL结合领域的知识体系。  
+
+### 📈 实验结果
+文中未明确提及传统意义上的实验结果呈现（如对比实验数据等），主要是从综述角度梳理领域内相关工作、挑战与机遇等内容，通过对RL在对话AI（如RLHF提升LLM能力）、数学推理（如AlphaProof等在数学竞赛表现）等场景应用的分析，展现RL与LLM结合的潜力与现状，为后续研究提供参考依据。  
+
+### 💬 可借鉴之处
+1. 领域交叉视角：将逆强化学习与大语言模型对齐结合进行综述，为研究者提供了跨领域融合的思考角度，启发在AI不同子领域间寻找关联与创新点。  
+2. 知识体系构建：从基础概念到前沿进展，再到实践层面（数据集、基础设施等）和未来方向，完整的知识脉络梳理有助于新手快速入门该领域，也让资深研究者全面把握领域现状与趋势。  
+3. 挑战与机遇分析：对LLM对齐中RL应用面临的缺乏奖励信号、计算成本、算法适配等挑战的剖析，以及对潜在解决方向的探讨，为后续研究选题和技术突破提供了清晰的问题导向。
+
+## bridging-the-gap-in-vision-language-models-in-identifying-unsafe-concepts-across-modalities
+### Abstract
+Vision-language models (VLMs) are increasingly applied to identify unsafe or
+inappropriate images due to their internal ethical standards and powerful
+reasoning abilities. However, it is still unclear whether they can recognize
+various unsafe concepts when presented in different modalities, such as text
+and images. To address this, we first compile the UnsafeConcepts dataset,
+featuring 75 unsafe concepts, i.e., ``Swastika,'' ``Sexual Harassment,'' and
+``Assaults,'' along with associated 1.5K images. We then conduct a systematic
+evaluation of VLMs' perception (concept recognition) and alignment (ethical
+reasoning) capabilities. We assess eight popular VLMs and find that, although
+most VLMs accurately perceive unsafe concepts, they sometimes mistakenly
+classify these concepts as safe. We also identify a consistent modality gap
+among open-source VLMs in distinguishing between visual and textual unsafe
+concepts. To bridge this gap, we introduce a simplified reinforcement learning
+(RL)-based approach using proximal policy optimization (PPO) to strengthen the
+ability to identify unsafe concepts from images. Our approach uses reward
+scores based directly on VLM responses, bypassing the need for collecting
+human-annotated preference data to train a new reward model. Experimental
+results show that our approach effectively enhances VLM alignment on images
+while preserving general capabilities. It outperforms baselines such as
+supervised fine-tuning (SFT) and direct preference optimization (DPO). We hope
+our dataset, evaluation findings, and proposed alignment solution contribute to
+the community's efforts in advancing safe VLMs.
+### 🌟 论文解读 | 跨模态识别不安全概念：弥合视觉语言模型的能力鸿沟
+
+### 📌 背景痛点/本文动机
+随着视觉语言模型（VLMs）在内容审核等现实场景的广泛应用，识别不安全概念（如仇恨符号、暴力图像、露骨内容等）成为构建负责任AI的关键。然而，VLMs在文本和图像等不同模态下识别不安全概念时，是否存在**模态鸿沟**（即对相同有害内容，文本输入和图像输入下响应不一致）尚不明确；且若存在该鸿沟，如何在不影响模型通用能力的前提下弥合它，也是亟待解决的问题。此外，现有研究缺乏对VLMs识别各类不安全概念能力的系统评估。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：构建UnsafeConcepts数据集  
+首次整合涵盖9大类别、75个不安全概念（如“纳粹万字符”“性骚扰”“袭击”）及1.5K关联图像的数据集，为评估VLMs识别不安全概念能力提供了细粒度标注的基准资源。区分“视觉不安全概念”（呈现概念的图像）与“文本不安全概念”（描述概念的文本），支撑跨模态对比分析。
+
+💡 创新点2：系统评估VLMs的双核心能力  
+从**感知（Perception）**和**对齐（Alignment）**两个维度评估8款主流VLMs：  
+- 感知能力：测试模型检测图像中不安全概念的准确性（为每个图像设计单选择题，含1个正确选项和3个干扰项）；  
+- 对齐能力：评估模型判断是否符合人类伦理标准（设计提示词，询问概念在“社交媒体展示”等安全场景下是否安全，并融入概念特定上下文线索分析 nuanced contexts 的影响）。  
+
+💡 创新点3：简化RLHF方法弥合模态鸿沟  
+提出基于近端策略优化（PPO）的简化强化学习方法，无需收集人工标注偏好数据训练新奖励模型，直接用响应分类器评估VLM回答的正确性并分配奖励分数，通过“生成（roll - out）- 评估 - 优化”三阶段迭代更新模型：  
+- Roll - out：针对代表伦理标准的安全/不安全概念，采样VLM响应；  
+- 评估：用分类器判断响应正确性并打赏；  
+- 优化：结合奖励分数、熵奖励（鼓励探索）和KL散度（防止偏离原行为），通过PPO优化VLM。  
+
+
+### 📈 实验结果
+1. 感知与对齐能力存在落差：多数VLMs能较准确感知图像中不安全概念（如LLaVA - 7B感知准确率达0.93），但在安全场景下判断是否“安全/合适”时，对齐得分显著降低（LLaVA - 7B仅0.37），即常忽视图像的不安全属性；  
+2. 模态鸿沟普遍存在：8款VLMs在区分视觉与文本不安全概念时，一致表现出跨模态响应不一致的问题；  
+3. 简化RLHF方法更优：对比有监督微调（SFT）、直接偏好优化（DPO）等基线，该方法在增强图像上不安全概念对齐能力的同时，保留了模型通用能力，且在外部数据集上泛化性更强。  
+
+
+### 💬 可借鉴之处
+1. 数据集建设：UnsafeConcepts为安全AI领域提供了首个细粒度、多模态的不安全概念基准集，启发后续研究者构建更丰富的安全评估资源；  
+2. 评估维度：从“感知（能不能识别）”到“对齐（是否符合伦理）”的双维度评估框架，为分析AI模型安全能力提供了更全面的视角；  
+3. 轻量化强化学习：无需人工偏好数据的简化RLHF思路，为资源受限场景下优化模型安全对齐提供了高效方案，可推广到其他需伦理对齐但标注成本高的任务。
+
+## tiny-reward-models
+### Abstract
+Large decoder-based language models have become the dominant architecture for
+reward modeling in reinforcement learning from human feedback (RLHF). However,
+as reward models are increasingly deployed in test-time strategies, their
+inference costs become a growing concern. We present TinyRM, a family of small,
+bidirectional masked language models (MLMs) with as few as 400 million
+parameters, that rival the capabilities of models over 175 times larger on
+reasoning and safety preference modeling tasks. TinyRM combines FLAN-style
+prompting, Directional Low-Rank Adaptation (DoRA), and layer freezing to
+achieve strong performance on RewardBench, despite using significantly fewer
+resources. Our experiments suggest that small models benefit from
+domain-specific tuning strategies, particularly in reasoning, where lightweight
+finetuning methods are especially effective. While challenges remain in
+building generalist models and conversational preference modeling, our
+preliminary results highlight the promise of lightweight bidirectional
+architectures as efficient, scalable alternatives for preference modeling.
+### 🌟 论文解读 | 小模型也能打？TinyRM：轻量级奖励模型挑战大模型霸权
+
+### 📌 背景痛点/本文动机
+在基于人类反馈的强化学习（RLHF）中，奖励模型（RM）是关键组件，其质量直接影响LLM与人类偏好的对齐效果。然而，当前主流做法是用大的基于解码器的语言模型做奖励模型，虽性能强，但在推理等测试时策略中部署，推理成本高得令人担忧。而且奖励模型在新范式（如智能体工作流路由、合成数据过滤等）中带来的重复成本，以及大模型是否真能让偏好建模受益于“越大越好”的缩放律存疑，这些都推动了对高效奖励模型的研究。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出TinyRM家族，用小参数量双向掩码语言模型（MLM）做奖励模型  
+TinyRM基于双向的掩码语言模型构建，参数量仅4亿左右，却能在推理和安全偏好建模任务上媲美超其175倍参数量的大模型，证明了双向MLM作为奖励模型的有效性，打破大模型在奖励建模领域的“唯参数规模论”。  
+
+💡 创新点2：组合高效微调技术适配偏好建模  
+采用FLAN风格提示（FLAN - style prompting）、定向低秩适应（Directional Low - Rank Adaptation，DoRA）和层冻结（layer freezing）技术的组合。FLAN风格提示为模型提供合适任务引导；DoRA作为高效参数微调方法，分解模型权重并对方向向量可控更新，在推理任务上比全秩微调增益明显；层冻结保留底层通用语言表征，聚焦上层任务特定层微调，三者结合让小模型在RewardBench基准上高效完成偏好建模。  
+
+### 📈 实验结果
+实验基于ModernBERT - Base（1.5亿参数）和ModernBERT - Large（4亿参数）初始化模型，在公开偏好数据上训练Chat、Reasoning、Safety等领域专家模型，还训练了“All - At - Once”通用模型。结果显示：在推理任务上，DoRA对比全秩微调有显著性能提升；小模型借助这些特定领域调优策略，在推理和安全任务上展现出惊人实力，能与大模型竞争；不过在通用模型构建和开放式对话偏好建模上仍有挑战，但初步结果凸显轻量双向架构在偏好建模上作为高效、可扩展替代方案的潜力。  
+
+### 💬 可借鉴之处
+1. 模型架构选择：双向MLM在语言理解上有优势，可作为奖励模型等任务的高效基础架构，不必一味追求大的解码器模型。  
+2. 微调策略组合：FLAN风格提示、DoRA、层冻结这类高效微调技术的组合，为小模型在特定领域（如推理）实现高性能提供了思路，证明轻量微调方法在小模型特定任务优化中效果显著，后续可在更多任务和模型上尝试这类组合策略。  
+3. 领域针对性优化：小模型受益于领域特定调优策略，在资源受限场景下，针对不同任务领域设计调优方案，能让小模型发挥大价值，为资源有限情况下的AI应用开发提供方向。
+
+## enhancing-rlhf-with-human-gaze-modeling
+### Abstract
+Reinforcement Learning from Human Feedback (RLHF) aligns language models with
+human preferences but is computationally expensive. We explore two approaches
+that leverage human gaze modeling to enhance RLHF: (1) gaze-aware reward models
+and (2) gaze-based distribution of sparse rewards at token level. Our
+experiments demonstate that gaze-informed RLHF achieves faster convergence
+while maintaining or slightly improving performance, thus, reducing
+computational costs during policy optimization. These results show that human
+gaze provides a valuable and underused signal for policy optimization, pointing
+to a promising direction for improving RLHF efficiency.
+### 🌟 论文解读 | 用人类 gaze 建模提升 RLHF：更快收敛，更低成本
+
+### 📌 背景痛点/本文动机
+Reinforcement Learning from Human Feedback（RLHF）是让语言模型对齐人类偏好的有力范式，但计算成本高昂，很大程度源于反馈信号稀疏——奖励模型通常给整个序列一个标量值，难以指导模型输出哪部分对人类偏好贡献更大。而人类视觉注意力（如眼动、 gaze 模式）能在文本处理时提供细粒度认知努力指向信息，若引入 RLHF 或可提升效率，本文就此展开探索。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：GazeRM（ gaze 感知奖励模型）
+基于 López - Cardona 等人（2025）工作，将预测的 gaze 特征投射到奖励模型隐藏表示空间（通过可训练前馈神经网络，添加或拼接至第一层隐藏激活）。此前这类结合 gaze 的奖励模型仅在偏好预测基准验证，本文首次将其纳入 RLHF  pipeline（如 PPO、GRPO 框架），验证是否加速收敛。
+
+💡 创新点2：GazeDistrib（基于 gaze 的 token 级稀疏奖励分配）
+受 Chan 等人（2024）用奖励模型注意力做奖励归因启发，本文改用预测的人类 gaze 在 RLHF 中分配 token 级奖励信用。不改变奖励模型本身，仅改变分数分配方式，让奖励与人类注意力对齐，提供更有针对性反馈以加速收敛。
+
+### 📈 实验结果
+在 PPO 和 GRPO 算法下，结合 gaze 的 RLHF（GazeRM、GazeDistrib）相比标准方法收敛速度提升 1.5 - 2 倍，同时保持或略微提升最终性能。例如在 LLaMa - 7B - open - instruct 模型、HH - RLHF 数据集上的实验，验证和训练阶段奖励表现都显示 gaze 辅助方法更优，说明人类视觉注意力模式为更高效学习提供了有价值信号。
+
+### 💬 可借鉴之处
+1. 多模态信号引入 RLHF：人类 gaze 这类视觉注意力信号是未充分利用的资源，为 RLHF 效率优化提供新方向，后续可探索更多人类行为、生理信号融入。
+2. 奖励分配精细化：GazeDistrib 展示了不改动奖励模型、仅调整奖励分配方式就能提升效率，启发在稀疏奖励场景下，通过更细粒度（如 token 级）且贴合人类认知的方式分配奖励。
+3. 跨领域结合思路：将 gaze 预测模型（训练自眼动语料库）与 RLHF 结合，体现了跨领域技术（眼动研究、强化学习）融合创新的潜力，为不同领域方法迁移提供参考。
+
+## one-token-to-fool-llm-as-a-judge
+### Abstract
+Generative reward models (also known as LLMs-as-judges), which use large
+language models (LLMs) to evaluate answer quality, are increasingly adopted in
+reinforcement learning with verifiable rewards (RLVR). They are often preferred
+over rigid rule-based metrics, especially for complex reasoning tasks involving
+free-form outputs. In this paradigm, an LLM is typically prompted to compare a
+candidate answer against a ground-truth reference and assign a binary reward
+indicating correctness. Despite the seeming simplicity of this comparison task,
+we find that generative reward models exhibit surprising vulnerabilities to
+superficial manipulations: non-word symbols (e.g., ":" or ".") or reasoning
+openers like "Thought process:" and "Let's solve this problem step by step."
+can often lead to false positive rewards. We demonstrate that this weakness is
+widespread across LLMs, datasets, and prompt formats, posing a serious threat
+for core algorithmic paradigms that rely on generative reward models, such as
+rejection sampling, preference optimization, and RLVR. To mitigate this issue,
+we introduce a simple yet effective data augmentation strategy and train a new
+generative reward model with substantially improved robustness. Our findings
+highlight the urgent need for more reliable LLM-based evaluation methods. We
+release our robust, general-domain reward model and its synthetic training data
+at https://huggingface.co/sarosavo/Master-RM and
+https://huggingface.co/datasets/sarosavo/Master-RM.
+### 🌟 论文解读 | 一个Token就能骗过LLM裁判？揭秘生成式奖励模型的脆弱性与应对
+
+### 📌 背景痛点/本文动机
+在强化学习结合可验证奖励（RLVR）的范式中，生成式奖励模型（也被称为“LLM作为裁判”）凭借大语言模型（LLM）强大的生成与泛化能力，逐渐取代僵化的规则式指标，用于评估答案质量。但研究发现，这类生成式奖励模型存在惊人的脆弱性：仅需一些表面操作（比如非文字符号“:”“.”，或者像“Thought process:”“Let’s solve this problem step by step.”这类推理开头），就能让模型给出错误的正向奖励。这种弱点在不同LLM、数据集和提示格式中广泛存在，对依赖生成式奖励模型的核心算法（如拒绝采样、偏好优化、RLVR等）构成严重威胁。因此，论文旨在揭示该问题并提出改进方法，推动更可靠的基于LLM的评估方式发展。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：发现“万能钥匙”漏洞  
+论文首次明确指出，生成式奖励模型在RLVR场景下存在系统性脆弱性——仅含非文字符号或推理开头的“候选答案”，常能骗取正向奖励。这类能触发错误奖励的对抗式响应被称为“master keys（万能钥匙）”，且该问题在多模型、多数据集上普遍存在。  
+
+💡 创新点2：系统性评估漏洞的普遍性  
+团队用十种“万能钥匙”响应，在多模型（通用模型如Qwen2.5 - 72B、GPT - 4o，专用验证器如Omni - Judge）和多数据集（数学推理、通用领域等）上展开测试，验证了漏洞的广泛性；还分析了该现象的规模效应与生成新“万能钥匙”的技巧，同时证明推理时策略难以可靠防御这类攻击。  
+
+💡 创新点3：数据增强+鲁棒奖励模型  
+为缓解漏洞，提出简单有效的数据增强策略：构造“类对抗”响应（截断模型输出，保留仅做泛化铺垫、无实际解题的开头片段作为负样本）来扩充训练数据。基于此训练出通用领域的Master - RM奖励模型，大幅提升了对“万能钥匙”的鲁棒性。  
+
+
+### 📈 实验结果
+在五大推理基准测试（含GSM8K、MATH等数学推理数据集，及Multi - subject RLVR等通用领域数据集）中，传统LLM裁判面对“万能钥匙”攻击时，错误正例率（FPR）最高达80%；而新训练的Master - RM在所有场景下错误正例率接近0，鲁棒性显著超越同类模型。  
+
+
+### 💬 可借鉴之处
+1. 漏洞发现视角：提醒研究者与开发者重新审视“LLM作为裁判”的鲁棒性假设，在依赖生成式奖励模型的系统设计中，需优先考虑对抗式测试与鲁棒性验证；  
+2. 数据增强思路：论文用“构造类对抗负样本”来增强模型鲁棒性的方法，为训练更可靠的奖励模型提供了轻量却有效的范式，可迁移到其他需抵御表面干扰的评估类模型训练中；  
+3. 开源资源价值：发布的Master - RM模型与合成训练数据，为后续研究提供了直接可用的鲁棒奖励模型基线，降低了领域内重复造轮子的成本，推动相关方向快速迭代。
+
+## stable-preference-optimization-for-llms--a-bilevel-approach-beyond-direct-preference-optimization
+### Abstract
+Direct Preference Optimization (DPO) has emerged as a popular and efficient
+alternative to reward modeling and reinforcement learning for aligning language
+models with human preferences. Despite its empirical success, the theoretical
+properties and intrinsic limitations of DPO remain underexplored. In this work,
+we first present a comprehensive analysis of DPO's dynamics from a probability
+evolution perspective. Our analysis reveals that DPO is highly sensitive to
+initialization. It also tends to misallocate probability mass, which can
+inadvertently shift probability toward irrelevant or undesired responses. This
+misallocation may unintentionally reinforce model bias, thereby compromising
+both the stability of model alignment and the consistency with intended
+preferences. Motivated by these theoretical findings, we propose a
+theoretically grounded bilevel optimization framework that tightly integrate
+supervised fine-tuning with an enhanced DPO objective a.k.a. stable preference
+optimization. Our approach introduces a principled regularization scheme to
+explicitly encourage absolute probability improvement for preferred outputs,
+while maintaining stable optimization dynamics. Experiments on challenging
+reasoning and summarization benchmarks elucidate that our method consistently
+improves reasoning accuracy and better aligns output distributions with
+intended preferences, outperforming standard DPO. Stable preference
+optimization provides new insights into the design of preference-based
+alignment objectives and opens up new avenues towards more reliable and
+interpretable language model alignment.
+### 🌟 论文解读 | 超越直接偏好优化：大语言模型的稳定偏好优化双级方法
+
+### 📌 背景痛点/本文动机
+直接偏好优化（DPO）作为一种流行且高效的方法，用于将语言模型与人类偏好对齐，替代了奖励建模和强化学习。然而其理论特性与内在局限性尚未得到充分探索。此前研究表明DPO训练中存在偏好与非偏好响应概率同时下降的“似然位移”现象，且现有对该现象的理论分析多基于强假设（如单token输出），限制了适用性。同时DPO对初始化敏感、易出现概率质量错配，可能导致模型偏向无关或不期望的响应、损害对齐稳定性与偏好一致性。因此，本文从概率演化视角深入分析DPO动态，并提出改进方法。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：DPO的全面理论分析  
+不同于以往基于强假设或特定场景（如单token、高度相似完成）的研究，本文无强假设地分析DPO优化行为，聚焦偏好（yw）与非偏好（yl）样本概率变化动态（∆πθ(yw|x)和∆πθ(yl|x)）。揭示出DPO对初始化敏感、无法持续提升偏好输出概率、易将概率质量从不期望方向重新分配等关键局限，为后续方法改进筑牢理论根基。  
+
+💡 创新点2：稳定偏好优化双级框架  
+受元学习启发，提出理论驱动的双级优化框架，统一监督微调（SFT）与增强型DPO目标（即稳定偏好优化）。下层SFT提供强初始化，上层增强DPO目标搭配基于梯度的正则化项，显式鼓励偏好输出概率提升、缓解概率错配问题。通过耦合两级优化，大幅增强直接对齐学习的稳定性与有效性。  
+
+### 📈 实验结果
+在具有挑战性的推理与摘要基准测试中，该方法持续提升推理准确性，且能更好地使输出分布与预期偏好对齐，性能超越标准DPO方法。实验结果验证了所提方法在改善模型对齐效果与稳定性上的优势。  
+
+### 💬 可借鉴之处
+从理论层面，本文对DPO概率演化动态的深入分析为理解偏好对齐方法的内在机制提供了新视角，启发后续对偏好对齐目标设计的理论研究；从方法层面，双级优化框架将SFT与偏好优化统一的思路，以及引入正则化显式引导概率改进的策略，为打造更可靠、可解释的语言模型对齐方法开辟了新路径，相关设计理念可迁移至其他基于偏好的模型对齐任务中。
+
+## bradley-terry-and-multi-objective-reward-modeling-are-complementary
+### Abstract
+Reward models trained on human preference data have demonstrated strong
+effectiveness in aligning Large Language Models (LLMs) with human intent under
+the framework of Reinforcement Learning from Human Feedback (RLHF). However,
+RLHF remains vulnerable to reward hacking, where the policy exploits
+imperfections in the reward function rather than genuinely learning the
+intended behavior. Although significant efforts have been made to mitigate
+reward hacking, they predominantly focus on and evaluate in-distribution
+scenarios, where the training and testing data for the reward model share the
+same distribution. In this paper, we empirically show that state-of-the-art
+methods struggle in more challenging out-of-distribution (OOD) settings. We
+further demonstrate that incorporating fine-grained multi-attribute scores
+helps address this challenge. However, the limited availability of high-quality
+data often leads to weak performance of multi-objective reward functions, which
+can negatively impact overall performance and become the bottleneck. To address
+this issue, we propose a unified reward modeling framework that jointly trains
+Bradley--Terry (BT) single-objective and multi-objective regression-based
+reward functions using a shared embedding space. We theoretically establish a
+connection between the BT loss and the regression objective and highlight their
+complementary benefits. Specifically, the regression task enhances the
+single-objective reward function's ability to mitigate reward hacking in
+challenging OOD settings, while BT-based training improves the scoring
+capability of the multi-objective reward function, enabling a 7B model to
+outperform a 70B baseline. Extensive experimental results demonstrate that our
+framework significantly improves both the robustness and the scoring
+performance of reward models.
+### 🌟 论文解读 |  Bradley - Terry与多目标奖励建模：优势互补应对RLHF奖励黑客难题
+
+### 📌 背景痛点/本文动机
+在基于人类反馈的强化学习（RLHF）框架下，基于人类偏好数据训练的奖励模型能有效让大语言模型（LLMs）与人类意图对齐，但RLHF易受“奖励黑客”问题困扰，即策略利用奖励函数缺陷而非真正学习预期行为。过往缓解该问题的工作多聚焦分布内场景（奖励模型训练与测试数据分布相同），而在更具挑战的分布外（OOD）场景下表现不佳。同时，引入细粒度多属性分数虽有助于应对挑战，但高质量数据有限导致多目标奖励函数性能弱，成为瓶颈。此外，现有研究在OOD场景下奖励模型泛化能力的局限性未得到充分探索，多目标奖励模型（MORMs）因数据限制性能不如单目标奖励模型（SORMs），且两者独立使用存在计算昂贵和性能瓶颈等问题，这些都构成了本文研究的动机。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：揭示SOTA奖励模型在OOD场景的缺陷  
+通过实验表明，当前最先进的方法在PPO和Best - of - N采样时，若所用prompt来自与训练数据不同分布的OOD场景，会出现奖励黑客问题，凸显了现有奖励模型在OOD场景下泛化能力的关键局限。
+
+💡 创新点2：提出SMORM统一奖励建模框架  
+提出联合单目标和多目标奖励模型（SMORM），该框架使用共享嵌入空间联合训练基于Bradley - Terry（BT）的单目标奖励函数和基于多目标回归的奖励函数。从理论上建立了BT损失和回归目标之间的联系，实现互补优势：多目标头训练优化嵌入空间，使表示能捕捉多属性质量差异，增强单目标头在OOD场景抗奖励黑客的鲁棒性；单目标头训练能修正嵌入空间中响应的定位，让多目标头在数据有限时也能有竞争力表现。且SMORM训练灵活，训练两个头的prompt - response对无需完全相同，只需单次前向传播共享骨干网络，解决了计算昂贵问题。
+
+### 📈 实验结果
+大量实验结果表明，该框架显著提升了奖励模型的鲁棒性和评分性能。例如，使用相同多目标数据集时，基于SMORM的7B模型能超越70B的基线模型；同时在应对OOD场景奖励黑客问题上，相比现有方法有明显改进，验证了多目标头对单目标头泛化能力的增强，以及单目标头对多目标头在有限数据下性能的提升等理论分析结论。
+
+### 💬 可借鉴之处
+1. 研究视角上，关注到OOD场景下奖励模型的性能问题，填补了过往研究在该场景下的空白，为后续奖励模型在更复杂场景的研究提供了方向参考。
+2. 方法创新上，SMORM框架为结合单目标和多目标奖励建模提供了有效范式，其理论层面建立的BT损失与回归目标的联系，为奖励模型的联合训练提供了理论支撑，后续在处理多类型奖励函数结合、提升模型鲁棒性等方面可借鉴该联合训练思路。
+3. 数据利用上，在高质量多属性数据有限的情况下，通过共享嵌入空间联合训练提升多目标奖励函数性能的方式，为解决数据瓶颈问题提供了创新思路，可应用于其他因数据限制导致模型性能受限的场景。
+
+## perception-aware-policy-optimization-for-multimodal-reasoning
+### Abstract
+Reinforcement Learning with Verifiable Rewards (RLVR) has proven to be a
+highly effective strategy for endowing Large Language Models (LLMs) with robust
+multi-step reasoning abilities. However, its design and optimizations remain
+tailored to purely textual domains, resulting in suboptimal performance when
+applied to multimodal reasoning tasks. In particular, we observe that a major
+source of error in current multimodal reasoning lies in the perception of
+visual inputs. To address this bottleneck, we propose Perception-Aware Policy
+Optimization (PAPO), a simple yet effective extension of GRPO that encourages
+the model to learn to perceive while learning to reason, entirely from internal
+supervision signals. Notably, PAPO does not rely on additional data curation,
+external reward models, or proprietary models. Specifically, we introduce the
+Implicit Perception Loss in the form of a KL divergence term to the GRPO
+objective, which, despite its simplicity, yields significant overall
+improvements (4.4%) on diverse multimodal benchmarks. The improvements are more
+pronounced, approaching 8.0%, on tasks with high vision dependency. We also
+observe a substantial reduction (30.5%) in perception errors, indicating
+improved perceptual capabilities with PAPO. We conduct comprehensive analysis
+of PAPO and identify a unique loss hacking issue, which we rigorously analyze
+and mitigate through a Double Entropy Loss. Overall, our work introduces a
+deeper integration of perception-aware supervision into RLVR learning
+objectives and lays the groundwork for a new RL framework that encourages
+visually grounded reasoning. Project page: https://mikewangwzhl.github.io/PAPO.
+### 🌟 论文解读 | 多模态推理的感知感知策略优化：PAPO 如何突破视觉感知瓶颈？
+
+### 📌 背景痛点/本文动机
+大语言模型（LLMs）在纯文本领域的推理能力已通过带可验证奖励的强化学习（RLVR）得到有效增强，但现有 RLVR 设计和优化主要针对纯文本领域，在多模态推理任务中表现欠佳。当前多模态推理的主要误差来源是对视觉输入的感知问题：模型虽能完成逻辑或代数推理，但常因无法准确理解视觉输入（如空间关系、标签关联）导致错误。此前针对感知优化的方法要么依赖额外奖励模型或数据处理，要么将感知与推理生硬分离，存在计算开销大或适配性不足等问题。因此，如何设计更适配多模态领域的 RLVR 算法，成为关键研究问题。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出 Perception - Aware Policy Optimization（PAPO）算法  
+PAPO 是对 GRPO（Group Relative Policy Optimization）的简洁且高效的扩展，旨在让模型在学习推理的同时学习感知，且完全依赖内部监督信号，无需额外数据整理、外部奖励模型或专有模型。核心是引入**隐式感知损失（Implicit Perception Loss）**，以 KL 散度形式加入 GRPO 目标函数。通过对比模型在原始图像和“损坏图像（如随机遮盖图像块的版本）”下生成输出的概率差异，引导模型更依赖有效视觉信息推理。  
+
+💡 创新点2：解决损失黑客（Loss Hacking）问题  
+由于 KL 目标的无界性，若隐式感知损失系数过高，PAPO 可能过度优化 KL 项，导致奖励崩溃。为此，论文深入分析该问题并提出**双熵损失（Double Entropy Loss）**来缓解，保障训练稳定性。  
+
+
+### 📈 实验结果
+- 多模态基准测试：在 8 个多模态推理基准上，PAPO 相比 GRPO 平均提升 4.4%；在视觉依赖度高的任务中，提升幅度接近 8.0%。  
+- 感知误差减少：人工分析 200 个错误案例显示，PAPO 使感知相关错误降低 30.5%，证明模型感知能力提升。  
+- 收敛速度：PAPO 早期（约 25 步）就展现增益，收敛更快；结合移除参考 KL 等策略，在 3B 规模模型上最高可提升 11.2%。  
+
+
+### 💬 可借鉴之处
+1. 多模态任务优化思路：针对多模态场景特有问题（如视觉感知瓶颈），从算法层面融合感知与推理监督，为多模态强化学习提供新范式。  
+2. 轻量高效设计：不依赖额外复杂组件（如外部奖励模型），仅通过修改目标函数引入感知监督，在工程实现上更具可操作性。  
+3. 问题发现与解决：通过 error analysis 定位核心痛点（感知误差主导多模态推理错误），再针对性设计损失函数；同时发现并缓解“损失黑客”这类新问题，体现了从问题诊断到方法迭代的完整研究思路，为后续算法优化提供参考范式。
+
+## sample-efficient-reinforcement-learning-controller-for-deep-brain-stimulation-in-parkinson-s-disease
+### Abstract
+Deep brain stimulation (DBS) is an established intervention for Parkinson's
+disease (PD), but conventional open-loop systems lack adaptability, are
+energy-inefficient due to continuous stimulation, and provide limited
+personalization to individual neural dynamics. Adaptive DBS (aDBS) offers a
+closed-loop alternative, using biomarkers such as beta-band oscillations to
+dynamically modulate stimulation. While reinforcement learning (RL) holds
+promise for personalized aDBS control, existing methods suffer from high sample
+complexity, unstable exploration in binary action spaces, and limited
+deployability on resource-constrained hardware.
+  We propose SEA-DBS, a sample-efficient actor-critic framework that addresses
+the core challenges of RL-based adaptive neurostimulation. SEA-DBS integrates a
+predictive reward model to reduce reliance on real-time feedback and employs
+Gumbel Softmax-based exploration for stable, differentiable policy updates in
+binary action spaces. Together, these components improve sample efficiency,
+exploration robustness, and compatibility with resource-constrained
+neuromodulatory hardware. We evaluate SEA-DBS on a biologically realistic
+simulation of Parkinsonian basal ganglia activity, demonstrating faster
+convergence, stronger suppression of pathological beta-band power, and
+resilience to post-training FP16 quantization. Our results show that SEA-DBS
+offers a practical and effective RL-based aDBS framework for real-time,
+resource-constrained neuromodulation.
+### 🌟 论文解读 | 帕金森病脑深部刺激的样本高效强化学习控制器
+
+### 📌 背景痛点/本文动机
+帕金森病（PD）是一种进行性神经退行性疾病，脑深部刺激（DBS）是有效的干预手段，但传统开环系统缺乏适应性、能量效率低且个性化不足。自适应DBS（aDBS）虽用生物标志物动态调节刺激，但基于强化学习（RL）的现有方法存在样本复杂度高、二元动作空间探索不稳定、资源受限硬件部署难等问题，因此需要更高效的RL - aDBS框架。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出SEA - DBS框架
+SEA - DBS是样本高效的演员 - 评论家框架，针对基于RL的自适应神经刺激核心挑战。整合预测奖励模型，从状态 - 动作对估计未来结果，减少对实时环境交互反馈的依赖，加速策略学习。
+💡 创新点2：基于Gumbel - Softmax的探索策略
+在二元动作空间采用该策略，实现结构化、可微分的动作采样，改善训练稳定性与收敛性，解决二元刺激控制任务早期策略学习问题。
+
+### 📈 实验结果
+在帕金森病基底神经节活动的生物逼真模拟上评估SEA - DBS，结果显示其收敛更快，对病理性β波段功率抑制更强，且对训练后FP16量化有韧性。与标准DDPG基线相比，内存占用显著减少，能在资源受限硬件部署。
+
+### 💬 可借鉴之处
+从方法创新看，将预测奖励建模与基于Gumbel - Softmax的探索结合提升样本效率，为解决RL在样本受限场景（如临床领域）问题提供思路；在硬件适配方面，对FP16量化的鲁棒性证明其在资源受限神经调节硬件部署的潜力，为医疗设备等资源受限场景的RL应用提供借鉴；针对特定领域（神经刺激）的RL改进，为领域特定的RL方法设计提供参考，即结合领域需求定制RL组件（如动作空间探索、奖励机制等）。
+
+## a-technical-survey-of-reinforcement-learning-techniques-for-large-language-models
+### Abstract
+Reinforcement Learning (RL) has emerged as a transformative approach for
+aligning and enhancing Large Language Models (LLMs), addressing critical
+challenges in instruction following, ethical alignment, and reasoning
+capabilities. This survey offers a comprehensive foundation on the integration
+of RL with language models, highlighting prominent algorithms such as Proximal
+Policy Optimization (PPO), Q-Learning, and Actor-Critic methods. Additionally,
+it provides an extensive technical overview of RL techniques specifically
+tailored for LLMs, including foundational methods like Reinforcement Learning
+from Human Feedback (RLHF) and AI Feedback (RLAIF), as well as advanced
+strategies such as Direct Preference Optimization (DPO) and Group Relative
+Policy Optimization (GRPO). We systematically analyze their applications across
+domains, i.e., from code generation to tool-augmented reasoning. We also
+present a comparative taxonomy based on reward modeling, feedback mechanisms,
+and optimization strategies. Our evaluation highlights key trends. RLHF remains
+dominant for alignment, and outcome-based RL such as RLVR significantly
+improves stepwise reasoning. However, persistent challenges such as reward
+hacking, computational costs, and scalable feedback collection underscore the
+need for continued innovation. We further discuss emerging directions,
+including hybrid RL algorithms, verifier-guided training, and multi-objective
+alignment frameworks. This survey serves as a roadmap for researchers advancing
+RL-driven LLM development, balancing capability enhancement with safety and
+scalability.
+### 🌟 论文解读 | 大语言模型强化学习技术全景：从对齐到能力增强的技术巡礼
+
+### 📌 背景痛点/本文动机
+大语言模型（LLMs）虽在自然语言处理领域展现强大能力，但在**对齐人类价值观**（如避免有害输出、遵循指令）与**增强推理能力**（如数学推理、复杂任务拆解）方面仍面临严峻挑战。传统监督学习依赖标注数据，难以应对复杂多目标优化与非可微反馈信号。强化学习（RL）作为“试错中学习”的范式，为LLMs解决对齐与能力提升难题提供了关键路径，但LLMs的高维离散动作空间（词汇表）、主观 Reward 量化（如文本质量、无害性）等特性，也让传统RL方法“水土不服”。因此，系统梳理RL与LLMs结合的技术体系，成为推动LLM安全与能力协同发展的迫切需求。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：全面技术谱系梳理，覆盖从基础到前沿的RL-LLM方法  
+论文首次系统性整合RL在LLMs中的核心技术，既包含**基础范式**（如人类反馈强化学习RLHF、AI反馈强化学习RLAIF），也深入解析**前沿优化策略**（如直接偏好优化DPO、组相对策略优化GRPO）。例如RLHF通过“示范微调→奖励模型训练→策略优化（如PPO）”三阶段，成为对齐人类偏好的“事实标准”；而DPO则跳过显式奖励建模，直接用偏好对优化策略，大幅降低计算复杂度与训练不稳定性。  
+
+💡 创新点2：领域级应用与技术分类框架，打通“方法-场景-评估”链路  
+论文不仅聚焦算法，更将RL-LLM技术映射到**多领域应用**（如代码生成、工具增强推理），展现RL在复杂任务中的泛化力。同时，提出基于**奖励建模、反馈机制、优化策略**的比较性分类法，为研究者提供“技术-场景”匹配的清晰框架——比如“结果导向RL（如RLVR）”通过对推理步骤的逐阶段反馈，显著提升数学推理精度（如GSM8K基准上GPT-3.5从56.8%→72.5%）。  
+
+
+### 📈 实验结果
+论文通过跨方法、跨任务的对比，揭示关键趋势：  
+- RLHF在“人类对齐”场景中仍占主导，验证其在指令遵循、无害性优化的标杆地位；  
+- 结果导向RL（如RLVR）在**分步推理任务**中表现突出，证明“过程反馈”对复杂逻辑能力的增强价值；  
+- 新兴方法（如DPO）在效率与性能间取得平衡，在情感控制、摘要等任务上比肩传统RLHF，却大幅简化训练管线。  
+
+
+### 💬 可借鉴之处
+1. **技术选型参考**：研究者可根据“对齐/推理”目标、计算资源、反馈可获得性，从分类框架中快速匹配RL方法（如追求低成本对齐可选RLAIF，追求推理精度可选RLVR）；  
+2. **挑战与方向洞察**：论文点明“奖励黑客（模型钻Reward漏洞）、计算成本、规模化反馈采集”等痛点，为后续研究锚定创新方向（如混合RL算法、验证器引导训练、多目标对齐框架）；  
+3. **产业落地视角**：企业在LLM产品化时，可参考“能力增强+安全+可扩展”的平衡思路，从RL技术中汲取对齐与推理优化的实践路径（如用DPO简化训练、用RLAIF降低人工标注依赖）。  
+
+
+这篇综述既是RL-LLM领域的“技术地图”，更是推动大模型安全与能力协同进化的“研究路线图”，为学术探索与产业落地架起桥梁。
+
+## arf-rlhf--adaptive-reward-following-for-rlhf-through-emotion-driven-self-supervision-and-trace-biased-dynamic-optimization
+### Abstract
+With the rapid advancement of Reinforcement Learning from Human Feedback
+(RLHF) and autoregressive transformers, state-of-the-art models such as
+GPT-4.0, DeepSeek R1, and Llama 3.3 increasingly emphasize answer depth and
+personalization. However, most existing RLHF approaches (e.g., PPO, DPO) still
+rely on a binary-preference (BT) paradigm, which, while reducing annotation
+costs, still requires substantial human effort and captures only group-level
+tendencies rather than individual preferences. To overcome these limitations,
+we propose Adaptive Reward-Following (ARF), a self-assessment framework that
+leverages a high-precision emotion analyzer achieving over 70% accuracy on
+GoEmotions, Sentiment140, and DailyDialog to convert free-form user feedback
+into continuous preference scores. We further enrich and debias these signals
+through lightweight data augmentations, including synonym replacement, random
+trace truncation, and score bias annotation algorithm. A Dynamic Adapter
+Preference Tracker continuously models evolving user tastes in real time,
+enabling our novel Trace Bias (TB) fine-tuning algorithm to optimize directly
+on these tracked rewards instead of coarse binary labels. Experiments on
+Qwen-2/2.5, Gemma-2, and Llama-3.2 across four preference domains demonstrate
+that ARF achieves an improvement of 3.3% over PPO and 7.6% over DPO. Moreover,
+TB preserves theoretical alignment with PPO and DPO objectives. Overall, ARF
+presents a scalable, personalized, and cost-effective approach to RLHF LLMs
+through autonomous reward modeling.
+### 🌟 论文解读 | ARF-RLHF：用情感驱动自监督与轨迹偏置动态优化革新RLHF
+
+### 📌 背景痛点/本文动机
+随着强化学习从人类反馈（RLHF）和自回归Transformer的快速发展，像GPT - 4.0、DeepSeek R1、Llama 3.3等前沿模型愈发重视回答深度与个性化。然而，现有多数RLHF方法（如PPO、DPO）依赖二元偏好（BT）范式，虽降低了标注成本，但仍需大量人力，且仅能捕捉群体层面趋势而非个体偏好，还存在标注偏差、更新滞后等问题。为克服这些局限，论文提出ARF - RLHF框架。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：自适应奖励跟随（ARF）评分器
+基于人类交流中隐含满意度信号这一观察，利用在GoEmotions、Sentiment140、DailyDialog等数据集上准确率超70%的高精度情感分析器，将自由形式的用户反馈转化为连续偏好分数。评分器基于轻量的RoBERTa - mini架构构建，平衡低延迟与强语义理解能力，实现从QA对的动态交互分析中自动进行偏好评分，替代传统BT - RLHF的二元比较分数。
+
+💡 创新点2：增强型数据处理与动态偏好跟踪
+通过轻量数据增强（同义词替换、随机轨迹截断、分数偏差标注算法）来丰富和去偏信号；借助带经验回放（ER）机制的动态适配器偏好跟踪器，结合软标签学习周期性更新评分器，实时建模用户变化的偏好，避免过拟合，为后续优化提供更优的奖励信号。
+
+💡 创新点3：Trace Bias（TB）微调算法
+无需依赖BT对数据，基于动态评分器反馈、随机路径截断和路径偏差校正提出新颖优化策略，直接在跟踪到的奖励上优化，而非粗糙的二元标签，且在理论上与PPO和DPO目标保持一致，实现稳定且有理论依据的微调。
+
+### 📈 实验结果
+在Qwen - 2/2.5、Gemma - 2、Llama - 3.2等模型及四个偏好领域的实验表明，ARF相对PPO提升3.3%，相对DPO提升7.6%，验证了方法的有效性与优越性。
+
+### 💬 可借鉴之处
+1. 情感驱动的自监督思路：利用用户交互中隐含的情感、满意度等信号来构建奖励模型，为减少人工标注依赖提供了新方向。
+2. 轻量数据增强与动态跟踪结合：通过简单有效的数据增强手段丰富数据并去偏，搭配动态跟踪机制适应用户偏好变化，在数据处理和模型适应性提升上有借鉴价值。
+3. 无二元标签依赖的优化算法：Trace Bias算法跳出传统RLHF依赖二元比较的局限，为LLM的RLHF优化开辟了更自主、可扩展的路径，在算法创新层面提供了参考。
+
+## self-guided-process-reward-optimization-with-redefined-step-wise-advantage-for-process-reinforcement-learning
+### Abstract
+Process Reinforcement Learning~(PRL) has demonstrated considerable potential
+in enhancing the reasoning capabilities of Large Language Models~(LLMs).
+However, introducing additional process reward models incurs substantial
+computational overhead, and there is no unified theoretical framework for
+process-level advantage estimation. To bridge this gap, we propose
+\textbf{S}elf-Guided \textbf{P}rocess \textbf{R}eward
+\textbf{O}ptimization~(\textbf{SPRO}), a novel framework that enables
+process-aware RL through two key innovations: (1) we first theoretically
+demonstrate that process rewards can be derived intrinsically from the policy
+model itself, and (2) we introduce well-defined cumulative process rewards and
+\textbf{M}asked \textbf{S}tep \textbf{A}dvantage (\textbf{MSA}), which
+facilitates rigorous step-wise action advantage estimation within shared-prompt
+sampling groups. Our experimental results demonstrate that SPRO outperforms
+vaniila GRPO with 3.4x higher training efficiency and a 17.5\% test accuracy
+improvement. Furthermore, SPRO maintains a stable and elevated policy entropy
+throughout training while reducing the average response length by approximately
+$1/3$, evidencing sufficient exploration and prevention of reward hacking.
+Notably, SPRO incurs no additional computational overhead compared to
+outcome-supervised RL methods such as GRPO, which benefit industrial
+implementation.
+### 🌟 论文解读 | 无额外开销！SPRO革新流程强化学习的优势估计与奖励优化
+
+### 📌 背景痛点/本文动机
+流程强化学习（Process Reinforcement Learning, PRL）在提升大语言模型（LLMs）推理能力方面潜力巨大，但当前存在两大核心问题：一是引入额外流程奖励模型会带来高昂计算开销；二是缺乏统一的流程级优势估计理论框架。现有基于辅助流程奖励模型（PRMs）的方法，存在训练难（人工标注或自动标注都有局限）、计算成本高（额外模型占用显存限制batch大小）、在线强化学习场景下难扩展等问题。同时，像PRIME这类方法虽改进了隐式PRM，但仍依赖辅助模型带来计算开销，且优势估计存在偏差。因此，亟需一种既无额外计算负担，又能精准估计流程优势的方法。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：流程奖励自引导，摆脱额外模型依赖  
+SPRO从理论上证明，流程奖励可直接从策略模型本身推导得到，无需额外训练辅助流程奖励模型。这既规避了PRMs训练难、计算成本高的问题，又保留了结果监督强化学习（如GRPO）的简洁性与可扩展性，契合工业落地需求。
+
+💡 创新点2：重定义逐步优势，精准估计流程优势  
+提出**累积流程奖励（Cumulative Process Reward, CPR）**与**掩码逐步优势（Masked Step Advantage, MSA）**。CPR隐式聚合前缀序列中所有前置步骤的流程奖励，作为各时间步预期回报的代理，提升估计准确性；MSA则在共享prompt的采样组内，对相同步骤的奖励进行分组归一化，实现严格的逐步动作优势估计，契合基于优势的策略梯度框架（如PPO），减少估计偏差。
+
+### 📈 实验结果
+在数学和代码基准测试中，SPRO展现出显著优势：  
+- 训练效率比 vanilla GRPO 高 3.4 倍，测试准确率提升 17.5%；  
+- 训练全程保持稳定且较高的策略熵，保证了充分探索；同时平均响应长度缩短约 1/3，避免“奖励黑客”（reward hacking）问题；  
+- 与 GRPO 等结果监督RL方法相比，无额外计算开销，更适配工业场景。  
+
+### 💬 可借鉴之处
+1. **无额外模型的奖励设计思路**：SPRO证明从策略模型自身挖掘流程奖励的可行性，为后续减少强化学习 pipeline 复杂度提供了新思路，尤其适合对算力、显存敏感的工业级应用；  
+2. **逐步优势的理论框架**：通过CPR和MSA重新定义流程级优势估计，既贴合传统策略梯度框架，又利用掩码注意力等结构编码前缀信息，这种“分组+归一化”的逐步优势估计范式，可为其他序列决策类任务（如代码生成、长文本推理）的优势计算提供参考；  
+3. **效率与探索的平衡**：在提升训练效率同时保证策略熵与抑制无效响应长度，验证了方法在“探索-利用”与“奖励合理性”上的兼顾能力，对构建更鲁棒的大模型推理策略有借鉴价值。
+
+## activation-reward-models-for-few-shot-model-alignment
+### Abstract
+Aligning Large Language Models (LLMs) and Large Multimodal Models (LMMs) to
+human preferences is a central challenge in improving the quality of the
+models' generative outputs for real-world applications. A common approach is to
+use reward modeling to encode preferences, enabling alignment via post-training
+using reinforcement learning. However, traditional reward modeling is not
+easily adaptable to new preferences because it requires a separate reward
+model, commonly trained on large preference datasets. To address this, we
+introduce Activation Reward Models (Activation RMs) -- a novel few-shot reward
+modeling method that leverages activation steering to construct well-aligned
+reward signals using minimal supervision and no additional model finetuning.
+Activation RMs outperform existing few-shot reward modeling approaches such as
+LLM-as-a-judge with in-context learning, voting-based scoring, and token
+probability scoring on standard reward modeling benchmarks. Furthermore, we
+demonstrate the effectiveness of Activation RMs in mitigating reward hacking
+behaviors, highlighting their utility for safety-critical applications. Toward
+this end, we propose PreferenceHack, a novel few-shot setting benchmark, the
+first to test reward models on reward hacking in a paired preference format.
+Finally, we show that Activation RM achieves state-of-the-art performance on
+this benchmark, surpassing even GPT-4o.
+### 🌟 论文解读 | 小样本模型对齐新范式：激活奖励模型（Activation RMs）
+
+### 📌 背景痛点/本文动机
+在大语言模型（LLMs）和大 multimodal 模型（LMMs）的实际应用中，让模型与人类偏好对齐是提升生成质量的核心挑战。传统奖励建模方法需在大规模偏好数据集上训练独立奖励模型，难以灵活适配新偏好；而依赖大模型自身做奖励评估的方法（如 LLM-as-a-Judge）在特定场景（如抵御 prompt 攻击、防范奖励黑客行为）下表现不足。同时，现有奖励模型在应对新任务、新安全威胁与偏见时，缺乏高效灵活的适配能力，这些痛点推动了对小样本下高效奖励建模方法的探索。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出激活奖励模型（Activation RMs）  
+Activation RMs 是一种小样本奖励建模方法，结合**激活引导（activation steering）**与**生成式评分**。给定少量带标签的偏好示例，从大注意力模型中提取稀疏的、包含信息的注意力头激活，推理时用这些激活引导模型内部表示（无需参数更新或额外上下文）；再通过简单生成式评分（如对二元偏好查询输出 “Yes”  token 的概率）得到奖励分数，实现对新任务和偏好的快速适配。  
+
+💡 创新点2：构建 PreferenceHack 基准  
+为测试奖励模型在奖励黑客行为下的鲁棒性，提出首个以配对偏好格式评估奖励黑客漏洞的基准 PreferenceHack，覆盖语言和多模态场景，针对长度、格式偏差等模型偏见设计任务，填补了小样本设置下奖励模型安全测试的空白。  
+
+
+### 📈 实验结果
+- 在标准奖励建模基准（如 RewardBench、MultimodalRewardBench）上，Activation RMs 超越现有小样本方法（如基于上下文学习的 LLM-as-a-Judge、投票评分、token 概率评分等）。  
+- 在 PreferenceHack 基准测试奖励黑客行为时，Activation RMs 展现出更强鲁棒性，性能超越 GPT-4o 等强基线，验证了其在安全关键应用中的实用价值。  
+
+
+### 💬 可借鉴之处
+- **方法层面**：激活引导与生成式评分的结合为小样本奖励建模提供新思路，无需全量微调即可让模型快速对齐新偏好，可启发后续轻量型、灵活型奖励模型的设计。  
+- **基准层面**：PreferenceHack 首次聚焦小样本下奖励黑客问题的配对偏好评估，为奖励模型安全性测试提供了标准化工具，推动领域对模型偏见与安全威胁的研究深度。  
+- **应用层面**：Activation RMs 在安全关键场景的有效性，说明该方法可迁移到需要快速响应新安全需求（如防范 hallucination、偏见滥用）的实际业务中，为模型部署的安全性提供技术参考。  
+
+## skywork-reward-v2--scaling-preference-data-curation-via-human-ai-synergy
+### Abstract
+Despite the critical role of reward models (RMs) in reinforcement learning
+from human feedback (RLHF), current state-of-the-art open RMs perform poorly on
+most existing evaluation benchmarks, failing to capture the spectrum of nuanced
+and sophisticated human preferences. Even approaches that incorporate advanced
+training techniques have not yielded meaningful performance improvements. We
+hypothesize that this brittleness stems primarily from limitations in
+preference datasets, which are often narrowly scoped, synthetically labeled, or
+lack rigorous quality control. To address these challenges, we present a
+large-scale preference dataset comprising 40 million preference pairs, named
+SynPref-40M. To enable data curation at scale, we design a human-AI synergistic
+two-stage pipeline that leverages the complementary strengths of human
+annotation quality and AI scalability. In this pipeline, humans provide
+verified annotations, while large language models perform automatic curation
+based on human guidance. Training on this preference mixture, we introduce
+Skywork-Reward-V2, a suite of eight reward models ranging from 0.6B to 8B
+parameters, trained on a carefully curated subset of 26 million preference
+pairs from SynPref-40M. We demonstrate that Skywork-Reward-V2 is versatile
+across a wide range of capabilities, including alignment with human
+preferences, objective correctness, safety, resistance to stylistic biases, and
+best-of-N scaling, achieving state-of-the-art performance across seven major
+reward model benchmarks. Ablation studies confirm that the effectiveness of our
+approach stems not only from data scale but also from high-quality curation.
+The Skywork-Reward-V2 series represents substantial progress in open reward
+models, highlighting the untapped potential of existing preference datasets and
+demonstrating how human-AI curation synergy can unlock significantly higher
+data quality.
+### 🌟 论文解读 | Skywork-Reward-V2：人机协同解锁偏好数据规模与质量新高度
+
+### 📌 背景痛点/本文动机
+奖励模型（RMs）在基于人类反馈的强化学习（RLHF）中至关重要，但当前开源奖励模型在多数评估基准上表现不佳，难以捕捉复杂精妙的人类偏好。究其原因，现有偏好数据集存在范围狭窄、标签合成性强或质量控制不严谨等局限，即便采用先进训练技术也难有实质性提升。因此，提升偏好数据质量以推动开源奖励模型发展成为关键诉求。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：构建超大规模偏好数据集SynPref - 40M  
+打造了包含4000万偏好对的大规模偏好数据集SynPref - 40M，为奖励模型训练提供了丰富的数据基础，这也是目前已知规模最大的精心整理偏好混合数据集。  
+
+💡 创新点2：设计人机协同两阶段数据整理 pipeline  
+第一阶段借助严格协议下的人工验证保障数据质量；第二阶段利用人类偏好引导的大语言模型（LLM）作为“裁判”实现规模化整理，同时结合奖励模型的迭代训练，持续纳入人工标签反馈并召回模型表现差的偏好数据以促进学习，最终得到2600万高质量偏好对用于模型训练。  
+
+💡 创新点3：推出Skywork - Reward - V2系列奖励模型  
+基于SynPref - 40M筛选出的偏好数据，训练出包含8个从0.6B到8B参数规模的Skywork - Reward - V2系列奖励模型，仅用Bradley - Terry目标函数训练却能在多基准展现卓越性能。  
+
+### 📈 实验结果
+在7个主要奖励模型基准测试中，Skywork - Reward - V2系列表现亮眼，8B规模模型在所有7个基准上大幅超越现有开源奖励模型；在人类偏好对齐、客观正确性、安全性、抗风格偏差、best - of - N缩放等多关键维度也展现出优越性能。消融实验表明，SynPref - 40M的成功既源于规模也得益于高质量，同时人机协同 pipeline 中人工标注、人类偏好引导的LLM标注及严谨标注协议都至关重要。  
+
+### 💬 可借鉴之处
+数据层面，大规模且高质量的偏好数据集对模型性能提升作用显著，SynPref - 40M的构建思路为数据驱动的模型优化提供范例；方法层面，人机协同的两阶段数据整理 pipeline 有效结合人类标注质量与AI可扩展性优势，为大规模数据高质量整理提供了可参考的流程框架；模型层面，Skywork - Reward - V2系列证明合理利用数据与训练策略，能在开源奖励模型领域实现性能突破，为后续奖励模型研发指明方向，凸显了挖掘现有偏好数据潜力与人机协同在提升数据质量上的价值。
+
+## safer--probing-safety-in-reward-models-with-sparse-autoencoder
+### Abstract
+Reinforcement learning from human feedback (RLHF) is a key paradigm for
+aligning large language models (LLMs) with human values, yet the reward models
+at its core remain largely opaque. In this work, we present sparse Autoencoder
+For Enhanced Reward model (\textbf{SAFER}), a novel framework for interpreting
+and improving reward models through mechanistic analysis. Leveraging Sparse
+Autoencoders (SAEs), we uncover human-interpretable features in reward model
+activations, enabling insight into safety-relevant decision-making. We apply
+SAFER to safety-oriented preference datasets and quantify the salience of
+individual features by activation differences between chosen and rejected
+responses. Using these feature-level signals, we design targeted data poisoning
+and denoising strategies. Experiments show that SAFER can precisely degrade or
+enhance safety alignment with minimal data modification, without sacrificing
+general chat performance. Our approach contributes to interpreting, auditing
+and refining reward models in high-stakes LLM alignment tasks. Our codes are
+available at https://github.com/xzy-101/SAFER-code. \textit{This paper
+discusses topics related to large language model safety and may include
+discussions or examples that highlight potential risks or unsafe outcomes.}
+### 🌟 论文解读 | SAFER：用稀疏自编码器透视奖励模型的安全奥秘
+
+### 📌 背景痛点/本文动机
+大语言模型（LLMs）的广泛应用凸显了安全与可靠性方面的关键担忧，基于人类反馈的强化学习（RLHF）是让模型与人类价值观对齐的主流方法，而其核心的奖励模型却在很大程度上不透明。一方面，奖励模型仅输出标量分数，掩盖了背后的语义特征，降低了透明度、可靠性与安全性；另一方面，奖励模型对偏好数据的标注十分敏感，微小改动就可能大幅影响性能，但当前检测、解释和修正有噪声或有问题标注的方法还很有限。因此，理解奖励模型内部机制和偏好数据集至关重要，本文正是为解决奖励模型可解释性以及偏好数据对其影响的理解问题而展开研究。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：引入稀疏自编码器（SAEs）实现奖励模型的机制性解释  
+利用稀疏自编码器这一机制可解释性方法，将奖励模型的激活分解为稀疏且可解释的特征，挖掘出驱动奖励预测的明确语义因素，通过识别与安全相关的特征大幅提升了奖励模型的透明度。SAEs旨在把语言模型激活表示为过完备基向量的稀疏组合，训练时最小化重建损失并对潜在向量施加稀疏约束，采用TopK SAE通过保留top K激活来增强稀疏性控制与特征可解释性。
+
+💡 创新点2：提出SAFER框架实现偏好数据集的特征级分析与增强  
+针对安全相关方面（因其实际重要性显著），先在安全导向的偏好数据集（SafeRLHF和WildGuardMix）上训练奖励模型，再在该奖励模型的隐藏状态激活上训练SAE以提取稀疏可解释特征；通过量化选中和拒绝响应间激活差异来确定特征显著性，进而实现对关键安全相关特征的隔离与解释。基于这些特征级信号，设计针对性的数据投毒和去噪策略，回答了偏好数据对奖励模型影响的问题，实现了基于安全相关性的靶向数据操作。
+
+### 📈 实验结果
+在数据投毒实验中，反转表现出最大安全相关特征激活差异的子集对，结果显示投毒操作能在极小数据改动下显著降低安全分数，且对模型通用能力（如聊天能力）几乎无影响；在数据去噪实验中，移除特征激活差异最小的对，去噪方法提升了奖励模型在安全评估上的性能。这表明SAFER能精准地降低或增强安全对齐度，同时不牺牲通用聊天性能。
+
+### 💬 可借鉴之处
+从方法层面，为奖励模型的解释、审计和优化提供了新途径，借助稀疏自编码器实现机制性解释的思路可迁移到其他模型可解释性任务中；从应用层面，针对偏好数据集的特征级探测策略，为高风险LLM对齐任务中数据的处理（投毒、去噪等）提供了靶向操作的范例，能启发后续在数据层面优化模型对齐与安全的工作；代码开源也为研究者复现和拓展相关研究提供了便利，推动该方向的发展。 
+
+## residual-reward-models-for-preference-based-reinforcement-learning
+### Abstract
+Preference-based Reinforcement Learning (PbRL) provides a way to learn
+high-performance policies in environments where the reward signal is hard to
+specify, avoiding heuristic and time-consuming reward design. However, PbRL can
+suffer from slow convergence speed since it requires training in a reward
+model. Prior work has proposed learning a reward model from demonstrations and
+fine-tuning it using preferences. However, when the model is a neural network,
+using different loss functions for pre-training and fine-tuning can pose
+challenges to reliable optimization. In this paper, we propose a method to
+effectively leverage prior knowledge with a Residual Reward Model (RRM). An RRM
+assumes that the true reward of the environment can be split into a sum of two
+parts: a prior reward and a learned reward. The prior reward is a term
+available before training, for example, a user's ``best guess'' reward
+function, or a reward function learned from inverse reinforcement learning
+(IRL), and the learned reward is trained with preferences. We introduce
+state-based and image-based versions of RRM and evaluate them on several tasks
+in the Meta-World environment suite. Experimental results show that our method
+substantially improves the performance of a common PbRL method. Our method
+achieves performance improvements for a variety of different types of prior
+rewards, including proxy rewards, a reward obtained from IRL, and even a
+negated version of the proxy reward. We also conduct experiments with a Franka
+Panda to show that our method leads to superior performance on a real robot. It
+significantly accelerates policy learning for different tasks, achieving
+success in fewer steps than the baseline. The videos are presented at
+https://sunlighted.github.io/RRM-web/.
+### 🌟 论文解读 | 基于偏好强化学习的残差奖励模型：高效利用先验知识加速策略学习
+
+### 📌 背景痛点/本文动机
+在强化学习（RL）中，奖励函数对智能体学习行为至关重要，但复杂任务下设计合适奖励函数很困难，易出现漏洞或无法适配场景等问题。基于偏好的强化学习（PbRL）通过人类反馈学习奖励函数，避免了繁琐的奖励设计，然而它存在收敛慢、反馈效率低等问题。此前用演示预训练奖励模型再用偏好微调的方法，因预训练和微调损失函数不同，会给神经网络优化带来不稳定风险。同时，逆强化学习（IRL）虽用专家演示估计奖励函数，但收集专家演示成本高且复杂行为下难获取。因此，如何高效结合先验知识提升PbRL性能成为关键。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出残差奖励模型（RRM）  
+假设环境真实奖励由先验奖励和学习到的奖励两部分相加构成。先验奖励是训练前可得的信息，比如用户“最佳猜测”的奖励函数、IRL得到的奖励函数等；学习到的奖励则通过偏好数据训练。这种结构像残差网络思路，让残差奖励在不改变先验奖励基础上，对与人类偏好不一致处进行修正，能从训练初期引导智能体学习目标相关策略，也能引入更细粒度任务信息。
+
+💡 创新点2：适配多场景的RRM版本  
+提出基于状态（state - based）和基于图像（image - based）的RRM版本，覆盖不同输入类型的强化学习任务场景，拓宽了方法的适用范围，能在多种环境下利用先验知识辅助偏好强化学习。
+
+### 📈 实验结果
+1. 在Meta - World环境套件多个任务上评估，无论是基于状态还是图像的任务，RRM都大幅提升了常见PbRL方法（如PEBBLE等）的性能，在不同类型先验奖励（代理奖励、IRL得到的奖励甚至代理奖励的取反版本）下都能带来性能改进。  
+2. 在真实Franka Panda机器人上开展sim2real实验，RRM能让机器人更快学习到高成功率策略，不同任务中策略学习速度加快，完成任务步骤数比基线方法更少。  
+3. 即使在反馈减少（总反馈有限或反馈频率低）、反馈错误等设置下，RRM也能保持稳定性能，对语义相反的先验奖励也有鲁棒性。
+
+### 💬 可借鉴之处
+1. 方法设计层面：残差结构在结合先验知识方面的思路可借鉴，为处理“已有部分知识但需精修”类问题提供了模型结构设计参考，在强化学习奖励学习之外的领域，若有类似需利用先验并微调修正的场景，残差式的模块设计或许能启发思路。  
+2. 实验验证层面：多场景（仿真到真实机器人）、多先验类型、多干扰条件（少反馈、错误反馈等）的实验验证方式，为验证方法鲁棒性和泛化性提供了范例，在后续研究中可学习这种全面验证的思路，更充分地展示方法价值。  
+3. 应用拓展层面：RRM对不同PbRL算法的性能提升表明，它可作为一种通用的增强模块，为现有PbRL技术栈升级提供了方向，在工业界或学术界现有基于偏好的强化学习系统优化时，可考虑引入该残差奖励模型思路来加速策略学习与提升效果。
+
+## generalist-reward-models--found-inside-large-language-models
+### Abstract
+The alignment of Large Language Models (LLMs) is critically dependent on
+reward models trained on costly human preference data. While recent work
+explores bypassing this cost with AI feedback, these methods often lack a
+rigorous theoretical foundation. In this paper, we discover that a powerful
+generalist reward model is already latently present within any LLM trained via
+standard next-token prediction. We prove that this endogenous reward is not a
+heuristic, but is theoretically equivalent to a reward function learned through
+offline inverse reinforcement learning. This connection allows us to directly
+elicit a high-quality reward signal from a base (pre-trained or supervised
+fine-tuned) model without any further training. Critically, we also prove that
+subsequent reinforcement learning using this endogenous reward leads to a
+policy with a provably superior error bound compared to the base model. To our
+best knowledge, this is the first theoretical proof of the effectiveness of
+reinforcement learning for LLMs. Our experiments validate this theory,
+demonstrating that our method not only outperforms existing LLM-as-a-judge
+approaches but can also surpass explicitly trained reward models. These
+findings suggest that the reward modeling stage can be replaced by a principled
+method of eliciting the knowledge already captured during pre-training,
+heralding a more efficient, powerful, and scalable paradigm for LLMs alignment
+as well as multi-modal models.
+### 🌟 论文解读 | 大语言模型中藏着通用奖励模型？LLM对齐新范式来了
+
+### 📌 背景痛点/本文动机
+大语言模型（LLM）对齐人类价值观（如帮助性、诚实性）是AI发展的核心挑战，主流的基于人类反馈的强化学习（RLHF）严重依赖用昂贵人类偏好数据训练的奖励模型（RM）。构建优质RM需大规模高质量人类偏好数据集，存在慢、贵、难扩展等问题。后续用AI反馈替代人类反馈的方法（如RLAIF、LLM-as-a-judge）又缺乏严谨理论基础，还易继承裁判模型的风格偏差与偏见。那么，高质量奖励信号是否必须外部获取？这成为关键问题，本文正是基于此展开研究。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：发现LLM中 latent 存在通用奖励模型  
+论文发现，任何经标准下一个token预测训练的LLM中，天然潜伏着强大的通用奖励模型，将其命名为“内生奖励（endogenous reward）”。无需额外训练，就能从基础模型（预训练或有监督微调模型）中直接提取高质量奖励信号。  
+
+💡 创新点2：理论层面建立与离线逆强化学习的联系  
+从理论上证明，这种内生奖励等价于通过离线逆强化学习（IRL）学到的奖励函数。具体而言，LLM的logits可直接解释为软Q函数，借助逆软Bellman算子能从中恢复出奖励函数，为提取奖励函数提供了原理性方法，突破了过往启发式做法。  
+
+💡 创新点3：证明基于内生奖励的RL有效性  
+证明用该内生奖励进行后续强化学习后，得到的策略相比基础模型有更优的误差界。RL过程能修正标准模仿学习（下一个token预测）的复合误差，把性能差距从与任务时长相关的二次依赖（O(H²)）降到更优的线性依赖（O(H)）。这是首次从理论上证明LLM强化学习的有效性。  
+
+
+### 📈 实验结果
+大量实验验证了理论：提取内生奖励的方法不仅优于现有LLM-as-a-judge方法，还能超越在昂贵人类标注数据上显式训练的奖励模型。  
+
+### 💬 可借鉴之处
+论文表明奖励建模阶段可被一种原理性方法替代——提取预训练阶段已捕获的知识。这为LLM对齐以及多模态模型领域，开辟了更高效、强大且可扩展的新范式，后续在模型对齐、奖励函数设计等方向，都可借鉴这种“挖掘模型内在已有能力”的思路，减少对外部昂贵数据与额外训练的依赖。
+
+## listener-rewarded-thinking-in-vlms-for-image-preferences
+### Abstract
+Training robust and generalizable reward models for human visual preferences
+is essential for aligning text-to-image and text-to-video generative models
+with human intent. However, current reward models often fail to generalize, and
+supervised fine-tuning leads to memorization, demanding complex annotation
+pipelines. While reinforcement learning (RL), specifically Group Relative
+Policy Optimization (GRPO), improves generalization, we uncover a key failure
+mode: a significant drop in reasoning accuracy occurs when a model's reasoning
+trace contradicts that of an independent, frozen vision-language model
+("listener") evaluating the same output. To address this, we introduce a
+listener-augmented GRPO framework. Here, the listener re-evaluates the
+reasoner's chain-of-thought to provide a dense, calibrated confidence score,
+shaping the RL reward signal. This encourages the reasoner not only to answer
+correctly, but to produce explanations that are persuasive to an independent
+model. Our listener-shaped reward scheme achieves best accuracy on the
+ImageReward benchmark (67.4%), significantly improves out-of-distribution (OOD)
+performance on a large-scale human preference dataset (1.2M votes, up to +6%
+over naive reasoner), and reduces reasoning contradictions compared to strong
+GRPO and SFT baselines. These results demonstrate that listener-based rewards
+provide a scalable, data-efficient path to aligning vision-language models with
+nuanced human preferences. We will release our reasoning model here:
+https://huggingface.co/alexgambashidze/qwen2.5vl_image_preference_reasoner.
+### 🌟 论文解读 | 用Listener增强的RL，让视觉语言模型更懂人类图像偏好
+
+### 📌 背景痛点/本文动机
+在生成式建模领域，让视觉 - 语言模型（VLMs）精准捕捉人类视觉偏好是关键难题。现有奖励模型存在泛化能力不足问题，监督微调（SFT）易导致模型记忆训练数据，还需要复杂标注流程。强化学习（RL）里的Group Relative Policy Optimization（GRPO）虽能提升泛化性，但研究发现基于RL的偏好推理模型存在“听众分歧（listener disagreement）”问题：当模型推理轨迹和独立冻结的视觉 - 语言模型（“listener”）对同一输出的评估矛盾时，推理准确率大幅下降。所以，如何解决这种推理矛盾、提升模型与人类偏好的对齐度是本文动机所在。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：首次训练思维链风格推理模型预测人类对生成模型输出的视觉偏好
+以往工作较少针对生成模型输出的人类视觉偏好来训练这种思维链推理模型，本文填补了这一空白，为视觉偏好预测提供新的模型训练思路。
+
+💡 创新点2：识别并量化“听众分歧”这一RL视觉偏好建模的主要失效模式
+通过分析发现，当模型预测和独立“listener”预测差异增大时，VLM准确率持续下降，将这种现象明确为关键问题并量化，为后续解决方法提供基础。
+
+💡 创新点3：设计面向GRPO的listener - shaped软奖励机制
+引入冻结的VLM“listener”，让其独立重新处理推理模型（reasoner）的思维链（排除最终答案token），输出对正确选择的校准置信分数，并整合到RL奖励信号中。这样既惩罚无法说服独立模型的解释，又无需额外人工标注就能提供密集、数据高效的监督，让推理模型不仅答案正确，推理过程也能被“listener”认可。
+
+### 📈 实验结果
+在ImageReward测试集上，方法达到67.4%的当前最优准确率；在大规模（120万投票）的Rapidata - HSP基准测试中，大幅超越强GRPO和SFT基线；同时减少了推理矛盾情况，且在分布外（OOD）数据集上表现出色，即便用少量偏好数据训练，也能让输出更校准、OOD鲁棒性更强。
+
+### 💬 可借鉴之处
+从方法创新角度，利用独立模型构建奖励机制来对齐推理轨迹和最终决策的思路，为解决模型推理一致性问题提供了新范式；从应用角度，证明listener增强的RL是VLMs中偏好对齐的有效实用工具，为下一代文本到图像、文本到视频系统提供了可扩展的偏好对齐解决方案，在工业界大规模生成模型偏好调优场景有借鉴价值；从问题发现角度，对“听众分歧”这种失效模式的识别和量化，让后续研究者能更关注模型推理过程的一致性问题，推动领域发展。
+
+## trofi--trajectory-ranked-offline-inverse-reinforcement-learning
+### Abstract
+In offline reinforcement learning, agents are trained using only a fixed set
+of stored transitions derived from a source policy. However, this requires that
+the dataset be labeled by a reward function. In applied settings such as video
+game development, the availability of the reward function is not always
+guaranteed. This paper proposes Trajectory-Ranked OFfline Inverse reinforcement
+learning (TROFI), a novel approach to effectively learn a policy offline
+without a pre-defined reward function. TROFI first learns a reward function
+from human preferences, which it then uses to label the original dataset making
+it usable for training the policy. In contrast to other approaches, our method
+does not require optimal trajectories. Through experiments on the D4RL
+benchmark we demonstrate that TROFI consistently outperforms baselines and
+performs comparably to using the ground truth reward to learn policies.
+Additionally, we validate the efficacy of our method in a 3D game environment.
+Our studies of the reward model highlight the importance of the reward function
+in this setting: we show that to ensure the alignment of a value function to
+the actual future discounted reward, it is fundamental to have a
+well-engineered and easy-to-learn reward function.
+### 🌟 论文解读 | TROFI：无预定义奖励下的离线逆强化学习新范式
+
+### 📌 背景痛点/本文动机
+在离线强化学习（ORL）中，智能体需依赖带奖励标签的存储转移数据训练，但在游戏开发等实际场景中，奖励函数往往难以获取或定义。同时，现有逆强化学习（IRL）和模仿学习（IL）方法多假设演示轨迹最优，且适配在线场景，无法直接用于含非专家、无奖励数据的离线场景。为解决这些问题，论文提出TROFI方法，旨在无预定义奖励函数和最优专家演示下学习离线策略。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：弱监督奖励学习与策略训练流程  
+TROFI分三步实现离线策略学习：首先通过T - REX（Trajectory - ranked Reward EXtrapolation）利用人类偏好进行弱监督学习，得到奖励模型\(\hat{r}_\theta\)；接着用该奖励模型为原始无奖励离线数据集打标签；最后基于打标后的数据集，用TD3 + BC（Twin Delayed Deep Deterministic plus Behavioral Cloning）训练参数化策略\(\pi_\theta\)。
+
+💡 创新点2：无需最优轨迹的奖励学习  
+区别于多数IRL/IL方法对最优演示的假设，TROFI借助T - REX仅需轨迹的定性排序信息来学习奖励函数。T - REX通过神经网路近似状态下的奖励，利用轨迹排名约束（如\(\tau_i \prec \tau_j\)时，轨迹\(\tau_j\)的累计奖励预测值大于\(\tau_i\)）构建损失函数训练奖励模型，无需知晓真实奖励函数。
+
+### 📈 实验结果
+在D4RL基准测试中，TROFI持续超越基线方法，性能媲美使用真实奖励训练策略的效果；同时在3D游戏环境中验证了方法有效性。此外，对奖励模型的研究表明，设计良好、易学习的奖励函数对保证值函数与实际未来折扣奖励对齐至关重要，凸显奖励函数在离线强化学习场景的关键作用。
+
+### 💬 可借鉴之处
+1. 方法层面：为无奖励函数或难获取最优演示的离线强化学习场景提供了弱监督解决方案，结合T - REX和TD3 + BC的流程可复用至类似数据驱动且奖励稀缺的任务（如游戏NPC行为学习、复杂工业场景策略优化）。  
+2. 实践层面：展示了游戏开发者如何高效利用大规模玩家无奖励数据，无需手动设计奖励函数就能训练智能体，为产业界利用玩家行为数据提供新思路。  
+3. 理论与分析层面：强调了离线强化学习中奖励函数设计的重要性，为后续研究中奖励函数的构建与优化提供了经验性指导，提示需关注奖励函数的可学习性与和实际任务目标的对齐性。
+
+## reasonflux-prm--trajectory-aware-prms-for-long-chain-of-thought-reasoning-in-llms
+### Abstract
+Process Reward Models (PRMs) have recently emerged as a powerful framework
+for supervising intermediate reasoning steps in large language models (LLMs).
+Previous PRMs are primarily trained on model final output responses and
+struggle to evaluate intermediate thinking trajectories robustly, especially in
+the emerging setting of trajectory-response outputs generated by frontier
+reasoning models like Deepseek-R1. In this work, we introduce ReasonFlux-PRM, a
+novel trajectory-aware PRM explicitly designed to evaluate the
+trajectory-response type of reasoning traces. ReasonFlux-PRM incorporates both
+step-level and trajectory-level supervision, enabling fine-grained reward
+assignment aligned with structured chain-of-thought data. We adapt
+ReasonFlux-PRM to support reward supervision under both offline and online
+settings, including (i) selecting high-quality model distillation data for
+downstream supervised fine-tuning of smaller models, (ii) providing dense
+process-level rewards for policy optimization during reinforcement learning,
+and (iii) enabling reward-guided Best-of-N test-time scaling. Empirical results
+on challenging downstream benchmarks such as AIME, MATH500, and GPQA-Diamond
+demonstrate that ReasonFlux-PRM-7B selects higher quality data than strong PRMs
+(e.g., Qwen2.5-Math-PRM-72B) and human-curated baselines. Furthermore, our
+derived ReasonFlux-PRM-7B yields consistent performance improvements, achieving
+average gains of 12.1% in supervised fine-tuning, 4.5% in reinforcement
+learning, and 6.3% in test-time scaling. We also release our efficient
+ReasonFlux-PRM-1.5B for resource-constrained applications and edge deployment.
+Projects: https://github.com/Gen-Verse/ReasonFlux
+### 🌟 论文解读 | ReasonFlux-PRM：面向大模型长思维链推理的轨迹感知型过程奖励模型
+
+### 📌 背景痛点/本文动机
+在大语言模型（LLMs）的复杂推理场景（如数学解题）中，Process Reward Models（PRMs，过程奖励模型）是监督中间推理步骤的有力工具。不过现有PRMs存在明显局限：它们主要基于模型最终输出训练，难以对**轨迹 - 响应（trajectory - response）**这类新兴输出形式的中间推理轨迹进行鲁棒评估。像Deepseek - R1等前沿推理模型会生成“冗长、欠规整的中间思考轨迹 + 简洁最终响应”的轨迹 - 响应对，这类数据常被用于小模型蒸馏，但现有PRMs因与中间轨迹在结构、格式上不匹配，且训练时缺乏带奖励的轨迹 - 响应数据，在监督这类数据时效果不佳甚至会损害下游训练。所以，如何让PRMs既能监督最终响应，又能有效评估中间思考轨迹，成为亟待解决的问题。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出轨迹感知的PRM——ReasonFlux - PRM  
+ReasonFlux - PRM专为评估轨迹 - 响应型推理痕迹设计，融合了**步骤级（step - level）**和**轨迹级（trajectory - level）**监督。它在涵盖数学和科学推理的10k高质量轨迹 - 响应对 curated 数据集上训练，能为思考轨迹内的每个步骤提供细粒度奖励作为监督信号，让模型中间思考轨迹与最终响应更对齐，解决了现有PRMs对中间轨迹监督能力不足的问题。  
+
+💡 创新点2：多场景适配的奖励监督  
+ReasonFlux - PRM适配离线和在线多种场景：  
+- 离线场景：为轨迹 - 响应对打分，筛选高质量数据，助力小模型下游有监督微调的训练数据精选；  
+- 在线场景：融入GRPO等策略优化过程，为强化学习（RL）中的策略优化提供细粒度过程奖励；  
+- 测试时缩放（test - time scaling）：通过奖励引导的Best - of - N策略，评估多个生成响应并选最优，提升推理性能。  
+
+
+### 📈 实验结果
+在AIME、MATH500、GPQA - Diamond等挑战性下游基准测试中，ReasonFlux - PRM展现出优异性能：  
+- 数据选择方面：ReasonFlux - PRM - 7B比强基线（如Qwen2.5 - Math - PRM - 72B）和人工策划基线选出的数据集质量更高；  
+- 性能提升方面：ReasonFlux - PRM - 7B在有监督微调中平均提升12.1%，强化学习中平均提升4.5%，测试时缩放中平均提升6.3%；  
+- 资源友好型发布：还发布了ReasonFlux - PRM - 1.5B，适配资源受限场景与边缘部署。  
+
+
+### 💬 可借鉴之处
+1. 问题定义与分析角度：针对新兴的轨迹 - 响应蒸馏数据趋势，深入分析现有PRMs在监督中间轨迹时的问题（结构格式不匹配、训练数据缺失），这种从产业新数据形态反推技术痛点的思路，为后续研究锚定方向提供参考；  
+2. 多粒度监督融合：将步骤级和轨迹级监督结合，为处理“长链条、多阶段”的推理类任务提供了细粒度奖励设计的范例，可迁移到代码生成、复杂决策等需分步评估的场景；  
+3. 多场景工程落地：从离线数据筛选、在线RL优化到测试时增强，完整覆盖大模型训练 - 推理全流程的奖励监督，展示了技术方案在产业级落地中的多维度价值，为打造端到端的大模型推理增强管线提供了实践模板；  
+4. 资源分层发布：同时提供7B和1.5B规模模型，兼顾高性能与资源受限场景，体现了技术普惠性，在实际业务中可根据算力、延迟等需求灵活选择，平衡效果与成本。  
+
+## longwriter-zero--mastering-ultra-long-text-generation-via-reinforcement-learning
+### Abstract
+Ultra-long generation by large language models (LLMs) is a widely demanded
+scenario, yet it remains a significant challenge due to their maximum
+generation length limit and overall quality degradation as sequence length
+increases. Previous approaches, exemplified by LongWriter, typically rely on
+''teaching'', which involves supervised fine-tuning (SFT) on synthetic
+long-form outputs. However, this strategy heavily depends on synthetic SFT
+data, which is difficult and costly to construct, often lacks coherence and
+consistency, and tends to be overly artificial and structurally monotonous. In
+this work, we propose an incentivization-based approach that, starting entirely
+from scratch and without relying on any annotated or synthetic data, leverages
+reinforcement learning (RL) to foster the emergence of ultra-long, high-quality
+text generation capabilities in LLMs. We perform RL training starting from a
+base model, similar to R1-Zero, guiding it to engage in reasoning that
+facilitates planning and refinement during the writing process. To support
+this, we employ specialized reward models that steer the LLM towards improved
+length control, writing quality, and structural formatting. Experimental
+evaluations show that our LongWriter-Zero model, trained from Qwen2.5-32B,
+consistently outperforms traditional SFT methods on long-form writing tasks,
+achieving state-of-the-art results across all metrics on WritingBench and
+Arena-Write, and even surpassing 100B+ models such as DeepSeek R1 and
+Qwen3-235B. We open-source our data and model checkpoints under
+https://huggingface.co/THU-KEG/LongWriter-Zero-32B
+### 🌟 论文解读 | LongWriter-Zero：用强化学习突破超长文本生成难题
+
+### 📌 背景痛点/本文动机
+超长文本生成（如万字级报告、叙事创作等）是大语言模型（LLM）在实际场景中至关重要的能力，但现有技术面临两大核心挑战：一是模型生成长度存在上限，二是随着文本长度增加，内容质量（连贯性、一致性、结构合理性等）会显著下降。  
+
+此前主流方案（如LongWriter）依赖**有监督微调（SFT）**，即在人工构造的“指令 - 长文本输出”配对数据上训练模型。但这种方式存在明显缺陷：  
+- 构造高质量的合成SFT数据成本极高、难度大；  
+- 合成数据往往缺乏连贯性与一致性，且风格单一、过度“人工化”；  
+- SFT的最大似然目标无法显式优化全局层面的文本属性（如整体连贯性、格式一致性）。  
+
+为突破这些限制，本文提出**完全从零开始、不依赖任何标注/合成数据**的强化学习（RL）方案，让LLM自主“进化”出超长高质量文本生成能力。  
+
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：基于强化学习的无监督超长文本生成框架  
+传统SFT依赖固定参考文本，而本文采用强化学习，让模型通过**奖励信号**优化长文本生成的全局目标（无需人工构造SFT数据集）。具体采用Group Relative Policy Optimization（GRPO）算法训练策略网络：从基础模型（如Qwen2.5 - 32B）出发，让模型在“写作过程中自主规划与迭代”，逐步掌握超长文本生成能力。  
+
+💡 创新点2：多维度奖励模型设计（Reward Design）  
+针对开放域文本生成的复杂性（主观性、多维度），设计**复合奖励函数**，整合多个专项奖励模型（RM），分别引导模型优化以下关键维度：  
+- 长度控制（Length RM）：确保输出满足“超长”需求，同时避免无意义冗余；  
+- 写作质量（Quality RM）：评估内容流畅度、逻辑性、专业性等；  
+- 结构格式（Structure RM）：保障文本结构合理（如分章节、层次清晰）。  
+
+💡 创新点3：测试时缩放（Test - time Scaling）与持续预训练（Continual Pretraining）  
+- 测试时缩放：借鉴大模型在数学/代码任务中“长思维链（CoT）”的成功经验，探索在超长文本生成中引入长CoT，增强模型推理与规划能力；  
+- 持续预训练：在长文本素材与推理数据上持续预训练，进一步提升RL训练后模型的性能上限。  
+
+
+### 📈 实验结果
+- 基准测试碾压传统SFT：基于Qwen2.5 - 32B训练的LongWriter - Zero，在WritingBench、Arena - Write等长文本写作基准测试中，**全面超越传统SFT方法**；  
+- 超越千亿参数模型：在多项指标上击败DeepSeek R1、Qwen3 - 235B等百 billion + 规模的大模型，刷新SOTA；  
+- 开源资源丰富：模型 checkpoint 和数据已开源（https://huggingface.co/THU - KEG/LongWriter - Zero - 32B），为社区提供了可复现、可扩展的基础。  
+
+
+### 💬 可借鉴之处
+1. 范式创新：证明强化学习可在“无标注/合成数据”场景下，激活LLM的超长文本生成能力，为大模型能力解锁提供了“非SFT”的新范式；  
+2. 奖励工程：多维度复合奖励模型的设计思路，可迁移到其他开放域生成任务（如创意写作、多轮对话），用于刻画“主观性强、无明确ground - truth”场景下的质量评估；  
+3. 训练策略：测试时缩放（长CoT）与持续预训练的组合，为提升大模型长文本推理、生成的上限提供了可复用的技术路线；  
+4. 落地价值：针对真实世界“超长文本需求”（如报告撰写、法律文书、教育内容创作），提供了更优质的技术方案，推动LLM在专业领域的落地。  
+
+
+LongWriter - Zero的工作不仅解决了超长文本生成的技术痛点，更展示了强化学习在大模型能力进化中的潜力——无需依赖大量人工标注，也能让模型“自主学习”复杂任务的完成能力。这为大模型研发范式、奖励机制设计等方向，都带来了极具启发性的参考。
+
+## reflective-verbal-reward-design-for-pluralistic-alignment
+### Abstract
+AI agents are commonly aligned with "human values" through reinforcement
+learning from human feedback (RLHF), where a single reward model is learned
+from aggregated human feedback and used to align an agent's behavior. However,
+human values are not homogeneous--different people hold distinct and sometimes
+conflicting values. Aggregating feedback into a single reward model risks
+disproportionately suppressing minority preferences. To address this, we
+present a novel reward modeling approach for learning individualized reward
+models. Our approach uses a language model to guide users through reflective
+dialogues where they critique agent behavior and construct their preferences.
+This personalized dialogue history, containing the user's reflections and
+critiqued examples, is then used as context for another language model that
+serves as an individualized reward function (what we call a "verbal reward
+model") for evaluating new trajectories. In studies with 30 participants, our
+method achieved a 9-12% improvement in accuracy over non-reflective verbal
+reward models while being more sample efficient than traditional supervised
+learning methods.
+### 🌟 论文解读 | 个性化价值对齐新范式：反思式语言奖励设计
+
+### 📌 背景痛点/本文动机
+在AI与人类价值对齐的领域，主流的基于人类反馈的强化学习（RLHF）方法存在局限：人类价值具有高度异质性，不同人价值观差异甚至冲突，但RLHF常将所有人反馈聚合为单一奖励模型，这会导致少数群体偏好被过度压制。此外，在复杂场景下人类偏好不是简单“提取”而是“构建”的，现有被动收集偏好、直接标注的方式难以让用户充分反思以形成明确偏好。因此，如何兼顾价值多样性与偏好构建过程，学习个性化奖励模型成为关键问题。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出Interactive - Reflective Dialogue Alignment（IRDA）框架  
+IRDA借助大语言模型（LLM）通过交互式对话学习个性化奖励函数，包含三部分：一是**反思式语言偏好引导**，引导用户清晰表达自身价值观；二是**主动学习**，策略性选择示例供人类批判，提升数据利用效率；三是**LLM驱动的语言奖励建模**，让LLM利用上下文学习能力，从稀疏用户反馈中泛化，直接作为奖励函数评估AI行为轨迹。用LLM引导的对话替代被动标注，激发用户深思熟虑的反思（System 2认知）来解决偏好构建难题。
+
+💡 创新点2：融合多学科视角实现个性化对齐  
+结合AI、人机交互（HCI）和社会科学知识，不再假设用户能直接清晰表达新场景下偏好，而是主动引导用户通过反思将潜在价值观转化为具体偏好，弥补了过往方法在偏好构建环节的不足，为个性化AI对齐提供新 pipeline。
+
+### 📈 实验结果
+开展两项涉及30名参与者的用户研究：第一项针对“尊重行为”的个人定义构建奖励模型（21人参与），第二项探索自动驾驶伦理决策（9人参与）。结果显示，参与者价值判断差异显著，IRDA相比基线方法（如非反思式语言奖励模型）能更准确捕捉个体对价值对齐行为的定义，在准确率上比非反思式语言奖励模型提升9 - 12%，且比传统监督学习方法样本效率更高。
+
+### 💬 可借鉴之处
+1. 多学科融合思路：将AI技术与HCI、社会科学中关于人类偏好构建、反思的研究结合，为AI对齐问题提供更贴合人类认知规律的解法，启示后续研究跨学科解决复杂AI伦理与对齐问题。  
+2. 个性化奖励模型构建：证明了通过引导反思、交互式对话学习个性化奖励函数的可行性，为面向个人的AI助手（如个性化智能助理）提供技术参考，让AI奖励更贴合用户个体而非群体平均。  
+3. 数据高效学习：主动学习策略在个性化场景下提升样本效率，为数据稀缺场景下的奖励模型学习提供借鉴，后续可探索在更多资源受限场景的应用。  
+4. 偏好构建过程重视：强调人类偏好“构建”而非“提取”，提醒研究者在设计AI对齐系统时关注用户反思、价值外显的过程，未来可深入探索如何优化对话引导策略以更好助力用户偏好构建。
+
+## reasongrm--enhancing-generative-reward-models-through-large-reasoning-models
+### Abstract
+Generative Reward Models (GRMs) provide greater flexibility than scalar
+reward models in capturing human preferences, but their effectiveness is
+limited by poor reasoning capabilities. This often results in incomplete or
+overly speculative reasoning paths, leading to hallucinations or missing key
+information in complex tasks. We address this challenge with ReasonGRM, a
+three-stage generative reward modeling framework. In the first stage, Zero-RL
+is used to generate concise, outcome-directed reasoning paths that reduce the
+likelihood of critical omissions. In the second stage, we introduce a novel
+evaluation metric, $R^\star$, which scores reasoning paths based on their
+generation likelihood. This favors paths that reach correct answers with
+minimal exploration, helping to reduce hallucination-prone data during
+training. In the final stage, the model is further refined through
+reinforcement learning on challenging examples to enhance its preference
+discrimination capabilities. Experiments on three public benchmarks show that
+ReasonGRM achieves competitive or state-of-the-art performance, outperforming
+previous best GRMs by 1.8\% on average and surpassing proprietary models such
+as GPT-4o by up to 5.6\%. These results demonstrate the effectiveness of
+reasoning-aware training and highlight the importance of high-quality rationale
+selection for reliable preference modeling.
+```
+### 🌟 论文解读 | ReasonGRM：借大模型推理能力革新生成式奖励模型
+
+### 📌 背景痛点/本文动机
+大语言模型（LLMs）在理解、生成与决策上取得长足进步，但要让模型输出贴合人类价值观，奖励模型（RM）是关键。传统标量奖励模型（SRMs）把复杂人类偏好压缩成单一标量，易信息丢失、泛化性弱；新兴生成式奖励模型（GRMs）虽更灵活，但推理能力不足，常出现推理路径不完整或过度推测，导致任务中“幻觉”或关键信息缺失。因此，如何提升GRMs的推理质量以实现可靠偏好建模，成了核心问题。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出ReasonGRM三阶段框架  
+ReasonGRM分三步打造更优生成式奖励模型：  
+- 阶段一（生成推理路径）：用Zero - RL生成简洁、以结果为导向的推理路径，减少关键信息遗漏风险；  
+- 阶段二（筛选优质路径）：引入全新评估指标\( R^\star \)，依据生成可能性为推理路径打分，偏好“用最少探索达正确答案”的路径，削减训练中易引发幻觉的数据；  
+- 阶段三（强化模型能力）：针对高难度示例用强化学习进一步精调模型，增强其偏好区分能力。  
+
+💡 创新点2：定义\( R^\star \)评估指标解决数据质量难题  
+\( R^\star \)结合“有效性（Validity，推理导向正确结果）”与“自一致性（Self - Consistency，推理逻辑连贯无冗余）”两大关键属性，通过生成可能性来评估推理路径，能从噪声候选集中自动选优质推理路径，破解复杂任务奖励模型训练的数据质量瓶颈。  
+
+
+### 📈 实验结果
+在RM - Bench、RewardBench、RMB三大公开基准测试中，ReasonGRM表现亮眼：平均超越此前最优GRMs 1.8%，在部分场景下比GPT - 4o等闭源模型领先达5.6%，还比主流SRMs平均高4.5%。实验不仅验证了方法有效性，消融实验也剖析了推理质量、\( R^\star \)过滤效果、各训练阶段对最终奖励模型的影响。  
+
+
+### 💬 可借鉴之处
+1. 重视推理质量在奖励模型中的价值：揭示了高质量推理路径（兼顾有效性与自一致性）对偏好建模的关键作用，为后续奖励模型设计指明“推理感知”方向；  
+2. 创新评估与过滤机制：\( R^\star \)展示了如何用生成可能性量化推理质量，为处理噪声数据、构建优质训练集提供了可复用思路；  
+3. 多阶段训练Pipeline：从生成到筛选再到强化学习的流程，为通用LLM向专精奖励模型转化提供了工程化参考范式；  
+4. 全面实验验证：跨多个权威基准的测试+消融实验，是学术研究中验证方法普适性与模块价值的典范，值得借鉴以增强研究说服力。  
+```
+
+## autorule--reasoning-chain-of-thought-extracted-rule-based-rewards-improve-preference-learning
+### Abstract
+Rule-based rewards offer a promising strategy for improving reinforcement
+learning from human feedback (RLHF), but current approaches often rely on
+manual rule engineering. We present AutoRule, a fully automated method for
+extracting rules from preference feedback and formulating them into rule-based
+rewards. AutoRule extraction operates in three stages: it leverages a reasoning
+model to interpret user preferences, identifies candidate rules from the
+reasoning chain of these interpretations, and synthesizes them into a unified
+rule set. Leveraging the finalized rule set, we employ language-model verifiers
+to compute the fraction of rules satisfied by each output, using this metric as
+an auxiliary reward alongside the learned reward model during policy
+optimization. Training a Llama-3-8B model with AutoRule results in a 28.6\%
+relative improvement in length-controlled win rate on AlpacaEval2.0, and a
+6.1\% relative gain in second-turn performance on a held-out MT-Bench subset,
+compared to a GRPO baseline trained with the same learned reward model but
+without the rule-based auxiliary reward. Our analysis confirms that the
+extracted rules exhibit good agreement with dataset preference. We find that
+AutoRule demonstrates reduced reward hacking compared to a learned reward model
+when run over two episodes. Finally, our case study suggests that the extracted
+rules capture unique qualities valued in different datasets. The extracted
+rules are provided in the appendix, and the code is open-sourced at
+https://github.com/cxcscmu/AutoRule.
+### 🌟 论文解读 | AutoRule：从推理思维链中提取规则奖励，革新偏好学习
+
+### 📌 背景痛点/本文动机
+强化学习从人类反馈（RLHF）是大语言模型（LLM）对齐人类价值观和遵循指令的关键技术，但现有基于学习的奖励模型存在“奖励黑客攻击”问题（模型为追求高奖励而投机取巧，未真正提升响应质量）。同时，规则驱动的奖励虽能有效缓解该问题，但传统规则依赖人工设计或大规模众包标注，成本高且难扩展。因此，如何自动从偏好数据中提取规则来构建奖励机制，成为亟待解决的问题。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出AutoRule自动规则提取框架  
+AutoRule通过大语言模型的推理能力，从偏好数据中自动提取对齐规则。流程分三步：首先用具备推理能力的LLM为偏好输出生成逐步推理依据；接着从推理过程中提取候选规则；最后聚合训练集候选规则并合成统一规则集，借助推理链的逻辑结构捕捉更精准的偏好准则。  
+
+💡 创新点2：规则奖励与策略优化结合  
+利用最终规则集，让语言模型充当“验证器”，计算每个输出满足规则的比例，将该指标作为辅助奖励，与传统学习到的奖励模型在策略优化阶段配合使用，引导模型训练。  
+
+### 📈 实验结果
+在实验验证中，用Llama 3 8B Instruct作验证器时，规则分数（单个或累计）在UltraFeedback和MT - Bench Human Judgment数据集上与偏好高度一致；基于UltraFeedback数据用GRPO结合AutoRule训练Llama - 3 - 8B模型，对比仅用学习奖励模型的GRPO基线，AlpacaEval2.0长度控制胜率相对提升28.6%，MT - Bench保留子集的第二轮表现相对提升6.1%；奖励黑客实验表明AutoRule能减轻奖励模型过度优化；消融实验证明从推理链提取规则比仅从依据提取更有效；定性分析显示不同数据集提取的规则各有侧重（如UltraFeedback侧重对话质量，MT - Bench侧重指令遵循与复杂任务鲁棒性）。  
+
+### 💬 可借鉴之处
+1. 自动规则提取思路：摆脱人工规则依赖，借助LLM推理能力从数据中自动挖掘规则，为领域适配规则构建提供高效方案。  
+2. 多奖励融合优化：将规则奖励与学习奖励结合用于策略优化，为缓解奖励黑客、提升模型真实性能提供新范式。  
+3. 可解释性与适配性：提取的规则可解释，且能捕捉不同数据集的独特价值，为理解模型偏好对齐逻辑和定制化优化提供参考。
+
+## reward-models-in-deep-reinforcement-learning--a-survey
+### Abstract
+In reinforcement learning (RL), agents continually interact with the
+environment and use the feedback to refine their behavior. To guide policy
+optimization, reward models are introduced as proxies of the desired
+objectives, such that when the agent maximizes the accumulated reward, it also
+fulfills the task designer's intentions. Recently, significant attention from
+both academic and industrial researchers has focused on developing reward
+models that not only align closely with the true objectives but also facilitate
+policy optimization. In this survey, we provide a comprehensive review of
+reward modeling techniques within the deep RL literature. We begin by outlining
+the background and preliminaries in reward modeling. Next, we present an
+overview of recent reward modeling approaches, categorizing them based on the
+source, the mechanism, and the learning paradigm. Building on this
+understanding, we discuss various applications of these reward modeling
+techniques and review methods for evaluating reward models. Finally, we
+conclude by highlighting promising research directions in reward modeling.
+Altogether, this survey includes both established and emerging methods, filling
+the vacancy of a systematic review of reward models in current literature.
+### 🌟 论文解读 | 深度强化学习中奖励模型全景式综述：从基础到前沿
+
+### 📌 背景痛点/本文动机
+强化学习（RL）中，奖励是引导智能体优化行为的核心，但现实场景里奖励常缺失或难定义。现有综述多聚焦逆强化学习、基于人类反馈的强化学习等子领域，缺乏对奖励模型本身的系统性梳理。同时，以大语言模型（LLM）、视觉 - 语言模型（VLM）为代表的基础模型在奖励建模中兴起却未被充分综述。因此，本文旨在填补空白，全面回顾深度强化学习中奖励建模技术，涵盖基础、方法、应用与未来方向。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：系统性分类框架构建
+从**来源**、**机制**、**学习范式**三维度构建奖励模型分类框架。来源上区分人类提供型（含手动奖励工程、人在环奖励学习，后者又细分为从演示、目标、偏好中学习）与AI生成型（依托LLM、VLM等基础模型）；机制上分为内在奖励（驱动智能体自主探索）与外在奖励（环境直接反馈）；学习范式围绕不同反馈类型展开，清晰梳理奖励模型的多样形态与构建逻辑。
+💡 创新点2：全面覆盖新兴方向
+聚焦基础模型赋能的奖励建模，如LLM解读人类意图自主定义奖励、VLM处理多模态场景下奖励生成等，弥补过往综述对这类新兴方法关注不足的问题，为领域注入新视角。
+💡 创新点3：完整生态梳理
+不仅剖析奖励模型技术本身，还延伸至应用场景（如复杂游戏、大模型对齐人类意图、大规模智能体训练）与评估方法，搭建从技术到落地再到效果验证的完整知识链条，助力读者理解奖励模型在RL生态中角色。
+
+### 📈 实验结果
+文中未侧重传统实验指标对比（因属综述），但通过对大量前沿论文（如基于LLM的奖励设计、人在环奖励学习案例）的归纳，展现各分类下方法在不同场景（如AlphaGo的决策奖励、InstructGPT的对齐奖励）的有效性：手动奖励工程在 Gym - MuJoCo  walker 任务中通过组合生存、移动等奖励引导智能体；人在环学习从人类演示/偏好中学习的方式降低人工设计难度且提升对齐度；基础模型生成奖励在大模型智能体训练（如OpenAI - o1）中展现强大推理引导能力，验证不同奖励建模路径在各自适用场景的价值。
+
+### 💬 可借鉴之处
+1. **分类思维**：三维度分类框架为领域内研究提供清晰“坐标”，后续研究可快速定位自身方法所属维度，也便于梳理领域发展脉络，类似思路可迁移至其他AI子领域技术综述与分类。
+2. **新兴技术融合视角**：关注基础模型与RL奖励建模的结合，启示研究者重视跨模态、大模型等前沿技术对传统RL模块的革新，推动学科交叉。
+3. **生态化梳理**：从技术到应用再到评估的全流程覆盖，提醒从业者做研究或落地时需兼顾上下游环节，如设计奖励模型要考虑应用场景特性、评估手段合理性，为项目全周期规划提供参考。 
+4. **填补领域空白价值**：作为首篇系统聚焦深度RL奖励模型的综述，为学界提供了该方向知识底座，后续研究可基于此展开更细分、深入的探索，如特定来源奖励模型的优化、跨机制奖励融合等。
+
+## adaptive-accompaniment-with-realchords
+### Abstract
+Jamming requires coordination, anticipation, and collaborative creativity
+between musicians. Current generative models of music produce expressive output
+but are not able to generate in an \emph{online} manner, meaning simultaneously
+with other musicians (human or otherwise). We propose ReaLchords, an online
+generative model for improvising chord accompaniment to user melody. We start
+with an online model pretrained by maximum likelihood, and use reinforcement
+learning to finetune the model for online use. The finetuning objective
+leverages both a novel reward model that provides feedback on both harmonic and
+temporal coherency between melody and chord, and a divergence term that
+implements a novel type of distillation from a teacher model that can see the
+future melody. Through quantitative experiments and listening tests, we
+demonstrate that the resulting model adapts well to unfamiliar input and
+produce fitting accompaniment. ReaLchords opens the door to live jamming, as
+well as simultaneous co-creation in other modalities.
+### 🌟 论文解读 | ReaLchords：开启实时音乐即兴伴奏新篇章
+
+### 📌 背景痛点/本文动机
+音乐即兴演奏（Jamming）需要乐手间的协调、预判与协作创造力，但当前音乐生成模型虽能产出富有表现力的内容，却无法“在线”（online）生成，即无法与其他乐手（人类或其他）同步创作。在音乐伴奏场景中，现有模型多为离线生成（如先拿到完整旋律再生成伴奏），不适应实时互动、动态调整的需求；且基于最大似然估计（MLE）预训练的模型存在“暴露偏差”，在面对实时场景中常见的错误、风格变化等情况时表现不佳，难以适配陌生输入并生成契合的伴奏。因此，打造一款能在线适配用户旋律、即兴生成和弦伴奏的模型成为关键需求，ReaLchords 应运而生。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出 ReaLchords 在线伴奏生成模型  
+ReaLchords 聚焦于为用户旋律实时即兴生成和弦伴奏，它先基于最大似然估计完成预训练，再通过强化学习（RL）对模型进行在线场景的微调。这种方式让模型能在不知道后续旋律的情况下，动态响应正在生成的音乐叙事，满足实时互动中“条件独立假设”的约束，为现场即兴演奏等场景提供技术支撑。
+
+💡 创新点2：结合强化学习与自监督奖励模型优化  
+微调过程中引入新颖的自监督奖励模型，从和声与时间连贯性等多个角度，为旋律和和弦之间的音乐协调性提供反馈。该奖励模型无需人类标注，通过自监督训练却能在人类听觉测试中展现出与人类偏好的高度对齐，有效引导模型生成更具音乐性的伴奏。
+
+💡 创新点3：基于“未来可见”教师模型的知识蒸馏  
+设计了一种从“能看到未来旋律”的教师模型向“看不到未来”的学生模型（即在线生成模型）蒸馏知识的新颖方式。教师模型可利用完整旋律信息，学生模型则模拟实时场景只能依赖历史信息，通过这种蒸馏让学生模型学会“预判”，大幅提升生成质量，人类评估结果也验证了蒸馏对模型效果的增益。
+
+### 📈 实验结果
+- 抗扰动与适配性：对比仅用 MLE 训练的在线模型，ReaLchords 在面对测试集中旋律中途的突然转调等扰动时，能更快适应。如示例中 MLE 模型预测出不合适和弦后无法调整，而 ReaLchords 虽初期也会预测不佳但能快速修正，且客观和声质量指标也佐证了这一优势。  
+- 人类评估与偏好对齐：奖励模型在无人类反馈训练下，经人类听觉测试证明与人类偏好高度契合；同时结合蒸馏与 RL 微调后的模型，在生成伴奏的节奏、和声质量等维度表现更优，各组件对最终效果均有提升贡献。  
+- 定量指标验证：通过领域特定指标分析（如和声、节奏相关度量），证实 RL 微调中各组件（奖励模型、蒸馏等）对生成伴奏在节奏和和声质量上的改进作用，无 RL 微调的模型在应对错误和扰动时表现拉胯。
+
+### 💬 可借鉴之处
+- 实时互动场景建模：为音乐以外的实时协同创作（如视觉艺术同步共创、互动叙事生成等）提供了“在线生成 + 强化学习适配”的思路参考，展示了如何让生成模型适应动态、不可见后续输入的场景。  
+- 自监督奖励机制：证明无需人类标注的自监督方式也能训练出与人类偏好对齐的奖励模型，在其他创意领域（如绘画风格一致性评估、文学创作连贯性打分等）可借鉴该思路构建自监督反馈信号。  
+- 知识蒸馏新范式：“从能看未来的教师到只能看历史的学生”的蒸馏模式，为需要“预判”能力的任务（如实时对话回复生成、实时交通调度策略学习等）提供了蒸馏方向与目标设定的创新范式，拓展了知识蒸馏的应用边界。
+
+## senior--efficient-query-selection-and-preference-guided-exploration-in-preference-based-reinforcement-learning
+### Abstract
+Preference-based Reinforcement Learning (PbRL) methods provide a solution to
+avoid reward engineering by learning reward models based on human preferences.
+However, poor feedback- and sample- efficiency still remain the problems that
+hinder the application of PbRL. In this paper, we present a novel efficient
+query selection and preference-guided exploration method, called SENIOR, which
+could select the meaningful and easy-to-comparison behavior segment pairs to
+improve human feedback-efficiency and accelerate policy learning with the
+designed preference-guided intrinsic rewards. Our key idea is twofold: (1) We
+designed a Motion-Distinction-based Selection scheme (MDS). It selects segment
+pairs with apparent motion and different directions through kernel density
+estimation of states, which is more task-related and easy for human preference
+labeling; (2) We proposed a novel preference-guided exploration method (PGE).
+It encourages the exploration towards the states with high preference and low
+visits and continuously guides the agent achieving the valuable samples. The
+synergy between the two mechanisms could significantly accelerate the progress
+of reward and policy learning. Our experiments show that SENIOR outperforms
+other five existing methods in both human feedback-efficiency and policy
+convergence speed on six complex robot manipulation tasks from simulation and
+four real-worlds.
+### 🌟 论文解读 | SENIOR：基于偏好强化学习的高效查询选择与偏好引导探索
+
+### 📌 背景痛点/本文动机
+强化学习（RL）在众多决策任务中取得成功，但奖励函数设计随任务复杂度提升变得困难。基于偏好的强化学习（PbRL）通过学习人类偏好来避免奖励工程，然而反馈效率与样本效率低的问题阻碍了其应用。现有方法在选择易标注的有意义片段及让探索与偏好关联方面存在不足，因此本文提出SENIOR方法来提升PbRL的反馈与探索效率。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：基于运动区分的选择方案（MDS）
+通过对状态进行核密度估计，选择具有明显运动且方向不同的行为片段对。这类片段更与任务相关，也便于人类进行偏好标注，能为奖励学习获取高质量标签，解决了以往查询选择中无意义数据对多、标注难的问题。
+
+💡 创新点2：偏好引导的探索方法（PGE）
+以内在奖励的形式，鼓励智能体探索高偏好且低访问的状态，持续引导智能体获取有价值样本。让探索和人类偏好关联起来，弥补了以往RL探索中较少关注偏好相关性的缺陷，加速策略学习。并且MDS与PGE协同作用，MDS为PGE提供准确奖励指导，PGE为MDS提供更有价值的查询样本，共同推动奖励和策略学习进程。
+
+### 📈 实验结果
+在6个模拟的复杂机器人操作任务和4个真实世界任务中，SENIOR在人类反馈效率和策略收敛速度上均优于其他五种现有方法，验证了其在提升PbRL性能方面的有效性。
+
+### 💬 可借鉴之处
+1. 在查询选择层面，关注任务相关的运动等信息来挑选易标注片段，为类似依赖人类反馈的学习场景提供了从任务特征角度优化数据选择的思路。
+2. 在探索机制层面，将人类偏好融入探索设计，为强化学习中探索与任务目标、人类意图结合提供了创新方向，可启发后续在提升探索针对性上的研究。
+3. 多任务（模拟+真实世界）的实验验证模式，为方法泛化性验证提供了参考范式，能让后续研究更注重方法在不同场景下的有效性检验。 
+
+## tgdpo--harnessing-token-level-reward-guidance-for-enhancing-direct-preference-optimization
+### Abstract
+Recent advancements in reinforcement learning from human feedback have shown
+that utilizing fine-grained token-level reward models can substantially enhance
+the performance of Proximal Policy Optimization (PPO) in aligning large
+language models. However, it is challenging to leverage such token-level reward
+as guidance for Direct Preference Optimization (DPO), since DPO is formulated
+as a sequence-level bandit problem. To address this challenge, this work
+decomposes the sequence-level PPO into a sequence of token-level proximal
+policy optimization problems and then frames the problem of token-level PPO
+with token-level reward guidance, from which closed-form optimal token-level
+policy and the corresponding token-level reward can be derived. Using the
+obtained reward and Bradley-Terry model, this work establishes a framework of
+computable loss functions with token-level reward guidance for DPO, and
+proposes a practical reward guidance based on the induced DPO reward. This
+formulation enables different tokens to exhibit varying degrees of deviation
+from reference policy based on their respective rewards. Experiment results
+demonstrate that our method achieves substantial performance improvements over
+DPO, with win rate gains of up to 7.5 points on MT-Bench, 6.2 points on
+AlpacaEval 2, and 4.3 points on Arena-Hard. Code is available at
+https://github.com/dvlab-research/TGDPO.
+### 🌟 论文解读 | TGDPO：用Token级奖励指导增强直接偏好优化，提升大模型对齐能力
+
+### 📌 背景痛点/本文动机
+在大语言模型（LLM）的人类反馈强化学习（RLHF）领域，近端策略优化（PPO）算法常被用于让模型与人类偏好对齐，但传统序列级奖励存在稀疏性（如延迟反馈），导致训练不稳定和样本利用低效。而直接偏好优化（DPO）虽简化了流程、无需单独训练奖励模型，但它是序列级的“老虎机问题”形式，难以直接利用细粒度的Token级奖励来指导优化。因此，如何把对PPO有效的Token级奖励优势引入DPO，成为待解决的关键挑战。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：序列级PPO的Token级分解与最优策略推导  
+论文将序列级的PPO分解为一系列Token级的近端策略优化子问题，通过上界方法重新构建问题后，推导出了**闭式的最优Token级策略**，并得到与之对应的Token级奖励表示，为后续把Token级奖励融入DPO打下基础。  
+
+💡 创新点2：面向DPO的Token级奖励指导框架（TGDPO）  
+基于推导得到的Token级奖励，结合Bradley - Terry模型以及“消除配分函数”的新理论结果，提出了**TGDPO框架**——为DPO赋予Token级奖励指导能力的偏好优化算法。同时，还设计了基于诱导DPO奖励的**实用Token级奖励指导方案**，让不同Token能依据自身奖励，呈现出与参考策略不同程度的偏离，更精细地调控生成过程。  
+
+
+### 📈 实验结果
+论文在AlpacaEval 2、MT - Bench、Arena - Hard三大指令跟随基准测试中验证效果：与最优基线方法相比，TGDPO在MT - Bench上胜率提升高达7.5个百分点，AlpacaEval 2上提升6.2个百分点，Arena - Hard上提升4.3个百分点。此外，实验还展现出TGDPO在损失收敛时能得到更优策略（这在传统偏好优化方法中不常见）、可控制收敛速度且对Token级奖励变化鲁棒等优势。  
+
+
+### 💬 可借鉴之处
+1. 分解与重构思路：把序列级问题拆分为Token级子问题并推导闭式解，这种“化整为零 + 理论推导”的思路，为处理大粒度强化学习问题提供了Token级精细调控的新视角。  
+2. 跨算法融合创新：成功将对PPO有效的Token级奖励能力引入DPO，证明了不同RLHF算法间“优势特性迁移”的可行性，启发后续算法融合创新。  
+3. 实用奖励设计：提出的基于诱导奖励的Token级指导方案，为实际落地时如何利用细粒度反馈优化大模型，提供了可参考的工程化思路。  
+
+## gram--a-generative-foundation-reward-model-for-reward-generalization
+### Abstract
+In aligning large language models (LLMs), reward models have played an
+important role, but are standardly trained as discriminative models and rely
+only on labeled human preference data. In this paper, we explore methods that
+train reward models using both unlabeled and labeled data. Building on the
+generative models in LLMs, we develop a generative reward model that is first
+trained via large-scale unsupervised learning and then fine-tuned via
+supervised learning. We also show that by using label smoothing, we are in fact
+optimizing a regularized pairwise ranking loss. This result, in turn, provides
+a new view of training reward models, which links generative models and
+discriminative models under the same class of training objectives. The outcome
+of these techniques is a foundation reward model, which can be applied to a
+wide range of tasks with little or no further fine-tuning effort. Extensive
+experiments show that this model generalizes well across several tasks,
+including response ranking, reinforcement learning from human feedback, and
+task adaptation with fine-tuning, achieving significant performance
+improvements over several strong baseline models.
+### 🌟 论文解读 | GRAM：面向奖励泛化的生成式基础奖励模型
+
+### 📌 背景痛点/本文动机
+在大语言模型（LLMs）的对齐工作中，奖励模型扮演着关键角色，但传统奖励模型多以判别式模型形式训练，且高度依赖带标签的人类偏好数据。这带来了两方面问题：一是强化学习算法复杂度与标注数据获取难度导致奖励模型应用成本高昂；二是现有训练方式对大量无标签数据利用不足，难以得到能灵活适配多任务的通用奖励模型。因此，本文旨在探索利用无标签和有标签数据训练奖励模型的方法，打造可泛化的基础奖励模型。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：两阶段训练的生成式奖励模型架构  
+基于大语言模型的生成式能力，构建生成式奖励模型（GRAM），分两阶段训练。第一阶段在大规模无标签的输入 - 响应数据上进行无监督预训练，学习输入与响应间的对应关系，无需偏好标注数据，可规模化获取响应比较的通用知识；第二阶段利用人类偏好数据进行有监督微调，让模型学会预测两个响应间的偏好关系。最终得到的基础奖励模型能直接用于下游任务或仅用少量任务特定数据微调。
+
+💡 创新点2：标签平滑下的损失函数统一视角  
+引入标签平滑技术到奖励模型训练中，证明此时训练目标可转化为正则化的 pairwise ranking loss（Bradley - Terry 损失）形式。这一成果在一定程度上统一了生成式模型与判别式模型的训练目标视角，为奖励模型训练提供了新认知，且标签平滑对训练生成式奖励模型十分有益，提升了模型泛化性。
+
+### 📈 实验结果
+在响应排序、基于人类反馈的强化学习（RLHF）、任务适配等多任务场景下开展大量实验。结果显示，GRAM 在几乎无需或仅需少量微调时，在各任务上泛化性出色。例如，基于 LLaMA - 3.1 - 8B - Instruct 模型训练奖励模型时，在 RewardBench 平均准确率上，相比普通判别式和生成式奖励模型分别提升 11.0 和 5.1 个百分点，显著超越多个强基线模型。
+
+### 💬 可借鉴之处
+1. 数据利用思路：打破传统奖励模型对有标签数据的强依赖，示范了无标签数据在预训练阶段为模型注入通用知识的价值，为后续奖励模型甚至其他模型训练在数据利用上开辟了“无标签 + 有标签”结合的思路。
+2. 模型架构创新：两阶段的生成式奖励模型架构为打造通用基础奖励模型提供了可行范式，展示了先无监督预训练再监督微调在奖励模型领域的有效性，可启发后续多模态、其他任务导向模型的架构设计。
+3. 损失函数与正则化：标签平滑结合后对损失函数的分析与转化，为理解生成式和判别式模型在奖励建模中的联系提供新角度，也提醒开发者在模型训练中重视正则化技术对模型泛化等能力的提升作用。
+
+## vl-genrm--enhancing-vision-language-verification-via-vision-experts-and-iterative-training
+### Abstract
+Reinforcement Fine-Tuning (RFT) with verifiable rewards has advanced large
+language models but remains underexplored for Vision-Language (VL) models. The
+Vision-Language Reward Model (VL-RM) is key to aligning VL models by providing
+structured feedback, yet training effective VL-RMs faces two major challenges.
+First, the bootstrapping dilemma arises as high-quality training data depends
+on already strong VL models, creating a cycle where self-generated supervision
+reinforces existing biases. Second, modality bias and negative example
+amplification occur when VL models hallucinate incorrect visual attributes,
+leading to flawed preference data that further misguides training. To address
+these issues, we propose an iterative training framework leveraging vision
+experts, Chain-of-Thought (CoT) rationales, and Margin-based Rejection
+Sampling. Our approach refines preference datasets, enhances structured
+critiques, and iteratively improves reasoning. Experiments across VL-RM
+benchmarks demonstrate superior performance in hallucination detection and
+multimodal reasoning, advancing VL model alignment with reinforcement learning.
+### 🌟 论文解读 | VL-GenRM：借视觉专家与迭代训练，突破多模态奖励模型训练困境
+
+### 📌 背景痛点/本文动机
+在大语言模型领域，基于可验证奖励的强化微调（RFT）已取得进展，但在视觉-语言（VL）模型中仍待深入探索。视觉-语言奖励模型（VL-RM）是对齐VL模型的关键，能提供结构化反馈，然而训练高效VL-RM面临两大核心挑战：一是“自举困境”，高质量训练数据依赖强VL模型生成，易强化模型固有偏差；二是“模态偏差与负例放大”，VL模型对视觉属性的错误幻想会产生有缺陷的偏好数据，误导训练。为解决这些问题，论文提出创新训练框架VL-GenRM。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：借视觉专家自动构建偏好数据集  
+利用视觉专家（如擅长目标检测、深度估计等的模型）生成大规模偏好数据集，提升VL-GenRM训练时的监督质量，打破“自举困境”中依赖自生成数据强化偏差的问题，为模型提供更可靠的训练依据。  
+
+💡 创新点2：CoT增强VL-GenRM训练  
+引入思维链（CoT）推理生成技术，为VL-GenRM训练提供系统性指导。通过结构化推理过程，增加数据中有效正确描述占比，缓解自生成数据的局限性，强化奖励建模的连贯性，让模型学习更合理的评估逻辑。  
+
+💡 创新点3：基于边际拒绝采样的迭代自举  
+通过对“正例与负例奖励信号边际”筛选出的优质推理依据，进行迭代微调，持续优化VL-GenRM的推理能力。让模型在多轮训练中逐步向更优输出适配，不断提升对视觉-语言场景的评估与推理水准。  
+
+
+### 📈 实验结果
+论文在VL-RM基准测试与Best-of-N采样等实验中验证方法有效性，在幻觉检测（识别VL模型错误幻想视觉属性等问题）与多模态推理任务上展现出更优性能，推动了VL模型借助强化学习实现更好对齐。  
+
+### 💬 可借鉴之处
+1. 跨模态领域数据增强思路：引入领域专家（如视觉专家）辅助构建训练数据，为突破“自举循环”提供了新范式，可推广到其他需多模态协作、依赖数据质量的任务。  
+2. 结构化推理融入训练：借助CoT将模糊的评估转化为可解释的推理步骤，为提升模型可解释性与训练有效性提供了参考，在复杂任务型模型训练中具借鉴价值。  
+3. 迭代式训练策略：基于奖励边际的采样与迭代微调，让模型能力逐步迭代提升，这种“小步快跑、数据择优”的训练逻辑，在强化学习与多轮优化场景中值得复用。  
+
+## fake-it-till-you-make-it--reward-modeling-as-discriminative-prediction
+### Abstract
+An effective reward model plays a pivotal role in reinforcement learning for
+post-training enhancement of visual generative models. However, current
+approaches of reward modeling suffer from implementation complexity due to
+their reliance on extensive human-annotated preference data or meticulously
+engineered quality dimensions that are often incomplete and
+engineering-intensive. Inspired by adversarial training in generative
+adversarial networks (GANs), this paper proposes GAN-RM, an efficient reward
+modeling framework that eliminates manual preference annotation and explicit
+quality dimension engineering. Our method trains the reward model through
+discrimination between a small set of representative, unpaired target
+samples(denoted as Preference Proxy Data) and model-generated ordinary outputs,
+requiring only a few hundred target samples. Comprehensive experiments
+demonstrate our GAN-RM's effectiveness across multiple key applications
+including test-time scaling implemented as Best-of-N sample filtering,
+post-training approaches like Supervised Fine-Tuning (SFT) and Direct
+Preference Optimization (DPO). Code and data will be released at
+https://github.com/Visualignment/GAN-RM.
+### 🌟 论文解读 | 告别繁琐标注：GAN - RM 让奖励建模“以假乱真”
+
+### 📌 背景痛点/本文动机
+在视觉生成模型的训练后增强中，奖励模型至关重要。然而当前奖励建模方法存在诸多难题：一是构建奖励模型需大量人工标注偏好数据，收集成本高昂，且基于特定生成模型输出域标注的数据，在应用到不同输出域模型时存在域差距；二是为全面评估生成内容质量，需人工设计多种评估指标，既增加工程成本，又难在不同维度间取得最优平衡，还难保证与人类普遍偏好契合。因此，本文受生成对抗网络（GAN）中对抗训练启发，提出 GAN - RM 框架，旨在摆脱手动偏好标注和显式质量维度设计，高效构建奖励模型。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：无需手动偏好标注，利用少量代理数据
+GAN - RM 仅需少量（几百个）无标注的代表性样本（即偏好代理数据，Preference Proxy Data）作为外部数据。通过训练奖励模型区分偏好代理数据和生成模型输出，让模型学习评估生成样本。同时采用基于排名的自举策略，将 GAN - RM 在这些样本上的置信分数作为软标签，利用额外数据再训练 GAN - RM，使其更好捕捉潜在人类偏好。
+💡 创新点2：支持多轮训练，迭代对齐偏好
+GAN - RM 支持多轮训练后优化。每一轮中，将被识别为接近偏好代理数据的样本用于生成器的训练后优化，反过来再训练判别器以区分这些更难的样本。这种迭代的“以假乱真”过程能逐步让生成质量与偏好代理数据中的潜在人类偏好对齐。
+
+### 📈 实验结果
+实验表明，基于 GAN - RM 的方法在性能上可与依赖大量标注数据（如 Pickapic 的 100 万标注人类偏好数据）的方法（如相关对比方法）相当甚至超越。在图像质量实验设置中，GAN - RM 仅需 500 个偏好代理数据样本。除图像质量提升实验外，在图像安全和视频质量增强场景下的实验也凸显了 GAN - RM 框架在不同场景下的泛化能力，验证了其在测试时缩放（如 Best - of - N 样本过滤）、监督微调（SFT）和直接偏好优化（DPO）等训练后方法中的有效性。
+
+### 💬 可借鉴之处
+从方法创新角度，GAN - RM 为解决奖励建模中数据获取难、依赖特定域、人工设计维度难契合人类偏好等问题提供了新思路，其利用对抗训练和少量代理数据的方式，减少了对大规模人工标注的依赖，降低工程成本；从应用拓展角度，该框架在图像、视频等多场景的有效实验，为视觉生成模型在不同领域的训练后增强提供了可复用的奖励建模范式，后续在视觉生成相关任务中，若需构建奖励模型，可借鉴其利用少量代理数据和对抗训练的思路来降低成本与难度。
+
+## pb$^2$--preference-space-exploration-via-population-based-methods-in-preference-based-reinforcement-learning
+### Abstract
+Preference-based reinforcement learning (PbRL) has emerged as a promising
+approach for learning behaviors from human feedback without predefined reward
+functions. However, current PbRL methods face a critical challenge in
+effectively exploring the preference space, often converging prematurely to
+suboptimal policies that satisfy only a narrow subset of human preferences. In
+this work, we identify and address this preference exploration problem through
+population-based methods. We demonstrate that maintaining a diverse population
+of agents enables more comprehensive exploration of the preference landscape
+compared to single-agent approaches. Crucially, this diversity improves reward
+model learning by generating preference queries with clearly distinguishable
+behaviors, a key factor in real-world scenarios where humans must easily
+differentiate between options to provide meaningful feedback. Our experiments
+reveal that current methods may fail by getting stuck in local optima,
+requiring excessive feedback, or degrading significantly when human evaluators
+make errors on similar trajectories, a realistic scenario often overlooked by
+methods relying on perfect oracle teachers. Our population-based approach
+demonstrates robust performance when teachers mislabel similar trajectory
+segments and shows significantly enhanced preference exploration
+capabilities,particularly in environments with complex reward landscapes.
+### 🌟 论文解读 | PB²：基于群体方法破解偏好强化学习中的偏好空间探索难题
+
+### 📌 背景痛点/本文动机
+强化学习（RL）在众多领域取得成功，但传统RL依赖精心设计的奖励函数，复杂任务中因涉及主观结果或人类偏好，奖励函数难以指定。基于偏好的强化学习（PbRL）通过人类对轨迹对的偏好反馈学习行为，无需手工奖励函数，但现有PbRL方法存在关键挑战：有效探索偏好空间不足，常过早收敛到仅满足狭窄人类偏好子集的次优策略。单智能体方法易生成相似轨迹对用于偏好 elicitation，限制反馈信息多样性，奖励模型学习样本单一；且人类评估相似轨迹时反馈不一致会严重降低学习性能，依赖“完美先知教师”的方法常忽略这一现实场景。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：识别偏好探索问题  
+明确PbRL中偏好探索难题，论证单智能体方法易在偏好空间收敛到次优局部极小值，导致探索不足与策略不佳。  
+
+💡 创新点2：提出群体化PbRL框架（PB²）  
+采用群体方法同时训练多个不同策略，相比单策略方法更全面探索偏好 landscape。通过不同策略收集经验构建比较对，提升评估行为的多样性，且与人类偏好对齐。借助反馈循环实现：多样策略生成独特轨迹→人类对轨迹的偏好训练奖励模型→判别器维持群体多样性并鼓励符合当前偏好的行为，让偏好查询更易区分，解决现有方法隐含假设人类能可靠评估细微差异行为的不足。  
+
+### 📈 实验结果
+通过三类实验验证：（1）在DMControl locomotion任务上设置不同相似度阈值ϵ模拟人类判断不一致，系统评估方法鲁棒性；（2）定性展示PB²在复杂偏好 landscape 中摆脱局部最优，而单智能体方法陷入其中；（3）在反馈极有限的导航任务中对比分析，体现PB²的反馈效率。实验表明PB²生成更易区分的查询提升奖励学习效率，在人类反馈不一致时更鲁棒，少反馈下性能更优；面对教师对相似轨迹段误标场景，也展现稳健性能与更强偏好探索能力。  
+
+### 💬 可借鉴之处
+1. 群体化思路拓展：将群体方法引入PbRL，为解决单智能体探索局限提供新范式，启示在依赖人类反馈、需行为多样性的任务中，可考虑多智能体并行探索模式。  
+2. 现实场景适配：关注人类反馈不一致的现实情况，设计鲁棒方法，为实际应用中处理噪声反馈提供参考，强调方法要适应真实世界非理想教师的场景。  
+3. 偏好探索与奖励模型协同：通过行为多样性让偏好查询更易区分，优化奖励模型学习，提示在涉及人类交互的学习任务里，重视交互内容的“可区分性”以提升反馈价值。
+
+## $\texttt{specs}$--faster-test-time-scaling-through-speculative-drafts
+### Abstract
+Scaling test-time compute has driven the recent advances in the reasoning
+capabilities of large language models (LLMs), typically by allocating
+additional computation for more thorough exploration. However, increased
+compute often comes at the expense of higher user-facing latency, directly
+impacting user experience. Current test-time scaling methods primarily optimize
+for accuracy based on total compute resources (FLOPS), often overlooking
+latency constraints. To address this gap, we propose $\texttt{SPECS}$, a
+latency-aware test-time scaling method inspired by speculative decoding.
+$\texttt{SPECS}$~uses a smaller, faster model to generate candidate sequences
+efficiently, and evaluates these candidates using signals from both a larger
+target model and a dedicated reward model. We introduce new integration
+strategies, including reward-guided soft verification and a reward-based
+deferral mechanism. Empirical results on MATH500, AMC23 and OlympiadBench
+datasets show that $\texttt{SPECS}$~matches or surpasses beam search accuracy
+while reducing latency by up to $\sim$19.1\%. Our theoretical analysis shows
+that our algorithm converges to the solution of a KL-regularized reinforcement
+learning objective with increasing beam width.
+### 🌟 论文解读 | SPECS：用“推测草稿”加速大模型推理，平衡延迟与精度
+
+### 📌 背景痛点/本文动机
+大语言模型（LLM）推理能力的提升常依赖“测试时算力扩容”，比如分配更多计算资源做更充分的探索。但算力增加往往导致用户侧延迟升高，直接影响体验。现有测试时扩容方法多聚焦算力（FLOPS）优化精度，却忽略延迟约束。此外，基于Transformer的LLM自回归采样延迟常受限于内存加载而非总算力，而推测解码虽能借小模型提候选 token 降延迟，却会增加总计算量。于是，论文试图回答：**能否设计高效测试时扩容方法，优化延迟 - 效用权衡？**
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出 SPECS 算法框架  
+SPECS 受推测解码启发，是一种“延迟感知型”测试时扩容方法。它用**更小更快的草稿模型**高效生成候选序列，再结合**更大的目标模型**与**专用奖励模型**评估候选。整体遵循“草稿 - 选择”流程：迭代生成响应块，每轮用草稿模型生成候选块，经打分选择后拼接，进入下一轮；若草稿全被拒，则切换目标模型生成候选。
+
+💡 创新点2：奖励引导的软验证与延迟机制  
+- 奖励引导软验证（SUBSAMPLE 子例程）：基于草稿、目标、奖励模型计算的“分数”选候选块，既优化效用 - 延迟权衡，也避免简单丢弃高奖励但可能被 naive 推测解码漏掉的轨迹。  
+- 奖励感知延迟规则（CASCADE 子例程）：自适应决定下一轮用草稿还是目标模型生成候选——让大模型处理难题步骤，小模型处理简单步骤，动态平衡算力与延迟。  
+
+💡 创新点3：理论分析保障收敛性  
+从理论上分析，SPECS 在结合草稿、目标、奖励模型优化“KL 正则化奖励最大化”目标时，其软验证方法随 beam 宽度增大，能优雅收敛到最优解。
+
+
+### 📈 实验结果
+论文在 MATH500、AMC23、OlympiadBench 数据集测试，用 Qwen - 1.5B - Instruct（草稿模型）、Qwen - 7B - Instruct（目标模型）与 Qwen - 7B - Math - PRM（奖励模型）验证：  
+- 精度层面：SPECS 匹配甚至超越 beam search 精度；  
+- 延迟层面：延迟最多降低约 19.1%，在精度与延迟间实现更优权衡。  
+
+
+### 💬 可借鉴之处
+1. **延迟 - 精度权衡思路**：跳出“只看算力/精度”的思维定式，把延迟作为核心约束，为大模型落地低延迟场景（如个性化交互）提供新思路；  
+2. **多模型协作范式**：用“小草稿模型 + 大目标模型 + 奖励模型”分层协作，既利用小模型提速，又靠大模型保精度，还借奖励模型做灵活选择，这种“分工”模式可迁移到其他需平衡资源与效果的任务；  
+3. **理论 + 实验双验证**：从理论证明收敛性，再用真实数据集验证，为方法可靠性背书，也示范了学术研究中“方法 - 理论 - 实验”闭环的重要性。  
+
+
+SPECS 为大模型推理的“延迟 - 精度”难题提供了一套兼具创新性与实用性的解法，无论是工业界落地低延迟 LLM 应用，还是学术界探索测试时优化新方向，都有不少可借鉴的闪光点~
+
+## theoretical-tensions-in-rlhf--reconciling-empirical-success-with-inconsistencies-in-social-choice-theory
+### Abstract
+Despite its empirical success, Reinforcement Learning from Human Feedback
+(RLHF) has been shown to violate almost all the fundamental axioms in social
+choice theory -- such as majority consistency, pairwise majority consistency,
+and Condorcet consistency. This raises a foundational question: why does RLHF
+perform so well in practice if it fails these seemingly essential properties?
+In this paper, we resolve this paradox by showing that under mild and
+empirically plausible assumptions on the preference profile, RLHF does satisfy
+pairwise majority and Condorcet consistency. These assumptions are frequently
+satisfied in real-world alignment tasks, offering a theoretical explanation for
+RLHF's strong practical performance. Furthermore, we show that a slight
+modification to the reward modeling objective can ensure pairwise majority or
+Condorcet consistency even under general preference profiles, thereby improving
+the alignment process. Finally, we go beyond classical axioms in economic and
+social choice theory and introduce new alignment criteria -- preference
+matching, preference equivalence, and group preference matching -- that better
+reflect the goal of learning distributions over responses. We show that while
+RLHF satisfies the first two properties, it fails to satisfy the third. We
+conclude by discussing how future alignment methods may be designed to satisfy
+all three.
+### 🌟 论文解读 | RLHF实践成功背后：调和社会选择理论矛盾的理论探索
+
+### 📌 背景痛点/本文动机
+大语言模型（LLMs）在众多任务中表现卓越，强化学习从人类反馈（RLHF）是让模型行为与人类期望对齐的关键方法。然而，RLHF在理论层面却与社会选择理论的诸多基础公理（如多数一致性、成对多数一致性、孔多塞一致性）相违背。这就产生了一个核心疑问：RLHF在实践中表现优异，可为何在理论上违背这些看似关键的公理？本文正是为解决这一矛盾、从理论层面解释RLHF实践成功原因并探索改进方向而展开研究。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：揭示RLHF满足公理的前提条件  
+在对偏好分布做温和且符合实证的假设下，证明RLHF能满足成对多数一致性与孔多塞一致性。现实中对齐任务里常见的偏好数据结构（比如每个比较最多由一个标注者标注、允许循环偏好等情况构成的偏好分布），让RLHF可以正确识别孔多塞胜者（若存在）并赋予最高分数，从理论上解释了RLHF实践效果好的原因。  
+
+💡 创新点2：改进奖励模型目标以保障公理满足  
+针对多个标注者参与同一比较的场景，对奖励模型目标做微小修改——基于多数投票聚合偏好并赋予二元偏好。这种修改让奖励模型能满足多数一致性、成对多数一致性和孔多塞一致性，其本质是让奖励建模隐式实现了社会选择理论中满足优良公理的Copeland规则，为现有实践提供理论支撑同时，也为未来对齐策略指明方向。  
+
+💡 创新点3：提出适配LLM对齐的新公理  
+突破经济与社会选择理论的经典公理框架，提出偏好匹配、偏好等价、群体偏好匹配这三个更贴合生成模型学习响应分布目标的新对齐准则。证明目标分布是定义良好、存在且唯一的，还分析出RLHF满足前两个准则但不满足第三个，为未来方法如何满足全部准则提供思路。  
+
+### 📈 实验结果
+文中未开展传统意义上的实验验证（侧重理论分析推导），通过严谨的理论推导与论证，阐明了在特定偏好分布假设下RLHF满足经典社会选择公理的情况、修改奖励模型目标后的公理满足性，以及新提出的三个分布层面公理与RLHF的契合情况等关键结论，从理论角度支撑了各创新点的合理性与价值。  
+
+### 💬 可借鉴之处
+1. 理论解释实践：为RLHF在实践中表现好却违背经典公理这一矛盾提供了理论层面的解释，让从业者理解其成功背后的偏好分布假设等关键因素，在实际构建偏好数据、设计对齐流程时更有理论依据。  
+2. 改进奖励模型思路：提出的奖励模型目标修改方式，为处理多标注者场景下的偏好聚合提供了更优路径，能指导后续优化奖励建模环节以保障对齐质量与公理满足性。  
+3. 新公理拓展方向：新提出的三个适配LLM对齐的公理，为该领域后续评估方法、设计新对齐算法提供了全新的衡量维度与目标导向，推动领域从经典公理框架向更贴合生成模型特性的方向发展。
+
+## treerl--llm-reinforcement-learning-with-on-policy-tree-search
+### Abstract
+Reinforcement learning (RL) with tree search has demonstrated superior
+performance in traditional reasoning tasks. Compared to conventional
+independent chain sampling strategies with outcome supervision, tree search
+enables better exploration of the reasoning space and provides dense, on-policy
+process rewards during RL training but remains under-explored in On-Policy LLM
+RL. We propose TreeRL, a reinforcement learning framework that directly
+incorporates on-policy tree search for RL training. Our approach includes
+intermediate supervision and eliminates the need for a separate reward model
+training. Existing approaches typically train a separate process reward model,
+which can suffer from distribution mismatch and reward hacking. We also
+introduce a cost-effective tree search approach that achieves higher search
+efficiency under the same generation token budget by strategically branching
+from high-uncertainty intermediate steps rather than using random branching.
+Experiments on challenging math and code reasoning benchmarks demonstrate that
+TreeRL achieves superior performance compared to traditional ChainRL,
+highlighting the potential of tree search for LLM. TreeRL is open-sourced at
+https://github.com/THUDM/TreeRL.
+### 🌟 论文解读 | TreeRL：基于On - Policy树搜索的大语言模型强化学习
+
+### 📌 背景痛点/本文动机
+大语言模型（LLMs）在复杂推理任务中展现出卓越能力，强化学习（RL）是提升其推理能力的有效方法。当前LLM的RL方法多独立采样轨迹并基于最终答案获取奖励，而在其他领域成功的树搜索在LLM推理的强化学习中发展不足。一方面，经典蒙特卡洛树搜索（MCTS）在相同推理成本下效果和效率不如独立采样多响应；另一方面，树搜索虽能提供细粒度过程监督，但离线过程奖励模型对RL训练性能提升贡献小。因此，探索结合树搜索的On - Policy RL训练以提升LLM推理能力具有重要意义。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出TreeRL强化学习框架
+TreeRL是一种将On - Policy树搜索直接纳入RL训练的强化学习框架。该框架包含中间监督，无需单独训练奖励模型，避免了现有方法中单独训练过程奖励模型可能出现的分布不匹配和奖励黑客问题。通过树搜索为RL训练提供密集的、On - Policy的过程奖励，更好地探索推理空间。
+
+💡 创新点2：提出高效树搜索策略EPTree
+不同于MCTS将答案分解为小部分让模型逐步探索，EPTree基于熵从现有树中最不确定的中间token分叉生成新响应，直到得到最终答案。这种方式在相同生成token预算下，通过从高不确定性中间步骤策略性分支而非随机分支，实现更高搜索效率，且通常只需约两次迭代就能形成生成树，能生成更多样有效的响应。
+
+💡 创新点3：基于树搜索的过程监督强化学习
+在树的每个步骤基于优势分配信用，计算给定推理步骤的过程信号为全局优势和局部优势的加权和。全局优势反映该步骤对问题整体正确率的潜力，局部优势量化该步骤与其在树中父步骤相比的改进。这些优势信号直接从On - Policy生成的树中推导，能抵抗奖励黑客且不依赖额外奖励模型。
+
+### 📈 实验结果
+在具有挑战性的数学和代码推理基准测试（基于Qwen和GLM模型）上评估TreeRL，结果表明TreeRL比传统ChainRL性能更优，展现出树搜索对LLM的潜力。EPTree在不同推理预算下持续优于独立同分布多链采样和MCTS，TreeRL结合EPTree比采用独立同分布多链采样的ChainRL表现更好，性能提升受益于EPTree良好的PassRate表现和过程监督。
+
+### 💬 可借鉴之处
+1. 树搜索与强化学习结合的思路：为提升大模型推理能力提供了新方向，不再局限于传统的独立轨迹采样和仅基于最终结果的奖励机制，利用树搜索更好探索推理空间。
+2. 高效树搜索策略设计：EPTree基于熵的高不确定性中间步骤分支方式，为在有限token预算下提升搜索效率提供了参考，可应用于其他需要高效探索的生成式任务场景。
+3. 过程监督信号构建：基于树中步骤优势计算过程信号，无需额外奖励模型且抗奖励黑客的方式，为强化学习中奖励信号设计提供了创新思路，可借鉴到需要细粒度监督的RL任务中。
+
+## agent-rlvr--training-software-engineering-agents-via-guidance-and-environment-rewards
+### Abstract
+Reinforcement Learning from Verifiable Rewards (RLVR) has been widely adopted
+as the de facto method for enhancing the reasoning capabilities of large
+language models and has demonstrated notable success in verifiable domains like
+math and competitive programming tasks. However, the efficacy of RLVR
+diminishes significantly when applied to agentic environments. These settings,
+characterized by multi-step, complex problem solving, lead to high failure
+rates even for frontier LLMs, as the reward landscape is too sparse for
+effective model training via conventional RLVR. In this work, we introduce
+Agent-RLVR, a framework that makes RLVR effective in challenging agentic
+settings, with an initial focus on software engineering tasks. Inspired by
+human pedagogy, Agent-RLVR introduces agent guidance, a mechanism that actively
+steers the agent towards successful trajectories by leveraging diverse
+informational cues. These cues, ranging from high-level strategic plans to
+dynamic feedback on the agent's errors and environmental interactions, emulate
+a teacher's guidance, enabling the agent to navigate difficult solution spaces
+and promotes active self-improvement via additional environment exploration. In
+the Agent-RLVR training loop, agents first attempt to solve tasks to produce
+initial trajectories, which are then validated by unit tests and supplemented
+with agent guidance. Agents then reattempt with guidance, and the agent policy
+is updated with RLVR based on the rewards of these guided trajectories.
+Agent-RLVR elevates the pass@1 performance of Qwen-2.5-72B-Instruct from 9.4%
+to 22.4% on SWE-Bench Verified. We find that our guidance-augmented RLVR data
+is additionally useful for test-time reward model training, shown by further
+boosting pass@1 to 27.8%. Agent-RLVR lays the groundwork for training agents
+with RLVR in complex, real-world environments where conventional RL methods
+struggle.
+### 🌟 论文解读 | Agent-RLVR：让大模型在软件工程任务中“拜师学艺”的RL框架
+
+### 📌 背景痛点/本文动机
+强化学习从可验证奖励（RLVR）在数学、竞赛编程等可验证领域提升大语言模型（LLM）推理能力表现出色，但在智能体环境（多步骤、复杂问题求解场景）中效果骤降。这类场景奖励稀疏，前沿LLM也易高失败率，传统RLVR难以有效训练。同时，智能体环境需多轮推理、与外部环境交互，训练复杂度高，为让RLVR在复杂真实场景（如软件工程）生效，催生了Agent - RLVR框架。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出Agent - RLVR框架适配智能体场景  
+借鉴人类教学法引入“agent guidance（智能体指导）”机制，利用从高层战略规划到错误与环境交互动态反馈等多样信息线索，引导智能体走向成功轨迹，像老师指导新人一样帮智能体在复杂解空间导航，还能通过环境探索促进自我提升。训练循环分三步：先让智能体无指导尝试生成初始轨迹，用单元测试验证并补充指导；再让智能体带指导重试；最后基于指导后轨迹奖励用RLVR更新策略。
+💡 创新点2：构建软件工程领域专属数据集  
+精心整理含817个训练环境的数据集，涵盖问题陈述、环境和指导信息，超越传统输入 - 输出对，捕捉带集成指导信号的完整编码环境，为训练软件工程智能体提供丰富资源。
+
+### 📈 实验结果
+在SWE - Bench Verified基准测试中，Agent - RLVR将Qwen - 2.5 - 72B - Instruct的pass@1性能从9.4%提升至22.4%；指导增强的RLVR数据用于测试时奖励模型训练，能进一步把pass@1推至27.8%；指导模型在pass@1（19.8%→22.4%）和pass@32（34.2%→38.4%）上都有提升，验证指导是关键组件，也体现方法在小数据集下提升智能体多步骤推理能力的高效性。
+
+### 💬 可借鉴之处
+1. 应对稀疏奖励场景时，引入类人类教学的指导机制是有效思路，为复杂多步骤推理任务中模型训练提供新范式参考。
+2. 构建领域专属、含丰富环境与指导信息的数据集，能为特定领域智能体训练筑牢数据基础，这种“定制化 + 场景化”数据构建思维值得借鉴。
+3. 展示了RLVR数据在奖励模型训练等方面的额外价值，启发后续探索不同模块间数据复用与协同增效，拓展技术应用边界。
+
+## reinforcement-learning-fine-tuning-of-language-model-for-instruction-following-and-math-reasoning
+### Abstract
+This study investigates the effectiveness of reinforcement learning (RL)
+fine-tuning techniques on a compact language model (Qwen2.5-0.5B Base) for two
+challenging tasks: instruction following and mathematical reasoning. We compare
+supervised fine-tuning (SFT), Direct Preference Optimization (DPO) using
+preference-labeled data, and Reinforce Leave-One-Out (RLOO) with reward models.
+Our experiments show that RLOO with DeBERTa reward modeling achieves the best
+alignment, while DPO provides strong and consistent results. For math reasoing
+tasks, synthetic data augmentation and best-of-N sampling with an external
+verifier significantly improve accuracy, showing the potential of combining
+fine-tuning with inference-time tools. This study highlights key trade-offs and
+practical strategies for training lightweight, task-aligned small-scale
+language models.
+### 🌟 论文解读 | 小模型也能打！强化学习微调让轻量级语言模型玩转指令遵循与数学推理
+
+### 📌 背景痛点/本文动机
+生成式语言模型在自然语言理解与生成领域取得了亮眼成果，但如何让小规模语言模型在指令遵循、数学推理等不同推理任务中表现出色仍是难题。同时，不同微调技术（尤其是强化学习类技术）间的性能对比也有待深入探索。为此，研究聚焦于轻量级开源模型Qwen2.5 - 0.5B Base，探索基于强化学习的微调方法在偏好对齐与特定领域适配方面的表现，以明确轻量级模型在类人对齐学习场景下的能力与局限。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：多微调技术对比与RLOO reward model探索  
+对比了监督微调（SFT）、直接偏好优化（DPO）、Reinforce Leave - One - Out（RLOO）三种微调技术。在RLOO中，还评估了DeBERTa、DistilBERT、Siamese DistilBERT等不同奖励模型，以此探究奖励模型对最终策略性能的影响。  
+💡 创新点2：数学推理任务的数据增强与推理工具结合  
+为提升模型数学推理能力，基于Countdown数据集构造含1600个样本的高质量合成数据集（借助GPT - 4o完成问题生成与答案验证）；同时采用best - of - N采样策略，结合外部验证器来提升模型预测的可靠性与正确性，探索微调与推理时工具结合的潜力。  
+
+### 📈 实验结果
+在指令遵循任务上，DPO相比SFT在全参数与LoRA配置下均能进一步提升效果；RLOO变体里，以DeBERTa为奖励模型的版本对齐分数最高。数学推理任务中，合成数据能小幅提升性能，而结合外部验证器的best - of - N采样带来显著增益，准确率超0.81，是SFT的两倍多。整体表明轻量级模型经有效微调与工具辅助可实现不错性能，奖励模型质量、采样响应多样性对RLOO很关键，外部验证器 + best - of - N采样为数学推理提准确率提供了低成本方案。
+
+### 💬 可借鉴之处
+对于想优化小模型下游任务性能的研究者与开发者，可借鉴多强化学习微调技术对比思路，明确不同技术在偏好对齐等场景的优劣；在特定领域（如数学推理）任务中，尝试合成数据增强与推理时工具（如外部验证器 + best - of - N采样）结合的方式，在计算资源受限下提升小模型表现；同时重视奖励模型选型与采样多样性等因素对RLOO类方法的影响，为轻量级语言模型适配多任务提供实践参考。
+
+## unsupervised-elicitation-of-language-models
+### Abstract
+To steer pretrained language models for downstream tasks, today's
+post-training paradigm relies on humans to specify desired behaviors. However,
+for models with superhuman capabilities, it is difficult or impossible to get
+high-quality human supervision. To address this challenge, we introduce a new
+unsupervised algorithm, Internal Coherence Maximization (ICM), to fine-tune
+pretrained language models on their own generated labels, \emph{without
+external supervision}. On GSM8k-verification, TruthfulQA, and Alpaca reward
+modeling tasks, our method matches the performance of training on golden
+supervision and outperforms training on crowdsourced human supervision. On
+tasks where LMs' capabilities are strongly superhuman, our method can elicit
+those capabilities significantly better than training on human labels. Finally,
+we show that our method can improve the training of frontier LMs: we use our
+method to train an unsupervised reward model and use reinforcement learning to
+train a Claude 3.5 Haiku-based assistant. Both the reward model and the
+assistant outperform their human-supervised counterparts.
+### 🌟 论文解读 | 无监督激发语言模型潜力：ICM算法突破人类监督限制
+
+### 📌 背景痛点/本文动机
+当下预训练语言模型（LMs）的后训练范式，依旧依赖人类来指定期望行为，像通过演示或者偏好反馈等方式。然而，随着任务和模型行为愈发复杂，人类监督变得越来越不可靠，语言模型可能会学习模仿演示里的错误，或者利用反馈中的缺陷。并且，对于具备超人类能力的模型，获取高质量的人类监督存在困难甚至是不可能的。所以，如何训练语言模型去完成那些人类难以可靠演示或评估的任务，成为亟待解决的问题，本文正是为解决该挑战而生。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出无监督算法ICM
+引入Internal Coherence Maximization（ICM）这一无监督算法，在没有外部监督的情况下，利用语言模型自身生成的标签对预训练语言模型进行微调。其目标是在给定由带标签输入指定的任务时，让预训练模型基于自身生成的标签在该任务上表现良好，无需使用任何提供的外部标签。
+💡 创新点2：设计 scoring function 衡量标签质量
+用由两部分组成的评分函数衡量模型生成标签集的质量，一是“相互可预测性（Mutual Predictability）”，计算模型在以所有其他标签为条件时推断每个标签的可能性，将所有示例的对数概率求和；二是“逻辑一致性（Logical Consistency）”，通过逻辑一致性函数检查标签集里数据点的标签之间是否逻辑一致，以此衡量标签中的不一致性。最终结合这两个部分得到整体评分函数 \( U(D) = \alpha · P_θ(D) − I(D) \) ，其中 \( \alpha \) 是平衡相互可预测性和逻辑一致性强度的超参数。 
+💡 创新点3：模拟退火启发的近似搜索算法
+由于找到最大化评分函数的最优标签集在计算上不可行（现实数据集规模下），ICM采用受模拟退火启发的高效近似算法。从空的标记集开始，用K个随机标记的示例初始化搜索过程，然后迭代添加标签，每次添加标签时执行采样新示例、确定标签同时修复引入的不一致、基于评分函数决定是否接受新标签这三个步骤，以此增量式扩展标签集并提高分数。
+
+### 📈 实验结果
+在GSM8k - verification、TruthfulQA和Alpaca reward modeling任务上，ICM方法匹配了基于“黄金监督（golden supervision）”训练的性能，且超过了基于众包人类监督训练的性能；在语言模型能力远超人类的任务（如从写作样本识别作者性别）上，ICM比基于人类标签的训练能显著更好地激发模型能力；在前沿模型训练方面，用ICM训练无监督奖励模型，再通过强化学习训练基于Claude 3.5 Haiku的助手，结果显示无监督奖励模型在Rewardbench评估中超过基于生产级高质量人类监督训练的对应模型，且无监督助手策略在与基于人类监督奖励模型训练的策略头对头比较中，赢得60%的对比。
+
+### 💬 可借鉴之处
+本文提出的ICM算法为突破人类监督限制训练语言模型提供了新思路，证明在现实生产规模场景中无监督激发能超越人类监督，为后训练前沿模型成为通用助手提供了实用方法；其设计的衡量标签质量的评分函数思路，以及受模拟退火启发的近似搜索算法，在处理需模型自身生成标签优化任务、解决计算不可行的优化问题等场景中，都有一定的借鉴意义，为后续相关研究在方法设计和算法选择上提供了参考方向。
+
+## learning-to-reason-across-parallel-samples-for-llm-reasoning
+### Abstract
+Scaling test-time compute brings substantial performance gains for large
+language models (LLMs). By sampling multiple answers and heuristically
+aggregate their answers (e.g., either through majority voting or using
+verifiers to rank the answers), one can achieve consistent performance gains in
+math domains. In this paper, we propose a new way to leverage such multiple
+sample set. We train a compact LLM, called Sample Set Aggregator (SSA), that
+takes a concatenated sequence of multiple samples and output the final answer,
+optimizing it for the answer accuracy with reinforcement learning. Experiments
+on multiple reasoning datasets show that SSA outperforms other test-time
+scaling methods such as reward model-based re-ranking. Our approach also shows
+a promising generalization ability, across sample set sizes, base model
+families and scales, and tasks. By separating LLMs to generate answers and LLMs
+to analyze and aggregate sampled answers, our approach can work with the
+outputs from premier black box models easily and efficiently.
+### 🌟 论文解读 | 融合并行与顺序推理，SSA让大模型推理更高效
+
+### 📌 背景痛点/本文动机
+大语言模型（LLMs）在复杂推理任务上能力不断提升，而测试时计算资源的分配（即测试时缩放）是优化模型性能的新方向。现有测试时缩放方法分并行和顺序两类：并行缩放是独立生成多条推理路径再聚合（如多数投票）；顺序缩放则迭代优化单个解（如基于提示的自我反思）。但并行方法常孤立看待样本，顺序方法计算成本或适配性受限。本文旨在提出新方法，融合二者优势，更高效利用测试时计算资源提升推理性能。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出Sample Set Aggregator（SSA）模型架构  
+设计轻量级的SSA模型，将其与生成答案的基础模型（LMans）解耦。先由LMans并行生成K个候选答案，再把这些候选答案拼接成序列输入SSA，SSA通过强化学习优化以输出最终正确答案。这种设计让SSA能基于基础模型输出的分布特性，直接优化答案合成过程，而非孤立评估单个样本。  
+
+💡 创新点2：基于输出分布推理，解耦训练与推理  
+SSA不直接训练生成答案的基础模型（LMans可视为黑盒），而是针对其采样输出进行优化。这种“推理输出分布而非调整模型内部”的思路，让方法更灵活——可适配不同基础模型（甚至是只能通过API调用的黑盒大模型），只需用其采样答案训练SSA即可。  
+
+💡 创新点3：统一并行与顺序缩放优势  
+并行缩放能快速获取多视角答案，顺序缩放可迭代优化推理；SSA通过“并行采样+单步顺序RL聚合”的方式，在一次前向传递中结合二者长处：用并行获取多样性，用SSA的顺序推理实现精准聚合，且仅需训练小模型就能带来显著性能提升。  
+
+
+### 📈 实验结果
+1. 性能超越强基线：在多个数学推理数据集上，SSA相比基于奖励模型重排序等测试时缩放方法表现更优，大幅缩小了模型实际性能与“理论最优（oracle - best）”精度的差距。  
+2. 泛化能力突出：跨样本集大小、基础模型家族（如Qwen 2.5、Llama 3.1）、模型规模（7B/14B/32B）和任务，SSA都展现出良好泛化性。比如在一个数据集上为特定模型训练的SSA，能成功聚合不同模型家族、规模在不同任务上的输出。  
+3. 轻量化优势：紧凑的SSA模型能匹配顺序缩放中经强化训练的大模型性能，证明其作为轻量顺序缩放方式的有效性。  
+
+
+### 💬 可借鉴之处
+1. 架构解耦思路：将“答案生成”与“答案聚合分析”解耦，为利用黑盒大模型（如调用API的商用大模型）提供了可行路径——只需获取其输出，用SSA做后处理即可，无需改动黑盒模型本身。  
+2. 测试时缩放新范式：展示了“并行采样 + 针对性小模型聚合”在推理任务上的潜力，为后续优化测试时计算效率、平衡资源与性能提供了新方向。  
+3. 强化学习应用启发：通过强化学习优化聚合模型（SSA）来提升最终答案精度，验证了在“输出分布层面做推理优化”的价值，可启发更多围绕模型输出后处理的研究。
+
+## gfriend--generative-few-shot-reward-inference-through-efficient-dpo
+### Abstract
+The ability to train high-performing reward models with few-shot data is
+critical for enhancing the efficiency and scalability of Reinforcement Learning
+from Human Feedback (RLHF). We propose a data augmentation and expansion
+framework that enables generative reward models trained on small datasets to
+achieve comparable performance to those trained on large-scale datasets.
+Traditional methods to train a generative reward model, such as Direct
+Preference Optimization (DPO), are constrained by inefficiencies in sample
+pairing and limited data diversity. This work introduces preference refinement,
+which employs Chain-of-Thought (CoT) sampling to uncover diverse and
+high-quality preference relationships. It also incorporates a perplexity-based
+scoring mechanism to assign nuanced preference levels and utilizes Multi-level
+Direct Preference Optimization (M-DPO) to enable the model to capture
+finer-grained preference differences between samples. Experimental results
+demonstrate that the proposed method significantly enhances data efficiency and
+model performance, enabling reward models trained in a few-shot setting to
+achieve results on par with those trained on large-scale datasets. This study
+underscores the potential of data-efficient strategies in advancing reward
+model optimization, offering a robust solution for low-resource RLHF
+applications.
+### 🌟 论文解读 | GFRIEND：小样本下高效DPO实现生成式奖励推理
+
+### 📌 背景痛点/本文动机
+大语言模型（LLMs）在自然语言处理任务中取得显著成果，但让模型与人类价值观和偏好对齐仍是挑战。基于人类反馈的强化学习（RLHF）是关键方法，其核心是用人类标注的偏好数据训练奖励模型。然而现有方法存在样本配对低效、偏好数据多样性有限等问题，在医疗、法律等专业领域，大规模偏好数据收集受限，低数据环境下训练奖励模型成难题，因此需要高效利用有限偏好数据的方法。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：高效数据增强  
+引入思维链（Chain - of - Thought, CoT）采样机制生成多样且高质量的偏好数据，缓解数据稀疏性问题，提升低资源条件下奖励模型的鲁棒性。通过CoT采样挖掘丰富优质的偏好关系，为奖励模型训练提供更充足且优质的数据基础。
+
+💡 创新点2：多水平偏好建模  
+提出基于困惑度的评分方法来分配细致的偏好等级，相较于传统的二元配对方法，能实现更细粒度的奖励模型训练。利用该评分机制量化偏好程度，让模型捕捉样本间更细微的偏好差异。
+
+💡 创新点3：优化偏好学习  
+通过结合基于偏好差异的加权样本对来增强直接偏好优化（DPO）损失函数，在低数据设置下提升模型的泛化能力和稳定性。依据偏好差异对样本对加权，确保训练时更关注有代表性的数据，优化奖励模型训练过程。
+
+### 📈 实验结果
+在多个基准测试中评估该框架，与传统奖励建模方法对比。实验证实数据增强提高了偏好建模准确性，多水平偏好评分有效。消融实验揭示各组件的贡献，结果表明在低资源设置下性能提升显著，能与在大规模数据集上训练的模型性能相当，凸显了数据高效策略在推进RLHF优化方面的潜力。
+
+### 💬 可借鉴之处
+在数据利用层面，其高效数据增强思路为低资源场景下的数据扩充提供了新方式，借助CoT采样生成优质数据的方法可被借鉴到其他需要数据增强的任务中；在模型训练层面，多水平偏好建模和优化损失函数的思路，为提升模型对细粒度差异的捕捉能力、增强模型在低数据下的泛化性提供了参考，对于资源受限但需高精度模型训练的场景有很好的借鉴价值，比如小众领域的AI应用开发等。
+
+## intra-trajectory-consistency-for-reward-modeling
+### Abstract
+Reward models are critical for improving large language models (LLMs),
+particularly in reinforcement learning from human feedback (RLHF) or
+inference-time verification. Current reward modeling typically relies on scores
+of overall responses to learn the outcome rewards for the responses. However,
+since the response-level scores are coarse-grained supervision signals, the
+reward model struggles to identify the specific components within a response
+trajectory that truly correlate with the scores, leading to poor generalization
+on unseen responses. In this paper, we propose to leverage generation
+probabilities to establish reward consistency between processes in the response
+trajectory, which allows the response-level supervisory signal to propagate
+across processes, thereby providing additional fine-grained signals for reward
+learning. Building on analysis under the Bayesian framework, we develop an
+intra-trajectory consistency regularization to enforce that adjacent processes
+with higher next-token generation probability maintain more consistent rewards.
+We apply the proposed regularization to the advanced outcome reward model,
+improving its performance on RewardBench. Besides, we show that the reward
+model trained with the proposed regularization induces better DPO-aligned
+policies and achieves better best-of-N (BON) inference-time verification
+results. Our code is provided in https://github.com/chaoyang101/ICRM.
+### 🌟 论文解读 | 奖励建模中的轨迹内一致性：让奖励信号更精细地流动
+
+### 📌 背景痛点/本文动机
+奖励模型（Reward Model）在提升大语言模型（LLM）性能中至关重要，不管是基于人类反馈的强化学习（RLHF）还是推理时验证场景，都依赖它对响应质量做量化评估。但**现有奖励建模存在“监督信号颗粒度过粗”**的问题：当前方法主要依赖“整个响应的打分”来学习奖励，这种响应级别的监督信号太粗糙，导致奖励模型很难精准定位响应生成轨迹里真正和分数相关的具体成分，最终在未见过的响应上泛化能力差，甚至可能去拟合像“响应长度”这类无关紧要的虚假特征，而非关注响应轨迹里和标签真正相关的内容。而且，想获取“过程级（比如生成到第k个token时的中间状态）”的精细标注成本又极高，这进一步限制了模型对过程依赖关系的捕捉。所以，论文希望找到一种方式，让“响应级的监督信号”能在生成轨迹的各个过程间传播，给奖励学习补充更细粒度的信号。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：从贝叶斯框架分析“生成概率”与“奖励一致性”的关联  
+论文先从理论层面剖析：生成概率（即生成器生成后续序列的可能性）和响应轨迹内不同过程间的奖励一致性存在联系。通过贝叶斯分解等分析，形式化地阐述了——当生成器给“连续生成的过程”分配更高概率时，这些过程在同一条响应里的奖励更可能相近。简单说，生成概率高的相邻生成过程，语义上更连续，奖励也该更一致。这为后续设计正则项提供了理论依据。
+
+💡 创新点2：提出轨迹内一致性正则化（ICRM）  
+基于上述分析，论文设计了**Intra - Trajectory Consistency Regularization for Reward Modeling（ICRM）** 。整个框架包含两部分：一是固定住的生成器（用来提供生成概率，给正则化做依据）；二是要训练的奖励模型（预测最终的结果奖励）。正则化的核心逻辑是：让奖励模型在“下一个token生成概率更高的相邻生成过程”上，输出更一致的奖励。这样一来，原本只在“整个响应级别”的监督信号，就能沿着生成轨迹的各个过程传播开，让奖励模型学习到更细粒度、和生成逻辑更契合的监督信息，进而提升泛化能力。
+
+### 📈 实验结果
+论文做了多维度实验验证方法有效性：  
+- 在RewardBench等标准奖励建模基准测试中，加入ICRM正则化后的奖励模型性能更优；  
+- 在RLHF场景下，用该正则化训练出的奖励模型，能诱导出更优的、和DPO（Direct Preference Optimization）更对齐的策略；  
+- 在推理时验证任务（比如best - of - N选择）中，也取得了更好的结果。  
+
+这些实验从不同应用角度，证明了ICRM能让奖励模型在实际任务里表现更出色。
+
+### 💬 可借鉴之处
+1. 解决“粗粒度监督信号”问题的思路：当直接获取细粒度标注成本太高时，论文巧妙利用生成器本身的“生成概率”来间接挖掘过程间的关联，把粗粒度信号“拆解”到过程级别，给奖励学习补充信息。这种“借力已有生成器资源，细化监督信号”的思路，在其他需要细粒度监督但标注受限的场景（比如其他序列生成任务的奖励建模、偏好学习等）中很有参考价值。  
+2. 正则化设计的启发：通过分析生成概率和奖励一致性的关联，将其转化为正则项约束模型，这种“从生成过程内在逻辑里找正则化依据”的方式，能为后续设计更贴合任务特性的正则方法提供思路，帮助模型在利用全局监督的同时，捕捉局部过程的合理依赖。  
+3. 多场景验证的示范：论文在“奖励建模基准、RLHF、推理时验证”等多个LLM关键应用场景做实验，这种全面验证方法有效性的方式，也提醒我们在做方法创新时，要尽可能覆盖技术落地的不同环节，更充分地展示方法价值。
+
+## reinforcement-learning-from-human-feedback-with-high-confidence-safety-constraints
+### Abstract
+Existing approaches to language model alignment often treat safety as a
+tradeoff against helpfulness, which can lead to unacceptable responses in
+sensitive domains. To ensure reliable performance in such settings, we propose
+High-Confidence Safe Reinforcement Learning from Human Feedback (HC-RLHF), a
+method that provides high-confidence safety guarantees while maximizing
+helpfulness. Similar to previous methods, HC-RLHF explicitly decouples human
+preferences into helpfulness and harmlessness (safety), which are learned by
+training a reward model and a cost model, respectively. It then employs a
+two-step process to find safe solutions. In the first step, it optimizes the
+reward function under an intentionally pessimistic version of the cost
+constraint. In the second step, the trained model undergoes a safety test to
+verify whether its performance stays within an upper-confidence bound of the
+actual cost constraint. We provide a theoretical analysis of HC-RLHF, including
+proof that it will not return an unsafe solution with a probability greater
+than a user-specified threshold. For our empirical analysis, we apply HC-RLHF
+to align three different language models (Qwen2-1.5B, Qwen2.5-3B, and
+LLaMa3.2-3B) with human preferences. Our results demonstrate that HC-RLHF
+produces safe models with high probability and can improve harmlessness and
+helpfulness compared to previous methods.
+### 🌟 论文解读 | 高置信度安全约束下的人类反馈强化学习：平衡语言模型的帮助性与安全性
+
+### 📌 背景痛点/本文动机
+大语言模型（LLMs）在医疗咨询、法律推理、教育支持等真实场景中广泛应用，这要求模型输出既“有帮助（helpful）”又“安全无害（harmless）”。然而现有语言模型对齐方法常将“安全性”与“帮助性”视为 trade-off（权衡），在敏感领域易产生不可接受的响应。传统强化学习从人类反馈（RLHF）未显式分离这两个目标，要么训练单一奖励模型兼顾二者，要么启发式结合多个奖励模型输出，导致提升安全性时可能牺牲帮助性（如模型过度保守拒答），或提升帮助性时产生不安全输出。虽然后续 Safe RLHF 方法尝试解耦并将无害性作为安全约束，但缺乏安全的概率性保障，在高风险应用中存在隐患。因此，本文提出 **高置信度安全人类反馈强化学习（HC - RLHF）**，旨在为无害性提供概率保证的同时最大化帮助性。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：解耦人类偏好与双模型训练  
+和 Safe RLHF 类似，HC - RLHF 显式地将人类偏好解耦为“帮助性（helpfulness）”和“无害性（harmlessness，即安全性）”，并分别训练奖励模型（reward model）捕捉帮助性、成本模型（cost model）捕捉无害性。这种解耦让两个目标的优化更具针对性，避免传统方法中目标混淆导致的权衡失衡问题。  
+
+💡 创新点2：两步式安全求解流程  
+HC - RLHF 采用两步流程寻找安全解：  
+- 第一步，在**故意悲观版的成本约束**下优化奖励函数。这里“悲观版成本约束”是为了让训练出的模型在后续安全测试中更易通过，提前为安全性“留有余地”；  
+- 第二步，对训练后的模型进行**安全测试**，验证其性能是否处于实际成本约束的置信上界内。只有通过该测试的模型才会被最终采用，以此确保输出安全的概率满足用户指定阈值。  
+
+💡 创新点3：理论保障与概率安全保证  
+论文对 HC - RLHF 进行了理论分析，证明了该算法输出不安全解的概率不会超过用户指定的阈值，为高风险场景下模型的安全性提供了理论层面的可靠性支撑。  
+
+
+### 📈 实验结果
+论文将 HC - RLHF 应用于对齐三个不同语言模型（Qwen2 - 1.5B、Qwen2.5 - 3B、LLaMa3.2 - 3B）与人类偏好。实验结果表明：  
+- HC - RLHF 能以高概率生成安全模型，在安全性保障上表现优异；  
+- 与现有方法相比，HC - RLHF 在提升无害性的同时，还能改善帮助性，实现了两个目标间更优的平衡。  
+
+
+### 💬 可借鉴之处
+1. 目标解耦思路：在多目标优化场景（尤其是存在冲突的目标，如帮助性与安全性）下，显式解耦目标并分别建模（如奖励、成本双模型）是控制权衡关系的有效方式，可推广到其他需平衡多个矛盾目标的 AI 任务；  
+2. 安全约束的“悲观 + 测试”机制：通过训练时引入保守约束 + 训练后严格测试的两步法，为高置信度安全保障提供了可落地的技术路径，适合医疗、法律等高风险领域的 AI 系统开发；  
+3. 理论与实验结合：既从理论上证明安全概率保证，又通过多模型实验验证效果，这种“理论支撑 + 实证检验”的研究范式，为算法类研究提供了示范，有助于提升方法的可信度与说服力。  
+
+## explicit-preference-optimization--no-need-for-an-implicit-reward-model
+### Abstract
+The generated responses of large language models (LLMs) are often fine-tuned
+to human preferences through a process called reinforcement learning from human
+feedback (RLHF). As RLHF relies on a challenging training sequence, whereby a
+separate reward model is independently learned and then later applied to LLM
+policy updates, ongoing research effort has targeted more straightforward
+alternatives. In this regard, direct preference optimization (DPO) and its many
+offshoots circumvent the need for a separate reward training step. Instead,
+through the judicious use of a reparameterization trick that induces an
+\textit{implicit} reward, DPO and related methods consolidate learning to the
+minimization of a single loss function. And yet despite demonstrable success in
+some real-world settings, we prove that DPO-based objectives are nonetheless
+subject to sub-optimal regularization and counter-intuitive interpolation
+behaviors, underappreciated artifacts of the reparameterizations upon which
+they are based. To this end, we introduce an \textit{explicit} preference
+optimization framework termed EXPO that requires no analogous
+reparameterization to achieve an implicit reward. Quite differently, we merely
+posit intuitively-appealing regularization factors from scratch that
+transparently avoid the potential pitfalls of key DPO variants, provably
+satisfying regularization desiderata that prior methods do not. Empirical
+results serve to corroborate our analyses and showcase the efficacy of EXPO.
+### 🌟 论文解读 | 无需隐式奖励模型的显式偏好优化：EXPO 框架革新大模型偏好对齐
+
+### 📌 背景痛点/本文动机
+大语言模型（LLM）常通过**基于人类反馈的强化学习（RLHF）**来对齐人类偏好，但 RLHF 存在多步骤训练的复杂性：需先训练独立奖励模型，再用其更新 LLM 策略，过程易不稳定。为简化流程，直接偏好优化（DPO）及衍生方法通过“重新参数化技巧”引入隐式奖励，将学习压缩为单损失函数最小化。然而，DPO 类方法存在未被充分重视的缺陷：正则化效果欠佳、插值行为反直觉等，根源是其依赖的重新参数化机制。本文旨在提出更优框架解决这些问题。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：定义全新评估准则，揭露 DPO 类方法缺陷  
+论文提出符合直觉的偏好模型理想行为评估准则，证明大量 DPO 类方法无法满足这些准则。例如，DPO 常用目标的极小值点，难以在“参考模型强的区域保持性能，同时在其他区域改进”；且模型权衡参数变化时，在理想端点间的插值能力也存在局限。  
+
+💡 创新点2：提出 EXPO 显式偏好优化框架  
+无需依赖隐式奖励或重新参数化，从头设计直观正则化因子，规避 DPO 关键变种的潜在缺陷，且理论上满足此前方法未达的正则化需求。虽 EXPO 损失函数依赖不可观测的真实偏好分布，但可直接计算梯度无偏估计，支持高效随机梯度下降（SGD）优化。  
+
+
+### 📈 实验结果
+1. 受控环境实验：在已知真实偏好的场景下，验证 DPO 类方法易收敛到“退化极小值”，而 EXPO 不会；  
+2. 真实对齐数据实验：EXPO 在响应胜率（response win rates）指标上超越 DPO 类模型，证明实际效果更优。  
+
+
+### 💬 可借鉴之处
+1. 评估视角革新：为偏好优化方法设计“理想行为准则”，提供了更清晰的性能衡量与缺陷诊断框架，后续研究可参考这类准则定义思路；  
+2. 显式正则化设计：EXPO 跳出“隐式奖励 + 重新参数化”的传统路径，通过直观正则化实现偏好优化，为简化大模型对齐流程提供了新范式；  
+3. 理论与实验结合：从理论分析缺陷、设计方法到受控 + 真实场景实验验证，整套逻辑严谨，为算法类论文的论证提供了示范。  
+
+
+本文针对 DPO 类方法的固有缺陷，以全新评估准则为锚点，提出 EXPO 框架，在理论和实验层面都展现了对大模型偏好对齐的革新价值，为后续简化 RLHF 流程、提升对齐稳定性提供了关键思路。
+
+## proteinzero--self-improving-protein-generation-via-online-reinforcement-learning
+### Abstract
+Protein generative models have shown remarkable promise in protein design but
+still face limitations in success rate, due to the scarcity of high-quality
+protein datasets for supervised pretraining. We present ProteinZero, a novel
+framework that enables scalable, automated, and continuous self-improvement of
+the inverse folding model through online reinforcement learning. To achieve
+computationally tractable online feedback, we introduce efficient proxy reward
+models based on ESM-fold and a novel rapid ddG predictor that significantly
+accelerates evaluation speed. ProteinZero employs a general RL framework
+balancing multi-reward maximization, KL-divergence from a reference model, and
+a novel protein-embedding level diversity regularization that prevents mode
+collapse while promoting higher sequence diversity. Through extensive
+experiments, we demonstrate that ProteinZero substantially outperforms existing
+methods across every key metric in protein design, achieving significant
+improvements in structural accuracy, designability, thermodynamic stability,
+and sequence diversity. Most impressively, ProteinZero reduces design failure
+rates by approximately 36% - 48% compared to widely-used methods like
+ProteinMPNN, ESM-IF and InstructPLM, consistently achieving success rates
+exceeding 90% across diverse and complex protein folds. Notably, the entire RL
+run on CATH-4.3 can be done with a single 8 X GPU node in under 3 days,
+including reward computation. Our work establishes a new paradigm for protein
+design where models evolve continuously from their own generated outputs,
+opening new possibilities for exploring the vast protein design space.
+### 🌟 论文解读 | ProteinZero：在线强化学习驱动的蛋白质生成自我进化框架
+
+### 📌 背景痛点/本文动机
+蛋白质设计在计算生物学领域极具前景，然而现有蛋白质生成模型受限于高质量监督预训练数据集稀缺，在成功率等方面存在不足。主流方法依赖Protein Data Bank（PDB）的序列 - 结构配对数据，这类数据仅覆盖蛋白质序列空间的极小部分，且存在多样性有限与天然偏差问题，限制了模型性能与对新蛋白质设计的探索。同时，逆折叠的有监督学习任务和实际蛋白质设计目标（如高设计性、热稳定性、多样性）存在错位，现有工作在利用模型自身生成输出来实现自我进化设计模型方面进展有限。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：首创在线强化学习框架ProteinZero
+ProteinZero是首个无需依赖精心构建的偏好数据集，实现蛋白质序列设计模型自动化自我改进的在线强化学习框架，能让逆折叠模型实现可扩展、自动化且持续的自我提升，在多轮优化中有效优化蛋白质序列设计的多个关键目标（设计性、热稳定性、序列多样性等）同时提升逆折叠精度。
+
+💡 创新点2：高效奖励模型与快速ddG预测器
+提出基于逆折叠序列似然和无条件序列先验的快速热力学稳定性ddG估计器，结合ESMFold提供的轻量级设计性奖励，大幅降低评估成本，首次让蛋白质设计的在线强化学习微调具备可行性。通过这种方式，在计算反馈时更高效，加速模型优化过程。
+
+💡 创新点3：基于蛋白质嵌入的多样性正则化
+开发了基于蛋白质嵌入的新颖多样性促进正则化方法，在模型表示空间而非直接在序列层面操作，有效防止模式崩溃，提升生成序列多样性，同时保证蛋白质结构完整性且不会引发训练不稳定，为蛋白质设计提供更具功能性多样性的结果。
+
+💡 创新点4：探索在线RL微调框架设计空间
+通过研究不同算法（GRPO、RAFT、DPO）、奖励、 divergence（KL散度）和多样性正则化等，阐明在线RL微调框架的设计空间，找到能稳定优化多目标且避免模式崩溃的最佳策略。
+
+### 📈 实验结果
+在逆折叠任务的广泛实验中，ProteinZero在各关键指标上远超现有方法。在结构准确性、热力学稳定性、序列多样性方面显著提升；与ProteinMPNN、ESM - IF和InstructPLM等常用方法相比，设计失败率降低约36% - 48%，在多样复杂的蛋白质折叠中成功率持续超90%；且能在不同复杂蛋白质折叠上设计更优序列，显著提升长链蛋白质设计成功率。在计算效率上，在CATH - 4.3上运行整个RL过程（含奖励计算），单个8卡GPU节点可在3天内完成。
+
+### 💬 可借鉴之处
+1. 框架创新角度：ProteinZero开创的在线强化学习自我改进框架模式，为领域内模型摆脱对固定离线数据集依赖、实现自我进化提供了范例，后续工作可借鉴这种利用模型自身输出迭代优化的思路拓展研究。
+2. 效率优化角度：其结合高效代理奖励模型与快速预测器降低评估成本的思路，为计算资源受限但需高效反馈的强化学习应用场景（如其他生物分子设计等）提供了效率优化参考。
+3. 正则化设计角度：基于蛋白质嵌入的多样性正则化方法，为解决生成模型模式崩溃与多样性不足问题提供了新的技术路线，可启发其他生成任务（如小分子生成、图像生成等）在正则化设计上的创新。
+4. 多目标优化角度：对在线RL微调框架设计空间的探索以及多目标稳定优化策略的确定，为多目标强化学习在复杂任务（不仅限于蛋白质设计）中的应用提供了方法论层面的借鉴，指导后续如何平衡多目标、选择算法与正则化手段等。
+
+## efficient-online-rft-with-plug-and-play-llm-judges--unlocking-state-of-the-art-performance
+### Abstract
+Reward-model training is the cost bottleneck in modern Reinforcement Learning
+Human Feedback (RLHF) pipelines, often requiring tens of billions of parameters
+and an offline preference-tuning phase. In the proposed method, a frozen,
+instruction-tuned 7B LLM is augmented with only a one line JSON rubric and a
+rank-16 LoRA adapter (affecting just 0.8% of the model's parameters), enabling
+it to serve as a complete substitute for the previously used heavyweight
+evaluation models. The plug-and-play judge achieves 96.2% accuracy on
+RewardBench, outperforming specialized reward networks ranging from 27B to 70B
+parameters. Additionally, it allows a 7B actor to outperform the top 70B DPO
+baseline, which scores 61.8%, by achieving 92% exact match accuracy on GSM-8K
+utilizing online PPO. Thorough ablations indicate that (i) six in context
+demonstrations deliver the majority of the zero-to-few-shot improvements
+(+2pp), and (ii) the LoRA effectively addresses the remaining disparity,
+particularly in the safety and adversarial Chat-Hard segments. The proposed
+model introduces HH-Rationales, a subset of 10,000 pairs from Anthropic
+HH-RLHF, to examine interpretability, accompanied by human generated
+justifications. GPT-4 scoring indicates that our LoRA judge attains
+approximately = 9/10 in similarity to human explanations, while zero-shot
+judges score around =5/10. These results indicate that the combination of
+prompt engineering and tiny LoRA produces a cost effective, transparent, and
+easily adjustable reward function, removing the offline phase while achieving
+new state-of-the-art outcomes for both static evaluation and online RLHF.
+### 🌟 论文解读 | 轻量LLM裁判：用即插即用方案解锁RLHF新性能
+
+### 📌 背景痛点/本文动机
+在现代强化学习人类反馈（RLHF）流程中，奖励模型训练是成本瓶颈，常需数百亿参数和离线偏好调优阶段。同时，在线强化学习算法在准确评估长上下文模型输出、保持对话或文档连贯性与事实一致性方面存在挑战；传统双阶段对齐策略（结合离线与在线强化学习）复杂度高，需多训练阶段、大量数据集标注、单独奖励模型训练和庞大计算资源。因此，需要一种更高效、灵活的方案来替代传统重量级奖励模型，优化在线强化学习框架中的奖励评估环节。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：即插即用的轻量奖励评估器架构  
+使用冻结的、经指令调优的7B大语言模型（LLM），仅添加一行JSON规则和一个秩为16的LoRA适配器（仅影响模型0.8%参数），使其完全替代之前的重量级评估模型，将离线强化学习优势融入在线强化学习，无需单独离线对齐阶段。  
+
+💡 创新点2：结合提示工程与微小LoRA实现高效奖励函数  
+通过提示工程（如提供上下文演示）和微小LoRA适配器的结合，打造经济高效、透明且易调整的奖励函数。六次上下文演示带来零样本到少样本的大部分性能提升（+2个百分点），LoRA则有效解决剩余差距，尤其在安全和对抗性Chat - Hard环节。  
+
+💡 创新点3：引入HH - Rationales提升可解释性  
+提出HH - Rationales（来自Anthropic HH - RLHF的10000对子集）来检验可解释性，附带人类生成的理由。利用GPT - 4评分表明，LoRA裁判与人类解释的相似度约达9/10，远高于零样本裁判的约5/10。  
+
+
+### 📈 实验结果
+- 在RewardBench上，即插即用裁判达到96.2%准确率，超越27B到70B参数的专用奖励网络。  
+- 借助在线PPO，7B的actor模型在GSM - 8K上实现92%的精确匹配准确率，超越得分61.8%的顶级70B DPO基线。  
+- 消融实验验证上下文演示和LoRA的作用：六次上下文演示带来主要的零到少样本提升；LoRA有效弥补安全、对抗性等环节的性能差距。  
+- GPT - 4对解释质量评分显示，LoRA裁判与人类解释相似度≈9/10，零样本裁判仅≈5/10。  
+
+
+### 💬 可借鉴之处
+- 架构设计层面：展示了轻量级模型通过少量适配器和提示工程实现重量级模型功能的可行性，为资源受限场景下的奖励模型设计提供思路，证明无需超大参数模型也能实现高性能评估。  
+- 方法融合层面：将离线RL优势（明确判别能力、人类标注标准）融入在线RL场景，为在线强化学习框架优化提供新范式，简化传统双阶段对齐的复杂流程。  
+- 可解释性优化层面：HH - Rationales的引入以及对解释相似度的量化评估，为提升AI系统可解释性提供了可参考的数据集构建和评估方法，助力打造更透明的AI系统。  
+- 效率提升层面：大幅降低传统两阶段对齐流程的计算开销和训练时间，无需专门奖励模型训练和重复对齐轮次，在工业界大规模模型训练与优化中具有成本控制和效率提升的借鉴价值。
+
+## confidence-is-all-you-need--few-shot-rl-fine-tuning-of-language-models
+### Abstract
+Large language models (LLMs) excel at reasoning, yet post-training remains
+critical for aligning their behavior with task goals. Existing reinforcement
+learning (RL) methods often depend on costly human annotations or external
+reward models. We propose Reinforcement Learning via Self-Confidence (RLSC),
+which uses the model's own confidence as reward signals-eliminating the need
+for labels, preference models, or reward engineering. Applied to
+Qwen2.5-Math-7B with only 16 samples per question and 10 or 20 training steps,
+RLSC improves accuracy by +13.4% on AIME2024, +21.2% on MATH500, +21.7% on
+Minerva Math, +20.8% on Olympiadbench, and +9.7% on AMC23. RLSC provides a
+simple, scalable post-training method for inference models, requiring only a
+small number of samples and unlabelled supervision.
+```
+### 🌟 论文解读 | 仅靠置信度就能微调大模型？RLSC 用自置信开启少样本强化学习新思路
+
+### 📌 背景痛点/本文动机
+大语言模型（LLMs）虽在推理任务中表现卓越，但后训练阶段对让模型行为与任务目标对齐至关重要。现有强化学习（RL）方法常依赖昂贵的人工标注或外部奖励模型，比如 RLHF 需要大量人工标注，TTRL 靠每个问题生成 64 个响应再多数投票生成伪标签，计算开销极大。为解决这些依赖外部监督、成本高昂的问题，本文提出用模型自身置信度作奖励信号的强化学习新范式 RLSC，无需标签、偏好模型与奖励工程，让模型能基于自身输出反馈优化。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出 RLSC 框架，以自置信为奖励信号  
+受 TTRL 多数投票选输出模式的启发，本文发现多数投票本质是选输出分布的众数，优化采样完成度间的一致性能“锐化”分布（让概率集中在最可能答案）。基于此，提出直接最大化自置信目标：$F(p_θ) = \mathbb{E}_{y \sim p_θ(y|x)} [p_θ(y | x)]$ ，让模型概率分布向更“确信”的单一响应坍缩，既保留 TTRL 稳定输出的优势，又无需伪标签提取或多数投票。  
+
+💡 创新点2：自置信损失与梯度设计  
+为优化自置信目标，推导其对模型参数 $θ$ 的梯度，得到训练损失。基础损失 $L_1 = -\sum_y p_{\text{old}}(y | x) \cdot \log p_θ(y | x)$ ，让更新后的模型对旧模型高置信的响应分配更高对数概率；还推广出带平滑项的损失 $L_2 = -\sum_y (p_{\text{old}}(y | x) + \alpha) \cdot \log p_θ(y | x)$ （$\alpha>0$ 用于稳定优化，小 $\alpha$ 就能提升收敛与泛化），仅用模型自身信念分布作反馈，无需外部奖励模型与标注数据。  
+
+💡 创新点3：轻量训练配置落地  
+在 Qwen2.5-Math-7B 上应用自置信目标微调：每个问题生成 16 个候选完成（固定温度采样，视为来自 $p_{\text{old}}$ 的独立同分布样本）；计算更新后模型下样本的对数概率，用基础或平滑版自置信损失评估；仅用 AIME2024 数据集训练 10 或 20 步，8 张 A100 GPU、AdamW 优化器（学习率 $1×10^{-5}$ ）等轻量配置，全程无辅助数据集、指令微调与偏好模型，实现高效零标签强化学习。  
+
+### 📈 实验结果
+在多个推理基准测试中，RLSC 展现显著提升：AIME2024 准确率 +13.4%、MATH500 +21.2%、Minerva Math +21.7%、Olympiadbench +20.8%、AMC23 +9.7% 。即便训练数据少、计算成本低，也能让强预训练模型结合 RLSC 框架，在短训练阶段提升置信度与泛化能力，验证了方法在无特定辅助数据、人工反馈标注与手工奖励函数下的有效性。  
+
+### 💬 可借鉴之处
+1. 范式创新：RLSC 开辟了“自置信驱动强化学习”路径，摆脱对外部监督与复杂奖励工程的依赖，为大模型后训练提供轻量且普适的新思路，尤其适合资源受限场景。  
+2. 损失设计：自置信损失的推导与平滑变体的实践，展示了如何从模型内在输出分布中挖掘反馈信号，为后续无监督/自监督微调的损失函数设计提供参考。  
+3. 落地可行性：仅需少量样本（每问题 16 个）、短训练步数（10 - 20 步）就能实现性能跃升，证明轻量训练在特定任务上的潜力，为工业界快速迭代模型提供借鉴方向。  
+```
+
+## customizing-speech-recognition-model-with-large-language-model-feedback
+### Abstract
+Automatic speech recognition (ASR) systems have achieved strong performance
+on general transcription tasks. However, they continue to struggle with
+recognizing rare named entities and adapting to domain mismatches. In contrast,
+large language models (LLMs), trained on massive internet-scale datasets, are
+often more effective across a wide range of domains. In this work, we propose a
+reinforcement learning based approach for unsupervised domain adaptation,
+leveraging unlabeled data to enhance transcription quality, particularly the
+named entities affected by domain mismatch, through feedback from a LLM. Given
+contextual information, our framework employs a LLM as the reward model to
+score the hypotheses from the ASR model. These scores serve as reward signals
+to fine-tune the ASR model via reinforcement learning. Our method achieves a
+21\% improvement on entity word error rate over conventional self-training
+methods.
+### 🌟 论文解读 | 用大语言模型反馈定制语音识别模型：领域适配新范式
+
+### 📌 背景痛点/本文动机
+自动语音识别（ASR）系统在通用转录任务上已取得不错成绩，但面对罕见命名实体识别与领域不匹配场景时表现不佳。传统解决领域适配的自训练方法依赖伪标签置信度分数，而这些分数在新领域中可靠性不足。同时，大语言模型（LLM）经大规模互联网数据训练，具备跨领域泛化能力，为ASR在领域适配难题上提供了新突破口。因此，本文旨在利用LLM反馈，通过强化学习实现ASR的无监督领域适配，提升领域不匹配场景下的转录质量，尤其是命名实体的识别效果。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：基于强化学习的无监督领域适配框架  
+提出一套结合LLM反馈的强化学习（RL）流程来实现ASR无监督领域适配。框架分为数据收集、生成奖励、模型微调三步：先让预训练ASR模型为目标域音频生成候选假设；再结合上下文信息（如领域元数据等），用LLM计算各假设的奖励分数；最后用RL算法依据奖励微调ASR模型，摆脱了传统自训练对不可靠置信度分数的依赖。  
+
+💡 创新点2：利用LLM构建奖励函数  
+不单独训练ASR专用奖励模型，而是借助LLM对语言和上下文的隐式理解来生成奖励。将领域上下文信息整合为提示词输入LLM，通过计算假设在LLM下的对数概率和（结合ASR模型自身分数，通过参数λ控制权重）作为奖励信号，让LLM的跨域泛化能力为ASR领域适配提供指导。  
+
+💡 创新点3：RL算法驱动ASR微调  
+探索多种强化学习算法用于ASR模型微调，利用LLM给出的奖励信号，让ASR模型在无监督场景下朝着更契合目标领域转录质量的方向更新，区别于传统仅依赖词错误率（WER）或人工反馈设计奖励的思路，把LLM反馈深度融入训练过程。  
+
+### 📈 实验结果
+实验聚焦领域不匹配场景下命名实体等转录质量提升。对比传统自训练领域适配方法，本文方法在实体词错误率（EWER）上实现了高达21%的相对提升，有力证明了LLM反馈在引导ASR模型适配过程中的有效性，验证了基于RL和LLM反馈的无监督领域适配框架的价值。  
+
+### 💬 可借鉴之处
+1. 跨模态协作思路：展示了ASR与LLM结合的新路径，不再局限于LLM在ASR后处理（重排序、纠错）环节，而是让LLM深度参与训练阶段，为多模态模型协作提供了新范式参考。  
+2. 无监督适配方案：针对领域适配中标签成本高的问题，提供了利用无标签数据+LLM反馈+强化学习的高效无监督适配方案，在低资源、领域差异大的场景下有推广潜力。  
+3. 奖励设计创新：借助LLM天然的语言理解和跨域能力构建奖励函数，避免了传统自训练置信度分数不可靠的缺陷，为后续模型评估与奖励机制设计打开新思路。
+
+## treerpo--tree-relative-policy-optimization
+### Abstract
+Large Language Models (LLMs) have shown remarkable reasoning capabilities
+through Reinforcement Learning with Verifiable Rewards (RLVR) methods. However,
+a key limitation of existing approaches is that rewards defined at the full
+trajectory level provide insufficient guidance for optimizing the intermediate
+steps of a reasoning process. To address this, we introduce \textbf{\name}, a
+novel method that estimates the mathematical expectations of rewards at various
+reasoning steps using tree sampling. Unlike prior methods that rely on a
+separate step reward model, \name directly estimates these rewards through this
+sampling process. Building on the group-relative reward training mechanism of
+GRPO, \name innovatively computes rewards based on step-level groups generated
+during tree sampling. This advancement allows \name to produce fine-grained and
+dense reward signals, significantly enhancing the learning process and overall
+performance of LLMs. Experimental results demonstrate that our \name algorithm
+substantially improves the average Pass@1 accuracy of Qwen-2.5-Math on test
+benchmarks, increasing it from 19.0\% to 35.5\%. Furthermore, \name
+significantly outperforms GRPO by 2.9\% in performance while simultaneously
+reducing the average response length by 18.1\%, showcasing its effectiveness
+and efficiency. Our code will be available at
+\href{https://github.com/yangzhch6/TreeRPO}{https://github.com/yangzhch6/TreeRPO}.
+```
+### 🌟 论文解读 | TreeRPO：用树采样重塑大模型推理优化的奖励信号
+
+### 📌 背景痛点/本文动机
+大语言模型（LLMs）借助带可验证奖励的强化学习（RLVR）在推理能力上取得显著进展，但现有方法存在关键局限：**轨迹级奖励对推理中间步骤的优化指导不足**。在基于奖励模型的方法中，过程奖励模型（PRM）虽能提供细粒度奖励，但高质量标注数据获取难；而无奖励模型的方法（如GRPO）仅提供轨迹级奖励，对中间步骤优化助力有限。如何在不依赖奖励模型的前提下，为推理过程提供密集、细粒度的奖励信号，成为亟待解决的问题。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：树采样实现无奖励模型的过程奖励估计  
+TreeRPO 提出**树采样机制**，无需显式的步骤奖励模型，直接通过树采样来估计各推理步骤奖励的数学期望。它突破了传统方法依赖单独步骤奖励模型的限制，用采样过程本身完成奖励估计，为中间推理步骤提供更直接的反馈。  
+
+💡 创新点2：基于GRPO框架的步骤级组相对奖励计算  
+在GRPO的组相对奖励训练机制基础上，TreeRPO创新性地**基于树采样生成的步骤级分组来计算奖励**。这一设计让模型能产生细粒度、密集的奖励信号，在保留可验证奖励函数扩展性优势的同时，更高效地引导推理过程优化。  
+
+
+### 📈 实验结果
+1. 推理准确率提升显著：在Qwen - 2.5 - Math的测试基准中，Pass@1准确率从19.0%大幅提升至35.5%；  
+2. 性能与效率双优：对比GRPO，TreeRPO性能领先2.9%，同时平均响应长度减少18.1%，证明在提升推理精度的同时，还能更高效地利用token资源；  
+3. 可视化对比（图1）：在MATH - 500、OlympiadBench等四个数学基准测试中，TreeRPO的Pass@1准确率随训练步骤推进，始终优于GRPO，展现持续优化能力。  
+
+
+### 💬 可借鉴之处
+1. 无奖励模型的细粒度奖励设计思路：TreeRPO证明了在不依赖昂贵标注数据构建奖励模型的情况下，通过采样与分组机制也能生成过程级奖励，为资源受限场景下的RL与LLM结合提供新路径；  
+2. 强化学习在推理优化的创新应用：将树结构采样与组相对奖励结合，为复杂推理任务中“中间步骤优化”这一难题提供了可落地的技术方案，启发后续在RL与LLM推理结合方向的研究；  
+3. 性能与效率的平衡：实验中同时实现准确率提升与响应长度缩短，体现了方法在实际部署中的价值，为追求“高效推理”的工业级应用提供参考。  
+```
+
+## rival--reinforcement-learning-with-iterative-and-adversarial-optimization-for-machine-translation
+### Abstract
+Large language models (LLMs) possess strong multilingual capabilities, and
+combining Reinforcement Learning from Human Feedback (RLHF) with translation
+tasks has shown great potential. However, we observe that this paradigm
+performs unexpectedly poorly when applied to colloquial subtitle translation
+tasks. In this work, we investigate this issue and find that the offline reward
+model (RM) gradually diverges from the online LLM due to distributional shift,
+ultimately leading to undesirable training outcomes. To address this, we
+propose RIVAL, an adversarial training framework that formulates the process as
+a min-max game between the RM and the LLM. RIVAL iteratively updates the both
+models, with the RM trained to distinguish strong from weak translations
+(qualitative preference reward), and the LLM trained to enhance its translation
+for closing this gap. To stabilize training and improve generalizability, we
+also incorporate quantitative preference reward (e.g., BLEU) into the RM,
+enabling reference-free quality modeling aligned with human evaluation. Through
+extensive experiments, we demonstrate that the proposed adversarial training
+framework significantly improves upon translation baselines.
+### 🌟 论文解读 | RIVAL：对抗迭代优化下的机器翻译强化学习新范式
+
+### 📌 背景痛点/本文动机
+大语言模型（LLMs）具备强大的多语言能力，将基于人类反馈的强化学习（RLHF）与翻译任务结合也展现出潜力。但在口语化字幕翻译任务中，传统RLHF范式表现不佳。研究发现，离线奖励模型（RM）会因分布偏移与在线LLM逐渐脱节，导致训练效果差，比如模型会生成源文本没有的内容“欺骗”RM获取高分（奖励黑客问题）。同时现有NMT系统多关注正式书面语，针对松散结构、口语化字幕的研究较少，为填补空白，团队先构建专用数据集并尝试RLHF优化，却发现 vanilla RLHF 效果欠佳，由此催生了解决分布偏移等问题的研究动机。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：提出RIVAL对抗训练框架  
+将传统RLHF训练重构为RM与LLM间的显式 minimax 博弈。RM被训练来最大化强翻译与弱翻译对之间的分数差距（定性偏好奖励）；LLM则被训练来缩小自身与强翻译在翻译质量上的差距。通过迭代优化两个模型，让RM持续适应LLM训练中引入的分布偏移，从弱到强逐步提升性能。  
+
+💡 创新点2：引入定量偏好奖励稳定训练  
+发现仅定性偏好奖励下，随训练推进RM可能偏离真实奖励信号，原因是翻译任务探索空间大。于是引入如BLEU等定量偏好奖励到对抗框架，扩展RM使其同时预测这类定量奖励，将其融入框架。既稳定迭代训练过程，又能实现更具泛化性的无参考翻译质量建模，还能通过间接参考指导与人类评估标准对齐。  
+
+💡 创新点3：构建并开源口语化字幕翻译数据集处理 pipeline  
+提供了处理口语化中英平行字幕翻译数据集的简洁有效流程，并将处理后数据作为开源资源发布，为该领域研究提供数据基础。
+
+### 📈 实验结果
+文中通过大量实验验证，所提出的RIVAL对抗训练框架在翻译基线任务上有显著提升，有效改进了域内翻译质量，同时没有损害模型的分布外（out-of-distribution）性能，证明了方法在提升翻译效果与保持泛化能力上的有效性。
+
+### 💬 可借鉴之处
+1. 对抗训练思路迁移：把GAN中对抗训练范式迁移到RLHF与机器翻译结合场景，为解决分布偏移等问题提供了新视角，这种跨范式融合思路可借鉴到其他存在分布变化、需要动态适配的任务中。  
+2. 多维度奖励融合：结合定性与定量奖励来稳定训练、提升泛化性，在处理复杂生成类任务（如对话生成、文本摘要等）时，可参考这种多维度信号结合的方式优化模型训练。  
+3. 领域数据建设：针对口语化字幕这类研究较少的领域构建数据集并开源，为领域内后续研究铺砖，启示研究者关注小众但实用的领域数据建设，推动特定场景下技术发展。
+
+## logicpuzzlerl--cultivating-robust-mathematical-reasoning-in-llms-via-reinforcement-learning
+### Abstract
+Large language models (LLMs) excel at many supervised tasks but often
+struggle with structured reasoning in unfamiliar settings. This discrepancy
+suggests that standard fine-tuning pipelines may instill narrow,
+domain-specific heuristics rather than fostering general-purpose thinking
+strategies. In this work, we propose a "play to learn" framework that
+fine-tunes LLMs through reinforcement learning on a suite of seven custom logic
+puzzles, each designed to cultivate distinct reasoning skills such as
+constraint propagation, spatial consistency, and symbolic deduction. Using a
+reinforcement learning setup with verifiable rewards, models receive binary
+feedback based on puzzle correctness, encouraging iterative, hypothesis-driven
+problem solving. We demonstrate that this training approach significantly
+improves out-of-distribution performance on a range of mathematical benchmarks,
+especially for mid-difficulty problems that require multi-step reasoning.
+Analyses across problem categories and difficulty levels reveal that puzzle
+training promotes transferable reasoning routines, strengthening algebraic
+manipulation, geometric inference, and combinatorial logic, while offering
+limited gains on rote or highly specialized tasks. These findings show that
+reinforcement learning over logic puzzles reshapes the internal reasoning of
+LLMs, enabling more robust and compositional generalization without relying on
+task-specific symbolic tools.
+### 🌟 论文解读 | LogicPuzzleRL：用强化学习培养大模型鲁棒数学推理能力
+
+### 📌 背景痛点/本文动机
+大语言模型（LLMs）在诸多有监督任务中表现出色，但在不熟悉场景下进行结构化推理时却常遇困境。这一矛盾表明，标准微调流程可能让模型习得狭窄、特定领域的启发式策略，而非通用的思维方式。而人类学习者能发展出假设检验、逐步推理、约束满足等抽象思维策略来应对各类问题，受此启发，本文希望打造一套“以玩促学”框架，助力LLMs培养通用推理能力。
+
+### 🚀 核心方法（介绍本文的几个创新点）
+💡 创新点1：设计“以玩促学”框架与定制化逻辑谜题集  
+构建了包含七个定制逻辑谜题的集合，每个谜题针对不同推理技能（如约束传播、空间一致性、符号演绎等），且无背景知识或记忆模板能直接解决，迫使模型逐步推理。借助带可验证奖励的强化学习（RLVR）框架，模型生成候选解后得到正确/错误的二元反馈，激励其迭代式、假设驱动式解题。  
+💡 创新点2：聚焦推理能力质性转变的评估与分析  
+不满足于下游任务定量提升，还通过数学基准测试（涵盖算术、代数、组合数学等类别与不同难度），结合中间推理轨迹分析（如解的长度结构、自我修正频率、错误传播等指标），探究模型内部推理的质性变化，验证是推理能力提升而非特定领域启发式策略积累带来性能改进。  
+
+### 📈 实验结果
+在多类数学基准测试中，经七谜题课程训练的LLMs在多数类别和难度层级上有统计显著提升，尤其在需多步推理的中等难度问题上表现突出；跨问题类别与难度的分析显示，谜题训练促进了可迁移推理流程，增强了代数操作、几何推理、组合逻辑等能力，不过在死记硬背或高度专业化任务上增益有限。  
+
+### 💬 可借鉴之处
+从研究思路看，将游戏化、谜题化任务与强化学习结合来塑造模型推理机制，为提升大模型通用推理能力提供了新范式，跳出仅依赖特定领域工具或模板的传统路径；在评估维度上，不仅关注任务表现还深入剖析内部推理过程的质性变化，这种全面评估方式可为后续大模型推理能力研究提供参考；从应用价值讲，证明了通过小而可验证的谜题训练能重构大模型内部推理流程，助力其在更广泛数学任务上表现更优，为大模型推理能力落地到复杂场景提供了实践方向。 
+
