@@ -83,7 +83,7 @@ with st.form("query_form"):
     # llm_provider = st.selectbox("LLM 提供商", ["openai"])
     llm_provider = "openai"
     # model_name = st.text_input("LLM 模型名", "glm-4-air")
-    model_name = st.selectbox("LLM 模型名", ['None', "ep-20250526175303-cv654"])
+    model_name = st.selectbox("LLM 模型名", ['None', "ep-20250529110941-khvtx"])
     submitted = st.form_submit_button("开始生成综述")
 
 progress_placeholder = st.empty()

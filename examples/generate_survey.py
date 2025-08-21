@@ -24,7 +24,7 @@ def main():
         max_results=10,
         output_file="output/vlm_games_survey.md",
         llm_provider="openai",  # just a python class name, not mean openai api
-        model_name="ep-20250526175303-cv654",
+        model_name="ep-20250529110941-khvtx",
     )
     
     '''# Option 2: Generate survey from pre-processed papers

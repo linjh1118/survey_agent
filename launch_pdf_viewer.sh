@@ -8,6 +8,8 @@ echo "Survey Agent - PDF查看器"
 echo "==========================="
 echo ""
 
+cd /Users/bytedance/Documents/github/survey_agent
+
 # 检查Python环境
 if ! command -v python3 &> /dev/null; then
     echo "错误: 未找到python3，请先安装Python 3"

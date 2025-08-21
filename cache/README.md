@@ -68,7 +68,7 @@ def _generate_content_hash(self, paper: Dict[str, Any]) -> str:
     "cached_at": "2025-06-22T23:38:30.231146",
     "model_info": {
       "provider": "doubao",
-      "model_name": "ep-20250526175303-cv654"
+      "model_name": "ep-20250529110941-khvtx"
     }
   }
 }

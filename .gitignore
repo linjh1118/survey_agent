@@ -9,3 +9,4 @@ src/survey_agent/env.py
 *.html
 doubao_api.py
 cache/paper_summaries.json
+tmp/*

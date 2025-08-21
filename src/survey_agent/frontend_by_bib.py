@@ -285,7 +285,7 @@ st.sidebar.header("⚙️ 配置选项")
 
 # LLM设置
 llm_provider = "openai"
-model_name = st.sidebar.selectbox("🤖 LLM 模型", ["ep-20250526175303-cv654", "doubao"])
+model_name = st.sidebar.selectbox("🤖 LLM 模型", ["ep-20250529110941-khvtx", "doubao"])
 
 # 并行处理设置
 max_workers = st.sidebar.slider("🔧 并行处理线程数", min_value=1, max_value=8, value=4, 
