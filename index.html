@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Agent - AI论文智能调研工具</title>
+    <meta name="description" content="Survey Agent是一个基于AI的智能论文调研工具，支持ArXiv搜索、PDF下载、智能摘要生成和调研报告创建">
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji/assets/📚/3d/📚_3d.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #64748b;
+            --background-light: #f8fafc;
+            --background-white: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --border-radius: 8px;
+            --border-radius-lg: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .main-card {
+            background: var(--background-white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-description {
+            opacity: 0.9;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .form-section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .button {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            border: none;
+            padding: 0.875rem 2rem;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .button:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .button-full {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            background: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.2s ease, border-color 0.2s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .status-message {
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .status-success {
+            background-color: #ecfdf5;
+            color: #047857;
+            border: 1px solid #a7f3d0;
+        }
+
+        .status-error {
+            background-color: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+
+        .status-warning {
+            background-color: #fffbeb;
+            color: #d97706;
+            border: 1px solid #fed7aa;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: var(--background-white);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ffffff;
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .github-link {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.2s ease;
+        }
+
+        .github-link:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .card-body {
+                padding: 1.5rem;
+            }
+        }
+
+        .result-card {
+            background: var(--background-light);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .result-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .result-content {
+            background: var(--background-white);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            white-space: pre-wrap;
+            font-family: monospace;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-input {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .file-input-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            border: 2px dashed var(--border-color);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+            color: var(--text-secondary);
+        }
+
+        .file-input-label:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(37, 99, 235, 0.05);
+        }
+
+        .file-selected {
+            color: var(--success-color);
+            border-color: var(--success-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">📚</div>
+            <h1 class="title">Survey Agent</h1>
+            <p class="subtitle">AI驱动的智能论文调研工具 - 让学术研究更高效</p>
+        </header>
+
+        <main class="main-card">
+            <div class="card-header">
+                <h2 class="card-title">开始你的智能调研之旅</h2>
+                <p class="card-description">输入关键词或上传BibTeX文件，AI将为您生成专业的文献综述</p>
+            </div>
+
+            <div class="card-body">
+                <!-- API配置区域 -->
+                <div class="form-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-cog"></i>
+                        API配置
+                    </h3>
+                    <div class="form-group">
+                        <label for="apiKey" class="form-label">API Key</label>
+                        <input type="password" id="apiKey" class="form-input" 
+                               placeholder="请输入您的API Key" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="baseUrl" class="form-label">Base URL</label>
+                        <input type="url" id="baseUrl" class="form-input" 
+                               placeholder="请输入API Base URL" required>
+                    </div>
+                </div>
+
+                <!-- 调研方式选择 -->
+                <div class="form-section">
+                    <div class="tabs">
+                        <button class="tab active" data-tab="keyword">关键词搜索</button>
+                        <button class="tab" data-tab="bibtex">BibTeX文件</button>
+                    </div>
+
+                    <!-- 关键词搜索 -->
+                    <div class="tab-content active" id="keyword-tab">
+                        <div class="form-group">
+                            <label for="keywords" class="form-label">研究关键词</label>
+                            <input type="text" id="keywords" class="form-input" 
+                                   placeholder="例如：machine learning, deep learning, neural network">
+                        </div>
+                        <div class="form-group">
+                            <label for="maxResults" class="form-label">最大结果数量</label>
+                            <input type="number" id="maxResults" class="form-input" 
+                                   value="10" min="1" max="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="customPrompt" class="form-label">自定义摘要提示词（可选）</label>
+                            <textarea id="customPrompt" class="form-input form-textarea" 
+                                      placeholder="输入自定义的提示词来指导AI生成特定风格的摘要..."></textarea>
+                        </div>
+                        <button class="button button-full" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                            开始关键词调研
+                        </button>
+                    </div>
+
+                    <!-- BibTeX文件上传 -->
+                    <div class="tab-content" id="bibtex-tab">
+                        <div class="form-group">
+                            <label class="form-label">BibTeX文件</label>
+                            <div class="file-input-wrapper">
+                                <input type="file" id="bibFile" class="file-input" accept=".bib,.txt">
+                                <label for="bibFile" class="file-input-label" id="fileLabel">
+                                    <i class="fas fa-upload"></i>
+                                    <span>点击选择或拖拽BibTeX文件</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="bibCustomPrompt" class="form-label">自定义摘要提示词（可选）</label>
+                            <textarea id="bibCustomPrompt" class="form-input form-textarea" 
+                                      placeholder="输入自定义的提示词来指导AI生成特定风格的摘要..."></textarea>
+                        </div>
+                        <button class="button button-full" id="bibBtn">
+                            <i class="fas fa-file-alt"></i>
+                            开始BibTeX调研
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 状态消息 -->
+                <div id="statusMessage"></div>
+
+                <!-- 结果显示 -->
+                <div id="resultContainer" style="display: none;">
+                    <div class="result-card">
+                        <h3 class="result-title">调研结果</h3>
+                        <div class="result-content" id="resultContent"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 功能特色 -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3 class="feature-title">智能搜索</h3>
+                <p class="feature-description">基于ArXiv的智能论文搜索，支持多关键词组合查询</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3 class="feature-title">AI摘要</h3>
+                <p class="feature-description">使用大模型生成专业的论文摘要，支持自定义提示词</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📄</div>
+                <h3 class="feature-title">BibTeX支持</h3>
+                <p class="feature-description">上传BibTeX文件，快速生成文献综述报告</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💾</div>
+                <h3 class="feature-title">智能缓存</h3>
+                <p class="feature-description">30天智能缓存机制，大幅提升重复查询效率</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">格式化输出</h3>
+                <p class="feature-description">生成格式化的Markdown调研报告，即用即取</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3 class="feature-title">隐私安全</h3>
+                <p class="feature-description">所有API配置仅在本地存储，保护您的隐私安全</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2025 Survey Agent | 由AI驱动的学术研究助手</p>
+            <p>
+                <a href="https://github.com/your-repo/survey_agent" class="github-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                    GitHub仓库
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Tab切换功能
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetTab = tab.getAttribute('data-tab');
+                
+                // 更新tab状态
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // 更新内容
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(targetTab + '-tab').classList.add('active');
+            });
+        });
+
+        // 文件上传处理
+        const fileInput = document.getElementById('bibFile');
+        const fileLabel = document.getElementById('fileLabel');
+        
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                fileLabel.classList.add('file-selected');
+                fileLabel.innerHTML = `
+                    <i class="fas fa-check-circle"></i>
+                    <span>${file.name}</span>
+                `;
+            } else {
+                fileLabel.classList.remove('file-selected');
+                fileLabel.innerHTML = `
+                    <i class="fas fa-upload"></i>
+                    <span>点击选择或拖拽BibTeX文件</span>
+                `;
+            }
+        });
+
+        // 状态消息显示
+        function showStatus(message, type = 'success') {
+            const statusDiv = document.getElementById('statusMessage');
+            const iconMap = {
+                success: 'fas fa-check-circle',
+                error: 'fas fa-exclamation-circle',
+                warning: 'fas fa-exclamation-triangle'
+            };
+            
+            statusDiv.innerHTML = `
+                <div class="status-message status-${type}">
+                    <i class="${iconMap[type]}"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+        }
+
+        // 显示结果
+        function showResult(content) {
+            const resultContainer = document.getElementById('resultContainer');
+            const resultContent = document.getElementById('resultContent');
+            
+            resultContent.textContent = content;
+            resultContainer.style.display = 'block';
+            resultContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 按钮loading状态
+        function setButtonLoading(button, loading) {
+            if (loading) {
+                button.disabled = true;
+                const originalText = button.innerHTML;
+                button.innerHTML = `
+                    <div class="spinner"></div>
+                    处理中...
+                `;
+                button.setAttribute('data-original-text', originalText);
+            } else {
+                button.disabled = false;
+                button.innerHTML = button.getAttribute('data-original-text');
+            }
+        }
+
+        // 验证API配置
+        function validateApiConfig() {
+            const apiKey = document.getElementById('apiKey').value.trim();
+            const baseUrl = document.getElementById('baseUrl').value.trim();
+            
+            if (!apiKey) {
+                showStatus('请输入API Key', 'error');
+                return false;
+            }
+            
+            if (!baseUrl) {
+                showStatus('请输入Base URL', 'error');
+                return false;
+            }
+            
+            // 验证URL格式
+            try {
+                new URL(baseUrl);
+            } catch {
+                showStatus('Base URL格式不正确', 'error');
+                return false;
+            }
+            
+            return { apiKey, baseUrl };
+        }
+
+        // 关键词搜索
+        document.getElementById('searchBtn').addEventListener('click', async () => {
+            const config = validateApiConfig();
+            if (!config) return;
+            
+            const keywords = document.getElementById('keywords').value.trim();
+            const maxResults = parseInt(document.getElementById('maxResults').value);
+            const customPrompt = document.getElementById('customPrompt').value.trim();
+            
+            if (!keywords) {
+                showStatus('请输入研究关键词', 'error');
+                return;
+            }
+            
+            const button = document.getElementById('searchBtn');
+            setButtonLoading(button, true);
+            
+            try {
+                showStatus('正在搜索相关论文并生成摘要...', 'warning');
+                
+                // 模拟API调用
+                const response = await simulateApiCall({
+                    type: 'keyword_search',
+                    keywords: keywords.split(',').map(k => k.trim()),
+                    max_results: maxResults,
+                    custom_prompt: customPrompt,
+                    api_key: config.apiKey,
+                    base_url: config.baseUrl
+                });
+                
+                showStatus('调研完成！', 'success');
+                showResult(response.content);
+                
+            } catch (error) {
+                showStatus(`调研失败: ${error.message}`, 'error');
+            } finally {
+                setButtonLoading(button, false);
+            }
+        });
+
+        // BibTeX文件处理
+        document.getElementById('bibBtn').addEventListener('click', async () => {
+            const config = validateApiConfig();
+            if (!config) return;
+            
+            const fileInput = document.getElementById('bibFile');
+            const customPrompt = document.getElementById('bibCustomPrompt').value.trim();
+            
+            if (!fileInput.files[0]) {
+                showStatus('请选择BibTeX文件', 'error');
+                return;
+            }
+            
+            const button = document.getElementById('bibBtn');
+            setButtonLoading(button, true);
+            
+            try {
+                showStatus('正在解析BibTeX文件并生成摘要...', 'warning');
+                
+                const fileContent = await readFileContent(fileInput.files[0]);
+                
+                // 模拟API调用
+                const response = await simulateApiCall({
+                    type: 'bibtex_upload',
+                    file_content: fileContent,
+                    custom_prompt: customPrompt,
+                    api_key: config.apiKey,
+                    base_url: config.baseUrl
+                });
+                
+                showStatus('调研完成！', 'success');
+                showResult(response.content);
+                
+            } catch (error) {
+                showStatus(`调研失败: ${error.message}`, 'error');
+            } finally {
+                setButtonLoading(button, false);
+            }
+        });
+
+        // 读取文件内容
+        function readFileContent(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = e => resolve(e.target.result);
+                reader.onerror = e => reject(new Error('文件读取失败'));
+                reader.readAsText(file);
+            });
+        }
+
+        // 模拟API调用（实际使用时需要替换为真实的后端API）
+        async function simulateApiCall(params) {
+            // 模拟网络延迟
+            await new Promise(resolve => setTimeout(resolve, 2000 + Math.random() * 3000));
+            
+            // 模拟成功响应
+            return {
+                success: true,
+                content: `# Survey Report
+
+## 搜索参数
+- 类型: ${params.type === 'keyword_search' ? '关键词搜索' : 'BibTeX文件'}
+- ${params.type === 'keyword_search' ? '关键词: ' + params.keywords.join(', ') : '文件处理完成'}
+- API配置: ✓ 已验证
+
+## 论文列表
+
+### [1] Example Paper Title
+**作者**: Author1, Author2  
+**摘要**: This is a sample abstract of the paper...  
+**链接**: [arXiv:2025.12345](https://arxiv.org/abs/2025.12345)
+
+### [2] Another Research Paper
+**作者**: Author3, Author4  
+**摘要**: Another sample abstract with detailed information...  
+**链接**: [arXiv:2025.12346](https://arxiv.org/abs/2025.12346)
+
+## 总结
+
+基于搜索结果，本次调研共找到相关论文2篇。主要研究方向包括...
+
+*报告生成时间: ${new Date().toLocaleString()}*`
+            };
+        }
+
+        // 页面加载时的初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            // 从localStorage恢复API配置
+            const savedApiKey = localStorage.getItem('survey_api_key');
+            const savedBaseUrl = localStorage.getItem('survey_base_url');
+            
+            if (savedApiKey) {
+                document.getElementById('apiKey').value = savedApiKey;
+            }
+            if (savedBaseUrl) {
+                document.getElementById('baseUrl').value = savedBaseUrl;
+            }
+            
+            // 保存API配置
+            ['apiKey', 'baseUrl'].forEach(id => {
+                document.getElementById(id).addEventListener('blur', () => {
+                    const value = document.getElementById(id).value.trim();
+                    if (value) {
+                        localStorage.setItem(`survey_${id.toLowerCase().replace('url', '_url')}`, value);
+                    }
+                });
+            });
+        });
+
+        // 拖拽上传支持
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            document.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        const bibTab = document.getElementById('bibtex-tab');
+        
+        ['dragenter', 'dragover'].forEach(eventName => {
+            bibTab.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            bibTab.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            fileLabel.style.borderColor = 'var(--primary-color)';
+            fileLabel.style.backgroundColor = 'rgba(37, 99, 235, 0.1)';
+        }
+
+        function unhighlight(e) {
+            fileLabel.style.borderColor = 'var(--border-color)';
+            fileLabel.style.backgroundColor = 'transparent';
+        }
+
+        bibTab.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            
+            if (files.length > 0) {
+                fileInput.files = files;
+                fileInput.dispatchEvent(new Event('change'));
+            }
+        }
+    </script>
+</body>
+</html>
