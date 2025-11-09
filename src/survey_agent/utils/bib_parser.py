@@ -115,7 +115,7 @@ class BibParser:
         }
     
     def search_paper_by_title(self, title: str, verbose: bool = False) -> Optional[Any]:
-        """Search for a paper on arXiv by title"""
+        """Search for a paper on arXiv by title with strict similarity checking"""
         if not title:
             return None
             
@@ -184,36 +184,22 @@ class BibParser:
                         strategy_used = "关键词组合搜索"
             
             if results:
-                # Find the best match using improved scoring
+                # Find the best match using improved scoring with strict similarity checking
                 best_match = None
                 best_score = 0
                 
                 for result in results:
                     result_title_cleaned = self.clean_title(result.title)
                     
-                    # Method 1: Word overlap scoring
-                    title_words = set(cleaned_title.lower().split())
-                    result_words = set(result_title_cleaned.lower().split())
+                    # Calculate multiple similarity metrics
+                    similarity_score = self._calculate_title_similarity(cleaned_title, result_title_cleaned)
                     
-                    if title_words and result_words:
-                        overlap = len(title_words.intersection(result_words))
-                        overlap_score = overlap / max(len(title_words), len(result_words))
-                        
-                        # Method 2: Character-level similarity (simple)
-                        char_score = len(set(cleaned_title.lower()) & set(result_title_cleaned.lower())) / max(len(set(cleaned_title.lower())), len(set(result_title_cleaned.lower())))
-                        
-                        # Method 3: Length similarity bonus
-                        length_ratio = min(len(cleaned_title), len(result_title_cleaned)) / max(len(cleaned_title), len(result_title_cleaned))
-                        
-                        # Combined score
-                        final_score = overlap_score * 0.7 + char_score * 0.2 + length_ratio * 0.1
-                        
-                        if final_score > best_score:
-                            best_score = final_score
-                            best_match = result
+                    if similarity_score > best_score:
+                        best_score = similarity_score
+                        best_match = result
                 
-                # Lower threshold for better recall
-                if best_score > 0.25:  # Reduced threshold from 0.3 to 0.25
+                # Use stricter threshold and additional checks
+                if self._is_title_match_valid(cleaned_title, best_match.title, best_score, verbose):
                     if verbose:
                         print(f"   ✅ 搜索成功 ({strategy_used})")
                         print(f"   找到论文: {best_match.title}")
@@ -224,9 +210,10 @@ class BibParser:
                     return best_match
                 else:
                     if verbose:
-                        print(f"   ❌ 搜索失败: 最高匹配分数 {best_score:.3f} 低于阈值 0.25")
-                        if results:
-                            print(f"   最佳候选: {results[0].title}")
+                        print(f"   ❌ 搜索失败: 标题相似性检查未通过")
+                        print(f"   原始标题: {cleaned_title}")
+                        print(f"   搜索到标题: {best_match.title}")
+                        print(f"   匹配分数: {best_score:.3f}")
                         print()
             else:
                 if verbose:
@@ -241,6 +228,176 @@ class BibParser:
                 print(f"Error searching for paper with title '{title}': {e}")
             
         return None
+    
+    def _calculate_title_similarity(self, title1: str, title2: str) -> float:
+        """Calculate comprehensive similarity score between two titles"""
+        if not title1 or not title2:
+            return 0.0
+        
+        # Normalize titles for comparison
+        t1 = title1.lower().strip()
+        t2 = title2.lower().strip()
+        
+        # Method 1: Word overlap scoring (most important)
+        words1 = set(t1.split())
+        words2 = set(t2.split())
+        
+        if not words1 or not words2:
+            return 0.0
+        
+        overlap = len(words1.intersection(words2))
+        word_overlap_score = overlap / max(len(words1), len(words2))
+        
+        # Method 2: Jaccard similarity for words
+        jaccard_score = overlap / len(words1.union(words2)) if words1.union(words2) else 0.0
+        
+        # Method 3: Character-level similarity (Levenshtein-based approximation)
+        char_similarity = self._calculate_char_similarity(t1, t2)
+        
+        # Method 4: Length similarity (penalize very different lengths)
+        length_ratio = min(len(t1), len(t2)) / max(len(t1), len(t2))
+        
+        # Method 5: Check for exact substring match (bonus)
+        substring_bonus = 0.0
+        if len(t1) > 10 and len(t2) > 10:  # Only for reasonably long titles
+            if t1 in t2 or t2 in t1:
+                substring_bonus = 0.2
+        
+        # Method 6: Check for significant word order preservation
+        word_order_score = self._calculate_word_order_similarity(t1, t2)
+        
+        # Weighted combination
+        final_score = (
+            word_overlap_score * 0.4 +      # Most important: word overlap
+            jaccard_score * 0.2 +           # Word set similarity
+            char_similarity * 0.15 +        # Character-level similarity
+            length_ratio * 0.1 +            # Length similarity
+            substring_bonus +               # Exact substring bonus
+            word_order_score * 0.15         # Word order preservation
+        )
+        
+        return min(final_score, 1.0)  # Cap at 1.0
+    
+    def _calculate_char_similarity(self, s1: str, s2: str) -> float:
+        """Calculate character-level similarity using a simple approach"""
+        if not s1 or not s2:
+            return 0.0
+        
+        # Simple character overlap
+        chars1 = set(s1)
+        chars2 = set(s2)
+        
+        if not chars1 or not chars2:
+            return 0.0
+        
+        overlap = len(chars1.intersection(chars2))
+        return overlap / max(len(chars1), len(chars2))
+    
+    def _calculate_word_order_similarity(self, title1: str, title2: str) -> float:
+        """Calculate how well the word order is preserved"""
+        words1 = title1.split()
+        words2 = title2.split()
+        
+        if len(words1) < 2 or len(words2) < 2:
+            return 0.0
+        
+        # Find common words and check their relative positions
+        common_words = set(words1).intersection(set(words2))
+        if len(common_words) < 2:
+            return 0.0
+        
+        # Calculate position correlation for common words
+        positions1 = {word: i for i, word in enumerate(words1) if word in common_words}
+        positions2 = {word: i for i, word in enumerate(words2) if word in common_words}
+        
+        # Check if relative order is preserved
+        order_preserved = 0
+        total_pairs = 0
+        
+        for word1 in common_words:
+            for word2 in common_words:
+                if word1 != word2:
+                    total_pairs += 1
+                    pos1_1, pos1_2 = positions1[word1], positions1[word2]
+                    pos2_1, pos2_2 = positions2[word1], positions2[word2]
+                    
+                    # Check if relative order is the same
+                    if (pos1_1 < pos1_2) == (pos2_1 < pos2_2):
+                        order_preserved += 1
+        
+        return order_preserved / total_pairs if total_pairs > 0 else 0.0
+    
+    def _is_title_match_valid(self, original_title: str, found_title: str, similarity_score: float, verbose: bool = False) -> bool:
+        """Determine if a title match is valid based on multiple criteria"""
+        
+        # Criterion 1: Minimum similarity threshold
+        min_similarity_threshold = 0.6  # Increased from 0.4 to 0.6 for stricter matching
+        if similarity_score < min_similarity_threshold:
+            if verbose:
+                print(f"   ❌ 相似性分数 {similarity_score:.3f} 低于阈值 {min_similarity_threshold}")
+            return False
+        
+        # Criterion 2: Check for significant word overlap
+        original_words = set(original_title.lower().split())
+        found_words = set(found_title.lower().split())
+        
+        if not original_words or not found_words:
+            if verbose:
+                print(f"   ❌ 标题为空或无法解析")
+            return False
+        
+        # At least 60% of words should overlap for short titles, 50% for longer titles
+        min_word_overlap_ratio = 0.6 if len(original_words) <= 5 else 0.5
+        word_overlap_ratio = len(original_words.intersection(found_words)) / max(len(original_words), len(found_words))
+        
+        if word_overlap_ratio < min_word_overlap_ratio:
+            if verbose:
+                print(f"   ❌ 词汇重叠比例 {word_overlap_ratio:.3f} 低于阈值 {min_word_overlap_ratio}")
+            return False
+        
+        # Criterion 3: Check for length similarity (avoid very different lengths)
+        length_ratio = min(len(original_title), len(found_title)) / max(len(original_title), len(found_title))
+        if length_ratio < 0.4:  # If one title is more than 2.5x longer than the other
+            if verbose:
+                print(f"   ❌ 标题长度差异过大，长度比例: {length_ratio:.3f}")
+            return False
+        
+        # Criterion 4: Check for critical words (important technical terms)
+        # Extract potential technical terms (words that are likely important)
+        technical_indicators = ['learning', 'network', 'model', 'algorithm', 'method', 'approach', 'system', 'framework', 'deep', 'neural', 'transformer', 'attention', 'reinforcement', 'optimization', 'classification', 'regression', 'clustering', 'detection', 'recognition', 'generation', 'synthesis', 'analysis', 'prediction', 'inference', 'training', 'evaluation', 'benchmark']
+        
+        original_tech_words = [w for w in original_words if w in technical_indicators]
+        found_tech_words = [w for w in found_words if w in technical_indicators]
+        
+        # If original title has technical terms, most should be present in found title
+        if original_tech_words:
+            tech_overlap = len(set(original_tech_words).intersection(set(found_tech_words)))
+            tech_overlap_ratio = tech_overlap / len(original_tech_words)
+            
+            if tech_overlap_ratio < 0.8:  # At least 80% of technical terms should match
+                if verbose:
+                    print(f"   ❌ 技术词汇重叠不足，重叠比例: {tech_overlap_ratio:.3f}")
+                    print(f"   原始技术词汇: {original_tech_words}")
+                    print(f"   找到的技术词汇: {found_tech_words}")
+                return False
+        
+        # Criterion 5: Check for exact word matches (at least some words should match exactly)
+        exact_matches = len(original_words.intersection(found_words))
+        min_exact_matches = 3 if len(original_words) <= 5 else 4  # More strict for longer titles
+        if exact_matches < min_exact_matches:
+            if verbose:
+                print(f"   ❌ 精确匹配词汇数量不足: {exact_matches} (需要至少 {min_exact_matches})")
+            return False
+        
+        # All criteria passed
+        if verbose:
+            print(f"   ✅ 标题匹配验证通过")
+            print(f"   相似性分数: {similarity_score:.3f}")
+            print(f"   词汇重叠比例: {word_overlap_ratio:.3f}")
+            print(f"   长度比例: {length_ratio:.3f}")
+            print(f"   精确匹配词汇数: {exact_matches}")
+        
+        return True
     
     def get_arxiv_papers(self) -> List[Dict[str, Any]]:
         """Get paper objects from arXiv using extracted IDs"""
