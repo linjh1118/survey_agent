@@ -10,11 +10,11 @@ from datetime import datetime
 from typing import Dict, List, Any
 
 def load_cached_papers() -> Dict[str, Any]:
-    """加载所有缓存的论文数据"""
+    """加载所有缓存的论文数据，优先使用完整数据"""
     cache_files = [
-        'cache/paper_summaries.json',
         'cache/demo_papers.json',
-        'cache/demo_reports.json'
+        'cache/demo_reports.json', 
+        'cache/paper_summaries.json'  # 最后加载，会覆盖不完整的数据
     ]
     
     all_papers = {}
@@ -25,6 +25,7 @@ def load_cached_papers() -> Dict[str, Any]:
                 with open(cache_file, 'r', encoding='utf-8') as f:
                     data = json.load(f)
                     if isinstance(data, dict):
+                        # paper_summaries.json 优先级最高，会覆盖之前的数据
                         all_papers.update(data)
                         print(f"✅ 已加载 {cache_file}: {len(data)} 篇论文")
                     else:
