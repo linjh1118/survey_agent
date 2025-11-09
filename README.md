@@ -10,7 +10,7 @@ A modern framework for automatically generating research surveys by searching ar
 
 ## 🌐 在线体验
 
-访问我们的 [GitHub Pages演示站点](https://your-username.github.io/survey_agent) 立即体验Survey Agent的强大功能！
+访问我们的 [GitHub Pages演示站点](https://linjh1118.github.io/survey_agent) 立即体验Survey Agent的强大功能！
 
 ### 🎯 Web界面
 - **🏠 主界面** (`index.html`): 动态论文调研工具，支持API配置和实时生成
