@@ -1,0 +1,44 @@
+# 简单的静态站点部署到GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # 在针对默认分支的推送上运行
+  push:
+    branches: ["main"]
+
+  # 允许手动从Actions选项卡运行此工作流
+  workflow_dispatch:
+
+# 设置GITHUB_TOKEN的权限，以允许部署到GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允许同时进行一次部署，跳过正在运行和最新队列之间的运行队列
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 上传整个仓库
+          path: '.'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

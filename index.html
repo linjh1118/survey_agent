@@ -726,36 +726,76 @@
             });
         }
 
-        // 模拟API调用（实际使用时需要替换为真实的后端API）
+        // 模拟API调用（在GitHub Pages静态环境中使用）
         async function simulateApiCall(params) {
             // 模拟网络延迟
             await new Promise(resolve => setTimeout(resolve, 2000 + Math.random() * 3000));
             
+            // 在静态环境中，我们模拟API响应
+            let searchInfo = '';
+            let paperExamples = '';
+            
+            if (params.type === 'keyword_search') {
+                searchInfo = `关键词: ${params.keywords.join(', ')}`;
+                paperExamples = `### [1] CAPO: Reinforcing Consistent Reasoning in Medical Decision-Making
+**ArXiv ID**: 2506.12849  
+**摘要**: 在医疗视觉问答领域，本文提出了CAPO框架，通过一致性感知偏好优化来强化医疗决策中的推理能力...  
+**链接**: [arXiv:2506.12849](https://arxiv.org/abs/2506.12849)
+
+### [2] One-shot Entropy Minimization
+**ArXiv ID**: 2505.20282  
+**摘要**: 提出了单样本熵最小化方法，这是一种强大且完全无监督的方法，仅用一个未标注数据就能与强化学习相媲美...  
+**链接**: [arXiv:2505.20282](https://arxiv.org/abs/2505.20282)`;
+            } else {
+                searchInfo = 'BibTeX文件处理完成';
+                paperExamples = `### 从BibTeX解析的论文
+基于您上传的BibTeX文件，我们提取了以下论文信息并生成了相应的摘要...
+
+*注意：在实际使用中，请配置您的API Key和Base URL来获取真实的AI生成摘要。*`;
+            }
+            
+            // 检查是否在演示环境
+            const isDemo = window.location.hostname.includes('github.io') || 
+                          window.location.hostname === 'localhost' ||
+                          window.location.pathname.includes('index.html');
+            
+            const demoNotice = isDemo ? `
+
+## 📝 演示说明
+这是Survey Agent的在线演示版本。要使用完整功能：
+1. 克隆仓库到本地
+2. 配置您的API Key和Base URL
+3. 运行本地版本获取真实的AI生成摘要
+
+当前显示的是示例数据。查看 [GitHub仓库](https://github.com/your-username/survey_agent) 了解完整部署方法。` : '';
+            
             // 模拟成功响应
             return {
                 success: true,
-                content: `# Survey Report
+                content: `# Survey Agent 调研报告
 
 ## 搜索参数
 - 类型: ${params.type === 'keyword_search' ? '关键词搜索' : 'BibTeX文件'}
-- ${params.type === 'keyword_search' ? '关键词: ' + params.keywords.join(', ') : '文件处理完成'}
-- API配置: ✓ 已验证
+- ${searchInfo}
+- API配置: ${isDemo ? '🎭 演示模式' : '✓ 已验证'}
 
 ## 论文列表
 
-### [1] Example Paper Title
-**作者**: Author1, Author2  
-**摘要**: This is a sample abstract of the paper...  
-**链接**: [arXiv:2025.12345](https://arxiv.org/abs/2025.12345)
-
-### [2] Another Research Paper
-**作者**: Author3, Author4  
-**摘要**: Another sample abstract with detailed information...  
-**链接**: [arXiv:2025.12346](https://arxiv.org/abs/2025.12346)
+${paperExamples}
 
 ## 总结
 
-基于搜索结果，本次调研共找到相关论文2篇。主要研究方向包括...
+本次演示调研展示了Survey Agent的核心功能。在实际使用中，系统会：
+- 自动从arXiv搜索相关论文
+- 下载PDF并提取文本内容
+- 使用大语言模型生成专业摘要
+- 创建格式化的Markdown报告
+
+### 主要特色
+- 🔍 智能搜索：支持多关键词组合查询
+- 🤖 AI摘要：使用LLM生成专业摘要
+- 💾 智能缓存：30天缓存机制，提升查询效率
+- 📊 格式化输出：生成Markdown格式报告${demoNotice}
 
 *报告生成时间: ${new Date().toLocaleString()}*`
             };

@@ -533,7 +533,7 @@
                 <a href="index.html" class="nav-link">
                     <i class="fas fa-home"></i> 返回主页
                 </a>
-                <a href="summary_view.html" class="nav-link">
+                <a href="reports.html" class="nav-link">
                     <i class="fas fa-list"></i> 调研报告
                 </a>
                 <a href="pdf_viewer.html" class="nav-link">
@@ -642,8 +642,8 @@
         // 加载论文数据
         async function loadPapers() {
             try {
-                // 尝试从缓存文件加载数据
-                const response = await fetch('cache/paper_summaries.json');
+                // 首先尝试加载演示数据
+                let response = await fetch('cache/demo_papers.json');
                 if (response.ok) {
                     const data = await response.json();
                     allPapers = Object.entries(data).map(([id, paper]) => ({
@@ -651,8 +651,18 @@
                         ...paper
                     }));
                 } else {
-                    // 使用模拟数据
-                    allPapers = mockPapers;
+                    // 然后尝试实际缓存文件
+                    response = await fetch('cache/paper_summaries.json');
+                    if (response.ok) {
+                        const data = await response.json();
+                        allPapers = Object.entries(data).map(([id, paper]) => ({
+                            arxiv_id: id,
+                            ...paper
+                        }));
+                    } else {
+                        // 最后使用模拟数据
+                        allPapers = mockPapers;
+                    }
                 }
                 
                 filteredPapers = [...allPapers];

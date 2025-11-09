@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>调研报告浏览器 - Survey Agent</title>
+    <meta name="description" content="浏览Survey Agent生成的所有调研报告">
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji/assets/📚/3d/📚_3d.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #64748b;
+            --background-light: #f8fafc;
+            --background-white: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --border-radius: 8px;
+            --border-radius-lg: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--background-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #16a085 0%, #2980b9 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .header-subtitle {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .header-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            transition: background-color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .toolbar {
+            background: var(--background-white);
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 3rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .reports-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .report-card {
+            background: var(--background-white);
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border-left: 4px solid #16a085;
+        }
+
+        .report-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .report-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+
+        .report-size {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-family: monospace;
+            background: var(--background-light);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .report-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .report-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .btn-primary {
+            background: #16a085;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #148f77;
+        }
+
+        .btn-secondary {
+            background: var(--background-light);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--border-color);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .empty-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid #16a085;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 2rem;
+        }
+
+        .modal-content {
+            background: var(--background-white);
+            border-radius: var(--border-radius-lg);
+            padding: 0;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 2rem 0 2rem;
+            border-bottom: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            padding: 0.5rem;
+            border-radius: var(--border-radius);
+        }
+
+        .close-btn:hover {
+            background: var(--background-light);
+        }
+
+        .modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .report-content {
+            line-height: 1.8;
+        }
+
+        .report-content h1,
+        .report-content h2,
+        .report-content h3 {
+            margin: 2rem 0 1rem 0;
+            color: var(--text-primary);
+        }
+
+        .report-content h1 {
+            font-size: 1.875rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .report-content h2 {
+            font-size: 1.5rem;
+        }
+
+        .report-content h3 {
+            font-size: 1.25rem;
+        }
+
+        .report-content p {
+            margin-bottom: 1rem;
+        }
+
+        .report-content pre {
+            background: var(--background-light);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            overflow-x: auto;
+            font-size: 0.875rem;
+            margin: 1rem 0;
+        }
+
+        .report-content blockquote {
+            border-left: 4px solid #16a085;
+            padding: 1rem;
+            margin: 1rem 0;
+            background: var(--background-light);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .report-content ul,
+        .report-content ol {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .report-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .report-content a {
+            color: #16a085;
+            text-decoration: none;
+        }
+
+        .report-content a:hover {
+            text-decoration: underline;
+        }
+
+        .floating-action {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #16a085;
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.2s ease;
+        }
+
+        .floating-action:hover {
+            background: #148f77;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 1.75rem;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .header-stats {
+                gap: 1rem;
+            }
+
+            .toolbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-box {
+                min-width: auto;
+            }
+
+            .report-header {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .report-actions {
+                flex-wrap: wrap;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .modal {
+                padding: 1rem;
+            }
+
+            .modal-content {
+                max-height: 95vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">
+                📊 调研报告浏览器
+            </h1>
+            <p class="header-subtitle">浏览和管理Survey Agent生成的所有调研报告</p>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalReports">-</span>
+                    <span class="stat-label">调研报告</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="totalSize">-</span>
+                    <span class="stat-label">总大小</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="avgSize">-</span>
+                    <span class="stat-label">平均大小</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i> 返回主页
+                </a>
+                <a href="papers.html" class="nav-link">
+                    <i class="fas fa-file-text"></i> 论文浏览器
+                </a>
+                <a href="pdf_viewer.html" class="nav-link">
+                    <i class="fas fa-file-pdf"></i> PDF浏览器
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="toolbar">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="searchInput" 
+                       placeholder="搜索报告标题或文件名...">
+            </div>
+        </div>
+
+        <div id="loadingState" class="loading">
+            <div class="spinner"></div>
+        </div>
+
+        <div id="reportsContainer" class="reports-grid" style="display: none;"></div>
+
+        <div id="emptyState" class="empty-state" style="display: none;">
+            <div class="empty-icon">📄</div>
+            <h3>没有找到匹配的报告</h3>
+            <p>尝试调整搜索条件</p>
+        </div>
+    </div>
+
+    <button class="floating-action" id="backToTop" title="回到顶部" style="display: none;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 报告详情模态框 -->
+    <div class="modal" id="reportModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <button class="close-btn" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <div class="report-content" id="reportContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 全局变量
+        let allReports = [];
+        let filteredReports = [];
+        let currentSearch = '';
+
+        // 初始化页面
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                await loadReports();
+                initializeEventListeners();
+                updateStats();
+                renderReports();
+            } catch (error) {
+                showError('加载报告数据失败：' + error.message);
+            }
+        });
+
+        // 加载报告数据
+        async function loadReports() {
+            try {
+                // 首先尝试加载演示数据
+                let response = await fetch('cache/demo_reports.json');
+                if (response.ok) {
+                    allReports = await response.json();
+                } else {
+                    // 使用模拟数据
+                    allReports = createMockReports();
+                }
+                
+                filteredReports = [...allReports];
+                
+                // 模拟加载延迟
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+            } catch (error) {
+                // 出错时使用模拟数据
+                allReports = createMockReports();
+                filteredReports = [...allReports];
+            }
+        }
+
+        // 创建模拟报告数据
+        function createMockReports() {
+            return [
+                {
+                    filename: "survey_result_ai_agents.md",
+                    title: "AI智能体技术调研报告",
+                    created_at: new Date(Date.now() - 86400000).toISOString(),
+                    modified_at: new Date().toISOString(),
+                    size: 45230
+                },
+                {
+                    filename: "survey_result_llm_training.md", 
+                    title: "大语言模型训练方法综述",
+                    created_at: new Date(Date.now() - 172800000).toISOString(),
+                    modified_at: new Date(Date.now() - 86400000).toISOString(),
+                    size: 38567
+                },
+                {
+                    filename: "survey_result_reinforcement_learning.md",
+                    title: "强化学习在NLP中的应用",
+                    created_at: new Date(Date.now() - 259200000).toISOString(),
+                    modified_at: new Date(Date.now() - 172800000).toISOString(),
+                    size: 52104
+                }
+            ];
+        }
+
+        // 初始化事件监听器
+        function initializeEventListeners() {
+            // 搜索功能
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', debounce(handleSearch, 300));
+
+            // 回到顶部按钮
+            const backToTopBtn = document.getElementById('backToTop');
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // 滚动显示/隐藏回到顶部按钮
+            window.addEventListener('scroll', () => {
+                backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+            });
+
+            // 模态框关闭
+            document.getElementById('closeModal').addEventListener('click', closeModal);
+            document.getElementById('reportModal').addEventListener('click', (e) => {
+                if (e.target.id === 'reportModal') closeModal();
+            });
+
+            // ESC键关闭模态框
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+        }
+
+        // 更新统计信息
+        function updateStats() {
+            const totalSize = allReports.reduce((sum, report) => sum + report.size, 0);
+            const avgSize = allReports.length > 0 ? totalSize / allReports.length : 0;
+            
+            document.getElementById('totalReports').textContent = allReports.length;
+            document.getElementById('totalSize').textContent = formatFileSize(totalSize);
+            document.getElementById('avgSize').textContent = formatFileSize(avgSize);
+        }
+
+        // 格式化文件大小
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 B';
+            
+            const k = 1024;
+            const sizes = ['B', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+        }
+
+        // 搜索处理
+        function handleSearch(e) {
+            currentSearch = e.target.value.toLowerCase().trim();
+            applyFilters();
+        }
+
+        // 应用筛选
+        function applyFilters() {
+            filteredReports = allReports.filter(report => {
+                return !currentSearch || 
+                    report.title.toLowerCase().includes(currentSearch) ||
+                    report.filename.toLowerCase().includes(currentSearch);
+            });
+
+            renderReports();
+        }
+
+        // 渲染报告列表
+        function renderReports() {
+            const container = document.getElementById('reportsContainer');
+            const loadingState = document.getElementById('loadingState');
+            const emptyState = document.getElementById('emptyState');
+
+            // 隐藏加载状态
+            loadingState.style.display = 'none';
+
+            if (filteredReports.length === 0) {
+                container.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            emptyState.style.display = 'none';
+            container.style.display = 'block';
+
+            // 渲染报告卡片
+            container.innerHTML = filteredReports.map(report => createReportCard(report)).join('');
+
+            // 绑定卡片事件
+            bindCardEvents();
+        }
+
+        // 创建报告卡片HTML
+        function createReportCard(report) {
+            const createdDate = new Date(report.created_at).toLocaleDateString('zh-CN');
+            const modifiedDate = new Date(report.modified_at).toLocaleDateString('zh-CN');
+            const fileSize = formatFileSize(report.size);
+            
+            return `
+                <div class="report-card">
+                    <div class="report-header">
+                        <h3 class="report-title">${escapeHtml(report.title)}</h3>
+                        <span class="report-size">${fileSize}</span>
+                    </div>
+                    
+                    <div class="report-meta">
+                        <div class="meta-item">
+                            <i class="far fa-calendar"></i>
+                            <span>创建于 ${createdDate}</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="far fa-clock"></i>
+                            <span>修改于 ${modifiedDate}</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="far fa-file"></i>
+                            <span>${report.filename}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="report-actions">
+                        <button class="btn btn-primary view-report-btn" data-filename="${report.filename}">
+                            <i class="fas fa-eye"></i>
+                            查看报告
+                        </button>
+                        <a href="output/${report.filename}" 
+                           class="btn btn-secondary" target="_blank" rel="noopener">
+                            <i class="fas fa-download"></i>
+                            下载文件
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        // 绑定卡片事件
+        function bindCardEvents() {
+            document.querySelectorAll('.view-report-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const filename = e.target.closest('.view-report-btn').dataset.filename;
+                    showReportModal(filename);
+                });
+            });
+        }
+
+        // 显示报告详情模态框
+        async function showReportModal(filename) {
+            const report = allReports.find(r => r.filename === filename);
+            if (!report) return;
+
+            const modal = document.getElementById('reportModal');
+            const title = document.getElementById('modalTitle');
+            const content = document.getElementById('reportContent');
+
+            title.textContent = report.title;
+            content.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            try {
+                // 尝试加载报告内容
+                const response = await fetch(`output/${filename}`);
+                if (response.ok) {
+                    let reportContent = await response.text();
+                    content.innerHTML = renderMarkdown(reportContent);
+                } else {
+                    content.innerHTML = createSampleReport(report);
+                }
+            } catch (error) {
+                content.innerHTML = createSampleReport(report);
+            }
+
+            // 高亮代码
+            content.querySelectorAll('pre code').forEach(block => {
+                hljs.highlightElement(block);
+            });
+        }
+
+        // 渲染Markdown（简单实现）
+        function renderMarkdown(markdown) {
+            return markdown
+                .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+                .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+                .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/\n/g, '<br>')
+                .replace(/^(.)/gim, '<p>$1')
+                .replace(/$(.)/gim, '$1</p>');
+        }
+
+        // 创建示例报告内容
+        function createSampleReport(report) {
+            return `
+                <h1>📊 ${escapeHtml(report.title)}</h1>
+                
+                <h2>📝 报告摘要</h2>
+                <p>这是一份由Survey Agent自动生成的学术调研报告。报告基于从arXiv搜索获得的相关论文，通过AI技术进行智能摘要和分析。</p>
+                
+                <h2>📚 论文列表</h2>
+                <p>本次调研共收集了多篇相关论文，涵盖了该领域的最新研究进展和关键技术突破。</p>
+                
+                <h3>核心论文</h3>
+                <ul>
+                    <li><strong>论文1</strong>: 介绍了相关技术的基础理论和方法</li>
+                    <li><strong>论文2</strong>: 提出了创新的解决方案和优化策略</li>
+                    <li><strong>论文3</strong>: 验证了方法的有效性和实用性</li>
+                </ul>
+                
+                <h2>🔍 技术分析</h2>
+                <p>通过对收集论文的深入分析，我们识别出了以下关键技术趋势：</p>
+                
+                <blockquote>
+                    <p>💡 <strong>关键洞察</strong>：该领域正朝着更加智能化和自动化的方向发展，新兴技术的融合为解决传统问题提供了新的思路。</p>
+                </blockquote>
+                
+                <h2>📈 发展趋势</h2>
+                <p>基于文献分析，我们总结出以下发展趋势：</p>
+                <ol>
+                    <li><strong>技术融合</strong>：多种技术的深度融合</li>
+                    <li><strong>效率提升</strong>：算法和系统性能的持续优化</li>
+                    <li><strong>应用扩展</strong>：应用场景的不断拓展</li>
+                </ol>
+                
+                <h2>🎯 总结与展望</h2>
+                <p>本次调研为理解该领域的发展现状和未来方向提供了重要参考。随着技术的不断进步，预期将有更多突破性进展。</p>
+                
+                <hr>
+                <p><em>📅 报告生成时间：${new Date(report.modified_at).toLocaleString('zh-CN')}</em></p>
+                <p><em>🤖 由 Survey Agent 自动生成</em></p>
+            `;
+        }
+
+        // 关闭模态框
+        function closeModal() {
+            const modal = document.getElementById('reportModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // 防抖函数
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // HTML转义
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // 显示错误信息
+        function showError(message) {
+            const container = document.getElementById('reportsContainer');
+            const loadingState = document.getElementById('loadingState');
+            const emptyState = document.getElementById('emptyState');
+            
+            loadingState.style.display = 'none';
+            container.style.display = 'none';
+            emptyState.innerHTML = `
+                <div class="empty-icon">⚠️</div>
+                <h3>加载失败</h3>
+                <p>${escapeHtml(message)}</p>
+                <button class="btn btn-primary" onclick="location.reload()">
+                    <i class="fas fa-redo"></i>
+                    重新加载
+                </button>
+            `;
+            emptyState.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
