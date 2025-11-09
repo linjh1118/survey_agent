@@ -14,7 +14,6 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  administration: write
 
 # 只允许同时进行一次部署，跳过正在运行和最新队列之间的运行队列
 concurrency:
