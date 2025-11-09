@@ -1,6 +1,22 @@
-# 📚 Survey Agent
+# Survey Agent
+
+🤖 **AI驱动的智能论文调研工具** - 让学术研究更高效
+
+[![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue?style=flat-square)](https://your-username.github.io/survey_agent)
+[![Python](https://img.shields.io/badge/python-3.8+-green?style=flat-square)](https://python.org)
+[![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](LICENSE)
 
 A modern framework for automatically generating research surveys by searching arXiv papers, downloading them, and using LLMs to summarize their content. Perfect for researchers, students, and anyone who wants to stay up-to-date with the latest research! ✨
+
+## 🌐 在线体验
+
+访问我们的 [GitHub Pages演示站点](https://your-username.github.io/survey_agent) 立即体验Survey Agent的强大功能！
+
+### 🎯 Web界面
+- **🏠 主界面** (`index.html`): 动态论文调研工具，支持API配置和实时生成
+- **📚 论文浏览器** (`papers.html`): 浏览和搜索缓存的论文数据
+- **📊 调研报告** (`summary_view.html`): 查看和管理生成的调研报告
+- **📖 PDF查看器** (`pdf_viewer.html`): 在线PDF查看和批量问答功能
 
 ## ✅ Features
 
