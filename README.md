@@ -2,7 +2,7 @@
 
 🤖 **AI驱动的智能论文调研工具** - 让学术研究更高效
 
-[![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue?style=flat-square)](https://your-username.github.io/survey_agent)
+[![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue?style=flat-square)](https://linjh1118.github.io/survey_agent)
 [![Python](https://img.shields.io/badge/python-3.8+-green?style=flat-square)](https://python.org)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](LICENSE)
 
