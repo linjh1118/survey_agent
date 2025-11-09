@@ -36,6 +36,12 @@ def load_cached_papers() -> Dict[str, Any]:
     
     return all_papers
 
+def clean_summary_text(summary: str) -> str:
+    """清理摘要文本，保持完整内容"""
+    # 只移除markdown代码块标记，保持所有内容完整
+    cleaned = summary.replace('```', '').strip()
+    return cleaned
+
 def process_papers_for_display(papers_data: Dict[str, Any]) -> List[Dict[str, Any]]:
     """处理论文数据为展示格式"""
     display_papers = []
@@ -43,11 +49,14 @@ def process_papers_for_display(papers_data: Dict[str, Any]) -> List[Dict[str, An
     for arxiv_id, paper_info in papers_data.items():
         # 处理不同的数据结构
         if 'title' in paper_info and 'summary' in paper_info:
+            # 清理摘要文本
+            cleaned_summary = clean_summary_text(paper_info['summary'])
+            
             # 标准格式
             processed_paper = {
                 'arxiv_id': paper_info.get('arxiv_id', arxiv_id),
                 'title': paper_info['title'],
-                'summary': paper_info['summary'],
+                'summary': cleaned_summary,
                 'cached_at': format_date(paper_info.get('cached_at', '')),
                 'content_hash': paper_info.get('content_hash', ''),
                 'model_info': paper_info.get('model_info', {'provider': 'unknown', 'model_name': 'unknown'})
