@@ -380,9 +380,42 @@ main() {
         echo -e "  ${GREEN}3. paper_captions.html${NC}"
         echo -e "     🌐 可视化 HTML 文件（含总结和图片）"
         echo ""
+
+        # 显示绝对路径
+        HTML_ABS_PATH="$(pwd)/paper_captions.html"
+        print_info "文件绝对路径："
+        echo -e "  ${CYAN}$HTML_ABS_PATH${NC}"
+        echo ""
+
         print_info "打开方式："
-        echo "  - 直接双击: paper_captions.html"
-        echo "  - 浏览器: file://$(pwd)/paper_captions.html"
+        echo "  1. 直接双击: paper_captions.html"
+        echo "  2. 复制上方路径到浏览器"
+        echo "  3. 终端运行: open \"$HTML_ABS_PATH\" (macOS)"
+        echo "               xdg-open \"$HTML_ABS_PATH\" (Linux)"
+        echo ""
+
+        # 询问是否自动打开
+        read -p "是否自动在浏览器中打开 HTML？(y/N) " -n 1 -r
+        echo
+        if [[ $REPLY =~ ^[Yy]$ ]]; then
+            print_step "正在打开浏览器..."
+            if command -v open &> /dev/null; then
+                # macOS
+                open "$HTML_ABS_PATH"
+                print_success "✓ 已在默认浏览器中打开！"
+            elif command -v xdg-open &> /dev/null; then
+                # Linux
+                xdg-open "$HTML_ABS_PATH" &> /dev/null &
+                print_success "✓ 已在默认浏览器中打开！"
+            elif command -v start &> /dev/null; then
+                # Windows (Git Bash)
+                start "$HTML_ABS_PATH"
+                print_success "✓ 已在默认浏览器中打开！"
+            else
+                print_error "无法自动打开浏览器"
+                print_info "请手动打开: file://$HTML_ABS_PATH"
+            fi
+        fi
         echo ""
     fi
 

@@ -7,6 +7,7 @@ arXiv HTML Caption Crawler
 import os
 import re
 import json
+import time
 import requests
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
@@ -57,6 +58,46 @@ def get_paper_title(soup):
     return None
 
 
+def download_with_retry(url, max_retries=3, timeout=30, backoff_factor=2):
+    """
+    带重试机制的下载函数
+
+    Args:
+        url: 要下载的 URL
+        max_retries: 最大重试次数（默认3次）
+        timeout: 超时时间（秒）
+        backoff_factor: 重试延迟倍数（指数退避）
+
+    Returns:
+        requests.Response: 成功的响应对象
+
+    Raises:
+        Exception: 所有重试失败后抛出最后一次的异常
+    """
+    last_exception = None
+
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(url, timeout=timeout)
+            response.raise_for_status()
+            return response
+
+        except Exception as e:
+            last_exception = e
+
+            if attempt < max_retries - 1:
+                # 计算延迟时间（指数退避）
+                delay = backoff_factor ** attempt
+                print(f"    重试 {attempt + 1}/{max_retries - 1}（{delay}秒后）...")
+                time.sleep(delay)
+            else:
+                # 最后一次尝试失败
+                print(f"    所有重试失败")
+
+    # 所有重试都失败，抛出最后一次的异常
+    raise last_exception
+
+
 def crawl_arxiv_html(url, output_dir='outputs'):
     """
     爬取 arXiv HTML 论文页面
@@ -79,9 +120,9 @@ def crawl_arxiv_html(url, output_dir='outputs'):
     os.makedirs(temp_dir, exist_ok=True)
 
     try:
-        # 获取 HTML 内容
-        response = requests.get(url, timeout=30)
-        response.raise_for_status()
+        # 获取 HTML 内容（带重试）
+        print("正在获取 HTML 页面...")
+        response = download_with_retry(url, max_retries=3, timeout=30)
         soup = BeautifulSoup(response.content, 'html.parser')
 
         # 提取标题
@@ -158,10 +199,10 @@ def crawl_arxiv_html(url, output_dir='outputs'):
                 if caption_elem:
                     caption = caption_elem.get_text(strip=True)
 
-            # 下载图片
+            # 下载图片（带重试）
             try:
-                img_response = requests.get(full_img_url, timeout=30)
-                img_response.raise_for_status()
+                # 使用重试机制下载图片
+                img_response = download_with_retry(full_img_url, max_retries=3, timeout=30)
 
                 # 获取文件扩展名
                 img_ext = os.path.splitext(img_src)[1] or '.png'

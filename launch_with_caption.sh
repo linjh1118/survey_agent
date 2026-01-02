@@ -237,9 +237,44 @@ main() {
     echo -e "  ${GREEN}1. $OUTPUT_DIR/${NC} - 爬取的论文数据和图片"
     echo -e "  ${GREEN}2. $HTML_FILE${NC} - 可视化 HTML 文件"
     echo ""
+
+    # 显示绝对路径
+    print_info "文件绝对路径:"
+    HTML_ABS_PATH="$(cd "$(dirname "$HTML_FILE")" && pwd)/$(basename "$HTML_FILE")"
+    echo -e "  ${CYAN}$HTML_ABS_PATH${NC}"
+    echo ""
+
     print_info "使用方法:"
-    echo "  直接双击打开: $HTML_FILE"
-    echo "  或在浏览器中打开: file://$(pwd)/$HTML_FILE"
+    echo "  1. 直接双击打开: $HTML_FILE"
+    echo "  2. 复制上方路径到浏览器打开"
+    echo "  3. 在终端运行: open \"$HTML_ABS_PATH\" (macOS)"
+    echo "                  xdg-open \"$HTML_ABS_PATH\" (Linux)"
+    echo ""
+
+    # 询问是否自动打开
+    read -p "是否自动在浏览器中打开 HTML？(y/N) " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        print_step "正在打开浏览器..."
+        if command -v open &> /dev/null; then
+            # macOS
+            open "$HTML_ABS_PATH"
+            print_success "已在默认浏览器中打开！"
+        elif command -v xdg-open &> /dev/null; then
+            # Linux
+            xdg-open "$HTML_ABS_PATH" &> /dev/null &
+            print_success "已在默认浏览器中打开！"
+        elif command -v start &> /dev/null; then
+            # Windows (Git Bash)
+            start "$HTML_ABS_PATH"
+            print_success "已在默认浏览器中打开！"
+        else
+            print_error "无法自动打开浏览器"
+            print_info "请手动打开: file://$HTML_ABS_PATH"
+        fi
+    else
+        print_info "您可以随时手动打开 HTML 文件"
+    fi
     echo ""
 }
 

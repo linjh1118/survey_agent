@@ -265,4 +265,33 @@ if submitted:
     if crawl_images:
         progress_placeholder.success(f"🎉 综述已生成！共处理 {len(processed_papers)} 篇论文，爬取 {successful_crawls} 篇图片")
     else:
-        progress_placeholder.success(f"🎉 综述已生成！共处理 {len(processed_papers)} 篇论文") 
+        progress_placeholder.success(f"🎉 综述已生成！共处理 {len(processed_papers)} 篇论文")
+
+    # 显示文件路径信息
+    st.markdown("---")
+    st.markdown("### 📁 生成的文件")
+
+    # Markdown 文件
+    md_abs_path = os.path.abspath(output_md)
+    st.markdown(f"**📄 Markdown 文件：**")
+    st.code(md_abs_path, language="")
+
+    # HTML 文件（如果有）
+    if html_output_file and os.path.exists(html_output_file):
+        html_abs_path = os.path.abspath(html_output_file)
+        st.markdown(f"**🌐 HTML 文件：**")
+        st.code(html_abs_path, language="")
+
+        # 提供打开链接
+        file_url = f"file://{html_abs_path}"
+        st.markdown(f"👉 [点击在浏览器中打开 HTML]({file_url})")
+
+        # 自动打开选项
+        col_auto1, col_auto2 = st.columns([1, 3])
+        with col_auto1:
+            if st.button("🚀 自动打开 HTML"):
+                import webbrowser
+                webbrowser.open(file_url)
+                st.success("✓ 已在浏览器中打开！")
+        with col_auto2:
+            st.caption("点击按钮在默认浏览器中自动打开 HTML 文件") 
