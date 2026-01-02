@@ -98,18 +98,23 @@ def download_with_retry(url, max_retries=3, timeout=30, backoff_factor=2):
     raise last_exception
 
 
-def crawl_arxiv_html(url, output_dir='outputs'):
+def crawl_arxiv_html(url, output_dir='outputs', timeout_seconds=120):
     """
     爬取 arXiv HTML 论文页面
 
     Args:
         url: arXiv HTML 页面 URL
         output_dir: 输出目录
+        timeout_seconds: 单篇论文爬取的最大时间（秒），默认120秒
 
     Returns:
         dict: 包含论文信息的字典，如果失败则返回 None
     """
+    import time as time_module
+    start_time = time_module.time()
+
     print(f"\n正在爬取: {url}")
+    print(f"超时限制: {timeout_seconds} 秒")
 
     # 提取 arXiv ID
     arxiv_id = url.split('/')[-1]
@@ -161,13 +166,24 @@ def crawl_arxiv_html(url, output_dir='outputs'):
         else:
             print("警告: 未找到摘要")
 
-        # 查找所有图片
+        # 查找所有图片（最多6张）
         images_with_captions = []
         figures = soup.find_all('figure', class_='ltx_figure')
 
-        print(f"找到 {len(figures)} 个图片")
+        MAX_IMAGES = 6
+        total_figures = len(figures)
+        figures_to_process = figures[:MAX_IMAGES]
 
-        for idx, figure in enumerate(figures, 1):
+        print(f"找到 {total_figures} 个图片，将下载前 {min(total_figures, MAX_IMAGES)} 张")
+
+        for idx, figure in enumerate(figures_to_process, 1):
+            # 检查是否超时
+            elapsed_time = time_module.time() - start_time
+            if elapsed_time > timeout_seconds:
+                print(f"  ⚠️ 已达到超时限制 ({timeout_seconds}秒)，停止下载图片")
+                print(f"  已成功下载 {len(images_with_captions)} 张图片")
+                break
+
             # 查找图片标签
             img_tag = figure.find('img')
             if not img_tag:
@@ -257,8 +273,10 @@ def crawl_arxiv_html(url, output_dir='outputs'):
         with open(metadata_path, 'w', encoding='utf-8') as f:
             json.dump(metadata, f, ensure_ascii=False, indent=2)
 
+        total_time = time_module.time() - start_time
         print(f"\n✓ 爬取完成: {len(images_with_captions)} 张图片")
         print(f"  输出目录: {final_dir}")
+        print(f"  总耗时: {total_time:.1f} 秒")
 
         return metadata
 

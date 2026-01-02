@@ -544,6 +544,81 @@ def generate_html_with_summary(papers, summaries, output_path):
             text-decoration: underline;
         }
 
+        .toc-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .toc-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s ease;
+        }
+
+        .toc-item:last-child {
+            border-bottom: none;
+        }
+
+        .toc-item:hover {
+            background: #f8f9fa;
+            padding-left: 10px;
+        }
+
+        .toc-link {
+            color: #2c3e50;
+            text-decoration: none;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.5;
+        }
+
+        .toc-link:hover {
+            color: #667eea;
+        }
+
+        .toc-number {
+            font-weight: bold;
+            color: #667eea;
+            min-width: 30px;
+            flex-shrink: 0;
+        }
+
+        .toc-paper-title {
+            flex: 1;
+        }
+
+        .toc-meta {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+            font-size: 0.85em;
+            color: #999;
+        }
+
+        .toc-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
         footer {
             text-align: center;
             color: white;
@@ -583,10 +658,49 @@ def generate_html_with_summary(papers, summaries, output_path):
                 </div>
             </div>
         </header>
+
+        <!-- 论文目录 -->
+        <div class="toc-container">
+            <div class="toc-title">
+                <span>📋</span>
+                <span>论文目录</span>
+            </div>
+            <ul class="toc-list">
 """
 
     # 按 arXiv ID 排序（倒序，最新的在前）
     sorted_arxiv_ids = sorted(papers.keys(), reverse=True)
+
+    # 生成目录
+    for idx, arxiv_id in enumerate(sorted_arxiv_ids, 1):
+        paper = papers[arxiv_id]
+        data = paper['data']
+        title = data.get('title', '未知标题')
+        images = data.get('images_with_captions', [])
+
+        html_content += f"""                <li class="toc-item">
+                    <a href="#paper-{idx}" class="toc-link">
+                        <span class="toc-number">{idx}.</span>
+                        <div class="toc-paper-title">
+                            <div>{title}</div>
+                            <div class="toc-meta">
+                                <span class="toc-meta-item">
+                                    <span>🔗</span>
+                                    <span>arXiv:{arxiv_id}</span>
+                                </span>
+                                <span class="toc-meta-item">
+                                    <span>🖼️</span>
+                                    <span>{len(images)} 张图片</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+"""
+
+    html_content += """            </ul>
+        </div>
+"""
 
     for idx, arxiv_id in enumerate(sorted_arxiv_ids, 1):
         paper = papers[arxiv_id]
@@ -599,7 +713,7 @@ def generate_html_with_summary(papers, summaries, output_path):
         summary = summaries.get(arxiv_id, '')
 
         html_content += f"""
-        <div class="paper-card">
+        <div class="paper-card" id="paper-{idx}">
             <div class="paper-title">{idx}. {title}</div>
 
             <div class="paper-meta">

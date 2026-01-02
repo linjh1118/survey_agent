@@ -109,10 +109,10 @@ def crawl_paper_images_parallel(processed_papers, output_dir, progress_placehold
         if not arxiv_id:
             return idx, None
 
-        # 爬取该论文的 HTML 页面
+        # 爬取该论文的 HTML 页面（限制单篇论文120秒超时）
         url = f"https://arxiv.org/html/{arxiv_id}"
         try:
-            result = crawl_arxiv_html(url, output_dir)
+            result = crawl_arxiv_html(url, output_dir, timeout_seconds=120)
             return idx, result
         except Exception as e:
             print(f"爬取 {arxiv_id} 失败: {e}")
@@ -191,7 +191,8 @@ if submitted:
     # 步骤 4: 爬取论文图片和 Caption（可选）
     if crawl_images:
         progress_placeholder.info("正在爬取论文图片和 Caption...")
-        output_dir = "paper_captions"
+        # 使用唯一ID作为目录名，避免与历史数据混淆
+        output_dir = f"paper_captions_{unique_id}"
         os.makedirs(output_dir, exist_ok=True)
 
         crawl_results = crawl_paper_images_parallel(
