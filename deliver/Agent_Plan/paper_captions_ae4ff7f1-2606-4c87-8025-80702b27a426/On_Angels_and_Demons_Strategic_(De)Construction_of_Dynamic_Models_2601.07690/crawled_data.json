@@ -1,0 +1,7 @@
+{
+  "url": "https://arxiv.org/html/2601.07690",
+  "arxiv_id": "2601.07690",
+  "title": "On Angels and Demons: Strategic (De)Construction of Dynamic Models",
+  "abstract": "In recent years, there has been growing interest in logics that formalise strategic reasoning about agents capable of modifying the structure of a given model. This line of research has been motivated by applications where a modelled system evolves over time, such as communication networks, security protocols, and multi-agent planning. In this paper, we introduce three logics for reasoning about strategies that modify the topology of weighted graphs. InStrategic Deconstruction Logic, a destructive agent (the demon) removes edges up to a certain cost. InStrategic Construction Logic, a constructive agent (the angel) adds edges within a cost bound. Finally,Strategic Update Logiccombines both agents, who may cooperate or compete. We study the expressive power of these logics and the complexity of their model checking problems.",
+  "images_with_captions": []
+}

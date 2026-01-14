@@ -1,0 +1,38 @@
+{
+  "url": "https://arxiv.org/html/2601.07823",
+  "arxiv_id": "2601.07823",
+  "title": "Video Generation Models in Robotics: Applications, Research Challenges, Future Directions",
+  "abstract": "Video generation models have emerged as high-fidelity models of the physical world, capable of synthesizing high-quality videos capturing fine-grained interactions between agents and their environments conditioned on multi-modal user inputs. Their impressive capabilities address many of the long-standing challenges faced by physics-based simulators, driving broad adoption in many problem domains, e.g., robotics.\nFor example, video models enable photorealistic, physically consistent deformable-body simulation without making prohibitive simplifying assumptions, which is a major bottleneck in physics-based simulation.\nMoreover, video models can serve as foundation world models that capture the dynamics of the world in a fine-grained and expressive way. They thus overcome the limited expressiveness of language-only abstractions in describing intricate physical interactions.\nIn this survey, we provide a review of video models and their applications as embodied world models in robotics, encompassing cost-effective data generation and action prediction in imitation learning, dynamics and rewards modeling in reinforcement learning, visual planning, and policy evaluation. Further, we highlight important challenges hindering the trustworthy integration of video models in robotics, which include poor instruction following, hallucinations such as violations of physics, and unsafe content generation, in addition to fundamental limitations such as significant data curation, training, and inference costs. We present potential future directions to address these open research challenges to motivate research and ultimately facilitate broader applications, especially in safety-critical settings.",
+  "images_with_captions": [
+    {
+      "figure_id": "S0.F1",
+      "url": "https://arxiv.org/html/2601.07823/x1.png",
+      "local_path": "paper_captions_ae4ff7f1-2606-4c87-8025-80702b27a426/Video_Generation_Models_in_Robotics_Applications,_Research_Challenges,_Future_Directions_2601.07823/images/S0.F1.png",
+      "caption": "Overview.As embodied world models, video models generate high-fidelity predictions of the spatiotemporal evolution of real-world environments, capturing fine-grained robot-environment interactions that have been traditionally challenging for classical physics-based simulators. Their remarkable capabilities enable generalist robot policy learning, policy evaluation, and visual planning that is well-aligned with commonsense knowledge."
+    },
+    {
+      "figure_id": "S2.F3",
+      "url": "https://arxiv.org/html/2601.07823/x2.png",
+      "local_path": "paper_captions_ae4ff7f1-2606-4c87-8025-80702b27a426/Video_Generation_Models_in_Robotics_Applications,_Research_Challenges,_Future_Directions_2601.07823/images/S2.F3.png",
+      "caption": "Diffusion Video Model Architectures.Diffusion/Flow-matching has emerged as the dominant model architecture for training photorealistic controllable video models that can be steered using text, image, and other conditioning inputs. These models broadly utilize diffusion transformers (DiTs) or U-Nets to learn important interpendencies across space and time within a compact latent space."
+    },
+    {
+      "figure_id": "S3.F4",
+      "url": "https://arxiv.org/html/2601.07823/x3.png",
+      "local_path": "paper_captions_ae4ff7f1-2606-4c87-8025-80702b27a426/Video_Generation_Models_in_Robotics_Applications,_Research_Challenges,_Future_Directions_2601.07823/images/S3.F4.png",
+      "caption": "Video Models for Embodied World Modeling.Video models provide high-quality representations of the physical world, which could be implicit (e.g., latent and video representations) or explicit (e.g., point clouds and Gaussian Splatting models)."
+    },
+    {
+      "figure_id": "S3.F5",
+      "url": "https://arxiv.org/html/2601.07823/x4.png",
+      "local_path": "paper_captions_ae4ff7f1-2606-4c87-8025-80702b27a426/Video_Generation_Models_in_Robotics_Applications,_Research_Challenges,_Future_Directions_2601.07823/images/S3.F5.png",
+      "caption": "Video Models for Data Generation.Video models enable high-fidelity data generation for cost-effective policy learning. Robot actions can be extracted from videos through modular approaches using end-effector pose tracking or end-to-end approaches, such as inverse-dynamics methods."
+    },
+    {
+      "figure_id": "S3.F6",
+      "url": "https://arxiv.org/html/2601.07823/x5.png",
+      "local_path": "paper_captions_ae4ff7f1-2606-4c87-8025-80702b27a426/Video_Generation_Models_in_Robotics_Applications,_Research_Challenges,_Future_Directions_2601.07823/images/S3.F6.png",
+      "caption": "Dynamics and Rewards Modeling.Video models provide high-accuracy dynamics modeling and rich reward signals, which are essential in reinforcement learning, circumventing long-standing challenges in system identification and reward engineering."
+    }
+  ]
+}

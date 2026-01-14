@@ -1,0 +1,14 @@
+{
+  "url": "https://arxiv.org/html/2601.07782",
+  "arxiv_id": "2601.07782",
+  "title": "Beyond Single-Shot: Multi-step Tool Retrieval via Query Planning",
+  "abstract": "LLM agents operating over massive, dynamic tool libraries rely on effective retrieval, yet standard single-shot dense retrievers struggle with complex requests.\nThese failures primarily stem from the disconnect between abstract user goals and technical documentation, and the limited capacity of fixed-size embeddings to model combinatorial tool compositions.\nTo address these challenges, we proposeToolQP, a lightweight framework that models retrieval as iterative query planning.\nInstead of single-shot matching,ToolQPdecomposes instructions into sub-tasks and dynamically generates queries to interact with the retriever, effectively bridging the semantic gap by targeting the specific sub-tasks required for composition.\nWe trainToolQPusing synthetic query trajectories followed by optimization via Reinforcement Learning with Verifiable Rewards (RLVR).\nExperiments demonstrate thatToolQPachieves state-of-the-art performance, exhibiting superior zero-shot generalization, robustness across diverse retrievers, and significant improvements in downstream agentic execution.",
+  "images_with_captions": [
+    {
+      "figure_id": "S2.F1",
+      "url": "https://arxiv.org/html/2601.07782/figures_framework2.png",
+      "local_path": "paper_captions_ae4ff7f1-2606-4c87-8025-80702b27a426/Beyond_Single-Shot_Multi-step_Tool_Retrieval_via_Query_Planning_2601.07782/images/S2.F1.png",
+      "caption": "Overview of theToolQPframework. The Planner decomposes a complex user query (e.g., travel planning) into sequential sub-tasks. For each sub-task, it interactively generates queries, processes feedback from the dense retriever, and self-corrects if necessary, before aggregating the final set of relevant tools."
+    }
+  ]
+}

@@ -180,7 +180,10 @@ if submitted:
         
     progress_placeholder.success("全部论文处理完成，正在生成 markdown...")
     unique_id = str(uuid.uuid4())
-    output_md = f"survey_result_{unique_id}.md"
+    query_folder = "_".join(terms).replace(" ", "_")[:50]
+    output_base_dir = f"deliver/{query_folder}"
+    os.makedirs(output_base_dir, exist_ok=True)
+    output_md = f"{output_base_dir}/survey_result_{unique_id}.md"
     markdown_content = generate_markdown(processed_papers, output_md, terms)
 
     # 初始化 HTML 相关变量
@@ -192,7 +195,7 @@ if submitted:
     if crawl_images:
         progress_placeholder.info("正在爬取论文图片和 Caption...")
         # 使用唯一ID作为目录名，避免与历史数据混淆
-        output_dir = f"paper_captions_{unique_id}"
+        output_dir = f"{output_base_dir}/paper_captions_{unique_id}"
         os.makedirs(output_dir, exist_ok=True)
 
         crawl_results = crawl_paper_images_parallel(
@@ -217,7 +220,7 @@ if submitted:
         papers_data = find_all_papers(output_dir)
 
         # 生成 HTML
-        html_output_file = f"paper_captions_{unique_id}.html"
+        html_output_file = f"{output_base_dir}/paper_captions_{unique_id}.html"
 
         if papers_data:
             generate_html_with_summary(papers_data, summaries, html_output_file)
@@ -234,7 +237,7 @@ if submitted:
         # 不爬取图片，生成标准 HTML
         import markdown
         html_content_with_images = markdown.markdown(markdown_content, extensions=['tables', 'fenced_code'])
-        html_output_file = f"survey_result_{unique_id}.html"
+        html_output_file = f"{output_base_dir}/survey_result_{unique_id}.html"
 
     # 显示预览
     summary_placeholder.markdown("### 综述 Markdown 预览")

@@ -8,53 +8,46 @@ Survey Agent is a Python framework for automatically generating research literat
 1. Searching arXiv papers by keywords or parsing BibTeX files
 2. Downloading PDFs and extracting text content  
 3. Using LLMs to generate paper summaries with intelligent caching
-4. Creating well-formatted markdown surveys
+4. Crawling paper images and captions from arXiv HTML pages
+5. Creating well-formatted markdown and HTML surveys
 
 **Key Components:**
-- `src/survey_agent/arxiv_tools/` - ArXiv search and PDF download functionality
+- `src/survey_agent/arxiv_tools/` - ArXiv search, PDF download, and image crawling
 - `src/survey_agent/llm/summarize.py` - LLM integration with caching and custom prompts
 - `src/survey_agent/survey/generator.py` - Survey generation pipeline
 - `src/survey_agent/utils/` - BibTeX parsing, caching, and utilities
-- Frontend interfaces for web-based usage
+- `src/survey_agent/frontend.py` - Query-based search interface
+- `src/survey_agent/frontend_by_bib.py` - BibTeX file interface
 
-## Development Commands
+## Entry Points (Only Two)
 
-### Installation & Setup
+### 1. Query-Based Search Entry Point
+```bash
+./launch.sh
+# Or: streamlit run src/survey_agent/frontend.py
+```
+**Features:**
+- 1.1 Input query keywords to search arXiv
+- 1.2 LLM paper interpretation and summarization
+- 1.3 Image and caption crawling from arXiv HTML
+
+### 2. BibTeX File Entry Point
+```bash
+./launch_bib.sh
+# Or: streamlit run src/survey_agent/frontend_by_bib.py
+```
+**Features:**
+- 2.1 Upload BibTeX file for paper parsing
+- 2.2 LLM paper interpretation and summarization
+- 2.3 Image and caption crawling from arXiv HTML
+
+## Installation & Setup
 ```bash
 pip install -e .
-# Install from requirements.txt: pip install -r requirements.txt
+# Or: pip install -r requirements.txt
 ```
 
-### Running the Application
-
-**Web Interfaces:**
-```bash
-# Standard keyword search interface
-streamlit run src/survey_agent/frontend.py
-# Alternative: ./launch.sh
-
-# BibTeX file interface  
-streamlit run src/survey_agent/frontend_by_bib.py
-# Alternative: ./launch_bib.sh
-
-# PDF viewer and batch Q&A interface
-python3 pdf_api.py
-# Alternative: ./launch_pdf_viewer.sh
-# Access at: http://localhost:8002/pdf_viewer.html
-```
-
-**Python API Usage:**
-```python
-# Standard search
-from survey_agent.survey import generate_survey
-generate_survey(terms=["AI", "ML"], max_results=10, output_file="output/survey.md")
-
-# From BibTeX file
-from survey_agent.survey import generate_survey_from_bib
-generate_survey_from_bib(bib_file="papers.bib", output_file="output/survey.md")
-```
-
-### Environment Variables
+## Environment Variables
 
 Required for LLM functionality:
 ```bash
@@ -81,11 +74,17 @@ export http_proxy="http://127.0.0.1:7890"
 - Default Chinese academic prompt in `src/survey_agent/llm/summarize.py:34`
 - Custom prompts can be passed to all generation functions
 
+### Parallel Processing
+- Both frontends support parallel processing for arXiv search, PDF download, LLM summarization, and image crawling
+- Configurable thread count (1-8 workers) via UI slider
+- Significantly improves processing speed for multiple papers
+
 ### File Structure
 - `pdfs/` - Downloaded paper PDFs
 - `output/` - Generated survey markdown files
 - `cache/` - Intelligent caching system
 - `examples/` - Usage examples for both search and BibTeX workflows
+- `paper_captions_*/` - Crawled images and captions (generated at runtime)
 
 ### Error Handling
 - Graceful handling of malformed BibTeX entries
@@ -94,11 +93,10 @@ export http_proxy="http://127.0.0.1:7890"
 - Continues processing even if individual papers fail
 
 ## Testing
-No formal test framework configured. Test manually using:
-- `python examples/basic_search.py`
-- `python examples/generate_survey.py` 
-- `python examples/generate_survey_by_bib.py`
+No formal test framework configured. Test manually using the two entry points:
+- `./launch.sh` - Test query-based search
+- `./launch_bib.sh` - Test BibTeX file processing
 
 ## Dependencies
-Core: streamlit, arxiv, PyMuPDF, openai, pandas, tqdm, fuzzywuzzy, python-Levenshtein
+Core: streamlit, arxiv, PyMuPDF, openai, pandas, tqdm, fuzzywuzzy, python-Levenshtein, beautifulsoup4, requests
 See `requirements.txt` and `setup.py` for complete list.

@@ -10,6 +10,90 @@ from ..arxiv_tools.search import search_papers
 from ..arxiv_tools.download import process_paper
 from ..llm.summarize import get_summarizer
 from ..utils.bib_parser import parse_bib_file, BibParser
+import arxiv
+
+def get_papers_by_arxiv_ids(arxiv_ids: List[str]) -> List[Dict[str, Any]]:
+    """
+    Get papers from arXiv by their IDs.
+    
+    Args:
+        arxiv_ids: List of arXiv IDs (e.g., ["2308.04371", "2310.17796"])
+        
+    Returns:
+        List of paper objects
+    """
+    client = arxiv.Client()
+    papers = []
+    
+    for arxiv_id in tqdm(arxiv_ids, desc="Fetching papers from arXiv"):
+        try:
+            search = arxiv.Search(id_list=[arxiv_id])
+            results = list(client.results(search))
+            if results:
+                papers.append(results[0])
+            else:
+                print(f"⚠️ Paper not found: {arxiv_id}")
+        except Exception as e:
+            print(f"⚠️ Error fetching paper {arxiv_id}: {e}")
+            continue
+    
+    return papers
+
+def generate_survey_from_arxiv_ids(arxiv_ids: List[str],
+                                 output_file: str = "survey_from_arxiv_ids.md",
+                                 llm_provider: str = "openai",
+                                 model_name: str = None,
+                                 custom_prompt: str = None,
+                                 pdf_dir: str = None) -> str:
+    """
+    Generate a complete survey from a list of arXiv IDs.
+    
+    Args:
+        arxiv_ids: List of arXiv IDs
+        output_file: Path to save the markdown file
+        llm_provider: LLM provider to use
+        model_name: Name of the model to use
+        custom_prompt: Custom prompt template for summarization
+        pdf_dir: Directory to save PDFs
+        
+    Returns:
+        Path to the generated markdown file
+    """
+    # Step 1: Get papers by arXiv IDs
+    print(f"📚 Fetching {len(arxiv_ids)} papers from arXiv...")
+    papers = get_papers_by_arxiv_ids(arxiv_ids)
+    
+    if not papers:
+        print("❌ No papers were successfully fetched")
+        return None
+    
+    print(f"✅ Successfully fetched {len(papers)} papers")
+    
+    # Step 2: Process papers (download PDFs and extract text)
+    print("📥 Processing papers...")
+    processed_papers = []
+    for paper in tqdm(papers, desc="Processing papers"):
+        try:
+            processed_paper = process_paper(paper, pdf_dir)
+            if processed_paper:  # 只添加成功处理的论文
+                processed_papers.append(processed_paper)
+        except Exception as e:
+            print(f"⚠️ Error processing paper '{paper.title}': {e}")
+            continue
+    
+    if not processed_papers:
+        print("❌ No papers were successfully processed")
+        return None
+    
+    # Step 3: Generate summaries
+    print("🤖 Generating summaries...")
+    summarized_papers = summarize_papers(processed_papers, llm_provider, model_name, custom_prompt)
+    
+    # Step 4: Generate markdown
+    print("📝 Generating markdown...")
+    generate_markdown(summarized_papers, output_file)
+    
+    return output_file
 
 def summarize_papers(papers: List[Dict[str, Any]], 
                     llm_provider: str = "openai", 
